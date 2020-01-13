@@ -12,7 +12,7 @@ namespace HRISCapsu
 {
     public partial class frmViewEmployee : Form
     {
-        public frmViewEmployee(string employeeNo, string firstName, string middleName, string lastName, string address, string gender, string dob, string placeofbirth, string contactNo, string civilStatus, string position, string department, string workStatus, string hiredDate, string endOfContract)
+        public frmViewEmployee(string employeeNo, string firstName, string middleName, string lastName, string address, string gender, string dob, string placeofbirth, string contactNo, string civilStatus, string position, string department, string workStatus, string hiredDate, string endOfContract, string status)
         {
             InitializeComponent();
             lblEmployeeNo.Text = employeeNo;
@@ -29,6 +29,7 @@ namespace HRISCapsu
             lblDepartment.Text = department;
             lblWorkStatus.Text = workStatus;
             lblHiredDate.Text = hiredDate;
+            lblStatus.Text = status;
             if (endOfContract != "")
             {
                 lblEndofContract.Text = endOfContract;
