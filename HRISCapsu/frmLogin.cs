@@ -6,6 +6,7 @@ namespace HRISCapsu
 {
     public partial class frmLogin : Form
     {
+        public static string id;
         public frmLogin()
         {
             InitializeComponent();
@@ -35,9 +36,13 @@ namespace HRISCapsu
 
                     if (dr.Read())
                     {
+                        id = dr[0].ToString();
                         MessageBox.Show("Login Successfully!");
-                        this.Close();
-                        var frm = new MDIMain();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Credentials!");
                     }
                 }
             }

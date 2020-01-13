@@ -18,3 +18,8 @@ D:\Keen\Documents\Visual Studio 2017\Projects\HRISCapsu\HRISCapsu\obj\Debug\HRIS
 D:\Keen\Documents\Visual Studio 2017\Projects\HRISCapsu\HRISCapsu\obj\Debug\HRISCapsu.frmListofEmployees.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\HRISCapsu\HRISCapsu\obj\Debug\HRISCapsu.frmListofContractualEmployees.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\HRISCapsu\HRISCapsu\obj\Debug\HRISCapsu.test.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\HRISCapsu\HRISCapsu\obj\Debug\HRISCapsu.frmSeminarsTraining.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\HRISCapsu\HRISCapsu\obj\Debug\HRISCapsu.frmAddSeminar.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\HRISCapsu\HRISCapsu\obj\Debug\HRISCapsu.frmEditSeminar.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\HRISCapsu\HRISCapsu\obj\Debug\HRISCapsu.frmAddSeminarEmployee.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\HRISCapsu\HRISCapsu\obj\Debug\HRISCapsu.frmChangePassword.resources

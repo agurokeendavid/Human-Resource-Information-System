@@ -78,5 +78,10 @@ namespace HRISCapsu
         {
             displayRecords(dtgRecords, txtSearch.Text);
         }
+
+        private void frmListofEmployees_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

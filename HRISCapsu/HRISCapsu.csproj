@@ -48,11 +48,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\DBConnection.cs" />
+    <Compile Include="frmAddSeminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSeminar.Designer.cs">
+      <DependentUpon>frmAddSeminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddSeminarEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSeminarEmployee.Designer.cs">
+      <DependentUpon>frmAddSeminarEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDepartments.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDepartments.Designer.cs">
       <DependentUpon>frmDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditSeminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditSeminar.Designer.cs">
+      <DependentUpon>frmEditSeminar.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEmployeesRecord.cs">
       <SubType>Form</SubType>
@@ -84,6 +108,12 @@
     <Compile Include="frmPositions.Designer.cs">
       <DependentUpon>frmPositions.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSeminarsTraining.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeminarsTraining.Designer.cs">
+      <DependentUpon>frmSeminarsTraining.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmViewEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,8 +134,20 @@
     <Compile Include="test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAddSeminar.resx">
+      <DependentUpon>frmAddSeminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSeminarEmployee.resx">
+      <DependentUpon>frmAddSeminarEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDepartments.resx">
       <DependentUpon>frmDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditSeminar.resx">
+      <DependentUpon>frmEditSeminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmployeesRecord.resx">
       <DependentUpon>frmEmployeesRecord.cs</DependentUpon>
@@ -121,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPositions.resx">
       <DependentUpon>frmPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeminarsTraining.resx">
+      <DependentUpon>frmSeminarsTraining.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewEmployee.resx">
       <DependentUpon>frmViewEmployee.cs</DependentUpon>
@@ -180,6 +225,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -89,7 +89,8 @@ namespace HRISCapsu
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var frm = new frmChangePassword();
+            frm.ShowDialog();
         }
 
         private void listOfEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -101,6 +102,12 @@ namespace HRISCapsu
         private void listOfContractualEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmListofContractualEmployees();
+            frm.ShowDialog();
+        }
+
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSeminarsTraining();
             frm.ShowDialog();
         }
     }
