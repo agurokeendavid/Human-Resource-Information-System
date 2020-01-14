@@ -16,8 +16,6 @@ namespace HRISCapsu
         public frmPositions()
         {
             InitializeComponent();
-            frmLogin.SendMessage(txtSearch.Handle, 0x1501, 1, "Search position.");
-            frmLogin.SendMessage(txtPosition.Handle, 0x1501, 1, "Position name.");
             displayRecords(dtgRecords);
         }
 

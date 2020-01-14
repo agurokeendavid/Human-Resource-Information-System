@@ -69,6 +69,23 @@ namespace HRISCapsu
             frm.ShowDialog();
         }
 
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmEmployeesRecord();
+            frm.ShowDialog(this);
+        }
+
+        private void viewToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frm = new frmPositions();
+            frm.ShowDialog(this);
+        }
+
+        private void viewToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            var frm = new frmDepartments();
+            frm.ShowDialog();
+        }
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -76,39 +93,19 @@ namespace HRISCapsu
             frm.ShowDialog();
         }
 
-
-
-        private void viewEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var frm = new frmEmployeesRecord();
-            frm.ShowDialog(this);
-        }
-
-        private void viewRegularEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void listOfEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmListofEmployees();
             frm.ShowDialog();
         }
 
-        private void viewContractualEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void listOfContractualEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmListofContractualEmployees();
             frm.ShowDialog();
         }
 
-        private void viewPositionsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var frm = new frmPositions();
-            frm.ShowDialog(this);
-        }
-
-        private void viewDepartmentsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var frm = new frmDepartments();
-            frm.ShowDialog();
-        }
-
-        private void viewSeminarsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmSeminarsTraining();
             frm.ShowDialog();
