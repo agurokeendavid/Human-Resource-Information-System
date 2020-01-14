@@ -16,6 +16,8 @@ namespace HRISCapsu
         public frmAddSeminar()
         {
             InitializeComponent();
+            frmLogin.SendMessage(txtSeminarName.Handle, 0x1501, 1, "Seminar name.");
+            frmLogin.SendMessage(txtLocation.Handle, 0x1501, 1, "Location.");
         }
 
         private void btnSave_Click(object sender, EventArgs e)

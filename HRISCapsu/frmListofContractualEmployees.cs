@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Ports;
+using System.Threading;
 
 namespace HRISCapsu
 {
@@ -16,7 +18,147 @@ namespace HRISCapsu
         public frmListofContractualEmployees()
         {
             InitializeComponent();
-            
+            frmLogin.SendMessage(txtSearch.Handle, 0x1501, 1, "Employee name.");
+        }
+
+        private void getModem()
+        {
+            try
+            {
+                using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                {
+                    conn.Open();
+                    var query = "select * from capsuthesis.tblmodems";
+                    var cmd = new MySqlCommand(query, conn);
+                    var da = new MySqlDataAdapter();
+                    var dt = new DataTable();
+                    da.SelectCommand = cmd;
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        //modemEmpty = false;
+                        //modemName = dt.Rows[0].Field<string>("modem_name");
+                        var sp = new SerialPort();
+                        //sp.PortName = modemName;
+                        sp.Open();
+
+
+                        sp.WriteLine("AT" + Environment.NewLine);
+                        Thread.Sleep(200);
+                        sp.WriteLine("AT+CMGF=1" + Environment.NewLine);
+                        Thread.Sleep(200);
+                        sp.WriteLine("AT+CSCS=\"GSM\"" + Environment.NewLine);
+                        Thread.Sleep(100);
+
+                        var response = sp.ReadExisting();
+
+
+                        //if (response.Contains("ERROR"))
+                        //{
+                        //    lblHeading.Text = "Send Message [Not connected]";
+                        //    lblHeading.ForeColor = Color.Red;
+                        //}
+                        //else
+                        //{
+                        //    lblHeading.Text = "Send Message [Connected]";
+                        //    lblHeading.ForeColor = Color.Green;
+                        //}
+
+                        sp.Close();
+                    }
+                    else
+                    {
+                        //modemEmpty = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void resend(string num, string message)
+        {
+            MessageBox.Show("resending..");
+
+            var x = "";
+            double arrayCount = 0;
+
+            new ManualResetEvent(false).WaitOne(500);
+            using (var sp = new SerialPort())
+            {
+                sp.Write("AT+CMGS=\"" + num + "\"" + Environment.NewLine);
+
+                new ManualResetEvent(false).WaitOne(500);
+                sp.ReadExisting();
+                sp.Write(x);
+
+                sp.Write(1 + "/" + arrayCount + " " + message);
+
+                new ManualResetEvent(false).WaitOne(500);
+                sp.ReadExisting();
+                sp.Write(x);
+
+                sp.Write(new byte[] { 26 }, 0, 1);
+                new ManualResetEvent(false).WaitOne(8000);
+                sp.ReadExisting();
+                sp.Write(x);
+            }
+
+        }
+
+
+        private void sendMessage(string phoneNumber, string s_message)
+        {
+            using (var sp = new SerialPort())
+            {
+                try
+                {
+                    if (sp.IsOpen)
+                    {
+                        sp.DtrEnable = true;
+                        sp.RtsEnable = true;
+                    }
+                    else
+                    {
+                        sp.Open();
+                        sp.DtrEnable = true;
+                        sp.RtsEnable = true;
+                    }
+
+                    var x = "";
+                    double arrayCount = 0;
+                    var m = arrayCount + 1;
+
+                    new ManualResetEvent(false).WaitOne(500);
+                    sp.Write("AT+CMGS=\"" + phoneNumber + "\"" + Environment.NewLine);
+                    new ManualResetEvent(false).WaitOne(500);
+                    sp.ReadExisting();
+                    sp.Write(x);
+
+                    sp.Write("1" + "/" + m + " " + s_message);
+
+                    new ManualResetEvent(false).WaitOne(500);
+                    sp.ReadExisting();
+                    sp.Write(x);
+
+                    sp.Write(new byte[] { 26 }, 0, 1);
+                    new ManualResetEvent(false).WaitOne(8000);
+                    sp.ReadExisting();
+                    sp.Write(x);
+
+
+                    var response = sp.ReadExisting();
+
+
+                }
+                catch (Exception ex)
+                {
+                    resend(phoneNumber, s_message);
+                }
+            }
         }
 
         void displayRecords(DataGridView gridView, string keyword)
@@ -63,7 +205,7 @@ namespace HRISCapsu
                             {
                                 dataGridViewRow.DefaultCellStyle.BackColor = Color.Red;
                                 dataGridViewRow.DefaultCellStyle.ForeColor = Color.White;
-                                
+
                             }
                         }
                     }
@@ -91,6 +233,11 @@ namespace HRISCapsu
         private void frmListofContractualEmployees_Load(object sender, EventArgs e)
         {
             displayRecords(dtgRecords, txtSearch.Text);
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
