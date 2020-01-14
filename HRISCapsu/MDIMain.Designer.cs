@@ -49,6 +49,7 @@
             this.tsslConnection = new System.Windows.Forms.ToolStripStatusLabel();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.panel1 = new System.Windows.Forms.Panel();
 <<<<<<< HEAD
             this.allEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +62,11 @@
 >>>>>>> parent of 078eeab... Improving User Interface
 =======
 >>>>>>> parent of c95e49e... Change font size Main form
+=======
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.seminarsTrainingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> parent of 078eeab... Improving User Interface
 =======
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.seminarsTrainingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,11 +92,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
 =======
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5);
 >>>>>>> parent of c95e49e... Change font size Main form
             this.menuStrip1.Size = new System.Drawing.Size(2538, 55);
+=======
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1599, 28);
+>>>>>>> parent of 078eeab... Improving User Interface
 =======
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1599, 28);
@@ -127,6 +138,7 @@
             // 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
@@ -144,6 +156,9 @@
 =======
             // employeesToolStripMenuItem
 >>>>>>> parent of 078eeab... Improving User Interface
+=======
+            // employeesToolStripMenuItem
+>>>>>>> parent of 078eeab... Improving User Interface
             // 
             this.employeesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewToolStripMenuItem,
@@ -152,6 +167,7 @@
             this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
             this.employeesToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.employeesToolStripMenuItem.Text = "Employees";
+<<<<<<< HEAD
             // 
             // viewToolStripMenuItem
             // 
@@ -204,6 +220,60 @@
             this.viewToolStripMenuItem2.Text = "View";
             this.viewToolStripMenuItem2.Click += new System.EventHandler(this.viewToolStripMenuItem2_Click);
             // 
+=======
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
+            this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
+            // 
+            // listOfEmployeesToolStripMenuItem
+            // 
+            this.listOfEmployeesToolStripMenuItem.Name = "listOfEmployeesToolStripMenuItem";
+            this.listOfEmployeesToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
+            this.listOfEmployeesToolStripMenuItem.Text = "List of Employees";
+            this.listOfEmployeesToolStripMenuItem.Click += new System.EventHandler(this.listOfEmployeesToolStripMenuItem_Click);
+            // 
+            // listOfContractualEmployeesToolStripMenuItem
+            // 
+            this.listOfContractualEmployeesToolStripMenuItem.Name = "listOfContractualEmployeesToolStripMenuItem";
+            this.listOfContractualEmployeesToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
+            this.listOfContractualEmployeesToolStripMenuItem.Text = "List of Contractual Employees";
+            this.listOfContractualEmployeesToolStripMenuItem.Click += new System.EventHandler(this.listOfContractualEmployeesToolStripMenuItem_Click);
+            // 
+            // positionsToolStripMenuItem
+            // 
+            this.positionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewToolStripMenuItem1});
+            this.positionsToolStripMenuItem.Name = "positionsToolStripMenuItem";
+            this.positionsToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.positionsToolStripMenuItem.Text = "Positions";
+            // 
+            // viewToolStripMenuItem1
+            // 
+            this.viewToolStripMenuItem1.Name = "viewToolStripMenuItem1";
+            this.viewToolStripMenuItem1.Size = new System.Drawing.Size(116, 26);
+            this.viewToolStripMenuItem1.Text = "View";
+            this.viewToolStripMenuItem1.Click += new System.EventHandler(this.viewToolStripMenuItem1_Click);
+            // 
+            // departmentsToolStripMenuItem
+            // 
+            this.departmentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewToolStripMenuItem2});
+            this.departmentsToolStripMenuItem.Name = "departmentsToolStripMenuItem";
+            this.departmentsToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
+            this.departmentsToolStripMenuItem.Text = "Departments";
+            // 
+            // viewToolStripMenuItem2
+            // 
+            this.viewToolStripMenuItem2.Name = "viewToolStripMenuItem2";
+            this.viewToolStripMenuItem2.Size = new System.Drawing.Size(216, 26);
+            this.viewToolStripMenuItem2.Text = "View";
+            this.viewToolStripMenuItem2.Click += new System.EventHandler(this.viewToolStripMenuItem2_Click);
+            // 
+>>>>>>> parent of 078eeab... Improving User Interface
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
@@ -251,6 +321,7 @@
             // 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.BackgroundImage = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -262,6 +333,8 @@
             this.panel1.Size = new System.Drawing.Size(2538, 731);
             this.panel1.TabIndex = 6;
 =======
+=======
+>>>>>>> parent of 078eeab... Improving User Interface
 =======
 >>>>>>> parent of 078eeab... Improving User Interface
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -281,6 +354,9 @@
             this.manageToolStripMenuItem.Text = "Manage";
             this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 078eeab... Improving User Interface
+=======
 >>>>>>> parent of 078eeab... Improving User Interface
 =======
 >>>>>>> parent of 078eeab... Improving User Interface
@@ -327,12 +403,15 @@
         private System.Windows.Forms.ToolStripStatusLabel tsslConnection;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.Panel panel1;
 <<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem allEmployeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regularEmployeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contractualEmployeesToolStripMenuItem;
 =======
+=======
+>>>>>>> parent of 078eeab... Improving User Interface
 =======
 >>>>>>> parent of 078eeab... Improving User Interface
         private System.Windows.Forms.ToolStripMenuItem positionsToolStripMenuItem;
@@ -346,9 +425,12 @@
         private System.Windows.Forms.ToolStripMenuItem seminarsTrainingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 078eeab... Improving User Interface
 =======
 >>>>>>> parent of c95e49e... Change font size Main form
+=======
+>>>>>>> parent of 078eeab... Improving User Interface
 =======
 >>>>>>> parent of 078eeab... Improving User Interface
     }
