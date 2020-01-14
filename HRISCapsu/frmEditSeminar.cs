@@ -17,11 +17,14 @@ namespace HRISCapsu
         public frmEditSeminar(string seminar_id, string seminar_name, string seminar_location, string seminar_date, string seminar_status)
         {
             InitializeComponent();
+            frmLogin.SendMessage(txtSeminarName.Handle, 0x1501, 1, "Seminar name.");
+            frmLogin.SendMessage(txtLocation.Handle, 0x1501, 1, "Location.");
             this.seminar_id = seminar_id;
             txtSeminarName.Text = seminar_name;
             txtLocation.Text = seminar_location;
             dtpDateofActivity.Text = seminar_date;
             cmbStatus.SelectedItem = seminar_status;
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
