@@ -16,9 +16,7 @@ namespace HRISCapsu
         public frmListofEmployees()
         {
             InitializeComponent();
-            frmLogin.SendMessage(txtSearch.Handle, 0x1501, 1, "Employee name.");
             displayRecords(dtgRecords, txtSearch.Text);
-
         }
 
 
