@@ -49,6 +49,7 @@
             this.tsslConnection = new System.Windows.Forms.ToolStripStatusLabel();
 <<<<<<< HEAD
             this.panel1 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.allEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regularEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contractualEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,6 +58,8 @@
             this.seminarsTrainingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 >>>>>>> parent of 078eeab... Improving User Interface
+=======
+>>>>>>> parent of c95e49e... Change font size Main form
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -75,7 +78,11 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+=======
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5);
+>>>>>>> parent of c95e49e... Change font size Main form
             this.menuStrip1.Size = new System.Drawing.Size(2538, 55);
 =======
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
@@ -110,10 +117,6 @@
 <<<<<<< HEAD
             // reportsToolStripMenuItem
             // 
-            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.allEmployeesToolStripMenuItem,
-            this.regularEmployeesToolStripMenuItem,
-            this.contractualEmployeesToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(132, 45);
             this.reportsToolStripMenuItem.Text = "Reports";
@@ -237,7 +240,6 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Controls.Add(this.statusStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 55);
             this.panel1.Margin = new System.Windows.Forms.Padding(9, 11, 9, 11);
             this.panel1.Name = "panel1";
@@ -261,24 +263,6 @@
             this.manageToolStripMenuItem.Text = "Manage";
             this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
 >>>>>>> parent of 078eeab... Improving User Interface
-            // 
-            // allEmployeesToolStripMenuItem
-            // 
-            this.allEmployeesToolStripMenuItem.Name = "allEmployeesToolStripMenuItem";
-            this.allEmployeesToolStripMenuItem.Size = new System.Drawing.Size(406, 46);
-            this.allEmployeesToolStripMenuItem.Text = "All Employees";
-            // 
-            // regularEmployeesToolStripMenuItem
-            // 
-            this.regularEmployeesToolStripMenuItem.Name = "regularEmployeesToolStripMenuItem";
-            this.regularEmployeesToolStripMenuItem.Size = new System.Drawing.Size(406, 46);
-            this.regularEmployeesToolStripMenuItem.Text = "Regular Employees";
-            // 
-            // contractualEmployeesToolStripMenuItem
-            // 
-            this.contractualEmployeesToolStripMenuItem.Name = "contractualEmployeesToolStripMenuItem";
-            this.contractualEmployeesToolStripMenuItem.Size = new System.Drawing.Size(406, 46);
-            this.contractualEmployeesToolStripMenuItem.Text = "Contractual Employees";
             // 
             // MDIMain
             // 
@@ -322,6 +306,7 @@
         private System.Windows.Forms.ToolStripStatusLabel tsslConnection;
 <<<<<<< HEAD
         private System.Windows.Forms.Panel panel1;
+<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem allEmployeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regularEmployeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contractualEmployeesToolStripMenuItem;
@@ -337,6 +322,8 @@
         private System.Windows.Forms.ToolStripMenuItem seminarsTrainingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
 >>>>>>> parent of 078eeab... Improving User Interface
+=======
+>>>>>>> parent of c95e49e... Change font size Main form
     }
 }
 
