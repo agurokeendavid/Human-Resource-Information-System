@@ -34,6 +34,7 @@
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< Updated upstream
             this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listOfEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,6 +75,29 @@
 >>>>>>> parent of 078eeab... Improving User Interface
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+=======
+            this.recordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewRegularEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewContractualEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.positionsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewPositionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departmentsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewDepartmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seminarsAndTrainingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewSeminarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.regularEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contractualEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.miniToolStrip = new System.Windows.Forms.StatusStrip();
+            this.tsslCurrentDateAndTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsslConnection = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.menuStrip1.SuspendLayout();
+>>>>>>> Stashed changes
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +113,7 @@
             this.reportsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -97,6 +122,9 @@
 =======
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5);
 >>>>>>> parent of c95e49e... Change font size Main form
+=======
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5);
+>>>>>>> Stashed changes
             this.menuStrip1.Size = new System.Drawing.Size(2538, 55);
 =======
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
@@ -136,6 +164,7 @@
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -149,6 +178,8 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+=======
+>>>>>>> Stashed changes
             // recordsToolStripMenuItem
 =======
             // employeesToolStripMenuItem
@@ -190,6 +221,7 @@
             this.listOfContractualEmployeesToolStripMenuItem.Text = "List of Contractual Employees";
             this.listOfContractualEmployeesToolStripMenuItem.Click += new System.EventHandler(this.listOfContractualEmployeesToolStripMenuItem_Click);
             // 
+<<<<<<< Updated upstream
             // positionsToolStripMenuItem
             // 
             this.positionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -214,6 +246,9 @@
             this.departmentsToolStripMenuItem.Text = "Departments";
             // 
             // viewToolStripMenuItem2
+=======
+            // viewEmployeesToolStripMenuItem
+>>>>>>> Stashed changes
             // 
             this.viewToolStripMenuItem2.Name = "viewToolStripMenuItem2";
             this.viewToolStripMenuItem2.Size = new System.Drawing.Size(216, 26);
@@ -231,17 +266,41 @@
             // 
             // listOfEmployeesToolStripMenuItem
             // 
+<<<<<<< Updated upstream
             this.listOfEmployeesToolStripMenuItem.Name = "listOfEmployeesToolStripMenuItem";
             this.listOfEmployeesToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.listOfEmployeesToolStripMenuItem.Text = "List of Employees";
             this.listOfEmployeesToolStripMenuItem.Click += new System.EventHandler(this.listOfEmployeesToolStripMenuItem_Click);
+=======
+            // positionsToolStripMenuItem1
+            // 
+            this.positionsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewPositionsToolStripMenuItem});
+            this.positionsToolStripMenuItem1.Name = "positionsToolStripMenuItem1";
+            this.positionsToolStripMenuItem1.Size = new System.Drawing.Size(405, 46);
+            this.positionsToolStripMenuItem1.Text = "Positions";
+            // 
+            // viewPositionsToolStripMenuItem
+>>>>>>> Stashed changes
             // 
             // listOfContractualEmployeesToolStripMenuItem
             // 
+<<<<<<< Updated upstream
             this.listOfContractualEmployeesToolStripMenuItem.Name = "listOfContractualEmployeesToolStripMenuItem";
             this.listOfContractualEmployeesToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
             this.listOfContractualEmployeesToolStripMenuItem.Text = "List of Contractual Employees";
             this.listOfContractualEmployeesToolStripMenuItem.Click += new System.EventHandler(this.listOfContractualEmployeesToolStripMenuItem_Click);
+=======
+            // departmentsToolStripMenuItem1
+            // 
+            this.departmentsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewDepartmentsToolStripMenuItem});
+            this.departmentsToolStripMenuItem1.Name = "departmentsToolStripMenuItem1";
+            this.departmentsToolStripMenuItem1.Size = new System.Drawing.Size(405, 46);
+            this.departmentsToolStripMenuItem1.Text = "Departments";
+            // 
+            // viewDepartmentsToolStripMenuItem
+>>>>>>> Stashed changes
             // 
             // positionsToolStripMenuItem
             // 
@@ -280,7 +339,19 @@
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
+<<<<<<< Updated upstream
             // panel1
+=======
+            // seminarsAndTrainingsToolStripMenuItem
+            // 
+            this.seminarsAndTrainingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewSeminarsToolStripMenuItem});
+            this.seminarsAndTrainingsToolStripMenuItem.Name = "seminarsAndTrainingsToolStripMenuItem";
+            this.seminarsAndTrainingsToolStripMenuItem.Size = new System.Drawing.Size(405, 46);
+            this.seminarsAndTrainingsToolStripMenuItem.Text = "Seminars and Trainings";
+            // 
+            // viewSeminarsToolStripMenuItem
+>>>>>>> Stashed changes
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -291,6 +362,7 @@
             this.panel1.Size = new System.Drawing.Size(1599, 740);
             this.panel1.TabIndex = 6;
             // 
+<<<<<<< Updated upstream
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -340,6 +412,26 @@
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // seminarsTrainingsToolStripMenuItem
+=======
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.allEmployeesToolStripMenuItem,
+            this.regularEmployeesToolStripMenuItem,
+            this.contractualEmployeesToolStripMenuItem});
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(132, 45);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // allEmployeesToolStripMenuItem
+            // 
+            this.allEmployeesToolStripMenuItem.Name = "allEmployeesToolStripMenuItem";
+            this.allEmployeesToolStripMenuItem.Size = new System.Drawing.Size(406, 46);
+            this.allEmployeesToolStripMenuItem.Text = "All Employees";
+            this.allEmployeesToolStripMenuItem.Click += new System.EventHandler(this.allEmployeesToolStripMenuItem_Click);
+            // 
+            // regularEmployeesToolStripMenuItem
+>>>>>>> Stashed changes
             // 
             this.seminarsTrainingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageToolStripMenuItem});
@@ -361,14 +453,65 @@
 =======
 >>>>>>> parent of 078eeab... Improving User Interface
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // miniToolStrip
+            // 
+            this.miniToolStrip.AccessibleName = "New item selection";
+            this.miniToolStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.miniToolStrip.AutoSize = false;
+            this.miniToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.miniToolStrip.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.miniToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.miniToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.miniToolStrip.Name = "miniToolStrip";
+            this.miniToolStrip.Padding = new System.Windows.Forms.Padding(4, 0, 47, 0);
+            this.miniToolStrip.Size = new System.Drawing.Size(2538, 46);
+            this.miniToolStrip.TabIndex = 0;
+            // 
+            // tsslCurrentDateAndTime
+            // 
+            this.tsslCurrentDateAndTime.BackColor = System.Drawing.Color.Transparent;
+            this.tsslCurrentDateAndTime.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tsslCurrentDateAndTime.Name = "tsslCurrentDateAndTime";
+            this.tsslCurrentDateAndTime.Size = new System.Drawing.Size(98, 41);
+            this.tsslCurrentDateAndTime.Text = "Time :";
+            // 
+            // tsslConnection
+            // 
+            this.tsslConnection.BackColor = System.Drawing.Color.Transparent;
+            this.tsslConnection.Name = "tsslConnection";
+            this.tsslConnection.Size = new System.Drawing.Size(171, 41);
+            this.tsslConnection.Text = "Connection";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsslCurrentDateAndTime,
+            this.tsslConnection});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 685);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(4, 0, 47, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(2538, 46);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // MDIMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(1599, 768);
             this.Controls.Add(this.panel1);
+=======
+            this.ClientSize = new System.Drawing.Size(2538, 786);
+>>>>>>> Stashed changes
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -381,8 +524,11 @@
             this.Load += new System.EventHandler(this.MDIMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+<<<<<<< Updated upstream
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+=======
+>>>>>>> Stashed changes
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -394,6 +540,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+<<<<<<< Updated upstream
         private System.Windows.Forms.ToolStripMenuItem employeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
@@ -433,6 +580,29 @@
 >>>>>>> parent of 078eeab... Improving User Interface
 =======
 >>>>>>> parent of 078eeab... Improving User Interface
+=======
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recordsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem employeesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem viewEmployeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewRegularEmployeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewContractualEmployeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem positionsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem departmentsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem seminarsAndTrainingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewPositionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewDepartmentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewSeminarsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem allEmployeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem regularEmployeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contractualEmployeesToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip miniToolStrip;
+        private System.Windows.Forms.ToolStripStatusLabel tsslCurrentDateAndTime;
+        private System.Windows.Forms.ToolStripStatusLabel tsslConnection;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+>>>>>>> Stashed changes
     }
 }
 

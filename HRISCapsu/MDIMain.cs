@@ -110,5 +110,12 @@ namespace HRISCapsu
             var frm = new frmSeminarsTraining();
             frm.ShowDialog();
         }
+
+        private void allEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmEmployeesReport();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
