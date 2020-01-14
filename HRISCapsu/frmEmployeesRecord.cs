@@ -12,6 +12,13 @@ namespace HRISCapsu
             InitializeComponent();
             displayPositions(cmbPosition);
             displayDepartments(cmbDepartment);
+            frmLogin.SendMessage(txtEmployeeNo.Handle, 0x1501, 1, "Employee no.");
+            frmLogin.SendMessage(txtFirstName.Handle, 0x1501, 1, "First name.");
+            frmLogin.SendMessage(txtMiddleName.Handle, 0x1501, 1, "Middle name.");
+            frmLogin.SendMessage(txtLastName.Handle, 0x1501, 1, "Last name.");
+            frmLogin.SendMessage(txtAddress.Handle, 0x1501, 1, "Address.");
+            frmLogin.SendMessage(txtPlaceofBirth.Handle, 0x1502, 1, "Place of birth.");
+            frmLogin.SendMessage(txtContactNo.Handle, 0x1501, 1, "Contact no.");
             displayRecords(dtgRecords);
             clearItems(panelFileInformation);
         }
@@ -145,7 +152,6 @@ namespace HRISCapsu
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
             btnView.Enabled = false;
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -16,6 +16,9 @@ namespace HRISCapsu
         public frmChangePassword()
         {
             InitializeComponent();
+            frmLogin.SendMessage(txtCurrentPassword.Handle, 0x1501, 1, "Current password.");
+            frmLogin.SendMessage(txtNewPassword.Handle, 0x1501, 1, "New password.");
+            frmLogin.SendMessage(txtVerifyNewPassword.Handle, 0x1501, 1, "Verify new password.");
         }
 
         bool isPasswordExist()
@@ -78,6 +81,11 @@ namespace HRISCapsu
             }
             else
                 MessageBox.Show("Wrong password!");
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

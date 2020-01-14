@@ -17,6 +17,8 @@ namespace HRISCapsu
         {
             InitializeComponent();
             displayRecords(dtgRecords);
+            frmLogin.SendMessage(txtSearch.Handle, 0x1501, 1, "Search department.");
+            frmLogin.SendMessage(txtDepartment.Handle, 0x1501, 1, "Department name.");
         }
 
         void displayRecords(DataGridView gridView)
