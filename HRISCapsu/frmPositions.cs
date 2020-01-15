@@ -13,6 +13,7 @@ namespace HRISCapsu
 {
     public partial class frmPositions : Form
     {
+        Bitmap bmp;
         public frmPositions()
         {
             InitializeComponent();
@@ -187,6 +188,17 @@ namespace HRISCapsu
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            var frm = new frmViewPositionsReport();
+            frm.ShowDialog();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            
         }
     }
 }

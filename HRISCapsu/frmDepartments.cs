@@ -183,7 +183,8 @@ namespace HRISCapsu
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            var frm = new frmViewDepartmentsReport();
+            frm.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
