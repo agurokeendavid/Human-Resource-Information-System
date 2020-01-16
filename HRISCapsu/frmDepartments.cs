@@ -43,15 +43,13 @@ namespace HRISCapsu
                         gridView.Columns[1].HeaderText = "Department";
                     }
                     else
-                        MessageBox.Show("No data found!", "Not found.",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No data found!");
 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -78,14 +76,12 @@ namespace HRISCapsu
                         dtgRecords.Columns[1].HeaderText = "Department";
                     }
                     else
-                        MessageBox.Show("No data found!", "Not found.",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No data found!");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -104,43 +100,32 @@ namespace HRISCapsu
         {
             if (btnSave.Text == "Sav&e")
             {
-                if (txtDepartment.Text != string.Empty)
+                try
                 {
-                    try
+                    using (var conn = new MySqlConnection(Classes.DBConnection.conString))
                     {
-                        using (var conn = new MySqlConnection(Classes.DBConnection.conString))
-                        {
-                            conn.Open();
-                            string query = @"INSERT INTO departments (department_name) VALUES (@department_name)";
-                            var cmd = new MySqlCommand(query, conn);
-                            cmd.Parameters.AddWithValue("department_name", txtDepartment.Text);
-                            cmd.ExecuteNonQuery();
-                            cmd.Parameters.Clear();
-                            MessageBox.Show("Department Added!");
-                            displayRecords(dtgRecords);
+                        conn.Open();
+                        string query = @"INSERT INTO departments (department_name) VALUES (@department_name)";
+                        var cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("department_name", txtDepartment.Text);
+                        cmd.ExecuteNonQuery();
+                        cmd.Parameters.Clear();
+                        MessageBox.Show("Department Added!");
+                        displayRecords(dtgRecords);
 
-                            grpFilter.Enabled = true;
-                            grpAddDepartment.Enabled = false;
-                            btnAdd.Enabled = true;
-                            btnEdit.Enabled = true;
-                            btnPrint.Enabled = true;
-                            txtSearch.Clear();
-                            txtDepartment.Clear();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error inserting department: " + ex.Message, "Error",
-        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        grpFilter.Enabled = true;
+                        grpAddDepartment.Enabled = false;
+                        btnAdd.Enabled = true;
+                        btnEdit.Enabled = true;
+                        btnPrint.Enabled = true;
+                        txtSearch.Clear();
+                        txtDepartment.Clear();
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Required fields", "Required",
-        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtDepartment.Focus();
+                    MessageBox.Show("Error updating department : " + ex.Message);
                 }
-                
             }
             else
             {
@@ -168,8 +153,7 @@ namespace HRISCapsu
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error updating department: " + ex.Message, "Error",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error updating department : " + ex.Message);
                 }
             }
         }
@@ -199,7 +183,7 @@ namespace HRISCapsu
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            var frm = new ReportViewer.frmDepartmentsReport();
+            var frm = new frmViewDepartmentsReport();
             frm.ShowDialog();
         }
 

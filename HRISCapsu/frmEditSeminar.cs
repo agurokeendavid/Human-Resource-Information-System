@@ -50,7 +50,7 @@ namespace HRISCapsu
                         cmd.Parameters.AddWithValue("seminar_id", seminar_id);
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
-                        MessageBox.Show("Information successfully updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
+                        MessageBox.Show("Information successfully updated!");
                         this.Close();
                     }
                 }
@@ -58,14 +58,12 @@ namespace HRISCapsu
                 catch (Exception ex)
 #pragma warning restore CS0168 // The variable 'ex' is declared but never used
                 {
-                    MessageBox.Show("Seminar exist!", "Record exist.",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
             else
             {
-                MessageBox.Show("Required fields.", "Required",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Required fields.");
             }
         }
     }

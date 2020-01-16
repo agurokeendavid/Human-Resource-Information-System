@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,7 +13,6 @@ namespace HRISCapsu
 {
     public partial class frmChangePassword : Form
     {
-
         public frmChangePassword()
         {
             InitializeComponent();
@@ -29,14 +27,10 @@ namespace HRISCapsu
             {
                 using (var conn = new MySqlConnection(Classes.DBConnection.conString))
                 {
-                    HashAlgorithm sha1 = new SHA1CryptoServiceProvider();
-                    Byte[] password = UTF8Encoding.Default.GetBytes(txtCurrentPassword.Text);
-                    Byte[] txtHash = sha1.ComputeHash(password);
-                    string convertedPassword = BitConverter.ToString(txtHash).ToLower().Replace("-", "");
                     conn.Open();
                     string query = "SELECT password FROM users WHERE password = @password";
                     var cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("password", convertedPassword);
+                    cmd.Parameters.AddWithValue("password", txtCurrentPassword.Text);
                     var da = new MySqlDataAdapter();
                     da.SelectCommand = cmd;
                     var dt = new DataTable();
@@ -56,7 +50,6 @@ namespace HRISCapsu
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
             if (isPasswordExist() == true)
             {
                 if (txtNewPassword.Text == txtVerifyNewPassword.Text)
@@ -65,14 +58,10 @@ namespace HRISCapsu
                     {
                         using (var conn = new MySqlConnection(Classes.DBConnection.conString))
                         {
-                            HashAlgorithm sha1 = new SHA1CryptoServiceProvider();
-                            Byte[] password = UTF8Encoding.Default.GetBytes(txtNewPassword.Text);
-                            Byte[] txtHash = sha1.ComputeHash(password);
-                            string convertedPassword = BitConverter.ToString(txtHash).ToLower().Replace("-", "");
                             conn.Open();
                             string query = "UPDATE users SET password = @password WHERE userID = @userID";
                             var cmd = new MySqlCommand(query, conn);
-                            cmd.Parameters.AddWithValue("password", convertedPassword);
+                            cmd.Parameters.AddWithValue("password", txtNewPassword.Text);
                             cmd.Parameters.AddWithValue("userID", frmLogin.id);
                             cmd.ExecuteNonQuery();
                             cmd.Parameters.Clear();
@@ -82,23 +71,16 @@ namespace HRISCapsu
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error: " + ex.Message, "Error",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("New Password does not match.", "Incorrect",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("New password does not match!");
                 }
             }
             else
-            {
-                MessageBox.Show("Incorrect password!", "Incorrect",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-                
-
+                MessageBox.Show("Wrong password!");
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

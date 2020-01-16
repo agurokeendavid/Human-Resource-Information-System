@@ -46,6 +46,7 @@ D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.csproj.CopyComplete
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.exe
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.pdb
+<<<<<<< HEAD
 D:\Keen\Documents\Visual Studio 2017\Projects\new\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\new\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\new\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -137,6 +138,9 @@ D:\Keen\Documents\Visual Studio 2017\Projects\new\Human-Resource-Information-Sys
 D:\Keen\Documents\Visual Studio 2017\Projects\new\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmDepartmentsReport.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\new\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmPositionsReport.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\new\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmChooseModem.resources
+=======
+
+>>>>>>> parent of 98aef7b... Finalized project.
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -149,6 +153,21 @@ D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\EnvDTE.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+<<<<<<< HEAD
+=======
+
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\EnvDTE.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+
+>>>>>>> parent of 98aef7b... Finalized project.
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\stdole.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
@@ -175,6 +194,10 @@ D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 98aef7b... Finalized project.
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
@@ -185,6 +208,31 @@ D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+<<<<<<< HEAD
+=======
+
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+
+>>>>>>> parent of 98aef7b... Finalized project.
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
@@ -195,6 +243,7 @@ D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+<<<<<<< HEAD
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmChooseModem.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmContractualEmployeesReport.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmDepartmentsReport.resources
@@ -204,3 +253,25 @@ D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\RdlCompile.cache
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\RdlCompile.compiled
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.csprojAssemblyReference.cache
+=======
+
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmViewEmployeesReport.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\RdlCompile.cache
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\RdlCompile.compiled
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmViewRegularEmployeesReport.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmViewContractualEmployeesReport.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmViewDepartmentsReport.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmViewPositionsReport.resources
+
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+
+>>>>>>> parent of 98aef7b... Finalized project.

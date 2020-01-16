@@ -45,8 +45,7 @@ namespace HRISCapsu
             catch (Exception ex)
 #pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-                MessageBox.Show("No data found!", "Not found.",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -89,8 +88,7 @@ namespace HRISCapsu
                     dtgRecords.Columns[16].Visible = false;
 
                     if (dt.Rows.Count == 0)
-                        MessageBox.Show("No data found!", "Not found.",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No data found!");
 
                 }
             }
@@ -128,15 +126,14 @@ namespace HRISCapsu
                     cmd.Parameters.AddWithValue("employee_position_id", dtgRecords.CurrentRow.Cells[16].Value.ToString());
                     cmd.ExecuteNonQuery();
                     cmd.Parameters.Clear();
-                    MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    MessageBox.Show("Successfully added!");
                 }
             }
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch(Exception ex)
 #pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-                MessageBox.Show("Employee exist!", "Record exist.",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Employee already added!");
             }
         }
     }
