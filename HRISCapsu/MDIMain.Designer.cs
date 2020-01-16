@@ -316,8 +316,8 @@
         private System.Windows.Forms.ToolStripMenuItem contractualEmployeesToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tsslCurrentDateAndTime;
-        private System.Windows.Forms.ToolStripStatusLabel tsslConnection;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.ToolStripStatusLabel tsslConnection;
     }
 }
 

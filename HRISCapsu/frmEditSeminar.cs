@@ -54,7 +54,9 @@ namespace HRISCapsu
                         this.Close();
                     }
                 }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                 catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                 {
                     MessageBox.Show("Seminar exist!", "Record exist.",
     MessageBoxButtons.OK, MessageBoxIcon.Error);

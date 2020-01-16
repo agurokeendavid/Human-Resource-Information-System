@@ -1,5 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Data;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
@@ -65,6 +67,11 @@ namespace HRISCapsu
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

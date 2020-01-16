@@ -41,7 +41,9 @@ namespace HRISCapsu
                     
                 }
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 MessageBox.Show("No data found!", "Not found.",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -129,7 +131,9 @@ namespace HRISCapsu
                     MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch(Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 MessageBox.Show("Employee exist!", "Record exist.",
     MessageBoxButtons.OK, MessageBoxIcon.Error);

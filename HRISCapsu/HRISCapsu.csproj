@@ -138,6 +138,7 @@
     <Compile Include="frmViewEmployee.Designer.cs">
       <DependentUpon>frmViewEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="HRISDataSource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

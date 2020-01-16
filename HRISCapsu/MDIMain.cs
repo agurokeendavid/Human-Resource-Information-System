@@ -26,7 +26,7 @@ namespace HRISCapsu
             frm.ShowDialog(this);
         }
 
-        private void MDIMain_Load(object sender, EventArgs e)
+        void testConnection()
         {
             using (var conn = new MySqlConnection(Classes.DBConnection.conString))
             {
@@ -44,17 +44,22 @@ namespace HRISCapsu
                         tsslConnection.Text = "Connection: Disconnected.";
                         tsslConnection.ForeColor = Color.Red;
                     }
-                } 
+                }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                 catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                 {
                     tsslConnection.Text = "Connection: Disconnected";
                     tsslConnection.ForeColor = Color.Red;
                 }
-                
+
             }
+        }
+        private void MDIMain_Load(object sender, EventArgs e)
+        {
+            testConnection();
             var frm = new frmLogin();
             frm.ShowDialog(this);
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
