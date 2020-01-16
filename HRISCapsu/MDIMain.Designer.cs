@@ -50,20 +50,11 @@
             this.regularEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contractualEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tsslCurrentDateAndTime = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsslConnection = new System.Windows.Forms.ToolStripStatusLabel();
-            this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
-
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsslCurrentDateAndTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
-
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +62,7 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.DodgerBlue;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.accountToolStripMenuItem,
@@ -208,7 +200,6 @@
             this.allEmployeesToolStripMenuItem.Name = "allEmployeesToolStripMenuItem";
             this.allEmployeesToolStripMenuItem.Size = new System.Drawing.Size(406, 46);
             this.allEmployeesToolStripMenuItem.Text = "All Employees";
-
             this.allEmployeesToolStripMenuItem.Click += new System.EventHandler(this.allEmployeesToolStripMenuItem_Click);
             // 
             // regularEmployeesToolStripMenuItem
@@ -217,39 +208,23 @@
             this.regularEmployeesToolStripMenuItem.Size = new System.Drawing.Size(406, 46);
             this.regularEmployeesToolStripMenuItem.Text = "Regular Employees";
             this.regularEmployeesToolStripMenuItem.Click += new System.EventHandler(this.regularEmployeesToolStripMenuItem_Click);
-
             // 
             // contractualEmployeesToolStripMenuItem
             // 
             this.contractualEmployeesToolStripMenuItem.Name = "contractualEmployeesToolStripMenuItem";
             this.contractualEmployeesToolStripMenuItem.Size = new System.Drawing.Size(406, 46);
             this.contractualEmployeesToolStripMenuItem.Text = "Contractual Employees";
-
             this.contractualEmployeesToolStripMenuItem.Click += new System.EventHandler(this.contractualEmployeesToolStripMenuItem_Click);
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel1.BackgroundImage = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Controls.Add(this.statusStrip1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 55);
-            this.panel1.Margin = new System.Windows.Forms.Padding(9, 11, 9, 11);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2538, 731);
-            this.panel1.TabIndex = 6;
-            // 
-
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.Color.DodgerBlue;
             this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.statusStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslCurrentDateAndTime,
@@ -264,7 +239,7 @@
             // tsslCurrentDateAndTime
             // 
             this.tsslCurrentDateAndTime.BackColor = System.Drawing.Color.Transparent;
-            this.tsslCurrentDateAndTime.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tsslCurrentDateAndTime.ForeColor = System.Drawing.Color.White;
             this.tsslCurrentDateAndTime.Name = "tsslCurrentDateAndTime";
             this.tsslCurrentDateAndTime.Size = new System.Drawing.Size(98, 41);
             this.tsslCurrentDateAndTime.Text = "Time :";
@@ -276,19 +251,17 @@
             this.tsslConnection.Size = new System.Drawing.Size(171, 41);
             this.tsslConnection.Text = "Connection";
             // 
-
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.BackgroundImage = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 55);
-            this.panel1.Margin = new System.Windows.Forms.Padding(9, 11, 9, 11);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2538, 731);
-            this.panel1.TabIndex = 6;
+            this.panel1.Size = new System.Drawing.Size(2538, 685);
+            this.panel1.TabIndex = 9;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // MDIMain
             // 
@@ -297,10 +270,9 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(2538, 786);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -314,10 +286,6 @@
             this.Load += new System.EventHandler(this.MDIMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -348,8 +316,8 @@
         private System.Windows.Forms.ToolStripMenuItem contractualEmployeesToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tsslCurrentDateAndTime;
+        private System.Windows.Forms.ToolStripStatusLabel tsslConnection;
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.ToolStripStatusLabel tsslConnection;
     }
 }
 

@@ -56,13 +56,15 @@ namespace HRISCapsu
                     gridView.Columns[14].Visible = false;
 
                     if (dt.Rows.Count == 0)
-                        MessageBox.Show("No data found!");
+                        MessageBox.Show("No data found!", "Not found",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -84,6 +86,12 @@ namespace HRISCapsu
         private void frmListofEmployees_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            var frm = new ReportViewer.frmRegularEmployeesReport();
+            frm.ShowDialog();
         }
     }
 }

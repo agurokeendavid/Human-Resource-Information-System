@@ -39,7 +39,6 @@
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Panel1.SuspendLayout();
@@ -48,7 +47,6 @@
             // GroupBox1
             // 
             this.GroupBox1.BackColor = System.Drawing.Color.White;
-            this.GroupBox1.Controls.Add(this.btnRefresh);
             this.GroupBox1.Controls.Add(this.pictureBox1);
             this.GroupBox1.Controls.Add(this.btnLogin);
             this.GroupBox1.Controls.Add(this.btnCancel);
@@ -62,7 +60,7 @@
             this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBox1.Size = new System.Drawing.Size(516, 182);
+            this.GroupBox1.Size = new System.Drawing.Size(516, 160);
             this.GroupBox1.TabIndex = 2;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "LOGIN";
@@ -72,7 +70,7 @@
             this.pictureBox1.Image = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
             this.pictureBox1.Location = new System.Drawing.Point(13, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 149);
+            this.pictureBox1.Size = new System.Drawing.Size(158, 127);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -177,26 +175,12 @@
             this.Label4.TabIndex = 0;
             this.Label4.Text = "CapSU Pontevedra";
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRefresh.Location = new System.Drawing.Point(304, 143);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(203, 32);
-            this.btnRefresh.TabIndex = 5;
-            this.btnRefresh.Text = "Refresh Connection";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(535, 294);
+            this.ClientSize = new System.Drawing.Size(535, 268);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -226,7 +210,6 @@
         internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Label Label4;
-        internal System.Windows.Forms.Button btnRefresh;
     }
 }
 

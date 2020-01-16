@@ -37,18 +37,20 @@ namespace HRISCapsu
                         cmd.Parameters.AddWithValue("seminar_status", cmbStatus.SelectedItem);
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
-                        MessageBox.Show("Seminar added!");
+                        MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
                         this.Close();
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message, "Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Please input required fields.");
+                MessageBox.Show("Please input required fields.", "Required",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -57,6 +59,11 @@ namespace HRISCapsu
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panelFileInformation_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

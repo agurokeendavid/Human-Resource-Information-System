@@ -13,7 +13,6 @@ namespace HRISCapsu
 {
     public partial class frmPositions : Form
     {
-        Bitmap bmp;
         public frmPositions()
         {
             InitializeComponent();
@@ -45,7 +44,8 @@ namespace HRISCapsu
                         gridView.Columns[1].HeaderText = "Position";
                     }
                     else
-                        MessageBox.Show("No data found!");
+                        MessageBox.Show("No data found!", "Not found",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
             }
@@ -86,32 +86,43 @@ namespace HRISCapsu
         {
             if (btnSave.Text == "Sav&e")
             {
-                try
+                if(txtPosition.Text != string.Empty)
                 {
-                    using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                    try
                     {
-                        conn.Open();
-                        string query = @"INSERT INTO positions (position_name) VALUES (@position_name)";
-                        var cmd = new MySqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("position_name", txtPosition.Text);
-                        cmd.ExecuteNonQuery();
-                        cmd.Parameters.Clear();
-                        MessageBox.Show("Position Added!");
-                        displayRecords(dtgRecords);
+                        using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                        {
+                            conn.Open();
+                            string query = @"INSERT INTO positions (position_name) VALUES (@position_name)";
+                            var cmd = new MySqlCommand(query, conn);
+                            cmd.Parameters.AddWithValue("position_name", txtPosition.Text);
+                            cmd.ExecuteNonQuery();
+                            cmd.Parameters.Clear();
+                            MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
+                            displayRecords(dtgRecords);
 
-                        grpFilter.Enabled = true;
-                        grpAddPosition.Enabled = false;
-                        btnAdd.Enabled = true;
-                        btnEdit.Enabled = true;
-                        btnPrint.Enabled = true;
-                        txtSearch.Clear();
-                        txtPosition.Clear();
+                            grpFilter.Enabled = true;
+                            grpAddPosition.Enabled = false;
+                            btnAdd.Enabled = true;
+                            btnEdit.Enabled = true;
+                            btnPrint.Enabled = true;
+                            txtSearch.Clear();
+                            txtPosition.Clear();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error inserting position: " + ex.Message, "Error",
+        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Error updating position : " + ex.Message);
+                    MessageBox.Show("Required fields.", "Required",
+        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtPosition.Focus();
                 }
+                
             }
             else
             {
@@ -126,7 +137,7 @@ namespace HRISCapsu
                         cmd.Parameters.AddWithValue("position_id", dtgRecords.CurrentRow.Cells[0].Value.ToString());
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
-                        MessageBox.Show("Position Updated!");
+                        MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
                         displayRecords(dtgRecords);
                         grpFilter.Enabled = true;
                         grpAddPosition.Enabled = false;
@@ -139,7 +150,8 @@ namespace HRISCapsu
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error updating position : " + ex.Message);
+                    MessageBox.Show("Error updating position: " + ex.Message, "Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             
@@ -181,24 +193,21 @@ namespace HRISCapsu
                         dtgRecords.Columns[1].HeaderText = "Position";
                     }
                     else
-                        MessageBox.Show("No data found!");
+                        MessageBox.Show("No data found!", "Not found",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            var frm = new frmViewPositionsReport();
+            var frm = new ReportViewer.frmPositionsReport();
             frm.ShowDialog();
-        }
-
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            
         }
     }
 }

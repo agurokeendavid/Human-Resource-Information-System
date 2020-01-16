@@ -2,18 +2,18 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="hriscapsuDataSet">
+    <DataSource Name="HRISDataSource">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>156b8974-659e-4b42-9c36-db3a73dcdb9f</rd:DataSourceID>
+      <rd:DataSourceID>9ef3a1a2-b44f-4a1c-853c-8477db72dd25</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>hriscapsuDataSet</DataSourceName>
+        <DataSourceName>HRISDataSource</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -83,8 +83,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>hriscapsuDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\hriscapsuDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>HRISDataSource</rd:DataSetName>
+        <rd:SchemaPath>D:\Keen\Documents\Visual Studio 2017\Projects\new\Human-Resource-Information-System\HRISCapsu\HRISDataSource.xsd</rd:SchemaPath>
         <rd:TableName>view_regular_employees</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -97,7 +97,7 @@
       <Body>
         <ReportItems>
           <Line Name="Line1">
-            <Top>0.81845cm</Top>
+            <Top>0.95603cm</Top>
             <Height>0cm</Height>
             <Width>27.94cm</Width>
             <Style>
@@ -114,11 +114,15 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Date: </Value>
-                    <Style />
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!rptCurrentDate.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -127,7 +131,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ReportName1</rd:DefaultName>
-            <Top>0.04206cm</Top>
+            <Top>0.17964cm</Top>
             <Left>1.27cm</Left>
             <Height>0.6cm</Height>
             <Width>15.85383cm</Width>
@@ -178,7 +182,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>1.05508cm</Height>
+                  <Height>0.69525cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -513,7 +517,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>1.05508cm</Height>
+                  <Height>0.50475cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -877,9 +881,9 @@
             <FixedColumnHeaders>true</FixedColumnHeaders>
             <FixedRowHeaders>true</FixedRowHeaders>
             <DataSetName>DataSet1</DataSetName>
-            <Top>1.02278cm</Top>
+            <Top>1.16036cm</Top>
             <Left>1.27cm</Left>
-            <Height>2.11016cm</Height>
+            <Height>1.2cm</Height>
             <Width>10in</Width>
             <ZIndex>2</ZIndex>
             <Style>
@@ -1043,7 +1047,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>2.5in</Height>
+          <Height>1in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1055,23 +1059,33 @@
                   <TextRuns>
                     <TextRun>
                       <Value>Page </Value>
-                      <Style />
+                      <Style>
+                        <FontWeight>SemiBold</FontWeight>
+                      </Style>
                     </TextRun>
                     <TextRun>
                       <Value>=Globals!PageNumber</Value>
-                      <Style />
+                      <Style>
+                        <FontWeight>SemiBold</FontWeight>
+                      </Style>
                     </TextRun>
                     <TextRun>
                       <Value> of </Value>
-                      <Style />
+                      <Style>
+                        <FontWeight>SemiBold</FontWeight>
+                      </Style>
                     </TextRun>
                     <TextRun>
                       <Value>=Globals!TotalPages</Value>
-                      <Style />
+                      <Style>
+                        <FontWeight>SemiBold</FontWeight>
+                      </Style>
                     </TextRun>
                     <TextRun>
                       <Value xml:space="preserve"> </Value>
-                      <Style />
+                      <Style>
+                        <FontWeight>SemiBold</FontWeight>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
@@ -1080,7 +1094,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
-              <Top>5.75cm</Top>
+              <Top>1.94cm</Top>
               <Left>20.6648cm</Left>
               <Height>0.6cm</Height>
               <Width>7.2752cm</Width>
@@ -1103,8 +1117,6 @@
         </PageFooter>
         <PageHeight>8.5in</PageHeight>
         <PageWidth>11in</PageWidth>
-        <InteractiveHeight>8.5in</InteractiveHeight>
-        <InteractiveWidth>11in</InteractiveWidth>
         <LeftMargin>0cm</LeftMargin>
         <RightMargin>0cm</RightMargin>
         <TopMargin>0cm</TopMargin>
@@ -1228,5 +1240,5 @@ AAAYdEVYdFRodW1iOjpJbWFnZTo6aGVpZ2h0ADI4MPpTnLEAAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lk
   </EmbeddedImages>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>f032fe08-21e9-4497-ab53-8e04c7efa0c7</rd:ReportID>
+  <rd:ReportID>bb0d720b-ebee-4124-83b8-57b2948f9217</rd:ReportID>
 </Report>

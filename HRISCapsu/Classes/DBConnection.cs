@@ -10,8 +10,6 @@ namespace HRISCapsu.Classes
     {
         public const string conString = "datasource=localhost;database=hriscapsu;port=3306;username=root";
 
-#pragma warning disable CS0649 // Field 'DBConnection.id' is never assigned to, and will always have its default value null
         public static string id;
-#pragma warning restore CS0649 // Field 'DBConnection.id' is never assigned to, and will always have its default value null
     }
 }

@@ -26,7 +26,7 @@ namespace HRISCapsu
             frm.ShowDialog(this);
         }
 
-        void testConnection()
+        private void MDIMain_Load(object sender, EventArgs e)
         {
             using (var conn = new MySqlConnection(Classes.DBConnection.conString))
             {
@@ -36,7 +36,7 @@ namespace HRISCapsu
                     if (conn.State == ConnectionState.Open)
                     {
                         tsslConnection.Text = "Connection: Connected.";
-                        tsslConnection.ForeColor = Color.Green;
+                        tsslConnection.ForeColor = Color.White;
 
                     }
                     else
@@ -44,22 +44,17 @@ namespace HRISCapsu
                         tsslConnection.Text = "Connection: Disconnected.";
                         tsslConnection.ForeColor = Color.Red;
                     }
-                }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
+                } 
                 catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                 {
                     tsslConnection.Text = "Connection: Disconnected";
                     tsslConnection.ForeColor = Color.Red;
                 }
-
+                
             }
-        }
-        private void MDIMain_Load(object sender, EventArgs e)
-        {
-            testConnection();
             var frm = new frmLogin();
             frm.ShowDialog(this);
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -121,20 +116,25 @@ namespace HRISCapsu
 
         private void allEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new frmViewEmployeesReport();
+            var frm = new ReportViewer.frmEmployeesReport();
             frm.ShowDialog();
         }
 
         private void regularEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new frmViewRegularEmployeesReport();
+            var frm = new ReportViewer.frmRegularEmployeesReport();
             frm.ShowDialog();
         }
 
         private void contractualEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new frmViewContractualEmployeesReport();
+            var frm = new ReportViewer.frmContractualEmployeesReport();
             frm.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
