@@ -142,19 +142,7 @@
     <Compile Include="frmViewContractualEmployeesReport.cs">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="frmViewEmployee.Designer.cs">
-      <DependentUpon>frmViewEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="HRISDataSource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HRISDataSource.xsd</DependentUpon>
-=======
-    <Compile Include="frmViewContractualEmployeesReport.Designer.cs">
-      <DependentUpon>frmViewContractualEmployeesReport.cs</DependentUpon>
->>>>>>> parent of 98aef7b... Finalized project.
+
     </Compile>
     <Compile Include="frmViewDepartmentsReport.cs">
       <SubType>Form</SubType>
