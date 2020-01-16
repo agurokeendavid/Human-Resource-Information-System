@@ -57,13 +57,15 @@ namespace HRISCapsu
                     gridView.Columns[15].Visible = false;
 
                     if (dt.Rows.Count == 0)
-                        MessageBox.Show("No data found!");
+                        MessageBox.Show("No data found.", "Not found",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void displayDepartments(ComboBox cmbDepartments)
@@ -73,19 +75,20 @@ namespace HRISCapsu
                 using (var conn = new MySqlConnection(Classes.DBConnection.conString))
                 {
                     conn.Open();
-                    string query = "SELECT department_name FROM departments";
+                    string query = "SELECT * FROM departments";
                     var cmd = new MySqlCommand(query, conn);
                     MySqlDataReader dr = cmd.ExecuteReader();
                     cmbDepartments.Items.Clear();
                     while (dr.Read())
                     {
-                        cmbDepartments.Items.Add(dr["department_name"].ToString());
+                        cmbDepartments.Items.Add((dr["department_id"]  + " - " + dr["department_name"]).ToString());
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void displayPositions(ComboBox cmbPositions)
@@ -95,19 +98,20 @@ namespace HRISCapsu
                 using (var conn = new MySqlConnection(Classes.DBConnection.conString))
                 {
                     conn.Open();
-                    string query = "SELECT position_name FROM positions";
+                    string query = "SELECT * FROM positions";
                     var cmd = new MySqlCommand(query, conn);
                     MySqlDataReader dr = cmd.ExecuteReader();
                     cmbPositions.Items.Clear();
                     while (dr.Read())
                     {
-                        cmbPositions.Items.Add(dr["position_name"].ToString());
+                        cmbPositions.Items.Add((dr["position_id"] + " - " + dr["position_name"].ToString()));
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -171,6 +175,16 @@ namespace HRISCapsu
                         {
                             conn.Open();
                             string query = "INSERT INTO employees (employee_no, first_name, middle_name, last_name, address, gender, date_of_birth, place_of_birth, contact_no, civil_status, position_id, department_id, work_status, hired_date, end_of_contract, status) VALUES (@employee_no, @first_name, @middle_name, @last_name, @address, @gender, @date_of_birth, @place_of_birth, @contact_no, @civil_status, @position_id, @department_id, @work_status, @hired_date, @end_of_contract, @status)";
+                            string input = cmbPosition.SelectedItem.ToString();
+                            int index = input.IndexOf(" ");
+                            if (index > 0)
+                                input = input.Substring(0, index);
+
+                            string input1 = cmbDepartment.SelectedItem.ToString();
+                            int index1 = input1.IndexOf(" ");
+                            if (index1 > 0)
+                                input1 = input1.Substring(0, index1);
+
                             var cmd = new MySqlCommand(query, conn);
                             cmd.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
                             cmd.Parameters.AddWithValue("first_name", txtFirstName.Text);
@@ -182,8 +196,8 @@ namespace HRISCapsu
                             cmd.Parameters.AddWithValue("place_of_birth", txtPlaceofBirth.Text);
                             cmd.Parameters.AddWithValue("contact_no", txtContactNo.Text);
                             cmd.Parameters.AddWithValue("civil_status", cmbCivilStatus.SelectedItem.ToString());
-                            cmd.Parameters.AddWithValue("position_id", cmbPosition.SelectedIndex + 1);
-                            cmd.Parameters.AddWithValue("department_id", cmbDepartment.SelectedIndex + 1);
+                            cmd.Parameters.AddWithValue("position_id", input);
+                            cmd.Parameters.AddWithValue("department_id", input1);
                             cmd.Parameters.AddWithValue("work_status", cmbWorkStatus.SelectedItem.ToString());
                             cmd.Parameters.AddWithValue("hired_date", dtpHiredDate.Value.ToString("yyyy-MM-dd"));
 
@@ -212,7 +226,8 @@ namespace HRISCapsu
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Failed to add employee information. " + ex.Message);
+                        MessageBox.Show("Failed to add employee information. " + ex.Message, "Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else if (btnSave.Text == "&Update")
@@ -242,7 +257,7 @@ namespace HRISCapsu
                             cmd.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
                             cmd.ExecuteNonQuery();
                             cmd.Parameters.Clear();
-                            MessageBox.Show("Employee Information Updated!");
+                            MessageBox.Show("Employee Information Updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
                             clearItems(panelFileInformation);
                             panelFileInformation.Enabled = false;
                             displayRecords(dtgRecords);
@@ -261,13 +276,15 @@ namespace HRISCapsu
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("Error: " + ex.Message, "Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Please input required fields.");
+                MessageBox.Show("Please input required fields.", "Required",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -295,7 +312,7 @@ namespace HRISCapsu
             DataGridViewRow selectedRow = dtgRecords.Rows[selectedRowIndex];
             try
             {
-                DialogResult dialogResult = MessageBox.Show($"Delete {selectedRow.Cells["last_name"].Value.ToString()}, {selectedRow.Cells["first_name"].Value.ToString()} {selectedRow.Cells["middle_name"].Value.ToString()} data ?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dialogResult = MessageBox.Show($"Delete {selectedRow.Cells["last_name"].Value.ToString()}, {selectedRow.Cells["first_name"].Value.ToString()} {selectedRow.Cells["middle_name"].Value.ToString()} ?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
                     using (var conn = new MySqlConnection(Classes.DBConnection.conString))
@@ -306,14 +323,15 @@ namespace HRISCapsu
                         cmd.Parameters.AddWithValue("@employee_no", selectedRow.Cells["employee_no"].Value);
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
-                        MessageBox.Show("Successfully Deleted!");
+                        MessageBox.Show("Successfully deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
                         displayRecords(dtgRecords);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -377,6 +395,12 @@ namespace HRISCapsu
         private void frmEmployeesRecord_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            var frm = new ReportViewer.frmEmployeesReport();
+            frm.ShowDialog();
         }
     }
 }

@@ -27,9 +27,9 @@ namespace HRISCapsu.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=hriscapsu")]
-        public string HRISCONNECTION {
+        public string HRISConnectionString {
             get {
-                return ((string)(this["HRISCONNECTION"]));
+                return ((string)(this["HRISConnectionString"]));
             }
         }
     }

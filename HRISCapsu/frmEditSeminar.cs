@@ -50,18 +50,20 @@ namespace HRISCapsu
                         cmd.Parameters.AddWithValue("seminar_id", seminar_id);
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
-                        MessageBox.Show("Information successfully updated!");
+                        MessageBox.Show("Information successfully updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
                         this.Close();
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Seminar exist!", "Record exist.",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Required fields.");
+                MessageBox.Show("Required fields.", "Required",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

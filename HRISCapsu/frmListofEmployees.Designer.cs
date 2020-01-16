@@ -151,6 +151,7 @@
             this.btnPrint.Text = "&Print  ";
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // Label9
             // 
@@ -243,10 +244,10 @@
             // PictureBox1
             // 
             this.PictureBox1.Image = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
-            this.PictureBox1.Location = new System.Drawing.Point(12, 92);
+            this.PictureBox1.Location = new System.Drawing.Point(12, 82);
             this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(228, 176);
+            this.PictureBox1.Size = new System.Drawing.Size(228, 186);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox1.TabIndex = 27;
             this.PictureBox1.TabStop = false;

@@ -44,7 +44,8 @@ namespace HRISCapsu
                     dtgEmployees.Columns[4].HeaderText = "Last Name";
                     dtgEmployees.Columns[5].HeaderText = "Position";
                     if (dt.Rows.Count == 0)
-                        MessageBox.Show("No data found!");
+                        MessageBox.Show("No data found.", "Not found",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
             }
@@ -77,14 +78,16 @@ namespace HRISCapsu
                     dtgSeminars.Columns[4].Visible = false;
 
                     if (dt.Rows.Count == 0)
-                        MessageBox.Show("No data found!");
+                        MessageBox.Show("No data found.", "Not found",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -36,7 +36,7 @@ namespace HRISCapsu
                     if (conn.State == ConnectionState.Open)
                     {
                         tsslConnection.Text = "Connection: Connected.";
-                        tsslConnection.ForeColor = Color.Green;
+                        tsslConnection.ForeColor = Color.White;
 
                     }
                     else
@@ -116,20 +116,25 @@ namespace HRISCapsu
 
         private void allEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new frmViewEmployeesReport();
+            var frm = new ReportViewer.frmEmployeesReport();
             frm.ShowDialog();
         }
 
         private void regularEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new frmViewRegularEmployeesReport();
+            var frm = new ReportViewer.frmRegularEmployeesReport();
             frm.ShowDialog();
         }
 
         private void contractualEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new frmViewContractualEmployeesReport();
+            var frm = new ReportViewer.frmContractualEmployeesReport();
             frm.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace HRISCapsu
@@ -11,7 +13,7 @@ namespace HRISCapsu
 
         [DllImport("user32.dll")]
         public static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
-        
+
         public frmLogin()
         {
             InitializeComponent();
@@ -30,6 +32,10 @@ namespace HRISCapsu
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            HashAlgorithm sha1 = new SHA1CryptoServiceProvider();
+            Byte[] password = UTF8Encoding.Default.GetBytes(txtPassword.Text);
+            Byte[] txtHash = sha1.ComputeHash(password);
+            string convertedPassword = BitConverter.ToString(txtHash).ToLower().Replace("-", "");
             try
             {
                 using (var conn = new MySqlConnection(Classes.DBConnection.conString))
@@ -38,18 +44,19 @@ namespace HRISCapsu
                     string query = "SELECT * FROM Users WHERE username = @username AND password = @password";
                     var cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("username", txtUsername.Text);
-                    cmd.Parameters.AddWithValue("password", txtPassword.Text);
-                    MySqlDataReader dr = cmd.ExecuteReader();
+                    cmd.Parameters.AddWithValue("password", convertedPassword);
+                    MySqlDataReader reader = cmd.ExecuteReader();
 
-                    if (dr.Read())
+                    if (reader.HasRows)
                     {
-                        id = dr[0].ToString();
-                        MessageBox.Show("Login Successfully!");
+                        while (reader.Read())
+                            id = reader["userID"].ToString();
                         Close();
                     }
                     else
                     {
-                        MessageBox.Show("Invalid Credentials!");
+                        MessageBox.Show("Incorrect username/password!", "Invalid Credentials",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
