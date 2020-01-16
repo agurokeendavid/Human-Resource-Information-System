@@ -38,6 +38,7 @@ namespace HRISCapsu
                     if (dt.Rows.Count > 0)
                     {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         while (reader.Read())
                         {
                             
@@ -108,11 +109,14 @@ namespace HRISCapsu
 
                     new ManualResetEvent(false).WaitOne(500);
 =======
+=======
+>>>>>>> parent of 98aef7b... Finalized project.
                         //modemEmpty = false;
                         //modemName = dt.Rows[0].Field<string>("modem_name");
                         var sp = new SerialPort();
                         //sp.PortName = modemName;
                         sp.Open();
+<<<<<<< HEAD
 >>>>>>> parent of 98aef7b... Finalized project.
 
 
@@ -123,6 +127,17 @@ namespace HRISCapsu
                         sp.WriteLine("AT+CSCS=\"GSM\"" + Environment.NewLine);
                         Thread.Sleep(100);
 
+=======
+
+
+                        sp.WriteLine("AT" + Environment.NewLine);
+                        Thread.Sleep(200);
+                        sp.WriteLine("AT+CMGF=1" + Environment.NewLine);
+                        Thread.Sleep(200);
+                        sp.WriteLine("AT+CSCS=\"GSM\"" + Environment.NewLine);
+                        Thread.Sleep(100);
+
+>>>>>>> parent of 98aef7b... Finalized project.
                         var response = sp.ReadExisting();
 
 
@@ -209,6 +224,7 @@ namespace HRISCapsu
                     new ManualResetEvent(false).WaitOne(500);
                     sp.ReadExisting();
                     sp.Write(x);
+<<<<<<< HEAD
 
                     sp.Write("1" + "/" + m + " " + s_message);
 
@@ -222,6 +238,21 @@ namespace HRISCapsu
                     sp.Write(x);
 
 
+=======
+
+                    sp.Write("1" + "/" + m + " " + s_message);
+
+                    new ManualResetEvent(false).WaitOne(500);
+                    sp.ReadExisting();
+                    sp.Write(x);
+
+                    sp.Write(new byte[] { 26 }, 0, 1);
+                    new ManualResetEvent(false).WaitOne(8000);
+                    sp.ReadExisting();
+                    sp.Write(x);
+
+
+>>>>>>> parent of 98aef7b... Finalized project.
                     var response = sp.ReadExisting();
 
 
