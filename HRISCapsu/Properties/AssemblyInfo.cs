@@ -1,14 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HRISCapsu")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Human Resource Information System")]
+[assembly: AssemblyDescription("For employees of Capiz State University")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HRISCapsu")]
+[assembly: AssemblyCompany("Capiz State University Pontevedra Campus")]
+[assembly: AssemblyProduct("Human Resource Information System")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

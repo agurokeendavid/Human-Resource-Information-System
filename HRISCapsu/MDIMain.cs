@@ -1,13 +1,19 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace HRISCapsu
 {
     public partial class MDIMain : Form
     {
+
         public MDIMain()
         {
             InitializeComponent();
@@ -31,21 +37,24 @@ namespace HRISCapsu
                     {
                         tsslConnection.Text = "Connection: Connected.";
                         tsslConnection.ForeColor = Color.White;
+
                     }
                     else
                     {
                         tsslConnection.Text = "Connection: Disconnected.";
                         tsslConnection.ForeColor = Color.Red;
                     }
-                }
+                } 
                 catch (Exception ex)
                 {
                     tsslConnection.Text = "Connection: Disconnected";
                     tsslConnection.ForeColor = Color.Red;
                 }
+                
             }
             var frm = new frmLogin();
             frm.ShowDialog(this);
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -60,11 +69,14 @@ namespace HRISCapsu
             frm.ShowDialog();
         }
 
+
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmChangePassword();
             frm.ShowDialog();
         }
+
+
 
         private void viewEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -122,6 +134,13 @@ namespace HRISCapsu
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmAbout();
+            frm.ShowDialog();
         }
     }
 }

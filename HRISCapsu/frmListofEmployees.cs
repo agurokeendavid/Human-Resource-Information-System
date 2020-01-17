@@ -1,6 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HRISCapsu
@@ -12,9 +18,11 @@ namespace HRISCapsu
             InitializeComponent();
             frmLogin.SendMessage(txtSearch.Handle, 0x1501, 1, "Employee name.");
             displayRecords(dtgRecords, txtSearch.Text);
+
         }
 
-        private void displayRecords(DataGridView gridView, string keyword)
+
+        void displayRecords(DataGridView gridView, string keyword)
         {
             try
             {
@@ -50,6 +58,7 @@ namespace HRISCapsu
                     if (dt.Rows.Count == 0)
                         MessageBox.Show("No data found!", "Not found",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
             }
             catch (Exception ex)
@@ -66,6 +75,7 @@ namespace HRISCapsu
 
         private void dtgRecords_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -75,6 +85,7 @@ namespace HRISCapsu
 
         private void frmListofEmployees_Load(object sender, EventArgs e)
         {
+
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

@@ -139,10 +139,13 @@ D:\Keen\Documents\Visual Studio 2017\Projects\new\Human-Resource-Information-Sys
 D:\Keen\Documents\Visual Studio 2017\Projects\new\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmDepartmentsReport.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\new\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmPositionsReport.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\new\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmChooseModem.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\new\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmAbout.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\HRISCapsu.exe.manifest
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\HRISCapsu.application
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.Common.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.Design.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.WinForms.dll
@@ -197,6 +200,7 @@ D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmAbout.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmChooseModem.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmContractualEmployeesReport.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmDepartmentsReport.resources
@@ -205,3 +209,5 @@ D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmRegularEmployeesReport.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\RdlCompile.cache
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\RdlCompile.compiled
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.exe.manifest
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.application

@@ -1,5 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HRISCapsu
@@ -11,7 +18,7 @@ namespace HRISCapsu
             InitializeComponent();
         }
 
-        private bool isModemExist()
+        bool isModemExist()
         {
             try
             {
@@ -80,6 +87,7 @@ namespace HRISCapsu
         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            
         }
     }
 }
