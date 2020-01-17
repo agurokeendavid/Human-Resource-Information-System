@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HRISCapsu
@@ -21,7 +15,7 @@ namespace HRISCapsu
             frmLogin.SendMessage(txtDepartment.Handle, 0x1501, 1, "Department name.");
         }
 
-        void displayRecords(DataGridView gridView)
+        private void displayRecords(DataGridView gridView)
         {
             try
             {
@@ -45,7 +39,6 @@ namespace HRISCapsu
                     else
                         MessageBox.Show("No data found!", "Not found.",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
             }
             catch (Exception ex)
@@ -140,7 +133,6 @@ namespace HRISCapsu
         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtDepartment.Focus();
                 }
-                
             }
             else
             {

@@ -1,32 +1,28 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO.Ports;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace HRISCapsu
 {
     public partial class frmListofContractualEmployees : Form
     {
-        double arrayCount;
-        readonly string[] arrayMessage = new string[20];
-        string inputMessage;
-        string message_start = "";
-        readonly SerialPort sp = new SerialPort();
+        private double arrayCount;
+        private readonly string[] arrayMessage = new string[20];
+        private string inputMessage;
+        private string message_start = "";
+        private readonly SerialPort sp = new SerialPort();
+
         public frmListofContractualEmployees()
         {
             InitializeComponent();
             frmLogin.SendMessage(txtSearch.Handle, 0x1501, 1, "Employee name.");
         }
 
-        bool hasModemConnection()
+        private bool hasModemConnection()
         {
             try
             {
@@ -41,7 +37,6 @@ namespace HRISCapsu
                     {
                         while (reader.Read())
                         {
-                            
                             string modemName = reader["port_name"].ToString();
                             sp.PortName = modemName;
                             sp.Open();
@@ -53,7 +48,6 @@ namespace HRISCapsu
                             Thread.Sleep(100);
 
                             var response = sp.ReadExisting();
-
 
                             if (response.Contains("ERROR"))
                             {
@@ -76,7 +70,7 @@ namespace HRISCapsu
             return false;
         }
 
-        void sendStartMessage(string phoneNumber, string s_message)
+        private void sendStartMessage(string phoneNumber, string s_message)
         {
             try
             {
@@ -98,7 +92,6 @@ namespace HRISCapsu
 
                 var d = 1;
 
-
                 try
                 {
                     var x = "";
@@ -118,7 +111,6 @@ namespace HRISCapsu
                     else
                         sp.Write("1" + "/" + m + " " + s_message);
 
-
                     new ManualResetEvent(false).WaitOne(500);
                     sp.ReadExisting();
                     sp.Write(x);
@@ -128,9 +120,7 @@ namespace HRISCapsu
                     sp.ReadExisting();
                     sp.Write(x);
 
-
                     var response = sp.ReadExisting();
-
 
                     if (response.Contains("ERROR"))
                         resend(phoneNumber, s_message, 1);
@@ -150,13 +140,11 @@ namespace HRISCapsu
             sp.Close();
         }
 
-
-        void resend(string num, string message, int count)
+        private void resend(string num, string message, int count)
         {
             MessageBox.Show("resending..");
 
             var x = "";
-
 
             new ManualResetEvent(false).WaitOne(500);
 
@@ -178,7 +166,7 @@ namespace HRISCapsu
             sp.Write(x);
         }
 
-        void sendMessage(string phoneNumber)
+        private void sendMessage(string phoneNumber)
         {
             try
             {
@@ -227,9 +215,7 @@ namespace HRISCapsu
                         sp.ReadExisting();
                         sp.Write(x);
 
-
                         var response = sp.ReadExisting();
-
 
                         if (response.Contains("ERROR"))
                             resend(phoneNumber, arrayMessage[i], i);
@@ -251,8 +237,7 @@ namespace HRISCapsu
             sp.Close();
         }
 
-
-        void message(string phoneNumber)
+        private void message(string phoneNumber)
         {
             var intro = "Capiz State University Pontevedra Campus: ";
             var bodyMessage = "Message here";
@@ -270,7 +255,6 @@ namespace HRISCapsu
 
                 var start_index = 0;
 
-
                 for (var w = 1; w < 30; w++)
                     if (message_start[message_start.Length - w].ToString() != " ")
                     {
@@ -285,7 +269,6 @@ namespace HRISCapsu
                     }
             }
 
-
             if (inputMessage.Length > 1550)
             {
                 MessageBox.Show(
@@ -296,14 +279,12 @@ namespace HRISCapsu
             else if (inputMessage.Length < 1)
             {
                 sendStartMessage(phoneNumber, message_start);
-
             }
             else
             {
                 try
                 {
                     var textLimit = 155;
-
 
                     double x = inputMessage.Length;
 
@@ -337,7 +318,6 @@ namespace HRISCapsu
                     {
                         var backwards = 0;
 
-
                         var loopcount = 0;
 
                         for (var i = 0; i < 100; i++)
@@ -353,7 +333,6 @@ namespace HRISCapsu
                             {
                                 loopcount++;
 
-
                                 arrayMessage[i] = inputMessage.Substring(start_subs, length_subs);
 
                                 var current = arrayMessage[i];
@@ -368,9 +347,7 @@ namespace HRISCapsu
 
                                         var changed = arrayMessage[i];
 
-
                                         start_subs = start_subs + textLimit - w;
-
 
                                         backwards = backwards + w;
 
@@ -396,7 +373,7 @@ namespace HRISCapsu
             }
         }
 
-        void displayRecords(DataGridView gridView, string keyword)
+        private void displayRecords(DataGridView gridView, string keyword)
         {
             try
             {
@@ -440,7 +417,6 @@ namespace HRISCapsu
                             {
                                 dataGridViewRow.DefaultCellStyle.BackColor = Color.Red;
                                 dataGridViewRow.DefaultCellStyle.ForeColor = Color.White;
-
                             }
                         }
                     }
@@ -463,7 +439,6 @@ namespace HRISCapsu
         private void btnSearch_Click(object sender, EventArgs e)
         {
             displayRecords(dtgRecords, txtSearch.Text);
-
         }
 
         private void frmListofContractualEmployees_Load(object sender, EventArgs e)
@@ -484,10 +459,8 @@ namespace HRISCapsu
                     {
                         message(dataGridViewRow.Cells[8].Value.ToString());
                     }
-                    
                 }
             }
-            
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

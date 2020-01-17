@@ -59,7 +59,6 @@ namespace HRISCapsu
                     if (dt.Rows.Count == 0)
                         MessageBox.Show("No data found.", "Not found",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
             }
             catch (Exception ex)
@@ -68,6 +67,7 @@ namespace HRISCapsu
     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void displayDepartments(ComboBox cmbDepartments)
         {
             try
@@ -81,7 +81,7 @@ namespace HRISCapsu
                     cmbDepartments.Items.Clear();
                     while (dr.Read())
                     {
-                        cmbDepartments.Items.Add((dr["department_id"]  + " - " + dr["department_name"]).ToString());
+                        cmbDepartments.Items.Add((dr["department_id"] + " - " + dr["department_name"]).ToString());
                     }
                 }
             }
@@ -91,6 +91,7 @@ namespace HRISCapsu
     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void displayPositions(ComboBox cmbPositions)
         {
             try
@@ -117,16 +118,26 @@ namespace HRISCapsu
 
         private void clearItems(Panel panel)
         {
-            foreach (Control control in panel.Controls)
+            try
             {
-                if (control is TextBox)
-                    control.ResetText();
-                else if (control is ComboBox)
-                    ((ComboBox)control).SelectedIndex = 0;
-                else if (control is DateTimePicker)
-                    ((DateTimePicker)control).ResetText();
+                foreach (Control control in panel.Controls)
+                {
+                    if (control is TextBox)
+                        control.ResetText();
+                    else if (control is ComboBox)
+                        ((ComboBox)control).SelectedIndex = 0;
+                    else if (control is DateTimePicker)
+                        ((DateTimePicker)control).ResetText();
+                }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Failed to clear textboxes. Please add department and position first.", "Error",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             clearItems(panelFileInformation);
@@ -141,8 +152,6 @@ namespace HRISCapsu
             btnDelete.Enabled = true;
             btnUpdate.Enabled = true;
             btnView.Enabled = true;
-
-
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -286,7 +295,6 @@ namespace HRISCapsu
                 MessageBox.Show("Please input required fields.", "Required",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void cmbWorkStatus_SelectedIndexChanged(object sender, EventArgs e)
@@ -298,6 +306,7 @@ namespace HRISCapsu
                     label14.Visible = false;
                     dtpEndofContract.Visible = false;
                     break;
+
                 case 1:
                     dtpEndofContract.ResetText();
                     label14.Visible = true;
@@ -378,8 +387,8 @@ namespace HRISCapsu
                 dtpEndofContract.Text = dtgRecords.CurrentRow.Cells[14].Value.ToString();
             }
             cmbStatus.SelectedItem = dtgRecords.CurrentRow.Cells[15].Value;
-
         }
+
         private void txtContactNo_KeyPress(object sender, KeyPressEventArgs e)
         {
             const char Delete = (char)8;
@@ -394,7 +403,6 @@ namespace HRISCapsu
 
         private void frmEmployeesRecord_Load(object sender, EventArgs e)
         {
-            
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

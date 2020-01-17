@@ -1,20 +1,14 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HRISCapsu
 {
     public partial class frmChangePassword : Form
     {
-
         public frmChangePassword()
         {
             InitializeComponent();
@@ -23,7 +17,7 @@ namespace HRISCapsu
             frmLogin.SendMessage(txtVerifyNewPassword.Handle, 0x1501, 1, "Verify new password.");
         }
 
-        bool isPasswordExist()
+        private bool isPasswordExist()
         {
             try
             {
@@ -56,7 +50,6 @@ namespace HRISCapsu
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
             if (isPasswordExist() == true)
             {
                 if (txtNewPassword.Text == txtVerifyNewPassword.Text)
@@ -97,13 +90,10 @@ namespace HRISCapsu
                 MessageBox.Show("Incorrect password!", "Incorrect",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-                
-
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
         }
     }
 }

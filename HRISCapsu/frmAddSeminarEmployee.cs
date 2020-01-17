@@ -1,19 +1,14 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HRISCapsu
 {
     public partial class frmAddSeminarEmployee : Form
     {
-        string seminar_id;
+        private string seminar_id;
+
         public frmAddSeminarEmployee(string seminar_id)
         {
             InitializeComponent();
@@ -22,7 +17,8 @@ namespace HRISCapsu
             displayRecords(cmbPosition.SelectedItem.ToString());
             this.seminar_id = seminar_id;
         }
-        void displayPositions()
+
+        private void displayPositions()
         {
             try
             {
@@ -38,7 +34,6 @@ namespace HRISCapsu
                     {
                         cmbPosition.Items.Add(dr["position_name"].ToString());
                     }
-                    
                 }
             }
             catch (Exception ex)
@@ -48,7 +43,7 @@ namespace HRISCapsu
             }
         }
 
-        void displayRecords(string keyword)
+        private void displayRecords(string keyword)
         {
             if (cmbPosition.SelectedItem.ToString() == "All")
                 keyword = "";
@@ -89,7 +84,6 @@ namespace HRISCapsu
                     if (dt.Rows.Count == 0)
                         MessageBox.Show("No data found!", "Not found.",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
             }
             catch (Exception ex)
@@ -97,6 +91,7 @@ namespace HRISCapsu
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -104,7 +99,6 @@ namespace HRISCapsu
 
         private void frmAddSeminarEmployee_Load(object sender, EventArgs e)
         {
-
         }
 
         private void cmbPosition_SelectedIndexChanged(object sender, EventArgs e)
@@ -129,7 +123,7 @@ namespace HRISCapsu
                     MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Employee exist!", "Record exist.",
     MessageBoxButtons.OK, MessageBoxIcon.Error);

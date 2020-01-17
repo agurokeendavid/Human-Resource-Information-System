@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HRISCapsu
@@ -21,8 +15,7 @@ namespace HRISCapsu
             displayRecords(dtgRecords);
         }
 
-
-        void displayRecords(DataGridView gridView)
+        private void displayRecords(DataGridView gridView)
         {
             try
             {
@@ -46,7 +39,6 @@ namespace HRISCapsu
                     else
                         MessageBox.Show("No data found!", "Not found",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
             }
             catch (Exception ex)
@@ -86,7 +78,7 @@ namespace HRISCapsu
         {
             if (btnSave.Text == "Sav&e")
             {
-                if(txtPosition.Text != string.Empty)
+                if (txtPosition.Text != string.Empty)
                 {
                     try
                     {
@@ -122,7 +114,6 @@ namespace HRISCapsu
         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtPosition.Focus();
                 }
-                
             }
             else
             {
@@ -154,7 +145,6 @@ namespace HRISCapsu
     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -167,7 +157,6 @@ namespace HRISCapsu
             btnPrint.Enabled = false;
             txtPosition.Text = dtgRecords.CurrentRow.Cells[1].Value.ToString();
             txtSearch.Clear();
-
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
