@@ -38,11 +38,11 @@ namespace HRISCapsu
 
                     dtgEmployees.Columns[0].Visible = false;
                     dtgEmployees.Columns[1].Visible = false;
-                    dtgEmployees.Columns[1].HeaderText = "Employee No.";
-                    dtgEmployees.Columns[2].HeaderText = "First Name";
-                    dtgEmployees.Columns[3].HeaderText = "Middle Name";
-                    dtgEmployees.Columns[4].HeaderText = "Last Name";
-                    dtgEmployees.Columns[5].HeaderText = "Position";
+                    dtgEmployees.Columns[2].HeaderText = "Employee No.";
+                    dtgEmployees.Columns[3].HeaderText = "First Name";
+                    dtgEmployees.Columns[4].HeaderText = "Middle Name";
+                    dtgEmployees.Columns[5].HeaderText = "Last Name";
+                    dtgEmployees.Columns[6].HeaderText = "Position";
                     if (dt.Rows.Count == 0)
                         MessageBox.Show("No data found.", "Not found",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -74,7 +74,7 @@ namespace HRISCapsu
                     dtgSeminars.Columns[0].Visible = false;
                     dtgSeminars.Columns[1].HeaderText = "Seminar";
                     dtgSeminars.Columns[2].HeaderText = "Location";
-                    dtgSeminars.Columns[3].HeaderText = "Date of Activity";
+                    dtgSeminars.Columns[3].HeaderText = "Date";
                     dtgSeminars.Columns[4].Visible = false;
 
                     if (dt.Rows.Count == 0)
@@ -125,7 +125,6 @@ namespace HRISCapsu
 
         private void frmSeminarsTraining_Load(object sender, EventArgs e)
         {
-            displayEmployees();
         }
     }
 }
