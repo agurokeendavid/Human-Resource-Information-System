@@ -1,15 +1,28 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Windows.Forms;
 
 namespace HRISCapsu
 {
     public partial class frmEmployeesRecord : Form
     {
+        private string source;
+        private string destination;
+        private BackgroundWorker worker = new BackgroundWorker();
+        private bool isAttachmentUpdated = false;
+
         public frmEmployeesRecord()
         {
             InitializeComponent();
+            worker.WorkerSupportsCancellation = true;
+            worker.WorkerReportsProgress = true;
+            worker.ProgressChanged += worker_ProgressChanged;
+            worker.DoWork += Worker_DoWork;
+
             displayPositions(cmbPosition);
             displayDepartments(cmbDepartment);
             frmLogin.SendMessage(txtEmployeeNo.Handle, 0x1501, 1, "Employee no.");
@@ -23,18 +36,48 @@ namespace HRISCapsu
             clearItems(panelFileInformation);
         }
 
+        private void copyFile(string source, string des)
+        {
+            FileStream fsout = new FileStream(des, FileMode.Create);
+            FileStream fsin = new FileStream(source, FileMode.Open);
+            byte[] bt = new byte[1048756];
+
+            int readByte;
+
+            while ((readByte = fsin.Read(bt, 0, bt.Length)) > 0)
+            {
+                fsout.Write(bt, 0, readByte);
+                worker.ReportProgress((int)(fsin.Position * 100 / fsin.Length));
+            }
+            fsin.Close();
+            fsout.Close();
+        }
+
+        private void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Value = e.ProgressPercentage;
+            lblPercent.Text = progressBar1.Value.ToString() + "%";
+        }
+
+        private void Worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            copyFile(source, destination);
+        }
+
         private void displayRecords(DataGridView gridView)
         {
             try
             {
-                using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    string query = @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract', emp.status FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE emp.status = 'Active'";
-                    var cmd = new MySqlCommand(query, conn);
-                    var da = new MySqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    var dt = new DataTable();
+                    string query = @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract', emp.status, emp.documentpath FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE emp.status = 'Active'";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlDataAdapter da = new MySqlDataAdapter
+                    {
+                        SelectCommand = cmd
+                    };
+                    DataTable dt = new DataTable();
                     da.Fill(dt);
 
                     gridView.DataSource = dt;
@@ -55,11 +98,13 @@ namespace HRISCapsu
                     gridView.Columns[13].Visible = false;
                     gridView.Columns[14].Visible = false;
                     gridView.Columns[15].Visible = false;
+                    gridView.Columns[16].Visible = false;
 
                     if (dt.Rows.Count == 0)
+                    {
                         MessageBox.Show("No data found.", "Not found",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    }
                 }
             }
             catch (Exception ex)
@@ -72,16 +117,16 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
                     string query = "SELECT * FROM departments";
-                    var cmd = new MySqlCommand(query, conn);
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataReader dr = cmd.ExecuteReader();
                     cmbDepartments.Items.Clear();
                     while (dr.Read())
                     {
-                        cmbDepartments.Items.Add((dr["department_id"]  + " - " + dr["department_name"]).ToString());
+                        cmbDepartments.Items.Add((dr["department_id"] + " - " + dr["department_name"]).ToString());
                     }
                 }
             }
@@ -95,11 +140,11 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
                     string query = "SELECT * FROM positions";
-                    var cmd = new MySqlCommand(query, conn);
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataReader dr = cmd.ExecuteReader();
                     cmbPositions.Items.Clear();
                     while (dr.Read())
@@ -122,11 +167,21 @@ namespace HRISCapsu
                 foreach (Control control in panel.Controls)
                 {
                     if (control is TextBox)
+                    {
                         control.ResetText();
+                    }
                     else if (control is ComboBox)
+                    {
                         ((ComboBox)control).SelectedIndex = 0;
+                    }
                     else if (control is DateTimePicker)
+                    {
                         ((DateTimePicker)control).ResetText();
+                    }
+                    else if (control is ProgressBar)
+                    {
+                        ((ProgressBar)control).Value = 0;
+                    }
                 }
             }
             catch (Exception)
@@ -134,7 +189,7 @@ namespace HRISCapsu
                 MessageBox.Show("Please add department and position first.", "Error",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -169,7 +224,7 @@ namespace HRISCapsu
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -180,21 +235,25 @@ namespace HRISCapsu
                 {
                     try
                     {
-                        using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                        using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                         {
                             conn.Open();
-                            string query = "INSERT INTO employees (employee_no, first_name, middle_name, last_name, address, gender, date_of_birth, place_of_birth, contact_no, civil_status, position_id, department_id, work_status, hired_date, end_of_contract, status) VALUES (@employee_no, @first_name, @middle_name, @last_name, @address, @gender, @date_of_birth, @place_of_birth, @contact_no, @civil_status, @position_id, @department_id, @work_status, @hired_date, @end_of_contract, @status)";
+                            string query = "INSERT INTO employees (employee_no, first_name, middle_name, last_name, address, gender, date_of_birth, place_of_birth, contact_no, civil_status, position_id, department_id, work_status, hired_date, end_of_contract, status, documentpath) VALUES (@employee_no, @first_name, @middle_name, @last_name, @address, @gender, @date_of_birth, @place_of_birth, @contact_no, @civil_status, @position_id, @department_id, @work_status, @hired_date, @end_of_contract, @status, @documentpath)";
                             string input = cmbPosition.SelectedItem.ToString();
                             int index = input.IndexOf(" ");
                             if (index > 0)
+                            {
                                 input = input.Substring(0, index);
+                            }
 
                             string input1 = cmbDepartment.SelectedItem.ToString();
                             int index1 = input1.IndexOf(" ");
                             if (index1 > 0)
+                            {
                                 input1 = input1.Substring(0, index1);
+                            }
 
-                            var cmd = new MySqlCommand(query, conn);
+                            MySqlCommand cmd = new MySqlCommand(query, conn);
                             cmd.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
                             cmd.Parameters.AddWithValue("first_name", txtFirstName.Text);
                             cmd.Parameters.AddWithValue("middle_name", txtMiddleName.Text);
@@ -213,7 +272,9 @@ namespace HRISCapsu
                             // if work status is selected to contractual end contract field will set to null.
                             cmd.Parameters.AddWithValue("end_of_contract", (cmbWorkStatus.SelectedItem.ToString() == "Contractual") ? dtpEndofContract.Value.ToString("yyyy-MM-dd") : null);
                             cmd.Parameters.AddWithValue("status", cmbStatus.SelectedItem.ToString());
+                            cmd.Parameters.AddWithValue("documentpath", destination);
                             cmd.ExecuteNonQuery();
+                            worker.RunWorkerAsync();
                             cmd.Parameters.Clear();
                             MessageBox.Show("Employee Information Added!");
                             clearItems(panelFileInformation);
@@ -243,11 +304,11 @@ namespace HRISCapsu
                 {
                     try
                     {
-                        using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                        using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                         {
                             conn.Open();
-                            string query = @"UPDATE employees SET first_name = @first_name, middle_name = @middle_name, last_name = @last_name, address = @address, gender = @gender, date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @contact_no, civil_status = @civil_status, position_id = @position_id, department_id = @department_id, work_status = @work_status, hired_date = @hired_date, end_of_contract = @end_of_contract, status = @status WHERE employee_no = @employee_no";
-                            var cmd = new MySqlCommand(query, conn);
+                            string query = @"UPDATE employees SET first_name = @first_name, middle_name = @middle_name, last_name = @last_name, address = @address, gender = @gender, date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @contact_no, civil_status = @civil_status, position_id = @position_id, department_id = @department_id, work_status = @work_status, hired_date = @hired_date, end_of_contract = @end_of_contract, status = @status, documentpath = @documentpath WHERE employee_no = @employee_no";
+                            MySqlCommand cmd = new MySqlCommand(query, conn);
                             cmd.Parameters.AddWithValue("first_name", txtFirstName.Text);
                             cmd.Parameters.AddWithValue("middle_name", txtMiddleName.Text);
                             cmd.Parameters.AddWithValue("last_name", txtLastName.Text);
@@ -263,6 +324,32 @@ namespace HRISCapsu
                             cmd.Parameters.AddWithValue("hired_date", dtpHiredDate.Value.ToString("yyyy-MM-dd"));
                             cmd.Parameters.AddWithValue("end_of_contract", (cmbWorkStatus.SelectedItem.ToString() == "Contractual") ? dtpEndofContract.Value.ToString("yyyy-MM-dd") : null);
                             cmd.Parameters.AddWithValue("status", cmbStatus.SelectedItem);
+                            if (isAttachmentUpdated)
+                            {
+                                cmd.Parameters.AddWithValue("documentpath", destination);
+                            }
+                            else
+                            {
+                                using (MySqlConnection conn1 = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                                {
+                                    conn1.Open();
+                                    string query1 = @"SELECT documentpath FROM employees where employee_no = @employee_no";
+                                    using (MySqlCommand cmd1 = new MySqlCommand(query1, conn1))
+                                    {
+                                        cmd1.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
+                                        using (MySqlDataReader reader = cmd1.ExecuteReader())
+                                        {
+                                            while (reader.Read())
+                                            {
+                                                destination = reader[0].ToString();
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                                cmd.Parameters.AddWithValue("documentpath", destination);
+                            }
                             cmd.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
                             cmd.ExecuteNonQuery();
                             cmd.Parameters.Clear();
@@ -324,11 +411,11 @@ namespace HRISCapsu
                 DialogResult dialogResult = MessageBox.Show($"Delete {selectedRow.Cells["last_name"].Value.ToString()}, {selectedRow.Cells["first_name"].Value.ToString()} {selectedRow.Cells["middle_name"].Value.ToString()} ?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                    using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                     {
                         conn.Open();
                         string query = "DELETE FROM employees WHERE employee_no = @employee_no";
-                        var cmd = new MySqlCommand(query, conn);
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@employee_no", selectedRow.Cells["employee_no"].Value);
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
@@ -346,7 +433,7 @@ namespace HRISCapsu
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            var frm = new frmViewEmployee(dtgRecords.CurrentRow.Cells[0].Value.ToString(), dtgRecords.CurrentRow.Cells[1].Value.ToString(), dtgRecords.CurrentRow.Cells[2].Value.ToString(), dtgRecords.CurrentRow.Cells[3].Value.ToString(), dtgRecords.CurrentRow.Cells[4].Value.ToString(), dtgRecords.CurrentRow.Cells[5].Value.ToString(), dtgRecords.CurrentRow.Cells[6].Value.ToString(), dtgRecords.CurrentRow.Cells[7].Value.ToString(), dtgRecords.CurrentRow.Cells[8].Value.ToString(), dtgRecords.CurrentRow.Cells[9].Value.ToString(), dtgRecords.CurrentRow.Cells[10].Value.ToString(), dtgRecords.CurrentRow.Cells[11].Value.ToString(), dtgRecords.CurrentRow.Cells[12].Value.ToString(), dtgRecords.CurrentRow.Cells[13].Value.ToString(), dtgRecords.CurrentRow.Cells[14].Value.ToString(), dtgRecords.CurrentRow.Cells[15].Value.ToString());
+            frmViewEmployee frm = new frmViewEmployee(dtgRecords.CurrentRow.Cells[0].Value.ToString(), dtgRecords.CurrentRow.Cells[1].Value.ToString(), dtgRecords.CurrentRow.Cells[2].Value.ToString(), dtgRecords.CurrentRow.Cells[3].Value.ToString(), dtgRecords.CurrentRow.Cells[4].Value.ToString(), dtgRecords.CurrentRow.Cells[5].Value.ToString(), dtgRecords.CurrentRow.Cells[6].Value.ToString(), dtgRecords.CurrentRow.Cells[7].Value.ToString(), dtgRecords.CurrentRow.Cells[8].Value.ToString(), dtgRecords.CurrentRow.Cells[9].Value.ToString(), dtgRecords.CurrentRow.Cells[10].Value.ToString(), dtgRecords.CurrentRow.Cells[11].Value.ToString(), dtgRecords.CurrentRow.Cells[12].Value.ToString(), dtgRecords.CurrentRow.Cells[13].Value.ToString(), dtgRecords.CurrentRow.Cells[14].Value.ToString(), dtgRecords.CurrentRow.Cells[15].Value.ToString(), dtgRecords.CurrentRow.Cells[16].Value.ToString());
             frm.ShowDialog();
         }
 
@@ -392,24 +479,43 @@ namespace HRISCapsu
         private void txtContactNo_KeyPress(object sender, KeyPressEventArgs e)
         {
             const char Delete = (char)8;
-            e.Handled = !Char.IsDigit(e.KeyChar) && e.KeyChar != Delete;
+            e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != Delete;
         }
 
         private void dtgRecords_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var frm = new frmViewEmployee(dtgRecords.CurrentRow.Cells[0].Value.ToString(), dtgRecords.CurrentRow.Cells[1].Value.ToString(), dtgRecords.CurrentRow.Cells[2].Value.ToString(), dtgRecords.CurrentRow.Cells[3].Value.ToString(), dtgRecords.CurrentRow.Cells[4].Value.ToString(), dtgRecords.CurrentRow.Cells[5].Value.ToString(), dtgRecords.CurrentRow.Cells[6].Value.ToString(), dtgRecords.CurrentRow.Cells[7].Value.ToString(), dtgRecords.CurrentRow.Cells[8].Value.ToString(), dtgRecords.CurrentRow.Cells[9].Value.ToString(), dtgRecords.CurrentRow.Cells[10].Value.ToString(), dtgRecords.CurrentRow.Cells[11].Value.ToString(), dtgRecords.CurrentRow.Cells[12].Value.ToString(), dtgRecords.CurrentRow.Cells[13].Value.ToString(), dtgRecords.CurrentRow.Cells[14].Value.ToString(), dtgRecords.CurrentRow.Cells[15].Value.ToString());
+            frmViewEmployee frm = new frmViewEmployee(dtgRecords.CurrentRow.Cells[0].Value.ToString(), dtgRecords.CurrentRow.Cells[1].Value.ToString(), dtgRecords.CurrentRow.Cells[2].Value.ToString(), dtgRecords.CurrentRow.Cells[3].Value.ToString(), dtgRecords.CurrentRow.Cells[4].Value.ToString(), dtgRecords.CurrentRow.Cells[5].Value.ToString(), dtgRecords.CurrentRow.Cells[6].Value.ToString(), dtgRecords.CurrentRow.Cells[7].Value.ToString(), dtgRecords.CurrentRow.Cells[8].Value.ToString(), dtgRecords.CurrentRow.Cells[9].Value.ToString(), dtgRecords.CurrentRow.Cells[10].Value.ToString(), dtgRecords.CurrentRow.Cells[11].Value.ToString(), dtgRecords.CurrentRow.Cells[12].Value.ToString(), dtgRecords.CurrentRow.Cells[13].Value.ToString(), dtgRecords.CurrentRow.Cells[14].Value.ToString(), dtgRecords.CurrentRow.Cells[15].Value.ToString(), dtgRecords.CurrentRow.Cells[16].Value.ToString());
             frm.ShowDialog();
         }
 
         private void frmEmployeesRecord_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            var frm = new ReportViewer.frmEmployeesReport();
+            ReportViewer.frmEmployeesReport frm = new ReportViewer.frmEmployeesReport();
             frm.ShowDialog();
+        }
+
+        private void btnAttach_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                openFileDialog.Title = "Select a word document to be upload.";
+                openFileDialog.Filter = "Select Valid Word File(*.doc; *.docx;)|*.doc;*.docx;";
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.FileName = "";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    source = openFileDialog.FileName;
+                    destination = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Files\" + openFileDialog.SafeFileName;
+                    isAttachmentUpdated = true;
+                }
+            }
+
         }
     }
 }

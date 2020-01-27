@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -38,7 +39,7 @@ namespace HRISCapsu
             {
                 try
                 {
-                    using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                    using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                     {
                         conn.Open();
                         string query = "UPDATE seminars SET seminar_name = @seminar_name, seminar_location = @seminar_location, seminar_date = @seminar_date, seminar_status = @seminar_status WHERE seminar_id = @seminar_id";

@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Configuration;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
@@ -38,7 +39,7 @@ namespace HRISCapsu
             string convertedPassword = BitConverter.ToString(txtHash).ToLower().Replace("-", "");
             try
             {
-                using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
                     string query = "SELECT * FROM Users WHERE username = @username AND password = @password";

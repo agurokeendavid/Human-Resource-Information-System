@@ -207,7 +207,5 @@ D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmEmployeesReport.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmPositionsReport.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmRegularEmployeesReport.resources
-D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\RdlCompile.cache
-D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\RdlCompile.compiled
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.exe.manifest
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.application

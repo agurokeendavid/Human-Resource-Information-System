@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2020 at 04:49 AM
+-- Generation Time: Jan 27, 2020 at 02:46 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -33,6 +33,13 @@ CREATE TABLE `departments` (
   `department_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `departments`
+--
+
+INSERT INTO `departments` (`department_id`, `department_name`) VALUES
+(1, 'College of Computer Studies');
+
 -- --------------------------------------------------------
 
 --
@@ -56,7 +63,8 @@ CREATE TABLE `employees` (
   `work_status` varchar(20) NOT NULL,
   `hired_date` date NOT NULL,
   `end_of_contract` date DEFAULT NULL,
-  `status` varchar(20) NOT NULL
+  `status` varchar(20) NOT NULL,
+  `documentpath` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -72,6 +80,13 @@ CREATE TABLE `employee_seminars` (
   `employee_position_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `employee_seminars`
+--
+
+INSERT INTO `employee_seminars` (`id`, `seminar_id`, `employee_no`, `employee_position_id`) VALUES
+(1, 1, '1', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -83,6 +98,13 @@ CREATE TABLE `ports` (
   `port_name` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `ports`
+--
+
+INSERT INTO `ports` (`port_id`, `port_name`) VALUES
+(1, 'COM1');
+
 -- --------------------------------------------------------
 
 --
@@ -93,6 +115,13 @@ CREATE TABLE `positions` (
   `position_id` int(11) NOT NULL,
   `position_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `positions`
+--
+
+INSERT INTO `positions` (`position_id`, `position_name`) VALUES
+(1, 'Programmer I');
 
 -- --------------------------------------------------------
 
@@ -107,6 +136,32 @@ CREATE TABLE `seminars` (
   `seminar_date` date NOT NULL,
   `seminar_status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `seminars`
+--
+
+INSERT INTO `seminars` (`seminar_id`, `seminar_name`, `seminar_location`, `seminar_date`, `seminar_status`) VALUES
+(1, 'Programming', 'Roxas', '2020-01-03', 'Active');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `test`
+--
+
+CREATE TABLE `test` (
+  `id` int(11) NOT NULL,
+  `documentpath` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `test`
+--
+
+INSERT INTO `test` (`id`, `documentpath`) VALUES
+(1, 'DocumentTextMerge1.pdf'),
+(2, 'DocumentTextMerge2.pdf');
 
 -- --------------------------------------------------------
 
@@ -125,7 +180,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userID`, `username`, `password`) VALUES
-(1, '1', '356a192b7913b04c54574d18c28d46e6395428ab');
+(1, 'admin', '356a192b7913b04c54574d18c28d46e6395428ab');
 
 -- --------------------------------------------------------
 
@@ -245,8 +300,8 @@ ALTER TABLE `departments`
 ALTER TABLE `employees`
   ADD PRIMARY KEY (`employee_id`),
   ADD UNIQUE KEY `employee_no` (`employee_no`),
-  ADD UNIQUE KEY `position_id` (`position_id`),
-  ADD UNIQUE KEY `department_id` (`department_id`);
+  ADD KEY `department_id` (`department_id`) USING BTREE,
+  ADD KEY `position_id` (`position_id`) USING BTREE;
 
 --
 -- Indexes for table `employee_seminars`
@@ -274,6 +329,12 @@ ALTER TABLE `seminars`
   ADD PRIMARY KEY (`seminar_id`);
 
 --
+-- Indexes for table `test`
+--
+ALTER TABLE `test`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -287,37 +348,43 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `departments`
 --
 ALTER TABLE `departments`
-  MODIFY `department_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `department_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `employee_seminars`
 --
 ALTER TABLE `employee_seminars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `ports`
 --
 ALTER TABLE `ports`
-  MODIFY `port_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `port_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `positions`
 --
 ALTER TABLE `positions`
-  MODIFY `position_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `position_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `seminars`
 --
 ALTER TABLE `seminars`
-  MODIFY `seminar_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `seminar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `test`
+--
+ALTER TABLE `test`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`

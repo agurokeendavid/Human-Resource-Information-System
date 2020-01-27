@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
                     string query = @"SELECT * FROM positions";
@@ -90,7 +91,7 @@ namespace HRISCapsu
                 {
                     try
                     {
-                        using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                        using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                         {
                             conn.Open();
                             string query = @"INSERT INTO positions (position_name) VALUES (@position_name)";
@@ -128,7 +129,7 @@ namespace HRISCapsu
             {
                 try
                 {
-                    using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                    using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                     {
                         conn.Open();
                         string query = @"UPDATE positions SET position_name = @position_name WHERE position_id = @position_id";
@@ -174,7 +175,7 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
                     string query = @"SELECT * FROM positions WHERE position_name LIKE @position_name";

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace HRISCapsu
 
         private void MDIMain_Load(object sender, EventArgs e)
         {
-            using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+            using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
             {
                 try
                 {

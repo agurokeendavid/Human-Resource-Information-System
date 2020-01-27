@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelFileInformation = new System.Windows.Forms.Panel();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.lblEndofContract = new System.Windows.Forms.Label();
             this.lblHiredDate = new System.Windows.Forms.Label();
             this.lblWorkStatus = new System.Windows.Forms.Label();
@@ -63,8 +65,8 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.Label9 = new System.Windows.Forms.Label();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.btnAttach = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.panelFileInformation.SuspendLayout();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
@@ -74,6 +76,8 @@
             // 
             this.panelFileInformation.BackColor = System.Drawing.Color.Transparent;
             this.panelFileInformation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelFileInformation.Controls.Add(this.label15);
+            this.panelFileInformation.Controls.Add(this.btnAttach);
             this.panelFileInformation.Controls.Add(this.lblStatus);
             this.panelFileInformation.Controls.Add(this.label17);
             this.panelFileInformation.Controls.Add(this.lblEndofContract);
@@ -109,8 +113,29 @@
             this.panelFileInformation.Location = new System.Drawing.Point(0, 70);
             this.panelFileInformation.Margin = new System.Windows.Forms.Padding(4);
             this.panelFileInformation.Name = "panelFileInformation";
-            this.panelFileInformation.Size = new System.Drawing.Size(1024, 308);
+            this.panelFileInformation.Size = new System.Drawing.Size(1024, 332);
             this.panelFileInformation.TabIndex = 49;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(599, 191);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(54, 17);
+            this.lblStatus.TabIndex = 43;
+            this.lblStatus.Text = "Status";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(535, 191);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(56, 17);
+            this.label17.TabIndex = 42;
+            this.label17.Text = "Status :";
             // 
             // lblEndofContract
             // 
@@ -478,32 +503,32 @@
             this.PictureBox1.TabIndex = 47;
             this.PictureBox1.TabStop = false;
             // 
-            // lblStatus
+            // btnAttach
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(599, 191);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(54, 17);
-            this.lblStatus.TabIndex = 43;
-            this.lblStatus.Text = "Status";
+            this.btnAttach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAttach.Location = new System.Drawing.Point(257, 274);
+            this.btnAttach.Name = "btnAttach";
+            this.btnAttach.Size = new System.Drawing.Size(140, 48);
+            this.btnAttach.TabIndex = 47;
+            this.btnAttach.Text = "View Attachment";
+            this.btnAttach.UseVisualStyleBackColor = true;
+            this.btnAttach.Click += new System.EventHandler(this.btnAttach_Click);
             // 
-            // label17
+            // label15
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(535, 191);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(56, 17);
-            this.label17.TabIndex = 42;
-            this.label17.Text = "Status :";
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(83, 290);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(167, 17);
+            this.label15.TabIndex = 48;
+            this.label15.Text = "Requirements Submitted:";
             // 
             // frmViewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 382);
+            this.ClientSize = new System.Drawing.Size(1024, 407);
             this.Controls.Add(this.panelFileInformation);
             this.Controls.Add(this.Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -558,5 +583,7 @@
         private System.Windows.Forms.Button btnClose;
         internal System.Windows.Forms.Label lblStatus;
         internal System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnAttach;
+        internal System.Windows.Forms.Label label15;
     }
 }

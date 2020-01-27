@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     HashAlgorithm sha1 = new SHA1CryptoServiceProvider();
                     Byte[] password = UTF8Encoding.Default.GetBytes(txtCurrentPassword.Text);
@@ -63,7 +64,7 @@ namespace HRISCapsu
                 {
                     try
                     {
-                        using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                        using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                         {
                             HashAlgorithm sha1 = new SHA1CryptoServiceProvider();
                             Byte[] password = UTF8Encoding.Default.GetBytes(txtNewPassword.Text);

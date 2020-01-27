@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,8 @@ namespace HRISCapsu
 {
     public partial class frmViewEmployee : Form
     {
-        public frmViewEmployee(string employeeNo, string firstName, string middleName, string lastName, string address, string gender, string dob, string placeofbirth, string contactNo, string civilStatus, string position, string department, string workStatus, string hiredDate, string endOfContract, string status)
+        string path;
+        public frmViewEmployee(string employeeNo, string firstName, string middleName, string lastName, string address, string gender, string dob, string placeofbirth, string contactNo, string civilStatus, string position, string department, string workStatus, string hiredDate, string endOfContract, string status, string path)
         {
             InitializeComponent();
             lblEmployeeNo.Text = employeeNo;
@@ -36,12 +38,18 @@ namespace HRISCapsu
                 lblEndofContract.Visible = true;
                 label14.Visible = true;
             }
+            this.path = path;
             
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAttach_Click(object sender, EventArgs e)
+        {
+            Process.Start(path);
         }
     }
 }

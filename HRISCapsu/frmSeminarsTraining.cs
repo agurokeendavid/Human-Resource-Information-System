@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
                     string query = @"SELECT empsem.id, empsem.seminar_id, emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, pos.position_name FROM employee_seminars empsem INNER JOIN employees emp ON empsem.employee_no = emp.employee_no INNER JOIN positions pos ON empsem.employee_position_id = pos.position_id WHERE empsem.seminar_id= @seminar_id";
@@ -59,7 +60,7 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
                     string query = @"SELECT seminar_id, seminar_name, seminar_location, date_format(seminar_date, '%M %d, %Y') AS 'Date', seminar_status FROM seminars WHERE seminar_status = 'Active'";

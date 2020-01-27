@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
                     string query = @"SELECT * FROM departments";
@@ -59,7 +60,7 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
                     string query = @"SELECT * FROM departments WHERE department_name LIKE @department_name";
@@ -108,7 +109,7 @@ namespace HRISCapsu
                 {
                     try
                     {
-                        using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                        using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                         {
                             conn.Open();
                             string query = @"INSERT INTO departments (department_name) VALUES (@department_name)";
@@ -146,7 +147,7 @@ namespace HRISCapsu
             {
                 try
                 {
-                    using (var conn = new MySqlConnection(Classes.DBConnection.conString))
+                    using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                     {
                         conn.Open();
                         string query = @"UPDATE departments SET department_name = @department_name WHERE department_id = @department_id";
