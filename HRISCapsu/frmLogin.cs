@@ -43,21 +43,27 @@ namespace HRISCapsu
                 {
                     conn.Open();
                     string query = "SELECT * FROM Users WHERE username = @username AND password = @password";
-                    var cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("username", txtUsername.Text);
-                    cmd.Parameters.AddWithValue("password", convertedPassword);
-                    MySqlDataReader reader = cmd.ExecuteReader();
+                    using (var cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("username", txtUsername.Text);
+                        cmd.Parameters.AddWithValue("password", convertedPassword);
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                while (reader.Read())
+                                    id = reader["userID"].ToString();
+                                Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Incorrect username/password!", "Invalid Credentials",
+            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
 
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                            id = reader["userID"].ToString();
-                        Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Incorrect username/password!", "Invalid Credentials",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            
+                        
                     }
                 }
             }

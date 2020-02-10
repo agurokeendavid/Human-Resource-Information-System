@@ -71,7 +71,7 @@ namespace HRISCapsu
                 using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    string query = @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract', emp.status, emp.documentpath FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE emp.status = 'Active'";
+                    string query = @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract', emp.status, emp.documentpath FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE emp.status = 'Active' ORDER BY emp.employee_no ASC";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataAdapter da = new MySqlDataAdapter
                     {
@@ -352,6 +352,7 @@ namespace HRISCapsu
                             }
                             cmd.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
                             cmd.ExecuteNonQuery();
+                            worker.RunWorkerAsync();
                             cmd.Parameters.Clear();
                             MessageBox.Show("Employee Information Updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
                             clearItems(panelFileInformation);
