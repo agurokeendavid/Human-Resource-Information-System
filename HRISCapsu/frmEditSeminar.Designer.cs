@@ -31,21 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditSeminar));
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Label9 = new System.Windows.Forms.Label();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Label16 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.Label20 = new System.Windows.Forms.Label();
             this.panelFileInformation = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.dtpDateofActivity = new System.Windows.Forms.DateTimePicker();
             this.txtLocation = new System.Windows.Forms.TextBox();
             this.txtSeminarName = new System.Windows.Forms.TextBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
-            this.panelFileInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            this.panelFileInformation.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel1
@@ -73,6 +73,18 @@
             this.Label9.Size = new System.Drawing.Size(376, 46);
             this.Label9.TabIndex = 0;
             this.Label9.Text = "UPDATE SEMINAR";
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.PictureBox1.Image = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
+            this.PictureBox1.Location = new System.Drawing.Point(35, 4);
+            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(84, 56);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 47;
+            this.PictureBox1.TabStop = false;
             // 
             // Label16
             // 
@@ -127,48 +139,30 @@
             this.panelFileInformation.Size = new System.Drawing.Size(540, 349);
             this.panelFileInformation.TabIndex = 7;
             // 
-            // dtpDateofActivity
+            // label2
             // 
-            this.dtpDateofActivity.CustomFormat = "MMMM dd, yyyy";
-            this.dtpDateofActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDateofActivity.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateofActivity.Location = new System.Drawing.Point(28, 183);
-            this.dtpDateofActivity.Name = "dtpDateofActivity";
-            this.dtpDateofActivity.Size = new System.Drawing.Size(488, 30);
-            this.dtpDateofActivity.TabIndex = 3;
-            this.dtpDateofActivity.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(23, 216);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 25);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Status:";
             // 
-            // txtLocation
+            // cmbStatus
             // 
-            this.txtLocation.BackColor = System.Drawing.Color.White;
-            this.txtLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLocation.Location = new System.Drawing.Point(28, 121);
-            this.txtLocation.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(488, 30);
-            this.txtLocation.TabIndex = 2;
-            // 
-            // txtSeminarName
-            // 
-            this.txtSeminarName.BackColor = System.Drawing.Color.White;
-            this.txtSeminarName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSeminarName.Location = new System.Drawing.Point(28, 58);
-            this.txtSeminarName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSeminarName.Name = "txtSeminarName";
-            this.txtSeminarName.Size = new System.Drawing.Size(488, 30);
-            this.txtSeminarName.TabIndex = 1;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.PictureBox1.Image = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
-            this.PictureBox1.Location = new System.Drawing.Point(35, 4);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(84, 56);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox1.TabIndex = 47;
-            this.PictureBox1.TabStop = false;
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.cmbStatus.Location = new System.Drawing.Point(28, 245);
+            this.cmbStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(488, 33);
+            this.cmbStatus.TabIndex = 29;
             // 
             // btnCancel
             // 
@@ -210,30 +204,36 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // cmbStatus
+            // dtpDateofActivity
             // 
-            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Items.AddRange(new object[] {
-            "Active",
-            "Inactive"});
-            this.cmbStatus.Location = new System.Drawing.Point(28, 245);
-            this.cmbStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(488, 33);
-            this.cmbStatus.TabIndex = 29;
+            this.dtpDateofActivity.CustomFormat = "MMMM dd, yyyy";
+            this.dtpDateofActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateofActivity.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateofActivity.Location = new System.Drawing.Point(28, 183);
+            this.dtpDateofActivity.Name = "dtpDateofActivity";
+            this.dtpDateofActivity.Size = new System.Drawing.Size(488, 30);
+            this.dtpDateofActivity.TabIndex = 3;
+            this.dtpDateofActivity.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
             // 
-            // label2
+            // txtLocation
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 216);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 25);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Status:";
+            this.txtLocation.BackColor = System.Drawing.Color.White;
+            this.txtLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocation.Location = new System.Drawing.Point(28, 121);
+            this.txtLocation.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLocation.Name = "txtLocation";
+            this.txtLocation.Size = new System.Drawing.Size(488, 30);
+            this.txtLocation.TabIndex = 2;
+            // 
+            // txtSeminarName
+            // 
+            this.txtSeminarName.BackColor = System.Drawing.Color.White;
+            this.txtSeminarName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSeminarName.Location = new System.Drawing.Point(28, 58);
+            this.txtSeminarName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeminarName.Name = "txtSeminarName";
+            this.txtSeminarName.Size = new System.Drawing.Size(488, 30);
+            this.txtSeminarName.TabIndex = 1;
             // 
             // frmEditSeminar
             // 
@@ -244,12 +244,13 @@
             this.Controls.Add(this.panelFileInformation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditSeminar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditSeminar";
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.panelFileInformation.ResumeLayout(false);
             this.panelFileInformation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

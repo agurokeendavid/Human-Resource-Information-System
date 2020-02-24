@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HRISCapsu.Classes
+﻿namespace HRISCapsu.Classes
 {
-    class DBConnection
+    internal class DBConnection
     {
         public static string id;
     }

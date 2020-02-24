@@ -1,20 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Configuration;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace HRISCapsu
 {
     public partial class frmViewEmployee : Form
     {
-        string path;
-        public frmViewEmployee(string employeeNo, string firstName, string middleName, string lastName, string address, string gender, string dob, string placeofbirth, string contactNo, string civilStatus, string position, string department, string workStatus, string hiredDate, string endOfContract, string status, string path)
+        private readonly string path;
+
+        public frmViewEmployee(string employeeNo, string firstName, string middleName, string lastName, string address,
+            string gender, string dob, string placeofbirth, string contactNo, string civilStatus, string position,
+            string department, string workStatus, string hiredDate, string endOfContract, string status, string path, byte[] imageBytes, string degree, string employeeType)
         {
             InitializeComponent();
             lblEmployeeNo.Text = employeeNo;
@@ -32,24 +32,42 @@ namespace HRISCapsu
             lblWorkStatus.Text = workStatus;
             lblHiredDate.Text = hiredDate;
             lblStatus.Text = status;
+            lblDegree.Text = degree;
+            lblEmployeeType.Text = employeeType;
+            pictureBox2.Image = ConvertBinaryToImage(imageBytes);
             if (endOfContract != "")
             {
                 lblEndofContract.Text = endOfContract;
                 lblEndofContract.Visible = true;
                 label14.Visible = true;
             }
+
             this.path = path;
-            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnAttach_Click(object sender, EventArgs e)
         {
             Process.Start(path);
+        }
+
+        private void panelFileInformation_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        Image ConvertBinaryToImage(byte[] data)
+        {
+            using (var ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+        private void frmViewEmployee_Load(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -1,10 +1,10 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Configuration;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace HRISCapsu
 {
@@ -12,15 +12,16 @@ namespace HRISCapsu
     {
         public static string id;
 
-        [DllImport("user32.dll")]
-        public static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
-
         public frmLogin()
         {
             InitializeComponent();
             SendMessage(txtUsername.Handle, 0x1501, 1, "Username.");
             SendMessage(txtPassword.Handle, 0x1501, 1, "Password.");
         }
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam,
+            [MarshalAs(UnmanagedType.LPWStr)] string lParam);
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -34,15 +35,16 @@ namespace HRISCapsu
         private void btnLogin_Click(object sender, EventArgs e)
         {
             HashAlgorithm sha1 = new SHA1CryptoServiceProvider();
-            Byte[] password = UTF8Encoding.Default.GetBytes(txtPassword.Text);
-            Byte[] txtHash = sha1.ComputeHash(password);
-            string convertedPassword = BitConverter.ToString(txtHash).ToLower().Replace("-", "");
+            var password = Encoding.Default.GetBytes(txtPassword.Text);
+            var txtHash = sha1.ComputeHash(password);
+            var convertedPassword = BitConverter.ToString(txtHash).ToLower().Replace("-", "");
             try
             {
-                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                using (var conn =
+                    new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    string query = "SELECT * FROM Users WHERE username = @username AND password = @password";
+                    var query = "SELECT * FROM Users WHERE username = @username AND password = @password";
                     using (var cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("username", txtUsername.Text);
@@ -58,12 +60,9 @@ namespace HRISCapsu
                             else
                             {
                                 MessageBox.Show("Incorrect username/password!", "Invalid Credentials",
-            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
-
-                            
-                        
                     }
                 }
             }
@@ -71,7 +70,6 @@ namespace HRISCapsu
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
     }
 }

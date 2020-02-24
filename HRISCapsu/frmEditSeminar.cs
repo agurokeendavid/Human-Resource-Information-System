@@ -1,21 +1,16 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Configuration;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace HRISCapsu
 {
     public partial class frmEditSeminar : Form
     {
-        string seminar_id;
-        public frmEditSeminar(string seminar_id, string seminar_name, string seminar_location, string seminar_date, string seminar_status)
+        private readonly string seminar_id;
+
+        public frmEditSeminar(string seminar_id, string seminar_name, string seminar_location, string seminar_date,
+            string seminar_status)
         {
             InitializeComponent();
             frmLogin.SendMessage(txtSeminarName.Handle, 0x1501, 1, "Seminar name.");
@@ -25,24 +20,25 @@ namespace HRISCapsu
             txtLocation.Text = seminar_location;
             dtpDateofActivity.Text = seminar_date;
             cmbStatus.SelectedItem = seminar_status;
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtSeminarName.Text != string.Empty && txtLocation.Text != string.Empty && cmbStatus.SelectedItem.ToString() != string.Empty)
-            {
+            if (txtSeminarName.Text != string.Empty && txtLocation.Text != string.Empty &&
+                cmbStatus.SelectedItem.ToString() != string.Empty)
                 try
                 {
-                    using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                    using (var conn =
+                        new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                     {
                         conn.Open();
-                        string query = "UPDATE seminars SET seminar_name = @seminar_name, seminar_location = @seminar_location, seminar_date = @seminar_date, seminar_status = @seminar_status WHERE seminar_id = @seminar_id";
+                        var query =
+                            "UPDATE seminars SET seminar_name = @seminar_name, seminar_location = @seminar_location, seminar_date = @seminar_date, seminar_status = @seminar_status WHERE seminar_id = @seminar_id";
                         var cmd = new MySqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("seminar_name", txtSeminarName.Text);
                         cmd.Parameters.AddWithValue("seminar_location", txtLocation.Text);
@@ -51,21 +47,19 @@ namespace HRISCapsu
                         cmd.Parameters.AddWithValue("seminar_id", seminar_id);
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
-                        MessageBox.Show("Information successfully updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
-                        this.Close();
+                        MessageBox.Show("Information successfully updated!", "Success", MessageBoxButtons.OK,
+                            MessageBoxIcon.None);
+                        Close();
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Seminar exist!", "Record exist.",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
             else
-            {
                 MessageBox.Show("Required fields.", "Required",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

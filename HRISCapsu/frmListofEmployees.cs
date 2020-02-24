@@ -1,14 +1,9 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Configuration;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using HRISCapsu.ReportViewer;
+using MySql.Data.MySqlClient;
 
 namespace HRISCapsu
 {
@@ -19,18 +14,19 @@ namespace HRISCapsu
             InitializeComponent();
             frmLogin.SendMessage(txtSearch.Handle, 0x1501, 1, "Employee name.");
             displayRecords(dtgRecords, txtSearch.Text);
-
         }
 
 
-        void displayRecords(DataGridView gridView, string keyword)
+        private void displayRecords(DataGridView gridView, string keyword)
         {
             try
             {
-                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                using (var conn =
+                    new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    string query = @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract' FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE (emp.first_name LIKE @keyword OR emp.middle_name LIKE @keyword OR emp.last_name LIKE @keyword) AND (emp.work_status = 'Regular') AND (emp.status = 'Active')";
+                    var query =
+                        @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract' FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE (emp.first_name LIKE @keyword OR emp.middle_name LIKE @keyword OR emp.last_name LIKE @keyword) AND (emp.work_status = 'Regular') AND (emp.status = 'Active') ORDER BY emp.last_name ASC;";
                     var cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("keyword", '%' + keyword + '%');
                     var da = new MySqlDataAdapter();
@@ -58,25 +54,23 @@ namespace HRISCapsu
 
                     if (dt.Rows.Count == 0)
                         MessageBox.Show("No data found!", "Not found",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Error",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void dtgRecords_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -86,12 +80,11 @@ namespace HRISCapsu
 
         private void frmListofEmployees_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            var frm = new ReportViewer.frmRegularEmployeesReport();
+            var frm = new frmRegularEmployeesReport();
             frm.ShowDialog();
         }
     }

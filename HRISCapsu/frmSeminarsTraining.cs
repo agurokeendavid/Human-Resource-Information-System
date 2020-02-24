@@ -1,14 +1,8 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Configuration;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace HRISCapsu
 {
@@ -20,14 +14,16 @@ namespace HRISCapsu
             displaySeminars();
         }
 
-        void displayEmployees()
+        private void displayEmployees()
         {
             try
             {
-                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                using (var conn =
+                    new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    string query = @"SELECT empsem.id, empsem.seminar_id, emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, pos.position_name FROM employee_seminars empsem INNER JOIN employees emp ON empsem.employee_no = emp.employee_no INNER JOIN positions pos ON empsem.employee_position_id = pos.position_id WHERE empsem.seminar_id= @seminar_id";
+                    var query =
+                        @"SELECT empsem.id, empsem.seminar_id, emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, pos.position_name FROM employee_seminars empsem INNER JOIN employees emp ON empsem.employee_no = emp.employee_no INNER JOIN positions pos ON empsem.employee_position_id = pos.position_id WHERE empsem.seminar_id= @seminar_id";
                     var cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("seminar_id", dtgSeminars.CurrentRow.Cells[0].Value.ToString());
                     var da = new MySqlDataAdapter();
@@ -46,8 +42,7 @@ namespace HRISCapsu
                     dtgEmployees.Columns[6].HeaderText = "Position";
                     if (dt.Rows.Count == 0)
                         MessageBox.Show("No data found.", "Not found",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -56,14 +51,16 @@ namespace HRISCapsu
             }
         }
 
-        void displaySeminars()
+        private void displaySeminars()
         {
             try
             {
-                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                using (var conn =
+                    new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    string query = @"SELECT seminar_id, seminar_name, seminar_location, date_format(seminar_date, '%M %d, %Y') AS 'Date', seminar_status FROM seminars WHERE seminar_status = 'Active'";
+                    var query =
+                        @"SELECT seminar_id, seminar_name, seminar_location, date_format(seminar_date, '%M %d, %Y') AS 'Date', seminar_status FROM seminars WHERE seminar_status = 'Active'";
                     var cmd = new MySqlCommand(query, conn);
                     var da = new MySqlDataAdapter();
                     da.SelectCommand = cmd;
@@ -80,15 +77,13 @@ namespace HRISCapsu
 
                     if (dt.Rows.Count == 0)
                         MessageBox.Show("No data found.", "Not found",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Error",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -101,12 +96,14 @@ namespace HRISCapsu
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            var frm = new frmEditSeminar(dtgSeminars.CurrentRow.Cells[0].Value.ToString(), dtgSeminars.CurrentRow.Cells[1].Value.ToString(), dtgSeminars.CurrentRow.Cells[2].Value.ToString(), dtgSeminars.CurrentRow.Cells[3].Value.ToString(), dtgSeminars.CurrentRow.Cells[4].Value.ToString());
+            var frm = new frmEditSeminar(dtgSeminars.CurrentRow.Cells[0].Value.ToString(),
+                dtgSeminars.CurrentRow.Cells[1].Value.ToString(), dtgSeminars.CurrentRow.Cells[2].Value.ToString(),
+                dtgSeminars.CurrentRow.Cells[3].Value.ToString(), dtgSeminars.CurrentRow.Cells[4].Value.ToString());
             frm.ShowDialog();
             displaySeminars();
         }

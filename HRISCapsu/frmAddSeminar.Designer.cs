@@ -245,6 +245,7 @@
             this.Controls.Add(this.panelFileInformation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddSeminar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddSeminar";
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();

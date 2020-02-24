@@ -1,14 +1,7 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Configuration;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace HRISCapsu
 {
@@ -23,14 +16,16 @@ namespace HRISCapsu
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtSeminarName.Text != string.Empty && txtLocation.Text != string.Empty && cmbStatus.SelectedItem.ToString() != string.Empty)
-            {
+            if (txtSeminarName.Text != string.Empty && txtLocation.Text != string.Empty &&
+                cmbStatus.SelectedItem.ToString() != string.Empty)
                 try
                 {
-                    using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                    using (var conn =
+                        new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                     {
                         conn.Open();
-                        string query = "INSERT INTO seminars (seminar_name, seminar_location, seminar_date, seminar_status) VALUES (@seminar_name, @seminar_location, @seminar_date, @seminar_status)";
+                        var query =
+                            "INSERT INTO seminars (seminar_name, seminar_location, seminar_date, seminar_status) VALUES (@seminar_name, @seminar_location, @seminar_date, @seminar_status)";
                         var cmd = new MySqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("seminar_name", txtSeminarName.Text);
                         cmd.Parameters.AddWithValue("seminar_location", txtLocation.Text);
@@ -39,32 +34,27 @@ namespace HRISCapsu
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
                         MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
-                        this.Close();
+                        Close();
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message, "Error",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
             else
-            {
                 MessageBox.Show("Please input required fields.", "Required",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void panelFileInformation_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }

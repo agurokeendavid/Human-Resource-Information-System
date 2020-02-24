@@ -1,49 +1,45 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO.Ports;
 using System.Threading;
-using System.Configuration;
+using System.Windows.Forms;
+using HRISCapsu.ReportViewer;
+using MySql.Data.MySqlClient;
 
 namespace HRISCapsu
 {
     public partial class frmListofContractualEmployees : Form
     {
-        double arrayCount;
-        readonly string[] arrayMessage = new string[20];
-        string inputMessage;
-        string message_start = "";
-        readonly SerialPort sp = new SerialPort();
+        private readonly string[] arrayMessage = new string[20];
+        private readonly SerialPort sp = new SerialPort();
+        private double arrayCount;
+        private string inputMessage;
+        private string message_start = "";
+
         public frmListofContractualEmployees()
         {
             InitializeComponent();
             frmLogin.SendMessage(txtSearch.Handle, 0x1501, 1, "Employee name.");
         }
 
-        bool hasModemConnection()
+        private bool hasModemConnection()
         {
             try
             {
-                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                using (var conn =
+                    new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    string query = "SELECT * from ports";
+                    var query = "SELECT * from ports";
                     var cmd = new MySqlCommand(query, conn);
-                    MySqlDataReader reader = cmd.ExecuteReader();
+                    var reader = cmd.ExecuteReader();
 
                     if (reader.HasRows)
-                    {
                         while (reader.Read())
                         {
-                            
-                            string modemName = reader["port_name"].ToString();
+                            var modemName = reader["port_name"].ToString();
                             sp.PortName = modemName;
                             sp.Open();
                             sp.WriteLine("AT" + Environment.NewLine);
@@ -57,27 +53,22 @@ namespace HRISCapsu
 
 
                             if (response.Contains("ERROR"))
-                            {
                                 return false;
-                            }
-                            else
-                            {
-                                return true;
-                            }
+                            return true;
 
                             sp.Close();
                         }
-                    }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
             return false;
         }
 
-        void sendStartMessage(string phoneNumber, string s_message)
+        private void sendStartMessage(string phoneNumber, string s_message)
         {
             try
             {
@@ -124,7 +115,7 @@ namespace HRISCapsu
                     sp.ReadExisting();
                     sp.Write(x);
 
-                    sp.Write(new byte[] { 26 }, 0, 1);
+                    sp.Write(new byte[] {26}, 0, 1);
                     new ManualResetEvent(false).WaitOne(8000);
                     sp.ReadExisting();
                     sp.Write(x);
@@ -152,7 +143,7 @@ namespace HRISCapsu
         }
 
 
-        void resend(string num, string message, int count)
+        private void resend(string num, string message, int count)
         {
             MessageBox.Show("resending..");
 
@@ -173,13 +164,13 @@ namespace HRISCapsu
             sp.ReadExisting();
             sp.Write(x);
 
-            sp.Write(new byte[] { 26 }, 0, 1);
+            sp.Write(new byte[] {26}, 0, 1);
             new ManualResetEvent(false).WaitOne(8000);
             sp.ReadExisting();
             sp.Write(x);
         }
 
-        void sendMessage(string phoneNumber)
+        private void sendMessage(string phoneNumber)
         {
             try
             {
@@ -223,7 +214,7 @@ namespace HRISCapsu
                         sp.ReadExisting();
                         sp.Write(x);
 
-                        sp.Write(new byte[] { 26 }, 0, 1);
+                        sp.Write(new byte[] {26}, 0, 1);
                         new ManualResetEvent(false).WaitOne(8000);
                         sp.ReadExisting();
                         sp.Write(x);
@@ -253,7 +244,7 @@ namespace HRISCapsu
         }
 
 
-        void message(string phoneNumber)
+        private void message(string phoneNumber)
         {
             var intro = "Capiz State University Pontevedra Campus: ";
             var bodyMessage = "Message here";
@@ -288,19 +279,13 @@ namespace HRISCapsu
 
 
             if (inputMessage.Length > 1550)
-            {
                 MessageBox.Show(
                     "Message too long. " + bodyMessage.Length +
                     " total characters. Only 1550 total characters allowed.", "Message", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
-            }
             else if (inputMessage.Length < 1)
-            {
                 sendStartMessage(phoneNumber, message_start);
-
-            }
             else
-            {
                 try
                 {
                     var textLimit = 155;
@@ -394,17 +379,18 @@ namespace HRISCapsu
                 {
                     MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
         }
 
-        void displayRecords(DataGridView gridView, string keyword)
+        private void displayRecords(DataGridView gridView, string keyword)
         {
             try
             {
-                using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                using (var conn =
+                    new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    string query = @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract' FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE (emp.first_name LIKE @keyword OR emp.middle_name LIKE @keyword OR emp.last_name LIKE @keyword) AND (emp.work_status = 'Contractual') AND (emp.status = 'Active')";
+                    var query =
+                        @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract' FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE (emp.first_name LIKE @keyword OR emp.middle_name LIKE @keyword OR emp.last_name LIKE @keyword) AND (emp.work_status = 'Contractual') AND (emp.status = 'Active') ORDER BY emp.last_name ASC;";
                     var cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("keyword", '%' + keyword + '%');
                     var da = new MySqlDataAdapter();
@@ -431,23 +417,20 @@ namespace HRISCapsu
                     gridView.Columns[14].HeaderText = "End of Contract";
 
                     if (dt.Rows.Count > 0)
-                    {
                         foreach (DataGridViewRow dataGridViewRow in dtgRecords.Rows)
                         {
-                            DateTime hiredDate = Convert.ToDateTime(dataGridViewRow.Cells[13].Value);
-                            DateTime endOfContract = Convert.ToDateTime(dataGridViewRow.Cells[14].Value);
-                            double expiredContract = (endOfContract - DateTime.Now.Date).TotalDays;
+                            var hiredDate = Convert.ToDateTime(dataGridViewRow.Cells[13].Value);
+                            var endOfContract = Convert.ToDateTime(dataGridViewRow.Cells[14].Value);
+                            var expiredContract = (endOfContract - DateTime.Now.Date).TotalDays;
                             if (expiredContract >= 1 && expiredContract <= 30)
                             {
                                 dataGridViewRow.DefaultCellStyle.BackColor = Color.Red;
                                 dataGridViewRow.DefaultCellStyle.ForeColor = Color.White;
-
                             }
                         }
-                    }
                     else
                         MessageBox.Show("No data found!", "Not found",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -458,13 +441,12 @@ namespace HRISCapsu
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             displayRecords(dtgRecords, txtSearch.Text);
-
         }
 
         private void frmListofContractualEmployees_Load(object sender, EventArgs e)
@@ -474,26 +456,20 @@ namespace HRISCapsu
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            if (hasModemConnection() == true)
-            {
+            if (hasModemConnection())
                 foreach (DataGridViewRow dataGridViewRow in dtgRecords.Rows)
                 {
-                    DateTime hiredDate = Convert.ToDateTime(dataGridViewRow.Cells[13].Value);
-                    DateTime endOfContract = Convert.ToDateTime(dataGridViewRow.Cells[14].Value);
-                    double expiredContract = (endOfContract - DateTime.Now.Date).TotalDays;
+                    var hiredDate = Convert.ToDateTime(dataGridViewRow.Cells[13].Value);
+                    var endOfContract = Convert.ToDateTime(dataGridViewRow.Cells[14].Value);
+                    var expiredContract = (endOfContract - DateTime.Now.Date).TotalDays;
                     if (expiredContract >= 1 && expiredContract <= 30)
-                    {
                         message(dataGridViewRow.Cells[8].Value.ToString());
-                    }
-                    
                 }
-            }
-            
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            var frm = new ReportViewer.frmContractualEmployeesReport();
+            var frm = new frmContractualEmployeesReport();
             frm.ShowDialog();
         }
 

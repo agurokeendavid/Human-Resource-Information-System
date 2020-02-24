@@ -39,15 +39,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtSource = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.txtTarget = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.txtSource = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -154,21 +155,51 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
-            // label3
+            // button5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Source:";
+            this.button5.Location = new System.Drawing.Point(418, 227);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 34);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Copy";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // txtSource
+            // label5
             // 
-            this.txtSource.Location = new System.Drawing.Point(69, 97);
-            this.txtSource.Name = "txtSource";
-            this.txtSource.Size = new System.Drawing.Size(371, 22);
-            this.txtSource.TabIndex = 1;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 178);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 17);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "0%";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(6, 198);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(487, 23);
+            this.progressBar1.TabIndex = 6;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(446, 125);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(47, 23);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "...";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(446, 97);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(47, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "...";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // txtTarget
             // 
@@ -186,57 +217,37 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Target:";
             // 
-            // button3
+            // txtSource
             // 
-            this.button3.Location = new System.Drawing.Point(446, 97);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(47, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "...";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.txtSource.Location = new System.Drawing.Point(69, 97);
+            this.txtSource.Name = "txtSource";
+            this.txtSource.Size = new System.Drawing.Size(371, 22);
+            this.txtSource.TabIndex = 1;
             // 
-            // button4
+            // label3
             // 
-            this.button4.Location = new System.Drawing.Point(446, 125);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(47, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "...";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Source:";
             // 
-            // progressBar1
+            // button6
             // 
-            this.progressBar1.Location = new System.Drawing.Point(6, 198);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(487, 23);
-            this.progressBar1.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 178);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 17);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "0%";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(418, 227);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 34);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Copy";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button6.Location = new System.Drawing.Point(677, 332);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(134, 36);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Upload Document";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 502);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -280,5 +291,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

@@ -246,3 +246,9 @@ D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.xml
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.exe.config
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\RdlCompile.cache
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\RdlCompile.compiled
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmApplyLeave.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmListEmployeeLeave.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.Graphs.frmMasteralGraph.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.Graphs.frmDoctoralGraph.resources
