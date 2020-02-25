@@ -28,7 +28,6 @@ namespace HRISCapsu
             worker.ProgressChanged += worker_ProgressChanged;
             worker.DoWork += Worker_DoWork;
 
-            displayPositions(cmbPosition);
             displayDepartments(cmbDepartment);
             frmLogin.SendMessage(txtEmployeeNo.Handle, 0x1501, 1, "Employee no.");
             frmLogin.SendMessage(txtFirstName.Handle, 0x1501, 1, "First name.");
@@ -98,7 +97,7 @@ namespace HRISCapsu
                 {
                     conn.Open();
                     string query =
-                        @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract', emp.status, emp.documentpath, emp.employee_photo, emp.degree FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE emp.status = 'Active' ORDER BY emp.last_name ASC";
+                        @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract', emp.status, emp.documentpath, emp.employee_photo, emp.degree, emp.employee_type FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE emp.status = 'Active' ORDER BY emp.last_name ASC";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataAdapter da = new MySqlDataAdapter
                     {
@@ -128,7 +127,7 @@ namespace HRISCapsu
                     gridView.Columns[16].Visible = false;
                     gridView.Columns[17].Visible = false;
                     gridView.Columns[18].HeaderText = "Degree";
-
+                    gridView.Columns[19].HeaderText = "Employee Type";
                     if (dt.Rows.Count == 0)
                     {
                         MessageBox.Show("No data found.", "Not found",
@@ -168,7 +167,7 @@ namespace HRISCapsu
             }
         }
 
-        private void displayPositions(ComboBox cmbPositions)
+        private void displayPositions(ComboBox cmbPositions, string positionType)
         {
             try
             {
@@ -176,8 +175,9 @@ namespace HRISCapsu
                     new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    string query = "SELECT * FROM positions";
+                    string query = "SELECT * FROM positions WHERE position_type = @position_type ORDER BY position_name ASC";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("position_type", positionType);
                     MySqlDataReader dr = cmd.ExecuteReader();
                     cmbPositions.Items.Clear();
                     while (dr.Read())
@@ -245,6 +245,7 @@ namespace HRISCapsu
         private void btnNew_Click(object sender, EventArgs e)
         {
             clearItems(panelFileInformation);
+            progressBar1.Value = 0;
             panelFileInformation.Enabled = true;
             btnNew.Enabled = false;
             btnSave.Enabled = true;
@@ -256,6 +257,8 @@ namespace HRISCapsu
             Image myImage = Resources.default1;
             pictureBox2.Image = myImage;
             grpPicture.Visible = true;
+            grpPicture.Enabled = true;
+            grpAttachment.Enabled = true;
             dtgRecords.Enabled = false;
         }
 
@@ -328,6 +331,7 @@ namespace HRISCapsu
                                 cmd.Parameters.Clear();
                                 MessageBox.Show("Employee Information Added!");
                                 clearItems(panelFileInformation);
+                                progressBar1.Value = 0;
                                 panelFileInformation.Enabled = false;
                                 displayRecords(dtgRecords);
 
@@ -449,6 +453,7 @@ namespace HRISCapsu
                             MessageBox.Show("Employee Information Updated!", "Success", MessageBoxButtons.OK,
                                 MessageBoxIcon.None);
                             clearItems(panelFileInformation);
+                            progressBar1.Value = 0;
                             panelFileInformation.Enabled = false;
                             displayRecords(dtgRecords);
                             txtEmployeeNo.ReadOnly = false;
@@ -464,6 +469,7 @@ namespace HRISCapsu
                             btnView.Enabled = true;
                             dtgRecords.Enabled = true;
                             grpPicture.Visible = false;
+                            
                         }
                     }
                     catch (Exception ex)
@@ -655,6 +661,14 @@ namespace HRISCapsu
                     isPictureUpdated = true;
                 }
             }
+        }
+
+        private void cmbEmployeeType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbEmployeeType.SelectedItem.ToString() == "Academic")
+                displayPositions(cmbPosition, cmbEmployeeType.SelectedItem.ToString());
+            else if (cmbEmployeeType.SelectedItem.ToString() == "Non - Academic")
+                displayPositions(cmbPosition, cmbEmployeeType.SelectedItem.ToString());
         }
     }
 }

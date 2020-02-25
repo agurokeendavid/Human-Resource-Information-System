@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HRISCapsu.exe" size="1986520">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HRISCapsu.exe" size="2313176">
       <assemblyIdentity name="HRISCapsu" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AvhUHUrWGhTfiFcMeT0M+6FiD73EQp/9sdlAAe3xtIU=</dsig:DigestValue>
+        <dsig:DigestValue>fDD8f2cDJZ/rDj6scF7RwAprudfWaHetE1Q2z43Mdw4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

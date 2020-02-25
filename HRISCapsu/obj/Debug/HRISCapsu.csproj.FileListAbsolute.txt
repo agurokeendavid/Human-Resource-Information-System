@@ -252,3 +252,6 @@ D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmListEmployeeLeave.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.Graphs.frmMasteralGraph.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.Graphs.frmDoctoralGraph.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.test1.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmAcademicReport.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmNonAcademic.resources

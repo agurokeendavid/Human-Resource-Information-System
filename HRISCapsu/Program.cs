@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using HRISCapsu.Graphs;
+using HRISCapsu.ReportViewer;
 
 namespace HRISCapsu
 {
@@ -14,7 +15,7 @@ namespace HRISCapsu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDIMain());
+            Application.Run(new frmNonAcademic());
         }
     }
 }

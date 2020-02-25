@@ -317,13 +317,13 @@ namespace HRISCapsu
 
         private void viewRegularEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new frmListofEmployees();
+            var frm = new frmListofEmployees("Academic");
             frm.ShowDialog();
         }
 
         private void viewContractualEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new frmListofContractualEmployees();
+            var frm = new frmListofContractualEmployees("Academic");
             frm.ShowDialog();
         }
 
@@ -353,14 +353,12 @@ namespace HRISCapsu
 
         private void regularEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new frmRegularEmployeesReport();
-            frm.ShowDialog();
+            
         }
 
         private void contractualEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new frmContractualEmployeesReport();
-            frm.ShowDialog();
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -380,8 +378,8 @@ namespace HRISCapsu
 
         private void endOfContractToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            var frm = new frmListofContractualEmployees();
-            frm.ShowDialog();
+            //var frm = new frmListofContractualEmployees();
+            //frm.ShowDialog();
         }
 
         private void applyLeaveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -408,6 +406,36 @@ namespace HRISCapsu
             var frm = new frmEmployeesRecord();
             frm.ShowDialog(this);
             notifications();
+        }
+
+        private void regularEmployeesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frm = new frmListofEmployees("Non - Academic");
+            frm.ShowDialog();
+        }
+
+        private void contractualEmployeesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frm = new frmListofContractualEmployees("Non - Academic");
+            frm.ShowDialog();
+        }
+
+        private void positionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmPositions();
+            frm.ShowDialog();
+        }
+
+        private void academicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmRegularEmployeesReport();
+            frm.ShowDialog();
+        }
+
+        private void academicToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frm = new frmContractualEmployeesReport();
+            frm.ShowDialog();
         }
     }
 }

@@ -17,7 +17,7 @@ namespace HRISCapsu
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtSeminarName.Text != string.Empty && txtLocation.Text != string.Empty &&
-                cmbStatus.SelectedItem.ToString() != string.Empty)
+                cmbStatus.SelectedItem.ToString() != string.Empty && cmbLocationBased.SelectedItem.ToString() != string.Empty)
                 try
                 {
                     using (var conn =
@@ -25,12 +25,13 @@ namespace HRISCapsu
                     {
                         conn.Open();
                         var query =
-                            "INSERT INTO seminars (seminar_name, seminar_location, seminar_date, seminar_status) VALUES (@seminar_name, @seminar_location, @seminar_date, @seminar_status)";
+                            "INSERT INTO seminars (seminar_name, seminar_location, seminar_date, seminar_status, location_based) VALUES (@seminar_name, @seminar_location, @seminar_date, @seminar_status, @location_based)";
                         var cmd = new MySqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("seminar_name", txtSeminarName.Text);
                         cmd.Parameters.AddWithValue("seminar_location", txtLocation.Text);
                         cmd.Parameters.AddWithValue("seminar_date", dtpDateofActivity.Value.ToString("yyyy-MM-dd"));
                         cmd.Parameters.AddWithValue("seminar_status", cmbStatus.SelectedItem);
+                        cmd.Parameters.AddWithValue("location_based", cmbLocationBased.SelectedItem);
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
                         MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);

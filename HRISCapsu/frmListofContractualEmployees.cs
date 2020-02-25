@@ -17,10 +17,12 @@ namespace HRISCapsu
         private double arrayCount;
         private string inputMessage;
         private string message_start = "";
+        private string employeeType;
 
-        public frmListofContractualEmployees()
+        public frmListofContractualEmployees(string employeeType)
         {
             InitializeComponent();
+            this.employeeType = employeeType;
             frmLogin.SendMessage(txtSearch.Handle, 0x1501, 1, "Employee name.");
         }
 
@@ -390,9 +392,12 @@ namespace HRISCapsu
                 {
                     conn.Open();
                     var query =
-                        @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract' FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE (emp.first_name LIKE @keyword OR emp.middle_name LIKE @keyword OR emp.last_name LIKE @keyword) AND (emp.work_status = 'Contractual') AND (emp.status = 'Active') ORDER BY emp.last_name ASC;";
+                        @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract' FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE (emp.first_name LIKE @keyword OR emp.middle_name LIKE @keyword OR emp.last_name LIKE @keyword) AND (emp.work_status = @work_status) AND (emp.status = @status) AND (emp.employee_type = @employee_type) ORDER BY emp.last_name ASC;";
                     var cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("keyword", '%' + keyword + '%');
+                    cmd.Parameters.AddWithValue("work_status", "Contractual");
+                    cmd.Parameters.AddWithValue("status", "Active");
+                    cmd.Parameters.AddWithValue("employee_type", employeeType);
                     var da = new MySqlDataAdapter();
                     da.SelectCommand = cmd;
                     var dt = new DataTable();

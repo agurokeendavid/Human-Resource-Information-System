@@ -43,6 +43,8 @@
             this.dtpDateofActivity = new System.Windows.Forms.DateTimePicker();
             this.txtLocation = new System.Windows.Forms.TextBox();
             this.txtSeminarName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbLocationBased = new System.Windows.Forms.ComboBox();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.panelFileInformation.SuspendLayout();
@@ -101,7 +103,7 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(23, 155);
+            this.Label1.Location = new System.Drawing.Point(23, 228);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(147, 25);
@@ -123,6 +125,8 @@
             // 
             this.panelFileInformation.BackColor = System.Drawing.Color.Transparent;
             this.panelFileInformation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelFileInformation.Controls.Add(this.label3);
+            this.panelFileInformation.Controls.Add(this.cmbLocationBased);
             this.panelFileInformation.Controls.Add(this.label2);
             this.panelFileInformation.Controls.Add(this.cmbStatus);
             this.panelFileInformation.Controls.Add(this.btnCancel);
@@ -136,7 +140,7 @@
             this.panelFileInformation.Location = new System.Drawing.Point(0, 72);
             this.panelFileInformation.Margin = new System.Windows.Forms.Padding(4);
             this.panelFileInformation.Name = "panelFileInformation";
-            this.panelFileInformation.Size = new System.Drawing.Size(540, 354);
+            this.panelFileInformation.Size = new System.Drawing.Size(540, 447);
             this.panelFileInformation.TabIndex = 0;
             this.panelFileInformation.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFileInformation_Paint);
             // 
@@ -144,7 +148,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 221);
+            this.label2.Location = new System.Drawing.Point(23, 294);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 25);
@@ -159,11 +163,11 @@
             this.cmbStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.cmbStatus.Location = new System.Drawing.Point(28, 250);
+            this.cmbStatus.Location = new System.Drawing.Point(28, 323);
             this.cmbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(488, 33);
-            this.cmbStatus.TabIndex = 31;
+            this.cmbStatus.TabIndex = 5;
             // 
             // btnCancel
             // 
@@ -175,11 +179,11 @@
             this.btnCancel.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(419, 291);
+            this.btnCancel.Location = new System.Drawing.Point(419, 382);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(97, 53);
-            this.btnCancel.TabIndex = 5;
+            this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -195,11 +199,11 @@
             this.btnSave.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(314, 291);
+            this.btnSave.Location = new System.Drawing.Point(314, 382);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(97, 53);
-            this.btnSave.TabIndex = 4;
+            this.btnSave.TabIndex = 6;
             this.btnSave.Text = "&Save ";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = false;
@@ -210,10 +214,10 @@
             this.dtpDateofActivity.CustomFormat = "MMMM dd, yyyy";
             this.dtpDateofActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateofActivity.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateofActivity.Location = new System.Drawing.Point(28, 183);
+            this.dtpDateofActivity.Location = new System.Drawing.Point(28, 256);
             this.dtpDateofActivity.Name = "dtpDateofActivity";
             this.dtpDateofActivity.Size = new System.Drawing.Size(488, 30);
-            this.dtpDateofActivity.TabIndex = 3;
+            this.dtpDateofActivity.TabIndex = 4;
             this.dtpDateofActivity.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
             // 
             // txtLocation
@@ -236,11 +240,38 @@
             this.txtSeminarName.Size = new System.Drawing.Size(488, 30);
             this.txtSeminarName.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(23, 162);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 25);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Location Based:";
+            // 
+            // cmbLocationBased
+            // 
+            this.cmbLocationBased.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLocationBased.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbLocationBased.FormattingEnabled = true;
+            this.cmbLocationBased.Items.AddRange(new object[] {
+            "Local",
+            "Regional",
+            "National",
+            "International"});
+            this.cmbLocationBased.Location = new System.Drawing.Point(28, 191);
+            this.cmbLocationBased.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbLocationBased.Name = "cmbLocationBased";
+            this.cmbLocationBased.Size = new System.Drawing.Size(488, 33);
+            this.cmbLocationBased.TabIndex = 3;
+            // 
             // frmAddSeminar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 426);
+            this.ClientSize = new System.Drawing.Size(540, 521);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.panelFileInformation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -272,5 +303,7 @@
         internal System.Windows.Forms.Button btnCancel;
         internal System.Windows.Forms.Label label2;
         internal System.Windows.Forms.ComboBox cmbStatus;
+        internal System.Windows.Forms.Label label3;
+        internal System.Windows.Forms.ComboBox cmbLocationBased;
     }
 }

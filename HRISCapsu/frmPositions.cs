@@ -39,6 +39,7 @@ namespace HRISCapsu
                     {
                         gridView.Columns[0].Visible = false;
                         gridView.Columns[1].HeaderText = "Position";
+                        gridView.Columns[2].HeaderText = "Position Type";
                     }
                     else
                     {
@@ -92,9 +93,10 @@ namespace HRISCapsu
                             .ConnectionString))
                         {
                             conn.Open();
-                            var query = @"INSERT INTO positions (position_name) VALUES (@position_name)";
+                            var query = @"INSERT INTO positions (position_name, position_type) VALUES (@position_name, @position_type)";
                             var cmd = new MySqlCommand(query, conn);
                             cmd.Parameters.AddWithValue("position_name", txtPosition.Text);
+                            cmd.Parameters.AddWithValue("position_type", cmbPositionType.Text);
                             cmd.ExecuteNonQuery();
                             cmd.Parameters.Clear();
                             MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK,
@@ -132,9 +134,10 @@ namespace HRISCapsu
                     {
                         conn.Open();
                         var query =
-                            @"UPDATE positions SET position_name = @position_name WHERE position_id = @position_id";
+                            @"UPDATE positions SET position_name = @position_name, position_type = @position_type WHERE position_id = @position_id";
                         var cmd = new MySqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("position_name", txtPosition.Text);
+                        cmd.Parameters.AddWithValue("position_type", cmbPositionType.Text);
                         cmd.Parameters.AddWithValue("position_id", dtgRecords.CurrentRow.Cells[0].Value.ToString());
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
@@ -166,7 +169,9 @@ namespace HRISCapsu
             btnEdit.Enabled = false;
             btnPrint.Enabled = false;
             txtPosition.Text = dtgRecords.CurrentRow.Cells[1].Value.ToString();
+            cmbPositionType.SelectedItem = dtgRecords.CurrentRow.Cells[2].Value.ToString();
             txtSearch.Clear();
+            
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -191,6 +196,7 @@ namespace HRISCapsu
                     {
                         dtgRecords.Columns[0].Visible = false;
                         dtgRecords.Columns[1].HeaderText = "Position";
+                        dtgRecords.Columns[2].HeaderText = "Position Type";
                     }
                     else
                     {
