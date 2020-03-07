@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployeesRecord));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -56,7 +56,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cmbCivilStatus = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -78,6 +77,10 @@
             this.Label9 = new System.Windows.Forms.Label();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFileInformation = new System.Windows.Forms.Panel();
+            this.btnPositions = new System.Windows.Forms.Button();
+            this.txtPositions = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cmbEmployeeType = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.cmbDegree = new System.Windows.Forms.ComboBox();
             this.grpAttachment = new System.Windows.Forms.GroupBox();
@@ -90,8 +93,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.cmbEmployeeType = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRecords)).BeginInit();
             this.Panel3.SuspendLayout();
@@ -269,20 +270,20 @@
             // 
             this.dtgRecords.AllowUserToAddRows = false;
             this.dtgRecords.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FloralWhite;
-            this.dtgRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FloralWhite;
+            this.dtgRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dtgRecords.BackgroundColor = System.Drawing.Color.White;
             this.dtgRecords.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgRecords.ColumnHeadersHeight = 30;
             this.dtgRecords.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtgRecords.EnableHeadersVisualStyles = false;
@@ -293,22 +294,22 @@
             this.dtgRecords.Name = "dtgRecords";
             this.dtgRecords.ReadOnly = true;
             this.dtgRecords.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgRecords.RowHeadersVisible = false;
             this.dtgRecords.RowHeadersWidth = 25;
             this.dtgRecords.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgRecords.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgRecords.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgRecords.RowTemplate.Height = 18;
             this.dtgRecords.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -458,16 +459,6 @@
             this.label11.Size = new System.Drawing.Size(90, 17);
             this.label11.TabIndex = 19;
             this.label11.Text = "Department :";
-            // 
-            // cmbPosition
-            // 
-            this.cmbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Location = new System.Drawing.Point(564, 157);
-            this.cmbPosition.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbPosition.Name = "cmbPosition";
-            this.cmbPosition.Size = new System.Drawing.Size(153, 24);
-            this.cmbPosition.TabIndex = 11;
             // 
             // label10
             // 
@@ -694,6 +685,8 @@
             // 
             this.panelFileInformation.BackColor = System.Drawing.Color.Transparent;
             this.panelFileInformation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelFileInformation.Controls.Add(this.btnPositions);
+            this.panelFileInformation.Controls.Add(this.txtPositions);
             this.panelFileInformation.Controls.Add(this.label18);
             this.panelFileInformation.Controls.Add(this.cmbEmployeeType);
             this.panelFileInformation.Controls.Add(this.label17);
@@ -730,7 +723,6 @@
             this.panelFileInformation.Controls.Add(this.label2);
             this.panelFileInformation.Controls.Add(this.label3);
             this.panelFileInformation.Controls.Add(this.label11);
-            this.panelFileInformation.Controls.Add(this.cmbPosition);
             this.panelFileInformation.Controls.Add(this.txtLastName);
             this.panelFileInformation.Enabled = false;
             this.panelFileInformation.Location = new System.Drawing.Point(3, 69);
@@ -738,6 +730,48 @@
             this.panelFileInformation.Name = "panelFileInformation";
             this.panelFileInformation.Size = new System.Drawing.Size(1011, 436);
             this.panelFileInformation.TabIndex = 0;
+            // 
+            // btnPositions
+            // 
+            this.btnPositions.Location = new System.Drawing.Point(724, 156);
+            this.btnPositions.Name = "btnPositions";
+            this.btnPositions.Size = new System.Drawing.Size(33, 23);
+            this.btnPositions.TabIndex = 57;
+            this.btnPositions.Text = "...";
+            this.btnPositions.UseVisualStyleBackColor = true;
+            this.btnPositions.Click += new System.EventHandler(this.btnPositions_Click);
+            // 
+            // txtPositions
+            // 
+            this.txtPositions.BackColor = System.Drawing.Color.White;
+            this.txtPositions.Location = new System.Drawing.Point(564, 157);
+            this.txtPositions.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPositions.Name = "txtPositions";
+            this.txtPositions.Size = new System.Drawing.Size(153, 22);
+            this.txtPositions.TabIndex = 56;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(424, 128);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(114, 17);
+            this.label18.TabIndex = 55;
+            this.label18.Text = "Employee Type :";
+            // 
+            // cmbEmployeeType
+            // 
+            this.cmbEmployeeType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmployeeType.FormattingEnabled = true;
+            this.cmbEmployeeType.Items.AddRange(new object[] {
+            "Academic",
+            "Non - Academic"});
+            this.cmbEmployeeType.Location = new System.Drawing.Point(564, 125);
+            this.cmbEmployeeType.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbEmployeeType.Name = "cmbEmployeeType";
+            this.cmbEmployeeType.Size = new System.Drawing.Size(153, 24);
+            this.cmbEmployeeType.TabIndex = 54;
             // 
             // label17
             // 
@@ -872,30 +906,6 @@
             this.cmbStatus.Size = new System.Drawing.Size(153, 24);
             this.cmbStatus.TabIndex = 14;
             // 
-            // cmbEmployeeType
-            // 
-            this.cmbEmployeeType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEmployeeType.FormattingEnabled = true;
-            this.cmbEmployeeType.Items.AddRange(new object[] {
-            "Academic",
-            "Non - Academic"});
-            this.cmbEmployeeType.Location = new System.Drawing.Point(564, 125);
-            this.cmbEmployeeType.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbEmployeeType.Name = "cmbEmployeeType";
-            this.cmbEmployeeType.Size = new System.Drawing.Size(153, 24);
-            this.cmbEmployeeType.TabIndex = 54;
-            this.cmbEmployeeType.SelectedIndexChanged += new System.EventHandler(this.cmbEmployeeType_SelectedIndexChanged);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(424, 128);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(114, 17);
-            this.label18.TabIndex = 55;
-            this.label18.Text = "Employee Type :";
-            // 
             // frmEmployeesRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -964,7 +974,6 @@
         internal System.Windows.Forms.Label label8;
         internal System.Windows.Forms.TextBox txtContactNo;
         internal System.Windows.Forms.Label label7;
-        internal System.Windows.Forms.ComboBox cmbPosition;
         internal System.Windows.Forms.Label label10;
         internal System.Windows.Forms.ComboBox cmbDepartment;
         internal System.Windows.Forms.Label label11;
@@ -990,5 +999,7 @@
         internal System.Windows.Forms.ComboBox cmbDegree;
         internal System.Windows.Forms.Label label18;
         internal System.Windows.Forms.ComboBox cmbEmployeeType;
+        internal System.Windows.Forms.TextBox txtPositions;
+        private System.Windows.Forms.Button btnPositions;
     }
 }

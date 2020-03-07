@@ -40,6 +40,208 @@ namespace HRISCapsu
             clearItems(panelFileInformation);
         }
 
+        private void InsertRecord()
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"]
+                    .ConnectionString))
+                {
+                    conn.Open();
+                    string query =
+                        @"INSERT INTO employees (employee_no, first_name, middle_name, last_name, address, gender, date_of_birth, place_of_birth, contact_no, civil_status, position_item_no, department_id, work_status, hired_date, end_of_contract, status, documentpath, employee_photo, degree, employee_type) VALUES (@employee_no, @first_name, @middle_name, @last_name, @address, @gender, @date_of_birth, @place_of_birth, @contact_no, @civil_status, @position_item_no, @department_id, @work_status, @hired_date, @end_of_contract, @status, @documentpath, @employee_photo, @degree, @employee_type);";
+                    string input1 = cmbDepartment.SelectedItem.ToString();
+                    int index1 = input1.IndexOf(" ");
+                    if (index1 > 0)
+                    {
+                        input1 = input1.Substring(0, index1);
+                    }
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
+                    cmd.Parameters.AddWithValue("first_name", txtFirstName.Text);
+                    cmd.Parameters.AddWithValue("middle_name", txtMiddleName.Text);
+                    cmd.Parameters.AddWithValue("last_name", txtLastName.Text);
+                    cmd.Parameters.AddWithValue("address", txtAddress.Text);
+                    cmd.Parameters.AddWithValue("gender", cmbGender.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("date_of_birth", dtpDateofBirth.Value.ToString("yyyy-MM-dd"));
+                    cmd.Parameters.AddWithValue("place_of_birth", txtPlaceofBirth.Text);
+                    cmd.Parameters.AddWithValue("contact_no", txtContactNo.Text);
+                    cmd.Parameters.AddWithValue("civil_status", cmbCivilStatus.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("position_item_no", txtPositions.Text);
+                    cmd.Parameters.AddWithValue("department_id", input1);
+                    cmd.Parameters.AddWithValue("work_status", cmbWorkStatus.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("hired_date", dtpHiredDate.Value.ToString("yyyy-MM-dd"));
+
+                    // if work status is selected to contractual end contract field will set to null.
+                    cmd.Parameters.AddWithValue("end_of_contract",
+                        cmbWorkStatus.SelectedItem.ToString() == "Contractual"
+                            ? dtpEndofContract.Value.ToString("yyyy-MM-dd")
+                            : null);
+                    cmd.Parameters.AddWithValue("status", cmbStatus.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("documentpath", destination);
+                    cmd.Parameters.AddWithValue("employee_photo", ConvertImageToBinary(pictureBox2.Image));
+                    cmd.Parameters.AddWithValue("degree", cmbDegree.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("employee_type", cmbEmployeeType.SelectedItem.ToString());
+                    cmd.ExecuteNonQuery();
+                    worker.RunWorkerAsync();
+                    cmd.Parameters.Clear();
+                    MessageBox.Show("Employee Information Added!");
+                    clearItems(panelFileInformation);
+                    progressBar1.Value = 0;
+                    panelFileInformation.Enabled = false;
+                    displayRecords(dtgRecords);
+
+                    txtEmployeeNo.ReadOnly = false;
+                    label14.Visible = false;
+                    dtpEndofContract.Visible = false;
+                    panelFileInformation.Enabled = false;
+                    btnCancel.Enabled = false;
+                    btnSave.Text = "&Save";
+                    btnSave.Enabled = false;
+                    btnNew.Enabled = true;
+                    btnDelete.Enabled = true;
+                    btnUpdate.Enabled = true;
+                    btnView.Enabled = true;
+                    grpPicture.Visible = false;
+                }
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show("Duplicate Employee No.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to add employee information. " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void UpdateRecord()
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"]
+                    .ConnectionString))
+                {
+                    conn.Open();
+                    string query =
+                        @"UPDATE employees SET first_name = @first_name, middle_name = @middle_name, last_name = @last_name, address = @address, gender = @gender, date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @contact_no, civil_status = @civil_status, position_item_no = @position_item_no, department_id = @department_id, work_status = @work_status, hired_date = @hired_date, end_of_contract = @end_of_contract, status = @status, degree = @degree, employee_type = @employee_type WHERE employee_no = @employee_no";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("first_name", txtFirstName.Text);
+                    cmd.Parameters.AddWithValue("middle_name", txtMiddleName.Text);
+                    cmd.Parameters.AddWithValue("last_name", txtLastName.Text);
+                    cmd.Parameters.AddWithValue("address", txtAddress.Text);
+                    cmd.Parameters.AddWithValue("gender", cmbGender.SelectedItem);
+                    cmd.Parameters.AddWithValue("date_of_birth", dtpDateofBirth.Value.ToString("yyyy-MM-dd"));
+                    cmd.Parameters.AddWithValue("place_of_birth", txtPlaceofBirth.Text);
+                    cmd.Parameters.AddWithValue("contact_no", txtContactNo.Text);
+                    cmd.Parameters.AddWithValue("civil_status", cmbCivilStatus.SelectedItem);
+                    cmd.Parameters.AddWithValue("position_item_no", txtPositions.Text);
+                    cmd.Parameters.AddWithValue("department_id", cmbDepartment.SelectedIndex + 1);
+                    cmd.Parameters.AddWithValue("work_status", cmbWorkStatus.SelectedItem);
+                    cmd.Parameters.AddWithValue("hired_date", dtpHiredDate.Value.ToString("yyyy-MM-dd"));
+                    cmd.Parameters.AddWithValue("end_of_contract",
+                        cmbWorkStatus.SelectedItem.ToString() == "Contractual"
+                            ? dtpEndofContract.Value.ToString("yyyy-MM-dd")
+                            : null);
+                    cmd.Parameters.AddWithValue("status", cmbStatus.SelectedItem);
+                    cmd.Parameters.AddWithValue("degree", cmbDegree.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("employee_type", cmbEmployeeType.SelectedItem.ToString());
+
+                    cmd.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+                    MessageBox.Show("Employee Information Updated!", "Success", MessageBoxButtons.OK,
+                        MessageBoxIcon.None);
+                    clearItems(panelFileInformation);
+                    progressBar1.Value = 0;
+                    panelFileInformation.Enabled = false;
+                    displayRecords(dtgRecords);
+                    txtEmployeeNo.ReadOnly = false;
+                    label14.Visible = false;
+                    dtpEndofContract.Visible = false;
+                    panelFileInformation.Enabled = false;
+                    btnCancel.Enabled = false;
+                    btnSave.Text = "&Save";
+                    btnSave.Enabled = false;
+                    btnNew.Enabled = true;
+                    btnDelete.Enabled = true;
+                    btnUpdate.Enabled = true;
+                    btnView.Enabled = true;
+                    dtgRecords.Enabled = true;
+                    grpPicture.Visible = false;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private bool CheckEmployeeExists()
+        {
+            try
+            {
+                using (MySqlConnection connection =
+                    new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                {
+
+                    connection.Open();
+                    string query = "SELECT employee_no FROM employees WHERE employee_no = @employee_no;";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                return true;
+                            }
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return false;
+        }
+        private bool CheckPositionExists()
+        {
+            try
+            {
+                using (MySqlConnection connection =
+                    new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT position_item_no FROM positions WHERE position_item_no = @position_item_no";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("position_item_no", txtPositions.Text);
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Error: " + exception.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return false;
+        }
         private Image ConvertBinaryToImage(byte[] data)
         {
             using (MemoryStream ms = new MemoryStream(data))
@@ -97,7 +299,7 @@ namespace HRISCapsu
                 {
                     conn.Open();
                     string query =
-                        @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract', emp.status, emp.documentpath, emp.employee_photo, emp.degree, emp.employee_type FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE emp.status = 'Active' ORDER BY emp.last_name ASC";
+                        @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract', emp.status, emp.documentpath, emp.employee_photo, emp.degree, emp.employee_type FROM employees emp INNER JOIN positions pos ON emp.position_item_no = pos.position_item_no INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE emp.status = 'Active' ORDER BY emp.last_name ASC";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataAdapter da = new MySqlDataAdapter
                     {
@@ -157,32 +359,6 @@ namespace HRISCapsu
                     while (dr.Read())
                     {
                         cmbDepartments.Items.Add(dr["department_id"] + " - " + dr["department_name"]);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void displayPositions(ComboBox cmbPositions, string positionType)
-        {
-            try
-            {
-                using (MySqlConnection conn =
-                    new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
-                {
-                    conn.Open();
-                    string query = "SELECT * FROM positions WHERE position_type = @position_type ORDER BY position_name ASC";
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("position_type", positionType);
-                    MySqlDataReader dr = cmd.ExecuteReader();
-                    cmbPositions.Items.Clear();
-                    while (dr.Read())
-                    {
-                        cmbPositions.Items.Add(dr["position_id"] + " - " + dr["position_name"]);
                     }
                 }
             }
@@ -269,219 +445,24 @@ namespace HRISCapsu
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtEmployeeNo.Text != "" && txtFirstName.Text != "" && txtMiddleName.Text != "" &&
-                txtLastName.Text != "" && txtAddress.Text != "" && cmbGender.Text != "" && txtPlaceofBirth.Text != "" &&
-                txtContactNo.Text != "" && cmbCivilStatus.Text != "" && cmbPosition.Text != "" &&
-                cmbDepartment.Text != "" && cmbWorkStatus.Text != "" && cmbDegree.Text != "" && cmbEmployeeType.Text != "")
+            if ((txtEmployeeNo.Text != string.Empty && txtFirstName.Text != string.Empty && txtMiddleName.Text != string.Empty &&
+                txtLastName.Text != string.Empty && txtAddress.Text != string.Empty && cmbGender.Text != string.Empty && txtPlaceofBirth.Text != string.Empty &&
+                txtContactNo.Text != string.Empty && cmbCivilStatus.Text != string.Empty &&
+                cmbDepartment.Text != string.Empty && cmbWorkStatus.Text != string.Empty && cmbDegree.Text != string.Empty && cmbEmployeeType.Text != string.Empty && txtPositions.Text != string.Empty && CheckEmployeeExists() == false && destination != string.Empty && CheckPositionExists()))
             {
                 if (btnSave.Text == "&Save")
                 {
-                    if (destination != null)
-                    {
-                        try
-                        {
-                            using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"]
-                                .ConnectionString))
-                            {
-                                conn.Open();
-                                string query =
-                                    "INSERT INTO employees (employee_no, first_name, middle_name, last_name, address, gender, date_of_birth, place_of_birth, contact_no, civil_status, position_id, department_id, work_status, hired_date, end_of_contract, status, documentpath, employee_photo, degree, employee_type) VALUES (@employee_no, @first_name, @middle_name, @last_name, @address, @gender, @date_of_birth, @place_of_birth, @contact_no, @civil_status, @position_id, @department_id, @work_status, @hired_date, @end_of_contract, @status, @documentpath, @employee_photo, @degree, @employee_type);";
-                                string input = cmbPosition.SelectedItem.ToString();
-                                int index = input.IndexOf(" ");
-                                if (index > 0)
-                                {
-                                    input = input.Substring(0, index);
-                                }
-
-                                string input1 = cmbDepartment.SelectedItem.ToString();
-                                int index1 = input1.IndexOf(" ");
-                                if (index1 > 0)
-                                {
-                                    input1 = input1.Substring(0, index1);
-                                }
-
-                                MySqlCommand cmd = new MySqlCommand(query, conn);
-                                cmd.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
-                                cmd.Parameters.AddWithValue("first_name", txtFirstName.Text);
-                                cmd.Parameters.AddWithValue("middle_name", txtMiddleName.Text);
-                                cmd.Parameters.AddWithValue("last_name", txtLastName.Text);
-                                cmd.Parameters.AddWithValue("address", txtAddress.Text);
-                                cmd.Parameters.AddWithValue("gender", cmbGender.SelectedItem.ToString());
-                                cmd.Parameters.AddWithValue("date_of_birth", dtpDateofBirth.Value.ToString("yyyy-MM-dd"));
-                                cmd.Parameters.AddWithValue("place_of_birth", txtPlaceofBirth.Text);
-                                cmd.Parameters.AddWithValue("contact_no", txtContactNo.Text);
-                                cmd.Parameters.AddWithValue("civil_status", cmbCivilStatus.SelectedItem.ToString());
-                                cmd.Parameters.AddWithValue("position_id", input);
-                                cmd.Parameters.AddWithValue("department_id", input1);
-                                cmd.Parameters.AddWithValue("work_status", cmbWorkStatus.SelectedItem.ToString());
-                                cmd.Parameters.AddWithValue("hired_date", dtpHiredDate.Value.ToString("yyyy-MM-dd"));
-
-                                // if work status is selected to contractual end contract field will set to null.
-                                cmd.Parameters.AddWithValue("end_of_contract",
-                                    cmbWorkStatus.SelectedItem.ToString() == "Contractual"
-                                        ? dtpEndofContract.Value.ToString("yyyy-MM-dd")
-                                        : null);
-                                cmd.Parameters.AddWithValue("status", cmbStatus.SelectedItem.ToString());
-                                cmd.Parameters.AddWithValue("documentpath", destination);
-                                cmd.Parameters.AddWithValue("employee_photo", ConvertImageToBinary(pictureBox2.Image));
-                                cmd.Parameters.AddWithValue("degree", cmbDegree.SelectedItem.ToString());
-                                cmd.Parameters.AddWithValue("employee_type", cmbEmployeeType.SelectedItem.ToString());
-                                cmd.ExecuteNonQuery();
-                                worker.RunWorkerAsync();
-                                cmd.Parameters.Clear();
-                                MessageBox.Show("Employee Information Added!");
-                                clearItems(panelFileInformation);
-                                progressBar1.Value = 0;
-                                panelFileInformation.Enabled = false;
-                                displayRecords(dtgRecords);
-
-                                txtEmployeeNo.ReadOnly = false;
-                                label14.Visible = false;
-                                dtpEndofContract.Visible = false;
-                                panelFileInformation.Enabled = false;
-                                btnCancel.Enabled = false;
-                                btnSave.Text = "&Save";
-                                btnSave.Enabled = false;
-                                btnNew.Enabled = true;
-                                btnDelete.Enabled = true;
-                                btnUpdate.Enabled = true;
-                                btnView.Enabled = true;
-                                grpPicture.Visible = false;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Failed to add employee information. " + ex.Message, "Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Please attach a file.", "Required",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    InsertRecord();
                 }
                 else if (btnSave.Text == "&Update")
                 {
-                    try
-                    {
-                        using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"]
-                            .ConnectionString))
-                        {
-                            conn.Open();
-                            string query =
-                                @"UPDATE employees SET first_name = @first_name, middle_name = @middle_name, last_name = @last_name, address = @address, gender = @gender, date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @contact_no, civil_status = @civil_status, position_id = @position_id, department_id = @department_id, work_status = @work_status, hired_date = @hired_date, end_of_contract = @end_of_contract, status = @status, degree = @degree, employee_type = @employee_type WHERE employee_no = @employee_no";
-                            MySqlCommand cmd = new MySqlCommand(query, conn);
-                            cmd.Parameters.AddWithValue("first_name", txtFirstName.Text);
-                            cmd.Parameters.AddWithValue("middle_name", txtMiddleName.Text);
-                            cmd.Parameters.AddWithValue("last_name", txtLastName.Text);
-                            cmd.Parameters.AddWithValue("address", txtAddress.Text);
-                            cmd.Parameters.AddWithValue("gender", cmbGender.SelectedItem);
-                            cmd.Parameters.AddWithValue("date_of_birth", dtpDateofBirth.Value.ToString("yyyy-MM-dd"));
-                            cmd.Parameters.AddWithValue("place_of_birth", txtPlaceofBirth.Text);
-                            cmd.Parameters.AddWithValue("contact_no", txtContactNo.Text);
-                            cmd.Parameters.AddWithValue("civil_status", cmbCivilStatus.SelectedItem);
-                            cmd.Parameters.AddWithValue("position_id", cmbPosition.SelectedIndex + 1);
-                            cmd.Parameters.AddWithValue("department_id", cmbDepartment.SelectedIndex + 1);
-                            cmd.Parameters.AddWithValue("work_status", cmbWorkStatus.SelectedItem);
-                            cmd.Parameters.AddWithValue("hired_date", dtpHiredDate.Value.ToString("yyyy-MM-dd"));
-                            cmd.Parameters.AddWithValue("end_of_contract",
-                                cmbWorkStatus.SelectedItem.ToString() == "Contractual"
-                                    ? dtpEndofContract.Value.ToString("yyyy-MM-dd")
-                                    : null);
-                            cmd.Parameters.AddWithValue("status", cmbStatus.SelectedItem);
-                            cmd.Parameters.AddWithValue("degree", cmbDegree.SelectedItem.ToString());
-                            cmd.Parameters.AddWithValue("employee_type", cmbEmployeeType.SelectedItem.ToString());
-                            //if (isAttachmentUpdated)
-                            //{
-                            //    cmd.Parameters.AddWithValue("documentpath", destination);
-                            //}
-                            //else
-                            //{
-                            //    using (MySqlConnection conn1 = new MySqlConnection(ConfigurationManager
-                            //        .ConnectionStrings["HRISConnection"].ConnectionString))
-                            //    {
-                            //        conn1.Open();
-                            //        string query1 = @"SELECT documentpath FROM employees where employee_no = @employee_no";
-                            //        using (MySqlCommand cmd1 = new MySqlCommand(query1, conn1))
-                            //        {
-                            //            cmd1.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
-                            //            using (MySqlDataReader reader = cmd1.ExecuteReader())
-                            //            {
-                            //                while (reader.Read())
-                            //                {
-                            //                    destination = reader[0].ToString();
-                            //                }
-                            //            }
-                            //        }
-                            //    }
-
-                            //    cmd.Parameters.AddWithValue("documentpath", destination);
-                            //}
-
-                            //if (isPictureUpdated)
-                            //{
-                            //    cmd.Parameters.AddWithValue("employee_photo", ConvertImageToBinary(pictureBox2.Image));
-                            //}
-                            //else
-                            //{
-                            //    byte[] pictureBytes = new byte[0];
-                            //    using (MySqlConnection conn1 = new MySqlConnection(ConfigurationManager
-                            //        .ConnectionStrings["HRISConnection"].ConnectionString))
-                            //    {
-                            //        conn1.Open();
-                            //        string query1 = @"SELECT employee_photo FROM employees where employee_no = @employee_no";
-                            //        using (MySqlCommand cmd1 = new MySqlCommand(query1, conn1))
-                            //        {
-                            //            cmd1.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
-                            //            using (MySqlDataReader reader = cmd1.ExecuteReader())
-                            //            {
-                            //                while (reader.Read())
-                            //                {
-                            //                    pictureBytes = (byte[])reader[0];
-                            //                }
-                            //            }
-                            //        }
-                            //    }
-                            //    cmd.Parameters.AddWithValue("employee_photo", pictureBytes);
-                            //}
-
-                            cmd.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
-                            cmd.ExecuteNonQuery();
-                            //worker.RunWorkerAsync();
-                            cmd.Parameters.Clear();
-                            MessageBox.Show("Employee Information Updated!", "Success", MessageBoxButtons.OK,
-                                MessageBoxIcon.None);
-                            clearItems(panelFileInformation);
-                            progressBar1.Value = 0;
-                            panelFileInformation.Enabled = false;
-                            displayRecords(dtgRecords);
-                            txtEmployeeNo.ReadOnly = false;
-                            label14.Visible = false;
-                            dtpEndofContract.Visible = false;
-                            panelFileInformation.Enabled = false;
-                            btnCancel.Enabled = false;
-                            btnSave.Text = "&Save";
-                            btnSave.Enabled = false;
-                            btnNew.Enabled = true;
-                            btnDelete.Enabled = true;
-                            btnUpdate.Enabled = true;
-                            btnView.Enabled = true;
-                            dtgRecords.Enabled = true;
-                            grpPicture.Visible = false;
-                            
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message, "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    UpdateRecord();
                 }
+                destination = string.Empty;
             }
             else
             {
-                MessageBox.Show("Please input required fields.", "Required",
+                MessageBox.Show("One of your fields are invalid.", "Required",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -572,7 +553,7 @@ namespace HRISCapsu
             txtPlaceofBirth.Text = dtgRecords.CurrentRow.Cells[7].Value.ToString();
             txtContactNo.Text = dtgRecords.CurrentRow.Cells[8].Value.ToString();
             cmbCivilStatus.SelectedItem = dtgRecords.CurrentRow.Cells[9].Value;
-            cmbPosition.SelectedItem = dtgRecords.CurrentRow.Cells[10].Value;
+            txtPositions.Text = dtgRecords.CurrentRow.Cells[10].Value.ToString();
             cmbDepartment.SelectedItem = dtgRecords.CurrentRow.Cells[11].Value;
             cmbWorkStatus.SelectedItem = dtgRecords.CurrentRow.Cells[12].Value;
             dtpHiredDate.Text = dtgRecords.CurrentRow.Cells[13].Value.ToString();
@@ -589,6 +570,7 @@ namespace HRISCapsu
             }
 
             cmbStatus.SelectedItem = dtgRecords.CurrentRow.Cells[15].Value;
+            destination = dtgRecords.CurrentRow.Cells[17].Value.ToString();
             cmbDegree.SelectedItem = dtgRecords.CurrentRow.Cells[18].Value;
             cmbEmployeeType.SelectedItem = dtgRecords.CurrentRow.Cells[19].Value;
             pictureBox2.Image = ConvertBinaryToImage((byte[])dtgRecords.CurrentRow.Cells[17].Value);
@@ -663,12 +645,12 @@ namespace HRISCapsu
             }
         }
 
-        private void cmbEmployeeType_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void btnPositions_Click(object sender, EventArgs e)
         {
-            if (cmbEmployeeType.SelectedItem.ToString() == "Academic")
-                displayPositions(cmbPosition, cmbEmployeeType.SelectedItem.ToString());
-            else if (cmbEmployeeType.SelectedItem.ToString() == "Non - Academic")
-                displayPositions(cmbPosition, cmbEmployeeType.SelectedItem.ToString());
+            frmSelectPositions frm = new frmSelectPositions();
+            frm.ShowDialog();
+            txtPositions.Text = frmSelectPositions.item_no;
         }
     }
 }

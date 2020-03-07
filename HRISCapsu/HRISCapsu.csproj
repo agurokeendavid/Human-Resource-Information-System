@@ -105,6 +105,12 @@
     <Compile Include="frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPosition.Designer.cs">
+      <DependentUpon>frmAddPosition.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddSeminar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,12 @@
     </Compile>
     <Compile Include="frmPositions.Designer.cs">
       <DependentUpon>frmPositions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectPositions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectPositions.Designer.cs">
+      <DependentUpon>frmSelectPositions.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSeminarsTraining.cs">
       <SubType>Form</SubType>
@@ -281,6 +293,9 @@
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddPosition.resx">
+      <DependentUpon>frmAddPosition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddSeminar.resx">
       <DependentUpon>frmAddSeminar.cs</DependentUpon>
     </EmbeddedResource>
@@ -319,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPositions.resx">
       <DependentUpon>frmPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectPositions.resx">
+      <DependentUpon>frmSelectPositions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSeminarsTraining.resx">
       <DependentUpon>frmSeminarsTraining.cs</DependentUpon>

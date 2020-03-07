@@ -15,7 +15,7 @@ namespace HRISCapsu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNonAcademic());
+            Application.Run(new MDIMain());
         }
     }
 }
