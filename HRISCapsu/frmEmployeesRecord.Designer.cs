@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployeesRecord));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.btnView = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.dtgRecords = new System.Windows.Forms.DataGridView();
             this.txtEmployeeNo = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtMiddleName = new System.Windows.Forms.TextBox();
@@ -56,7 +56,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cmbCivilStatus = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -72,40 +71,82 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Panel3 = new System.Windows.Forms.Panel();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Label9 = new System.Windows.Forms.Label();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFileInformation = new System.Windows.Forms.Panel();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txtStep = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtSalaryGrade = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtUniqueItemNo = new System.Windows.Forms.TextBox();
+            this.cmbPosition = new System.Windows.Forms.ComboBox();
+            this.grpSeminar = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.btnAddInternationSeminar = new System.Windows.Forms.Button();
+            this.btnAddNationalSeminar = new System.Windows.Forms.Button();
+            this.btnAddRegionalSeminar = new System.Windows.Forms.Button();
+            this.btnAddLocalSeminar = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtEligibility = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.grpDoctoral = new System.Windows.Forms.GroupBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtDoctoralYearGraduated = new System.Windows.Forms.TextBox();
+            this.txtDoctoralSchool = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtDoctoralCourse = new System.Windows.Forms.TextBox();
+            this.grpMasteral = new System.Windows.Forms.GroupBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtMasteralYearGraduated = new System.Windows.Forms.TextBox();
+            this.txtMasteralSchool = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtMasteralCourse = new System.Windows.Forms.TextBox();
+            this.grpBS = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtBSYearGraduated = new System.Windows.Forms.TextBox();
+            this.txtBSSchool = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtBSCourse = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cmbEmployeeType = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.cmbDegree = new System.Windows.Forms.ComboBox();
             this.grpAttachment = new System.Windows.Forms.GroupBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.pgbAttachment = new System.Windows.Forms.ProgressBar();
             this.btnAttach = new System.Windows.Forms.Button();
             this.lblPercent = new System.Windows.Forms.Label();
             this.grpPicture = new System.Windows.Forms.GroupBox();
             this.lblFileName = new System.Windows.Forms.Label();
             this.btnUpload = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.cmbEmployeeType = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dtgRecords = new System.Windows.Forms.DataGridView();
             this.GroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgRecords)).BeginInit();
-            this.Panel3.SuspendLayout();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.panelFileInformation.SuspendLayout();
+            this.grpSeminar.SuspendLayout();
+            this.grpDoctoral.SuspendLayout();
+            this.grpMasteral.SuspendLayout();
+            this.grpBS.SuspendLayout();
             this.grpAttachment.SuspendLayout();
             this.grpPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRecords)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox2
             // 
             this.GroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox2.Controls.Add(this.btnPrint);
             this.GroupBox2.Controls.Add(this.btnDelete);
             this.GroupBox2.Controls.Add(this.btnCancel);
             this.GroupBox2.Controls.Add(this.btnClose);
@@ -115,13 +156,30 @@
             this.GroupBox2.Controls.Add(this.btnNew);
             this.GroupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.GroupBox2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox2.Location = new System.Drawing.Point(0, 831);
-            this.GroupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.GroupBox2.Location = new System.Drawing.Point(0, 653);
             this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBox2.Size = new System.Drawing.Size(1019, 69);
+            this.GroupBox2.Size = new System.Drawing.Size(1029, 47);
             this.GroupBox2.TabIndex = 25;
             this.GroupBox2.TabStop = false;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnPrint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.BackgroundImage")));
+            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrint.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnPrint.Image = global::HRISCapsu.Properties.Resources.icons8_print_16;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(404, 11);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(73, 28);
+            this.btnPrint.TabIndex = 39;
+            this.btnPrint.Text = "&Print";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnDelete
             // 
@@ -133,11 +191,10 @@
             this.btnDelete.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(114, 22);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Location = new System.Drawing.Point(88, 11);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(97, 34);
-            this.btnDelete.TabIndex = 18;
+            this.btnDelete.Size = new System.Drawing.Size(73, 28);
+            this.btnDelete.TabIndex = 35;
             this.btnDelete.Text = "&Delete";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -154,11 +211,10 @@
             this.btnCancel.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(917, 22);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Location = new System.Drawing.Point(944, 11);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(97, 34);
-            this.btnCancel.TabIndex = 23;
+            this.btnCancel.Size = new System.Drawing.Size(73, 28);
+            this.btnCancel.TabIndex = 41;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -174,11 +230,10 @@
             this.btnClose.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(419, 22);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Location = new System.Drawing.Point(325, 10);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(97, 34);
-            this.btnClose.TabIndex = 21;
+            this.btnClose.Size = new System.Drawing.Size(73, 28);
+            this.btnClose.TabIndex = 38;
             this.btnClose.Text = "Clos&e ";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = false;
@@ -195,11 +250,10 @@
             this.btnSave.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(815, 22);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(865, 10);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(97, 34);
-            this.btnSave.TabIndex = 22;
+            this.btnSave.Size = new System.Drawing.Size(73, 28);
+            this.btnSave.TabIndex = 40;
             this.btnSave.Text = "&Save ";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = false;
@@ -215,11 +269,10 @@
             this.btnView.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnView.Image = ((System.Drawing.Image)(resources.GetObject("btnView.Image")));
             this.btnView.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnView.Location = new System.Drawing.Point(319, 22);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4);
+            this.btnView.Location = new System.Drawing.Point(246, 10);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(97, 34);
-            this.btnView.TabIndex = 20;
+            this.btnView.Size = new System.Drawing.Size(73, 28);
+            this.btnView.TabIndex = 37;
             this.btnView.Text = "&View";
             this.btnView.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnView.UseVisualStyleBackColor = false;
@@ -235,11 +288,10 @@
             this.btnUpdate.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(217, 22);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Location = new System.Drawing.Point(167, 11);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(97, 34);
-            this.btnUpdate.TabIndex = 19;
+            this.btnUpdate.Size = new System.Drawing.Size(73, 28);
+            this.btnUpdate.TabIndex = 36;
             this.btnUpdate.Text = "&Edit";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -255,131 +307,72 @@
             this.btnNew.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
             this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(13, 22);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNew.Location = new System.Drawing.Point(10, 11);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(97, 34);
-            this.btnNew.TabIndex = 17;
+            this.btnNew.Size = new System.Drawing.Size(73, 28);
+            this.btnNew.TabIndex = 34;
             this.btnNew.Text = "&New ";
             this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // dtgRecords
-            // 
-            this.dtgRecords.AllowUserToAddRows = false;
-            this.dtgRecords.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FloralWhite;
-            this.dtgRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            this.dtgRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dtgRecords.BackgroundColor = System.Drawing.Color.White;
-            this.dtgRecords.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dtgRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.dtgRecords.ColumnHeadersHeight = 30;
-            this.dtgRecords.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtgRecords.EnableHeadersVisualStyles = false;
-            this.dtgRecords.GridColor = System.Drawing.Color.PaleTurquoise;
-            this.dtgRecords.Location = new System.Drawing.Point(0, 550);
-            this.dtgRecords.Margin = new System.Windows.Forms.Padding(4);
-            this.dtgRecords.MultiSelect = false;
-            this.dtgRecords.Name = "dtgRecords";
-            this.dtgRecords.ReadOnly = true;
-            this.dtgRecords.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.dtgRecords.RowHeadersVisible = false;
-            this.dtgRecords.RowHeadersWidth = 25;
-            this.dtgRecords.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgRecords.RowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.dtgRecords.RowTemplate.Height = 18;
-            this.dtgRecords.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgRecords.Size = new System.Drawing.Size(1011, 273);
-            this.dtgRecords.TabIndex = 25;
-            this.dtgRecords.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgRecords_CellDoubleClick);
-            // 
             // txtEmployeeNo
             // 
             this.txtEmployeeNo.BackColor = System.Drawing.Color.White;
-            this.txtEmployeeNo.Location = new System.Drawing.Point(151, 29);
-            this.txtEmployeeNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmployeeNo.Location = new System.Drawing.Point(113, 14);
             this.txtEmployeeNo.Name = "txtEmployeeNo";
-            this.txtEmployeeNo.Size = new System.Drawing.Size(95, 22);
-            this.txtEmployeeNo.TabIndex = 1;
+            this.txtEmployeeNo.Size = new System.Drawing.Size(104, 20);
+            this.txtEmployeeNo.TabIndex = 0;
             // 
             // txtFirstName
             // 
             this.txtFirstName.BackColor = System.Drawing.Color.White;
-            this.txtFirstName.Location = new System.Drawing.Point(151, 60);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFirstName.Location = new System.Drawing.Point(113, 39);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(137, 22);
-            this.txtFirstName.TabIndex = 2;
+            this.txtFirstName.Size = new System.Drawing.Size(104, 20);
+            this.txtFirstName.TabIndex = 1;
             // 
             // txtMiddleName
             // 
             this.txtMiddleName.BackColor = System.Drawing.Color.White;
-            this.txtMiddleName.Location = new System.Drawing.Point(151, 92);
-            this.txtMiddleName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMiddleName.Location = new System.Drawing.Point(113, 65);
             this.txtMiddleName.Name = "txtMiddleName";
-            this.txtMiddleName.Size = new System.Drawing.Size(137, 22);
-            this.txtMiddleName.TabIndex = 3;
+            this.txtMiddleName.Size = new System.Drawing.Size(104, 20);
+            this.txtMiddleName.TabIndex = 2;
             // 
             // Label20
             // 
             this.Label20.AutoSize = true;
-            this.Label20.Location = new System.Drawing.Point(39, 63);
-            this.Label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label20.Location = new System.Drawing.Point(29, 41);
             this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(84, 17);
+            this.Label20.Size = new System.Drawing.Size(63, 13);
             this.Label20.TabIndex = 0;
             this.Label20.Text = "First Name :";
             // 
             // Label16
             // 
             this.Label16.AutoSize = true;
-            this.Label16.Location = new System.Drawing.Point(18, 32);
-            this.Label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label16.Location = new System.Drawing.Point(14, 16);
             this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(104, 17);
+            this.Label16.Size = new System.Drawing.Size(79, 13);
             this.Label16.TabIndex = 0;
             this.Label16.Text = "Employee No. :";
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(27, 95);
-            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label1.Location = new System.Drawing.Point(20, 67);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(98, 17);
+            this.Label1.Size = new System.Drawing.Size(75, 13);
             this.Label1.TabIndex = 0;
             this.Label1.Text = "Middle Name :";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(424, 321);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(223, 207);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(114, 17);
+            this.label14.Size = new System.Drawing.Size(87, 13);
             this.label14.TabIndex = 26;
             this.label14.Text = "End of Contract :";
             this.label14.Visible = false;
@@ -388,20 +381,20 @@
             // 
             this.dtpEndofContract.CustomFormat = "MMMM dd, yyyy";
             this.dtpEndofContract.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEndofContract.Location = new System.Drawing.Point(564, 316);
+            this.dtpEndofContract.Location = new System.Drawing.Point(327, 203);
+            this.dtpEndofContract.Margin = new System.Windows.Forms.Padding(2);
             this.dtpEndofContract.Name = "dtpEndofContract";
-            this.dtpEndofContract.Size = new System.Drawing.Size(153, 22);
-            this.dtpEndofContract.TabIndex = 16;
+            this.dtpEndofContract.Size = new System.Drawing.Size(104, 20);
+            this.dtpEndofContract.TabIndex = 17;
             this.dtpEndofContract.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
             this.dtpEndofContract.Visible = false;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(454, 291);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(245, 183);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(84, 17);
+            this.label13.Size = new System.Drawing.Size(64, 13);
             this.label13.TabIndex = 24;
             this.label13.Text = "Hired Date :";
             // 
@@ -409,10 +402,11 @@
             // 
             this.dtpHiredDate.CustomFormat = "MMMM dd, yyyy";
             this.dtpHiredDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHiredDate.Location = new System.Drawing.Point(564, 286);
+            this.dtpHiredDate.Location = new System.Drawing.Point(327, 179);
+            this.dtpHiredDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpHiredDate.Name = "dtpHiredDate";
-            this.dtpHiredDate.Size = new System.Drawing.Size(153, 22);
-            this.dtpHiredDate.TabIndex = 15;
+            this.dtpHiredDate.Size = new System.Drawing.Size(104, 20);
+            this.dtpHiredDate.TabIndex = 16;
             this.dtpHiredDate.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
             // 
             // cmbWorkStatus
@@ -422,20 +416,18 @@
             this.cmbWorkStatus.Items.AddRange(new object[] {
             "Regular",
             "Contractual"});
-            this.cmbWorkStatus.Location = new System.Drawing.Point(564, 223);
-            this.cmbWorkStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbWorkStatus.Location = new System.Drawing.Point(327, 149);
             this.cmbWorkStatus.Name = "cmbWorkStatus";
-            this.cmbWorkStatus.Size = new System.Drawing.Size(153, 24);
-            this.cmbWorkStatus.TabIndex = 13;
+            this.cmbWorkStatus.Size = new System.Drawing.Size(104, 21);
+            this.cmbWorkStatus.TabIndex = 15;
             this.cmbWorkStatus.SelectedIndexChanged += new System.EventHandler(this.cmbWorkStatus_SelectedIndexChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(448, 226);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(241, 152);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 17);
+            this.label12.Size = new System.Drawing.Size(72, 13);
             this.label12.TabIndex = 21;
             this.label12.Text = "Work Status :";
             // 
@@ -443,39 +435,31 @@
             // 
             this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(564, 190);
-            this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbDepartment.Items.AddRange(new object[] {
+            "College of Education Arts and Sciences",
+            "College of Agriculture and Fisheries",
+            "College of Management",
+            "College of Business Management"});
+            this.cmbDepartment.Location = new System.Drawing.Point(327, 123);
             this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(153, 24);
-            this.cmbDepartment.TabIndex = 12;
+            this.cmbDepartment.Size = new System.Drawing.Size(104, 21);
+            this.cmbDepartment.TabIndex = 14;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(448, 193);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(241, 125);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 17);
+            this.label11.Size = new System.Drawing.Size(68, 13);
             this.label11.TabIndex = 19;
             this.label11.Text = "Department :";
-            // 
-            // cmbPosition
-            // 
-            this.cmbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Location = new System.Drawing.Point(564, 157);
-            this.cmbPosition.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbPosition.Name = "cmbPosition";
-            this.cmbPosition.Size = new System.Drawing.Size(153, 24);
-            this.cmbPosition.TabIndex = 11;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(472, 160);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(259, 14);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 17);
+            this.label10.Size = new System.Drawing.Size(50, 13);
             this.label10.TabIndex = 17;
             this.label10.Text = "Position :";
             // 
@@ -486,69 +470,62 @@
             this.cmbCivilStatus.Items.AddRange(new object[] {
             "Single",
             "Married"});
-            this.cmbCivilStatus.Location = new System.Drawing.Point(564, 61);
-            this.cmbCivilStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbCivilStatus.Location = new System.Drawing.Point(113, 291);
             this.cmbCivilStatus.Name = "cmbCivilStatus";
-            this.cmbCivilStatus.Size = new System.Drawing.Size(153, 24);
-            this.cmbCivilStatus.TabIndex = 10;
+            this.cmbCivilStatus.Size = new System.Drawing.Size(104, 21);
+            this.cmbCivilStatus.TabIndex = 9;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(453, 65);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(30, 294);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 17);
+            this.label8.Size = new System.Drawing.Size(65, 13);
             this.label8.TabIndex = 15;
             this.label8.Text = "Civil Status :";
             // 
             // txtContactNo
             // 
             this.txtContactNo.BackColor = System.Drawing.Color.White;
-            this.txtContactNo.Location = new System.Drawing.Point(564, 29);
-            this.txtContactNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContactNo.Location = new System.Drawing.Point(113, 265);
             this.txtContactNo.Name = "txtContactNo";
-            this.txtContactNo.Size = new System.Drawing.Size(153, 22);
-            this.txtContactNo.TabIndex = 9;
+            this.txtContactNo.Size = new System.Drawing.Size(104, 20);
+            this.txtContactNo.TabIndex = 8;
             this.txtContactNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactNo_KeyPress);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(448, 32);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(26, 268);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 17);
+            this.label7.Size = new System.Drawing.Size(70, 13);
             this.label7.TabIndex = 14;
             this.label7.Text = "Contact No. :";
             // 
             // txtPlaceofBirth
             // 
             this.txtPlaceofBirth.BackColor = System.Drawing.Color.White;
-            this.txtPlaceofBirth.Location = new System.Drawing.Point(151, 283);
-            this.txtPlaceofBirth.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPlaceofBirth.Location = new System.Drawing.Point(113, 220);
             this.txtPlaceofBirth.Multiline = true;
             this.txtPlaceofBirth.Name = "txtPlaceofBirth";
-            this.txtPlaceofBirth.Size = new System.Drawing.Size(235, 48);
-            this.txtPlaceofBirth.TabIndex = 8;
+            this.txtPlaceofBirth.Size = new System.Drawing.Size(104, 40);
+            this.txtPlaceofBirth.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 286);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(16, 222);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 17);
+            this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Place of Birth :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 258);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(17, 200);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 17);
+            this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Date of Birth :";
             // 
@@ -556,10 +533,11 @@
             // 
             this.dtpDateofBirth.CustomFormat = "MMMM dd, yyyy";
             this.dtpDateofBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateofBirth.Location = new System.Drawing.Point(151, 252);
+            this.dtpDateofBirth.Location = new System.Drawing.Point(113, 195);
+            this.dtpDateofBirth.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDateofBirth.Name = "dtpDateofBirth";
-            this.dtpDateofBirth.Size = new System.Drawing.Size(235, 22);
-            this.dtpDateofBirth.TabIndex = 7;
+            this.dtpDateofBirth.Size = new System.Drawing.Size(104, 20);
+            this.dtpDateofBirth.TabIndex = 6;
             this.dtpDateofBirth.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
             // 
             // cmbGender
@@ -569,89 +547,54 @@
             this.cmbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(151, 220);
-            this.cmbGender.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbGender.Location = new System.Drawing.Point(113, 169);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(137, 24);
-            this.cmbGender.TabIndex = 6;
+            this.cmbGender.Size = new System.Drawing.Size(104, 21);
+            this.cmbGender.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(63, 223);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(47, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 17);
+            this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Gender :";
             // 
             // txtAddress
             // 
             this.txtAddress.BackColor = System.Drawing.Color.White;
-            this.txtAddress.Location = new System.Drawing.Point(151, 156);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress.Location = new System.Drawing.Point(113, 117);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(235, 56);
-            this.txtAddress.TabIndex = 5;
+            this.txtAddress.Size = new System.Drawing.Size(104, 46);
+            this.txtAddress.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 159);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(42, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 17);
+            this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Address :";
             // 
             // txtLastName
             // 
             this.txtLastName.BackColor = System.Drawing.Color.White;
-            this.txtLastName.Location = new System.Drawing.Point(151, 124);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLastName.Location = new System.Drawing.Point(113, 91);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(137, 22);
-            this.txtLastName.TabIndex = 4;
+            this.txtLastName.Size = new System.Drawing.Size(104, 20);
+            this.txtLastName.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 127);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(30, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 17);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Last Name :";
-            // 
-            // Panel3
-            // 
-            this.Panel3.BackColor = System.Drawing.Color.Transparent;
-            this.Panel3.Controls.Add(this.btnPrint);
-            this.Panel3.Location = new System.Drawing.Point(-3, 513);
-            this.Panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(1014, 32);
-            this.Panel3.TabIndex = 44;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
-            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPrint.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(4, 3);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(141, 27);
-            this.btnPrint.TabIndex = 24;
-            this.btnPrint.Text = "&Print ";
-            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrint.UseVisualStyleBackColor = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // Panel1
             // 
@@ -659,10 +602,9 @@
             this.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Panel1.Controls.Add(this.Label9);
             this.Panel1.Controls.Add(this.PictureBox1);
-            this.Panel1.Location = new System.Drawing.Point(3, 0);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel1.Location = new System.Drawing.Point(10, 0);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(1011, 66);
+            this.Panel1.Size = new System.Drawing.Size(1008, 54);
             this.Panel1.TabIndex = 45;
             // 
             // Label9
@@ -671,10 +613,9 @@
             this.Label9.BackColor = System.Drawing.Color.Transparent;
             this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label9.ForeColor = System.Drawing.Color.Teal;
-            this.Label9.Location = new System.Drawing.Point(255, 10);
-            this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label9.Location = new System.Drawing.Point(337, 8);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(528, 46);
+            this.Label9.Size = new System.Drawing.Size(425, 37);
             this.Label9.TabIndex = 0;
             this.Label9.Text = "EMPLOYEE INFORMATION";
             // 
@@ -682,10 +623,9 @@
             // 
             this.PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.PictureBox1.Image = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
-            this.PictureBox1.Location = new System.Drawing.Point(133, 4);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox1.Location = new System.Drawing.Point(245, 3);
             this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(84, 56);
+            this.PictureBox1.Size = new System.Drawing.Size(63, 46);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox1.TabIndex = 47;
             this.PictureBox1.TabStop = false;
@@ -694,14 +634,25 @@
             // 
             this.panelFileInformation.BackColor = System.Drawing.Color.Transparent;
             this.panelFileInformation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelFileInformation.Controls.Add(this.label35);
+            this.panelFileInformation.Controls.Add(this.txtStep);
+            this.panelFileInformation.Controls.Add(this.label34);
+            this.panelFileInformation.Controls.Add(this.txtSalaryGrade);
+            this.panelFileInformation.Controls.Add(this.label33);
+            this.panelFileInformation.Controls.Add(this.txtUniqueItemNo);
+            this.panelFileInformation.Controls.Add(this.cmbPosition);
+            this.panelFileInformation.Controls.Add(this.grpSeminar);
+            this.panelFileInformation.Controls.Add(this.txtEligibility);
+            this.panelFileInformation.Controls.Add(this.label15);
+            this.panelFileInformation.Controls.Add(this.grpDoctoral);
+            this.panelFileInformation.Controls.Add(this.grpMasteral);
+            this.panelFileInformation.Controls.Add(this.grpBS);
             this.panelFileInformation.Controls.Add(this.label18);
             this.panelFileInformation.Controls.Add(this.cmbEmployeeType);
             this.panelFileInformation.Controls.Add(this.label17);
             this.panelFileInformation.Controls.Add(this.cmbDegree);
             this.panelFileInformation.Controls.Add(this.grpAttachment);
             this.panelFileInformation.Controls.Add(this.grpPicture);
-            this.panelFileInformation.Controls.Add(this.label15);
-            this.panelFileInformation.Controls.Add(this.cmbStatus);
             this.panelFileInformation.Controls.Add(this.label14);
             this.panelFileInformation.Controls.Add(this.cmbWorkStatus);
             this.panelFileInformation.Controls.Add(this.Label16);
@@ -730,22 +681,443 @@
             this.panelFileInformation.Controls.Add(this.label2);
             this.panelFileInformation.Controls.Add(this.label3);
             this.panelFileInformation.Controls.Add(this.label11);
-            this.panelFileInformation.Controls.Add(this.cmbPosition);
             this.panelFileInformation.Controls.Add(this.txtLastName);
             this.panelFileInformation.Enabled = false;
-            this.panelFileInformation.Location = new System.Drawing.Point(3, 69);
-            this.panelFileInformation.Margin = new System.Windows.Forms.Padding(4);
+            this.panelFileInformation.Location = new System.Drawing.Point(10, 56);
             this.panelFileInformation.Name = "panelFileInformation";
-            this.panelFileInformation.Size = new System.Drawing.Size(1011, 436);
+            this.panelFileInformation.Size = new System.Drawing.Size(1008, 405);
             this.panelFileInformation.TabIndex = 0;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(273, 95);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(35, 13);
+            this.label35.TabIndex = 68;
+            this.label35.Text = "Step :";
+            // 
+            // txtStep
+            // 
+            this.txtStep.BackColor = System.Drawing.Color.White;
+            this.txtStep.Location = new System.Drawing.Point(327, 92);
+            this.txtStep.Name = "txtStep";
+            this.txtStep.Size = new System.Drawing.Size(104, 20);
+            this.txtStep.TabIndex = 69;
+            this.txtStep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStep_KeyPress);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(234, 68);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(74, 13);
+            this.label34.TabIndex = 66;
+            this.label34.Text = "Salary Grade :";
+            // 
+            // txtSalaryGrade
+            // 
+            this.txtSalaryGrade.BackColor = System.Drawing.Color.White;
+            this.txtSalaryGrade.Location = new System.Drawing.Point(327, 66);
+            this.txtSalaryGrade.Name = "txtSalaryGrade";
+            this.txtSalaryGrade.Size = new System.Drawing.Size(104, 20);
+            this.txtSalaryGrade.TabIndex = 67;
+            this.txtSalaryGrade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalaryGrade_KeyPress);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(221, 43);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(87, 13);
+            this.label33.TabIndex = 64;
+            this.label33.Text = "Unique Item No :";
+            // 
+            // txtUniqueItemNo
+            // 
+            this.txtUniqueItemNo.BackColor = System.Drawing.Color.White;
+            this.txtUniqueItemNo.Location = new System.Drawing.Point(327, 40);
+            this.txtUniqueItemNo.Name = "txtUniqueItemNo";
+            this.txtUniqueItemNo.Size = new System.Drawing.Size(104, 20);
+            this.txtUniqueItemNo.TabIndex = 65;
+            // 
+            // cmbPosition
+            // 
+            this.cmbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPosition.FormattingEnabled = true;
+            this.cmbPosition.Location = new System.Drawing.Point(327, 13);
+            this.cmbPosition.Name = "cmbPosition";
+            this.cmbPosition.Size = new System.Drawing.Size(104, 21);
+            this.cmbPosition.TabIndex = 63;
+            // 
+            // grpSeminar
+            // 
+            this.grpSeminar.Controls.Add(this.label32);
+            this.grpSeminar.Controls.Add(this.btnAddInternationSeminar);
+            this.grpSeminar.Controls.Add(this.btnAddNationalSeminar);
+            this.grpSeminar.Controls.Add(this.btnAddRegionalSeminar);
+            this.grpSeminar.Controls.Add(this.btnAddLocalSeminar);
+            this.grpSeminar.Controls.Add(this.label29);
+            this.grpSeminar.Controls.Add(this.label30);
+            this.grpSeminar.Controls.Add(this.label31);
+            this.grpSeminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpSeminar.Location = new System.Drawing.Point(226, 227);
+            this.grpSeminar.Margin = new System.Windows.Forms.Padding(2);
+            this.grpSeminar.Name = "grpSeminar";
+            this.grpSeminar.Padding = new System.Windows.Forms.Padding(2);
+            this.grpSeminar.Size = new System.Drawing.Size(244, 152);
+            this.grpSeminar.TabIndex = 62;
+            this.grpSeminar.TabStop = false;
+            this.grpSeminar.Text = "Seminar";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(12, 121);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(71, 13);
+            this.label32.TabIndex = 63;
+            this.label32.Text = "International :";
+            // 
+            // btnAddInternationSeminar
+            // 
+            this.btnAddInternationSeminar.Image = ((System.Drawing.Image)(resources.GetObject("btnAddInternationSeminar.Image")));
+            this.btnAddInternationSeminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddInternationSeminar.Location = new System.Drawing.Point(101, 113);
+            this.btnAddInternationSeminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddInternationSeminar.Name = "btnAddInternationSeminar";
+            this.btnAddInternationSeminar.Size = new System.Drawing.Size(104, 28);
+            this.btnAddInternationSeminar.TabIndex = 37;
+            this.btnAddInternationSeminar.Text = "+ Seminar";
+            this.btnAddInternationSeminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddInternationSeminar.UseVisualStyleBackColor = true;
+            this.btnAddInternationSeminar.Click += new System.EventHandler(this.btnAddInternationSeminar_Click);
+            // 
+            // btnAddNationalSeminar
+            // 
+            this.btnAddNationalSeminar.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNationalSeminar.Image")));
+            this.btnAddNationalSeminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddNationalSeminar.Location = new System.Drawing.Point(101, 81);
+            this.btnAddNationalSeminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddNationalSeminar.Name = "btnAddNationalSeminar";
+            this.btnAddNationalSeminar.Size = new System.Drawing.Size(104, 28);
+            this.btnAddNationalSeminar.TabIndex = 36;
+            this.btnAddNationalSeminar.Text = "+ Seminar";
+            this.btnAddNationalSeminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddNationalSeminar.UseVisualStyleBackColor = true;
+            this.btnAddNationalSeminar.Click += new System.EventHandler(this.btnAddNationalSeminar_Click);
+            // 
+            // btnAddRegionalSeminar
+            // 
+            this.btnAddRegionalSeminar.Image = ((System.Drawing.Image)(resources.GetObject("btnAddRegionalSeminar.Image")));
+            this.btnAddRegionalSeminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddRegionalSeminar.Location = new System.Drawing.Point(101, 49);
+            this.btnAddRegionalSeminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddRegionalSeminar.Name = "btnAddRegionalSeminar";
+            this.btnAddRegionalSeminar.Size = new System.Drawing.Size(104, 28);
+            this.btnAddRegionalSeminar.TabIndex = 35;
+            this.btnAddRegionalSeminar.Text = "+ Seminar";
+            this.btnAddRegionalSeminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddRegionalSeminar.UseVisualStyleBackColor = true;
+            this.btnAddRegionalSeminar.Click += new System.EventHandler(this.btnAddRegionalSeminar_Click);
+            // 
+            // btnAddLocalSeminar
+            // 
+            this.btnAddLocalSeminar.Image = global::HRISCapsu.Properties.Resources.single_choice;
+            this.btnAddLocalSeminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddLocalSeminar.Location = new System.Drawing.Point(101, 17);
+            this.btnAddLocalSeminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddLocalSeminar.Name = "btnAddLocalSeminar";
+            this.btnAddLocalSeminar.Size = new System.Drawing.Size(104, 28);
+            this.btnAddLocalSeminar.TabIndex = 34;
+            this.btnAddLocalSeminar.Text = "+ Seminar";
+            this.btnAddLocalSeminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddLocalSeminar.UseVisualStyleBackColor = true;
+            this.btnAddLocalSeminar.Click += new System.EventHandler(this.btnAddLocalSeminar_Click);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(31, 89);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(52, 13);
+            this.label29.TabIndex = 7;
+            this.label29.Text = "National :";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(28, 53);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(55, 13);
+            this.label30.TabIndex = 5;
+            this.label30.Text = "Regional :";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(44, 22);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(39, 13);
+            this.label31.TabIndex = 3;
+            this.label31.Text = "Local :";
+            // 
+            // txtEligibility
+            // 
+            this.txtEligibility.BackColor = System.Drawing.Color.White;
+            this.txtEligibility.Location = new System.Drawing.Point(113, 342);
+            this.txtEligibility.Name = "txtEligibility";
+            this.txtEligibility.Size = new System.Drawing.Size(104, 20);
+            this.txtEligibility.TabIndex = 11;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(41, 344);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(52, 13);
+            this.label15.TabIndex = 61;
+            this.label15.Text = "Eligibility :";
+            // 
+            // grpDoctoral
+            // 
+            this.grpDoctoral.Controls.Add(this.label26);
+            this.grpDoctoral.Controls.Add(this.label27);
+            this.grpDoctoral.Controls.Add(this.txtDoctoralYearGraduated);
+            this.grpDoctoral.Controls.Add(this.txtDoctoralSchool);
+            this.grpDoctoral.Controls.Add(this.label28);
+            this.grpDoctoral.Controls.Add(this.txtDoctoralCourse);
+            this.grpDoctoral.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpDoctoral.Location = new System.Drawing.Point(492, 241);
+            this.grpDoctoral.Margin = new System.Windows.Forms.Padding(2);
+            this.grpDoctoral.Name = "grpDoctoral";
+            this.grpDoctoral.Padding = new System.Windows.Forms.Padding(2);
+            this.grpDoctoral.Size = new System.Drawing.Size(244, 90);
+            this.grpDoctoral.TabIndex = 26;
+            this.grpDoctoral.TabStop = false;
+            this.grpDoctoral.Text = "Doctoral Degree";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(4, 66);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(46, 13);
+            this.label26.TabIndex = 7;
+            this.label26.Text = "School :";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(4, 41);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(88, 13);
+            this.label27.TabIndex = 5;
+            this.label27.Text = "Year Graduated :";
+            // 
+            // txtDoctoralYearGraduated
+            // 
+            this.txtDoctoralYearGraduated.BackColor = System.Drawing.Color.White;
+            this.txtDoctoralYearGraduated.Location = new System.Drawing.Point(98, 37);
+            this.txtDoctoralYearGraduated.Name = "txtDoctoralYearGraduated";
+            this.txtDoctoralYearGraduated.Size = new System.Drawing.Size(104, 19);
+            this.txtDoctoralYearGraduated.TabIndex = 28;
+            this.txtDoctoralYearGraduated.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDoctoralYearGraduated_KeyPress);
+            // 
+            // txtDoctoralSchool
+            // 
+            this.txtDoctoralSchool.BackColor = System.Drawing.Color.White;
+            this.txtDoctoralSchool.Location = new System.Drawing.Point(98, 63);
+            this.txtDoctoralSchool.Name = "txtDoctoralSchool";
+            this.txtDoctoralSchool.Size = new System.Drawing.Size(138, 19);
+            this.txtDoctoralSchool.TabIndex = 29;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(4, 17);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(46, 13);
+            this.label28.TabIndex = 3;
+            this.label28.Text = "Course :";
+            // 
+            // txtDoctoralCourse
+            // 
+            this.txtDoctoralCourse.BackColor = System.Drawing.Color.White;
+            this.txtDoctoralCourse.Location = new System.Drawing.Point(98, 13);
+            this.txtDoctoralCourse.Name = "txtDoctoralCourse";
+            this.txtDoctoralCourse.Size = new System.Drawing.Size(138, 19);
+            this.txtDoctoralCourse.TabIndex = 27;
+            // 
+            // grpMasteral
+            // 
+            this.grpMasteral.Controls.Add(this.label23);
+            this.grpMasteral.Controls.Add(this.label24);
+            this.grpMasteral.Controls.Add(this.txtMasteralYearGraduated);
+            this.grpMasteral.Controls.Add(this.txtMasteralSchool);
+            this.grpMasteral.Controls.Add(this.label25);
+            this.grpMasteral.Controls.Add(this.txtMasteralCourse);
+            this.grpMasteral.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpMasteral.Location = new System.Drawing.Point(492, 146);
+            this.grpMasteral.Margin = new System.Windows.Forms.Padding(2);
+            this.grpMasteral.Name = "grpMasteral";
+            this.grpMasteral.Padding = new System.Windows.Forms.Padding(2);
+            this.grpMasteral.Size = new System.Drawing.Size(244, 90);
+            this.grpMasteral.TabIndex = 22;
+            this.grpMasteral.TabStop = false;
+            this.grpMasteral.Text = "Masteral Degree";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(4, 66);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(46, 13);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "School :";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(4, 41);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(88, 13);
+            this.label24.TabIndex = 5;
+            this.label24.Text = "Year Graduated :";
+            // 
+            // txtMasteralYearGraduated
+            // 
+            this.txtMasteralYearGraduated.BackColor = System.Drawing.Color.White;
+            this.txtMasteralYearGraduated.Location = new System.Drawing.Point(98, 37);
+            this.txtMasteralYearGraduated.Name = "txtMasteralYearGraduated";
+            this.txtMasteralYearGraduated.Size = new System.Drawing.Size(104, 19);
+            this.txtMasteralYearGraduated.TabIndex = 24;
+            this.txtMasteralYearGraduated.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMasteralYearGraduated_KeyPress);
+            // 
+            // txtMasteralSchool
+            // 
+            this.txtMasteralSchool.BackColor = System.Drawing.Color.White;
+            this.txtMasteralSchool.Location = new System.Drawing.Point(98, 63);
+            this.txtMasteralSchool.Name = "txtMasteralSchool";
+            this.txtMasteralSchool.Size = new System.Drawing.Size(138, 19);
+            this.txtMasteralSchool.TabIndex = 25;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(4, 17);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(46, 13);
+            this.label25.TabIndex = 3;
+            this.label25.Text = "Course :";
+            // 
+            // txtMasteralCourse
+            // 
+            this.txtMasteralCourse.BackColor = System.Drawing.Color.White;
+            this.txtMasteralCourse.Location = new System.Drawing.Point(98, 13);
+            this.txtMasteralCourse.Name = "txtMasteralCourse";
+            this.txtMasteralCourse.Size = new System.Drawing.Size(142, 19);
+            this.txtMasteralCourse.TabIndex = 23;
+            // 
+            // grpBS
+            // 
+            this.grpBS.Controls.Add(this.label22);
+            this.grpBS.Controls.Add(this.label21);
+            this.grpBS.Controls.Add(this.txtBSYearGraduated);
+            this.grpBS.Controls.Add(this.txtBSSchool);
+            this.grpBS.Controls.Add(this.label19);
+            this.grpBS.Controls.Add(this.txtBSCourse);
+            this.grpBS.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBS.Location = new System.Drawing.Point(492, 51);
+            this.grpBS.Margin = new System.Windows.Forms.Padding(2);
+            this.grpBS.Name = "grpBS";
+            this.grpBS.Padding = new System.Windows.Forms.Padding(2);
+            this.grpBS.Size = new System.Drawing.Size(244, 90);
+            this.grpBS.TabIndex = 18;
+            this.grpBS.TabStop = false;
+            this.grpBS.Text = "BS Degree";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(4, 66);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(46, 13);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "School :";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(4, 41);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(88, 13);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "Year Graduated :";
+            // 
+            // txtBSYearGraduated
+            // 
+            this.txtBSYearGraduated.BackColor = System.Drawing.Color.White;
+            this.txtBSYearGraduated.Location = new System.Drawing.Point(98, 37);
+            this.txtBSYearGraduated.Name = "txtBSYearGraduated";
+            this.txtBSYearGraduated.Size = new System.Drawing.Size(104, 19);
+            this.txtBSYearGraduated.TabIndex = 20;
+            this.txtBSYearGraduated.TextChanged += new System.EventHandler(this.txtBSYearGraduated_TextChanged);
+            this.txtBSYearGraduated.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBSYearGraduated_KeyPress);
+            // 
+            // txtBSSchool
+            // 
+            this.txtBSSchool.BackColor = System.Drawing.Color.White;
+            this.txtBSSchool.Location = new System.Drawing.Point(98, 63);
+            this.txtBSSchool.Name = "txtBSSchool";
+            this.txtBSSchool.Size = new System.Drawing.Size(138, 19);
+            this.txtBSSchool.TabIndex = 21;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(4, 17);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(46, 13);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "Course :";
+            // 
+            // txtBSCourse
+            // 
+            this.txtBSCourse.BackColor = System.Drawing.Color.White;
+            this.txtBSCourse.Location = new System.Drawing.Point(98, 13);
+            this.txtBSCourse.Name = "txtBSCourse";
+            this.txtBSCourse.Size = new System.Drawing.Size(142, 19);
+            this.txtBSCourse.TabIndex = 19;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(7, 371);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(86, 13);
+            this.label18.TabIndex = 55;
+            this.label18.Text = "Employee Type :";
+            // 
+            // cmbEmployeeType
+            // 
+            this.cmbEmployeeType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmployeeType.FormattingEnabled = true;
+            this.cmbEmployeeType.Items.AddRange(new object[] {
+            "Academic",
+            "Non - Academic"});
+            this.cmbEmployeeType.Location = new System.Drawing.Point(113, 368);
+            this.cmbEmployeeType.Name = "cmbEmployeeType";
+            this.cmbEmployeeType.Size = new System.Drawing.Size(104, 21);
+            this.cmbEmployeeType.TabIndex = 12;
+            this.cmbEmployeeType.SelectedIndexChanged += new System.EventHandler(this.cmbEmployeeType_SelectedIndexChanged);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(427, 97);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(11, 320);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(111, 17);
+            this.label17.Size = new System.Drawing.Size(84, 13);
             this.label17.TabIndex = 53;
             this.label17.Text = "Highest Degree:";
             // 
@@ -760,47 +1132,55 @@
             "College",
             "Masteral Degree",
             "Doctoral Degree"});
-            this.cmbDegree.Location = new System.Drawing.Point(564, 93);
-            this.cmbDegree.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbDegree.Location = new System.Drawing.Point(113, 317);
             this.cmbDegree.Name = "cmbDegree";
-            this.cmbDegree.Size = new System.Drawing.Size(153, 24);
-            this.cmbDegree.TabIndex = 52;
+            this.cmbDegree.Size = new System.Drawing.Size(104, 21);
+            this.cmbDegree.TabIndex = 10;
+            this.cmbDegree.SelectedIndexChanged += new System.EventHandler(this.cmbDegree_SelectedIndexChanged);
             // 
             // grpAttachment
             // 
-            this.grpAttachment.Controls.Add(this.progressBar1);
+            this.grpAttachment.Controls.Add(this.pgbAttachment);
             this.grpAttachment.Controls.Add(this.btnAttach);
             this.grpAttachment.Controls.Add(this.lblPercent);
-            this.grpAttachment.Location = new System.Drawing.Point(151, 338);
+            this.grpAttachment.Location = new System.Drawing.Point(778, 261);
+            this.grpAttachment.Margin = new System.Windows.Forms.Padding(2);
             this.grpAttachment.Name = "grpAttachment";
-            this.grpAttachment.Size = new System.Drawing.Size(235, 93);
-            this.grpAttachment.TabIndex = 51;
+            this.grpAttachment.Padding = new System.Windows.Forms.Padding(2);
+            this.grpAttachment.Size = new System.Drawing.Size(150, 76);
+            this.grpAttachment.TabIndex = 32;
             this.grpAttachment.TabStop = false;
             this.grpAttachment.Text = "Attachment";
             // 
-            // progressBar1
+            // pgbAttachment
             // 
-            this.progressBar1.Location = new System.Drawing.Point(6, 21);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(153, 23);
-            this.progressBar1.TabIndex = 47;
+            this.pgbAttachment.Location = new System.Drawing.Point(4, 17);
+            this.pgbAttachment.Margin = new System.Windows.Forms.Padding(2);
+            this.pgbAttachment.Name = "pgbAttachment";
+            this.pgbAttachment.Size = new System.Drawing.Size(141, 19);
+            this.pgbAttachment.TabIndex = 47;
             // 
             // btnAttach
             // 
-            this.btnAttach.Location = new System.Drawing.Point(6, 50);
+            this.btnAttach.Image = global::HRISCapsu.Properties.Resources.icons8_attach_16;
+            this.btnAttach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAttach.Location = new System.Drawing.Point(66, 40);
+            this.btnAttach.Margin = new System.Windows.Forms.Padding(2);
             this.btnAttach.Name = "btnAttach";
-            this.btnAttach.Size = new System.Drawing.Size(75, 34);
-            this.btnAttach.TabIndex = 46;
-            this.btnAttach.Text = "Attach";
+            this.btnAttach.Size = new System.Drawing.Size(80, 28);
+            this.btnAttach.TabIndex = 33;
+            this.btnAttach.Text = "Attach File";
+            this.btnAttach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAttach.UseVisualStyleBackColor = true;
             this.btnAttach.Click += new System.EventHandler(this.btnAttach_Click);
             // 
             // lblPercent
             // 
             this.lblPercent.AutoSize = true;
-            this.lblPercent.Location = new System.Drawing.Point(117, 47);
+            this.lblPercent.Location = new System.Drawing.Point(5, 37);
+            this.lblPercent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPercent.Name = "lblPercent";
-            this.lblPercent.Size = new System.Drawing.Size(28, 17);
+            this.lblPercent.Size = new System.Drawing.Size(21, 13);
             this.lblPercent.TabIndex = 48;
             this.lblPercent.Text = "0%";
             // 
@@ -810,10 +1190,12 @@
             this.grpPicture.Controls.Add(this.lblFileName);
             this.grpPicture.Controls.Add(this.btnUpload);
             this.grpPicture.Controls.Add(this.pictureBox2);
-            this.grpPicture.Location = new System.Drawing.Point(763, 29);
+            this.grpPicture.Location = new System.Drawing.Point(778, 61);
+            this.grpPicture.Margin = new System.Windows.Forms.Padding(2);
             this.grpPicture.Name = "grpPicture";
-            this.grpPicture.Size = new System.Drawing.Size(200, 235);
-            this.grpPicture.TabIndex = 50;
+            this.grpPicture.Padding = new System.Windows.Forms.Padding(2);
+            this.grpPicture.Size = new System.Drawing.Size(150, 191);
+            this.grpPicture.TabIndex = 30;
             this.grpPicture.TabStop = false;
             this.grpPicture.Text = "Please select a picture";
             this.grpPicture.Visible = false;
@@ -821,20 +1203,23 @@
             // lblFileName
             // 
             this.lblFileName.AutoSize = true;
-            this.lblFileName.Location = new System.Drawing.Point(7, 166);
-            this.lblFileName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFileName.Location = new System.Drawing.Point(5, 135);
             this.lblFileName.Name = "lblFileName";
-            this.lblFileName.Size = new System.Drawing.Size(75, 17);
+            this.lblFileName.Size = new System.Drawing.Size(57, 13);
             this.lblFileName.TabIndex = 51;
             this.lblFileName.Text = "File Name:";
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(6, 186);
+            this.btnUpload.Image = global::HRISCapsu.Properties.Resources.icons8_upload_16;
+            this.btnUpload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpload.Location = new System.Drawing.Point(4, 151);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(188, 40);
-            this.btnUpload.TabIndex = 51;
-            this.btnUpload.Text = "Upload";
+            this.btnUpload.Size = new System.Drawing.Size(141, 32);
+            this.btnUpload.TabIndex = 31;
+            this.btnUpload.Text = "Select Photo";
+            this.btnUpload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpload.UseVisualStyleBackColor = true;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
@@ -842,89 +1227,113 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::HRISCapsu.Properties.Resources.default1;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 21);
+            this.pictureBox2.Location = new System.Drawing.Point(4, 17);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(188, 142);
+            this.pictureBox2.Size = new System.Drawing.Size(141, 115);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 49;
             this.pictureBox2.TabStop = false;
             // 
-            // label15
+            // panel2
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(482, 258);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 17);
-            this.label15.TabIndex = 28;
-            this.label15.Text = "Status :";
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.dtgRecords);
+            this.panel2.Location = new System.Drawing.Point(10, 466);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1008, 182);
+            this.panel2.TabIndex = 46;
             // 
-            // cmbStatus
+            // dtgRecords
             // 
-            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Items.AddRange(new object[] {
-            "Active",
-            "Inactive"});
-            this.cmbStatus.Location = new System.Drawing.Point(564, 255);
-            this.cmbStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(153, 24);
-            this.cmbStatus.TabIndex = 14;
-            // 
-            // cmbEmployeeType
-            // 
-            this.cmbEmployeeType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEmployeeType.FormattingEnabled = true;
-            this.cmbEmployeeType.Items.AddRange(new object[] {
-            "Academic",
-            "Non - Academic"});
-            this.cmbEmployeeType.Location = new System.Drawing.Point(564, 125);
-            this.cmbEmployeeType.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbEmployeeType.Name = "cmbEmployeeType";
-            this.cmbEmployeeType.Size = new System.Drawing.Size(153, 24);
-            this.cmbEmployeeType.TabIndex = 54;
-            this.cmbEmployeeType.SelectedIndexChanged += new System.EventHandler(this.cmbEmployeeType_SelectedIndexChanged);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(424, 128);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(114, 17);
-            this.label18.TabIndex = 55;
-            this.label18.Text = "Employee Type :";
+            this.dtgRecords.AllowUserToAddRows = false;
+            this.dtgRecords.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FloralWhite;
+            this.dtgRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgRecords.BackgroundColor = System.Drawing.Color.White;
+            this.dtgRecords.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dtgRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgRecords.ColumnHeadersHeight = 30;
+            this.dtgRecords.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtgRecords.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgRecords.EnableHeadersVisualStyles = false;
+            this.dtgRecords.GridColor = System.Drawing.Color.PaleTurquoise;
+            this.dtgRecords.Location = new System.Drawing.Point(0, 0);
+            this.dtgRecords.MultiSelect = false;
+            this.dtgRecords.Name = "dtgRecords";
+            this.dtgRecords.ReadOnly = true;
+            this.dtgRecords.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgRecords.RowHeadersVisible = false;
+            this.dtgRecords.RowHeadersWidth = 25;
+            this.dtgRecords.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgRecords.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgRecords.RowTemplate.Height = 18;
+            this.dtgRecords.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgRecords.Size = new System.Drawing.Size(1006, 180);
+            this.dtgRecords.TabIndex = 26;
+            this.dtgRecords.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgRecords_CellContentClick);
+            this.dtgRecords.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgRecords_CellDoubleClick);
             // 
             // frmEmployeesRecord
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1019, 900);
+            this.ClientSize = new System.Drawing.Size(1029, 700);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelFileInformation);
             this.Controls.Add(this.GroupBox2);
-            this.Controls.Add(this.Panel3);
             this.Controls.Add(this.Panel1);
-            this.Controls.Add(this.dtgRecords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEmployeesRecord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEmployeesRecord";
             this.Load += new System.EventHandler(this.frmEmployeesRecord_Load);
             this.GroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgRecords)).EndInit();
-            this.Panel3.ResumeLayout(false);
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.panelFileInformation.ResumeLayout(false);
             this.panelFileInformation.PerformLayout();
+            this.grpSeminar.ResumeLayout(false);
+            this.grpSeminar.PerformLayout();
+            this.grpDoctoral.ResumeLayout(false);
+            this.grpDoctoral.PerformLayout();
+            this.grpMasteral.ResumeLayout(false);
+            this.grpMasteral.PerformLayout();
+            this.grpBS.ResumeLayout(false);
+            this.grpBS.PerformLayout();
             this.grpAttachment.ResumeLayout(false);
             this.grpAttachment.PerformLayout();
             this.grpPicture.ResumeLayout(false);
             this.grpPicture.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRecords)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -940,10 +1349,7 @@
         internal System.Windows.Forms.Button btnNew;
         internal System.Windows.Forms.PictureBox PictureBox1;
         internal System.Windows.Forms.Label Label9;
-        internal System.Windows.Forms.Panel Panel3;
-        internal System.Windows.Forms.Button btnPrint;
         internal System.Windows.Forms.Panel Panel1;
-        internal System.Windows.Forms.DataGridView dtgRecords;
         internal System.Windows.Forms.TextBox txtEmployeeNo;
         internal System.Windows.Forms.TextBox txtFirstName;
         internal System.Windows.Forms.TextBox txtMiddleName;
@@ -964,7 +1370,6 @@
         internal System.Windows.Forms.Label label8;
         internal System.Windows.Forms.TextBox txtContactNo;
         internal System.Windows.Forms.Label label7;
-        internal System.Windows.Forms.ComboBox cmbPosition;
         internal System.Windows.Forms.Label label10;
         internal System.Windows.Forms.ComboBox cmbDepartment;
         internal System.Windows.Forms.Label label11;
@@ -976,11 +1381,9 @@
         private System.Windows.Forms.DateTimePicker dtpEndofContract;
         internal System.Windows.Forms.Button btnView;
         internal System.Windows.Forms.Panel panelFileInformation;
-        internal System.Windows.Forms.Label label15;
-        internal System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Button btnAttach;
         private System.Windows.Forms.Label lblPercent;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar pgbAttachment;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox grpPicture;
         private System.Windows.Forms.Button btnUpload;
@@ -990,5 +1393,47 @@
         internal System.Windows.Forms.ComboBox cmbDegree;
         internal System.Windows.Forms.Label label18;
         internal System.Windows.Forms.ComboBox cmbEmployeeType;
+        private System.Windows.Forms.GroupBox grpBS;
+        internal System.Windows.Forms.Label label22;
+        internal System.Windows.Forms.Label label21;
+        internal System.Windows.Forms.TextBox txtBSYearGraduated;
+        internal System.Windows.Forms.TextBox txtBSSchool;
+        internal System.Windows.Forms.Label label19;
+        internal System.Windows.Forms.TextBox txtBSCourse;
+        private System.Windows.Forms.GroupBox grpMasteral;
+        internal System.Windows.Forms.Label label23;
+        internal System.Windows.Forms.Label label24;
+        internal System.Windows.Forms.TextBox txtMasteralYearGraduated;
+        internal System.Windows.Forms.TextBox txtMasteralSchool;
+        internal System.Windows.Forms.Label label25;
+        internal System.Windows.Forms.TextBox txtMasteralCourse;
+        internal System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Panel panel2;
+        internal System.Windows.Forms.DataGridView dtgRecords;
+        private System.Windows.Forms.GroupBox grpDoctoral;
+        internal System.Windows.Forms.Label label26;
+        internal System.Windows.Forms.Label label27;
+        internal System.Windows.Forms.TextBox txtDoctoralYearGraduated;
+        internal System.Windows.Forms.TextBox txtDoctoralSchool;
+        internal System.Windows.Forms.Label label28;
+        internal System.Windows.Forms.TextBox txtDoctoralCourse;
+        internal System.Windows.Forms.TextBox txtEligibility;
+        internal System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox grpSeminar;
+        internal System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button btnAddInternationSeminar;
+        private System.Windows.Forms.Button btnAddNationalSeminar;
+        private System.Windows.Forms.Button btnAddRegionalSeminar;
+        private System.Windows.Forms.Button btnAddLocalSeminar;
+        internal System.Windows.Forms.Label label29;
+        internal System.Windows.Forms.Label label30;
+        internal System.Windows.Forms.Label label31;
+        internal System.Windows.Forms.ComboBox cmbPosition;
+        internal System.Windows.Forms.Label label34;
+        internal System.Windows.Forms.TextBox txtSalaryGrade;
+        internal System.Windows.Forms.Label label33;
+        internal System.Windows.Forms.TextBox txtUniqueItemNo;
+        internal System.Windows.Forms.Label label35;
+        internal System.Windows.Forms.TextBox txtStep;
     }
 }

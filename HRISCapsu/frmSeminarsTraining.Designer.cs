@@ -46,7 +46,7 @@
             this.dtgEmployees = new System.Windows.Forms.DataGridView();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.btnAddSeminar = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
@@ -64,10 +64,9 @@
             this.Label9.BackColor = System.Drawing.Color.Transparent;
             this.Label9.Font = new System.Drawing.Font("Britannic Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label9.ForeColor = System.Drawing.Color.Teal;
-            this.Label9.Location = new System.Drawing.Point(330, 11);
-            this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label9.Location = new System.Drawing.Point(286, 9);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(443, 44);
+            this.Label9.Size = new System.Drawing.Size(354, 36);
             this.Label9.TabIndex = 1;
             this.Label9.Text = "Seminars and Trainings";
             // 
@@ -79,18 +78,16 @@
             this.Panel1.Controls.Add(this.Label9);
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel1.Location = new System.Drawing.Point(0, 0);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(1059, 66);
+            this.Panel1.Size = new System.Drawing.Size(872, 54);
             this.Panel1.TabIndex = 31;
             // 
             // PictureBox1
             // 
             this.PictureBox1.Image = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
-            this.PictureBox1.Location = new System.Drawing.Point(281, 8);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox1.Location = new System.Drawing.Point(250, 6);
             this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(41, 47);
+            this.PictureBox1.Size = new System.Drawing.Size(31, 38);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox1.TabIndex = 32;
             this.PictureBox1.TabStop = false;
@@ -100,11 +97,9 @@
             this.GroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.GroupBox1.Controls.Add(this.dtgSeminars);
             this.GroupBox1.Font = new System.Drawing.Font("Verdana", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.Location = new System.Drawing.Point(13, 85);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.GroupBox1.Location = new System.Drawing.Point(10, 69);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBox1.Size = new System.Drawing.Size(456, 402);
+            this.GroupBox1.Size = new System.Drawing.Size(388, 327);
             this.GroupBox1.TabIndex = 28;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Available Seminars";
@@ -115,7 +110,6 @@
             this.dtgSeminars.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FloralWhite;
             this.dtgSeminars.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgSeminars.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgSeminars.BackgroundColor = System.Drawing.Color.White;
             this.dtgSeminars.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgSeminars.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -131,8 +125,7 @@
             this.dtgSeminars.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtgSeminars.EnableHeadersVisualStyles = false;
             this.dtgSeminars.GridColor = System.Drawing.Color.PaleTurquoise;
-            this.dtgSeminars.Location = new System.Drawing.Point(8, 36);
-            this.dtgSeminars.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgSeminars.Location = new System.Drawing.Point(6, 29);
             this.dtgSeminars.MultiSelect = false;
             this.dtgSeminars.Name = "dtgSeminars";
             this.dtgSeminars.ReadOnly = true;
@@ -156,20 +149,19 @@
             this.dtgSeminars.RowTemplate.Height = 18;
             this.dtgSeminars.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgSeminars.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgSeminars.Size = new System.Drawing.Size(440, 353);
+            this.dtgSeminars.Size = new System.Drawing.Size(376, 287);
             this.dtgSeminars.TabIndex = 1;
             this.dtgSeminars.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSeminars_CellDoubleClick);
+            this.dtgSeminars.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSeminars_CellEnter);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.dtgEmployees);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(477, 85);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(404, 69);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(568, 402);
+            this.groupBox2.Size = new System.Drawing.Size(458, 327);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Employees";
@@ -180,7 +172,7 @@
             this.dtgEmployees.AllowUserToDeleteRows = false;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FloralWhite;
             this.dtgEmployees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dtgEmployees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dtgEmployees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dtgEmployees.BackgroundColor = System.Drawing.Color.White;
             this.dtgEmployees.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgEmployees.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -196,8 +188,7 @@
             this.dtgEmployees.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtgEmployees.EnableHeadersVisualStyles = false;
             this.dtgEmployees.GridColor = System.Drawing.Color.PaleTurquoise;
-            this.dtgEmployees.Location = new System.Drawing.Point(8, 36);
-            this.dtgEmployees.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgEmployees.Location = new System.Drawing.Point(6, 29);
             this.dtgEmployees.MultiSelect = false;
             this.dtgEmployees.Name = "dtgEmployees";
             this.dtgEmployees.ReadOnly = true;
@@ -221,7 +212,7 @@
             this.dtgEmployees.RowTemplate.Height = 18;
             this.dtgEmployees.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEmployees.Size = new System.Drawing.Size(552, 353);
+            this.dtgEmployees.Size = new System.Drawing.Size(446, 287);
             this.dtgEmployees.TabIndex = 1;
             // 
             // Panel2
@@ -231,10 +222,9 @@
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Panel2.Controls.Add(this.btnClose);
             this.Panel2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Panel2.Location = new System.Drawing.Point(13, 600);
-            this.Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel2.Location = new System.Drawing.Point(10, 488);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(1032, 73);
+            this.Panel2.Size = new System.Drawing.Size(853, 60);
             this.Panel2.TabIndex = 34;
             // 
             // btnClose
@@ -247,35 +237,33 @@
             this.btnClose.ForeColor = System.Drawing.Color.DarkCyan;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(924, 10);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Location = new System.Drawing.Point(770, 8);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(100, 48);
+            this.btnClose.Size = new System.Drawing.Size(75, 39);
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "&Close ";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnEdit
+            // btnDelete
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEdit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnEdit.Image = global::HRISCapsu.Properties.Resources.file__1_;
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(193, 495);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(172, 48);
-            this.btnEdit.TabIndex = 35;
-            this.btnEdit.Text = "&Edit Seminar";
-            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelete.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnDelete.Image = global::HRISCapsu.Properties.Resources.icon_delete;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(145, 402);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(129, 39);
+            this.btnDelete.TabIndex = 35;
+            this.btnDelete.Text = "&Delete Seminar";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAddEmployee
             // 
@@ -287,12 +275,11 @@
             this.btnAddEmployee.ForeColor = System.Drawing.Color.DarkCyan;
             this.btnAddEmployee.Image = global::HRISCapsu.Properties.Resources.add;
             this.btnAddEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEmployee.Location = new System.Drawing.Point(873, 495);
-            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddEmployee.Location = new System.Drawing.Point(733, 402);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(172, 48);
+            this.btnAddEmployee.Size = new System.Drawing.Size(129, 39);
             this.btnAddEmployee.TabIndex = 33;
-            this.btnAddEmployee.Text = "Add Employee";
+            this.btnAddEmployee.Text = "Add &Employee";
             this.btnAddEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddEmployee.UseVisualStyleBackColor = false;
             this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
@@ -307,22 +294,21 @@
             this.btnAddSeminar.ForeColor = System.Drawing.Color.DarkCyan;
             this.btnAddSeminar.Image = global::HRISCapsu.Properties.Resources.plus;
             this.btnAddSeminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddSeminar.Location = new System.Drawing.Point(13, 495);
-            this.btnAddSeminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddSeminar.Location = new System.Drawing.Point(10, 402);
             this.btnAddSeminar.Name = "btnAddSeminar";
-            this.btnAddSeminar.Size = new System.Drawing.Size(172, 48);
+            this.btnAddSeminar.Size = new System.Drawing.Size(129, 39);
             this.btnAddSeminar.TabIndex = 7;
-            this.btnAddSeminar.Text = "Add Seminar";
+            this.btnAddSeminar.Text = "Add &Seminar";
             this.btnAddSeminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddSeminar.UseVisualStyleBackColor = false;
             this.btnAddSeminar.Click += new System.EventHandler(this.btnAddSeminar_Click);
             // 
             // frmSeminarsTraining
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1059, 686);
-            this.Controls.Add(this.btnEdit);
+            this.ClientSize = new System.Drawing.Size(872, 557);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.groupBox2);
@@ -330,6 +316,7 @@
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmSeminarsTraining";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSeminarsTraining";
@@ -358,6 +345,6 @@
         internal System.Windows.Forms.Button btnAddEmployee;
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Button btnClose;
-        internal System.Windows.Forms.Button btnEdit;
+        internal System.Windows.Forms.Button btnDelete;
     }
 }

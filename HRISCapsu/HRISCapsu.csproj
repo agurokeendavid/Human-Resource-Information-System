@@ -69,6 +69,39 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v18.2.Core, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v18.2.Win, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v18.2.UI, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v18.2.Core, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v18.2.Core, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v18.2.Presets, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v18.2.Win, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v18.2, Version=18.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -98,12 +131,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\DBConnection.cs" />
+    <Compile Include="Classes\Methods.cs" />
     <Compile Include="frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPosition.Designer.cs">
+      <DependentUpon>frmAddPosition.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddSeminar.cs">
       <SubType>Form</SubType>
@@ -183,6 +222,36 @@
     <Compile Include="frmPositions.Designer.cs">
       <DependentUpon>frmPositions.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSelectPositions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectPositions.Designer.cs">
+      <DependentUpon>frmSelectPositions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeminarInternational.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeminarInternational.Designer.cs">
+      <DependentUpon>frmSeminarInternational.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeminarLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeminarLocal.Designer.cs">
+      <DependentUpon>frmSeminarLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeminarNational.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeminarNational.Designer.cs">
+      <DependentUpon>frmSeminarNational.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeminarRegional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeminarRegional.Designer.cs">
+      <DependentUpon>frmSeminarRegional.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSeminarsTraining.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,63 +292,48 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportViewer\frmAcademicReport.cs">
+    <Compile Include="ReportPreviewer\previewAcademicRegularEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportViewer\frmAcademicReport.Designer.cs">
-      <DependentUpon>frmAcademicReport.cs</DependentUpon>
+    <Compile Include="ReportPreviewer\previewAcademicRegularEmployees.Designer.cs">
+      <DependentUpon>previewAcademicRegularEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportViewer\frmContractualEmployeesReport.cs">
+    <Compile Include="ReportPreviewer\previewAllEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportViewer\frmContractualEmployeesReport.Designer.cs">
-      <DependentUpon>frmContractualEmployeesReport.cs</DependentUpon>
+    <Compile Include="ReportPreviewer\previewAllEmployees.Designer.cs">
+      <DependentUpon>previewAllEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportViewer\frmDepartmentsReport.cs">
+    <Compile Include="ReportPreviewer\previewContractualAcademicEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportViewer\frmDepartmentsReport.Designer.cs">
-      <DependentUpon>frmDepartmentsReport.cs</DependentUpon>
+    <Compile Include="ReportPreviewer\previewContractualAcademicEmployees.Designer.cs">
+      <DependentUpon>previewContractualAcademicEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportViewer\frmEmployeesReport.cs">
+    <Compile Include="ReportPreviewer\previewContractualNonAcademicEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportViewer\frmEmployeesReport.Designer.cs">
-      <DependentUpon>frmEmployeesReport.cs</DependentUpon>
+    <Compile Include="ReportPreviewer\previewContractualNonAcademicEmployees.Designer.cs">
+      <DependentUpon>previewContractualNonAcademicEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportViewer\frmNonAcademic.cs">
+    <Compile Include="ReportPreviewer\previewNonAcademicRegularEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportViewer\frmNonAcademic.Designer.cs">
-      <DependentUpon>frmNonAcademic.cs</DependentUpon>
+    <Compile Include="ReportPreviewer\previewNonAcademicRegularEmployees.Designer.cs">
+      <DependentUpon>previewNonAcademicRegularEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportViewer\frmPositionsReport.cs">
+    <Compile Include="ReportPreviewer\previewSeminarEmployeeList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportViewer\frmPositionsReport.Designer.cs">
-      <DependentUpon>frmPositionsReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReportViewer\frmRegularEmployeesReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportViewer\frmRegularEmployeesReport.Designer.cs">
-      <DependentUpon>frmRegularEmployeesReport.cs</DependentUpon>
+    <Compile Include="ReportPreviewer\previewSeminarEmployeeList.Designer.cs">
+      <DependentUpon>previewSeminarEmployeeList.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="test1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="test1.Designer.cs">
-      <DependentUpon>test1.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddPosition.resx">
+      <DependentUpon>frmAddPosition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddSeminar.resx">
       <DependentUpon>frmAddSeminar.cs</DependentUpon>
@@ -320,6 +374,21 @@
     <EmbeddedResource Include="frmPositions.resx">
       <DependentUpon>frmPositions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectPositions.resx">
+      <DependentUpon>frmSelectPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeminarInternational.resx">
+      <DependentUpon>frmSeminarInternational.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeminarLocal.resx">
+      <DependentUpon>frmSeminarLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeminarNational.resx">
+      <DependentUpon>frmSeminarNational.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeminarRegional.resx">
+      <DependentUpon>frmSeminarRegional.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSeminarsTraining.resx">
       <DependentUpon>frmSeminarsTraining.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +404,7 @@
     <EmbeddedResource Include="MDIMain.resx">
       <DependentUpon>MDIMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -345,40 +415,30 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reports\rptAcademic.rdlc" />
-    <EmbeddedResource Include="Reports\rptContractualEmployees.rdlc" />
-    <EmbeddedResource Include="Reports\rptDepartments.rdlc" />
-    <EmbeddedResource Include="Reports\rptEmployees.rdlc" />
-    <EmbeddedResource Include="Reports\rptNonAcademic.rdlc" />
-    <EmbeddedResource Include="Reports\rptPositions.rdlc" />
-    <EmbeddedResource Include="Reports\rptRegularEmployees.rdlc" />
-    <EmbeddedResource Include="ReportViewer\frmAcademicReport.resx">
-      <DependentUpon>frmAcademicReport.cs</DependentUpon>
+    <EmbeddedResource Include="ReportPreviewer\previewAcademicRegularEmployees.resx">
+      <DependentUpon>previewAcademicRegularEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportViewer\frmContractualEmployeesReport.resx">
-      <DependentUpon>frmContractualEmployeesReport.cs</DependentUpon>
+    <EmbeddedResource Include="ReportPreviewer\previewAllEmployees.resx">
+      <DependentUpon>previewAllEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportViewer\frmDepartmentsReport.resx">
-      <DependentUpon>frmDepartmentsReport.cs</DependentUpon>
+    <EmbeddedResource Include="ReportPreviewer\previewContractualAcademicEmployees.resx">
+      <DependentUpon>previewContractualAcademicEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportViewer\frmEmployeesReport.resx">
-      <DependentUpon>frmEmployeesReport.cs</DependentUpon>
+    <EmbeddedResource Include="ReportPreviewer\previewContractualNonAcademicEmployees.resx">
+      <DependentUpon>previewContractualNonAcademicEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportViewer\frmNonAcademic.resx">
-      <DependentUpon>frmNonAcademic.cs</DependentUpon>
+    <EmbeddedResource Include="ReportPreviewer\previewNonAcademicRegularEmployees.resx">
+      <DependentUpon>previewNonAcademicRegularEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportViewer\frmPositionsReport.resx">
-      <DependentUpon>frmPositionsReport.cs</DependentUpon>
+    <EmbeddedResource Include="ReportPreviewer\previewSeminarEmployeeList.resx">
+      <DependentUpon>previewSeminarEmployeeList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportViewer\frmRegularEmployeesReport.resx">
-      <DependentUpon>frmRegularEmployeesReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="test1.resx">
-      <DependentUpon>test1.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptNewAllEmployees.rdlc" />
+    <EmbeddedResource Include="Reports\rptNewContractualAcademicEmployees.rdlc" />
+    <EmbeddedResource Include="Reports\rptNewContractualNonAcademicEmployees.rdlc" />
+    <EmbeddedResource Include="Reports\rptNewRegularAcademicEmployees.rdlc" />
+    <EmbeddedResource Include="Reports\rptNewRegularNonAcademicEmployees.rdlc" />
+    <EmbeddedResource Include="Reports\rptSeminarEmployeeList.rdlc" />
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
@@ -469,6 +529,13 @@
     <None Include="Resources\profile picture.png" />
     <None Include="Resources\default.jpg" />
     <None Include="Resources\default1.jpg" />
+    <None Include="Resources\btn-delete.png" />
+    <None Include="Resources\icon-delete.png" />
+    <None Include="Resources\icons8-print-30.png" />
+    <None Include="Resources\icons8-print-16.png" />
+    <None Include="Resources\icons8-attach-16.png" />
+    <None Include="Resources\icons8-upload-16.png" />
+    <None Include="Resources\single-choice.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

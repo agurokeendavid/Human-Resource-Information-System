@@ -35,7 +35,7 @@ namespace HRISCapsu
                     while (dr.Read()) cmbPosition.Items.Add(dr["position_name"].ToString());
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("No data found!", "Not found.",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -54,8 +54,9 @@ namespace HRISCapsu
                 {
                     conn.Open();
                     var query =
-                        @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract', emp.status, emp.position_id FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE emp.status = 'Active' AND pos.position_name LIKE @keyword";
+                        @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract', emp.position_item_no FROM employees emp INNER JOIN positions pos ON emp.position_item_no = pos.position_item_no WHERE emp.is_deleted = @is_deleted AND pos.position_name LIKE @keyword";
                     var cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("is_deleted", 0);
                     cmd.Parameters.AddWithValue("keyword", '%' + keyword + '%');
                     var da = new MySqlDataAdapter();
                     da.SelectCommand = cmd;
@@ -75,12 +76,10 @@ namespace HRISCapsu
                     dtgRecords.Columns[8].Visible = false;
                     dtgRecords.Columns[9].Visible = false;
                     dtgRecords.Columns[10].HeaderText = "Position";
-                    dtgRecords.Columns[11].HeaderText = "Department";
-                    dtgRecords.Columns[12].HeaderText = "Work Status";
+                    dtgRecords.Columns[11].HeaderText = "Work Status";
+                    dtgRecords.Columns[12].Visible = false;
                     dtgRecords.Columns[13].Visible = false;
                     dtgRecords.Columns[14].Visible = false;
-                    dtgRecords.Columns[15].Visible = false;
-                    dtgRecords.Columns[16].Visible = false;
 
                     if (dt.Rows.Count == 0)
                         MessageBox.Show("No data found!", "Not found.",
@@ -109,6 +108,11 @@ namespace HRISCapsu
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void dtgRecords_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
             try
             {
                 using (var conn =
@@ -116,15 +120,14 @@ namespace HRISCapsu
                 {
                     conn.Open();
                     var query =
-                        "INSERT INTO employee_seminars (seminar_id, employee_no, employee_position_id) VALUES (@seminar_id, @employee_no, @employee_position_id)";
+                        "INSERT INTO employee_seminars (seminar_id, employee_no) VALUES (@seminar_id, @employee_no)";
                     var cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("seminar_id", seminar_id);
                     cmd.Parameters.AddWithValue("employee_no", dtgRecords.CurrentRow.Cells[0].Value.ToString());
-                    cmd.Parameters.AddWithValue("employee_position_id",
-                        dtgRecords.CurrentRow.Cells[16].Value.ToString());
                     cmd.ExecuteNonQuery();
                     cmd.Parameters.Clear();
                     MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    Close();
                 }
             }
             catch (Exception ex)

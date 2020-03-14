@@ -255,3 +255,655 @@ D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.test1.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmAcademicReport.resources
 D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportViewer.frmNonAcademic.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmAddPosition.resources
+D:\Keen\Documents\Visual Studio 2017\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmSelectPositions.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\HRISCapsu.exe.config
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\HRISCapsu.exe.manifest
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\HRISCapsu.application
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\HRISCapsu.exe
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\HRISCapsu.pdb
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\EnvDTE.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\stdole.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.14.0.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.12.0.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\EnvDTE80.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.Build.Tasks.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\VSLangProj.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\VSLangProj80.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Newtonsoft.Json.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.MSXML.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.Build.Utilities.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.Build.Framework.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\VSLangProj2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\MySql.Data.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.14.0.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.12.0.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.csprojAssemblyReference.cache
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.exe.config
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmAbout.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmAddPosition.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmAddSeminar.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmAddSeminarEmployee.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmApplyLeave.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmChangePassword.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmChooseModem.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmDepartments.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmEditSeminar.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmEmployeesRecord.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmListEmployeeLeave.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmListofContractualEmployees.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmListofEmployees.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmLogin.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmPositions.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmSelectPositions.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmSeminarsTraining.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmViewEmployee.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.Graphs.frmDoctoralGraph.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.Graphs.frmMasteralGraph.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.MDIMain.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.Properties.Resources.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.csproj.GenerateResource.cache
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.exe.manifest
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.application
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.csproj.CopyComplete
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.exe
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.pdb
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\System.Threading.Tasks.Dataflow.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\RdlCompile.cache
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\RdlCompile.compiled
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.csproj.CoreCompileInputs.cache
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Data.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Printing.v18.2.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Utils.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraEditors.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGrid.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraLayout.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraPrinting.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Pdf.v18.2.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Sparkline.v18.2.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraBars.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.RichEdit.v18.2.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraTreeList.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Office.v18.2.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Images.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Data.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Printing.v18.2.Core.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Utils.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraEditors.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGrid.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraLayout.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraPrinting.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Pdf.v18.2.Core.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Sparkline.v18.2.Core.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraBars.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.RichEdit.v18.2.Core.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraTreeList.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Office.v18.2.Core.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Data.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Data.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Data.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Data.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Printing.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Printing.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Printing.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Printing.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Utils.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Utils.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Utils.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Utils.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraEditors.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraEditors.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraEditors.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraEditors.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraGrid.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraGrid.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraGrid.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraGrid.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraLayout.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraLayout.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraLayout.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraLayout.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraPrinting.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraPrinting.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraPrinting.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraPrinting.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Pdf.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Pdf.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Pdf.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Pdf.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Sparkline.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Sparkline.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Sparkline.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Sparkline.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraBars.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraBars.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraBars.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraBars.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.RichEdit.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.RichEdit.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.RichEdit.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.RichEdit.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraTreeList.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraTreeList.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraTreeList.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraTreeList.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Office.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Office.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Office.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Office.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.exe.licenses
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Charts.v18.2.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Dashboard.v18.2.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Dashboard.v18.2.Win.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.DataAccess.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.DataAccess.v18.2.UI.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Map.v18.2.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.PivotGrid.v18.2.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.TreeMap.v18.2.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Utils.v18.2.UI.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Xpo.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraCharts.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraCharts.v18.2.UI.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraCharts.v18.2.Wizard.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGauges.v18.2.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGauges.v18.2.Presets.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGauges.v18.2.Win.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraMap.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraPivotGrid.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraReports.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraRichEdit.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraTreeMap.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.CodeParser.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraDiagram.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Diagram.v18.2.Core.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraVerticalGrid.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraNavBar.v18.2.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Dashboard.v18.2.Core.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Dashboard.v18.2.Win.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.DataAccess.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.DataAccess.v18.2.UI.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Map.v18.2.Core.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.PivotGrid.v18.2.Core.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.TreeMap.v18.2.Core.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Utils.v18.2.UI.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Xpo.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraCharts.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraCharts.v18.2.UI.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraCharts.v18.2.Wizard.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGauges.v18.2.Core.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGauges.v18.2.Presets.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGauges.v18.2.Win.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraMap.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraPivotGrid.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraReports.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraRichEdit.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraTreeMap.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraDiagram.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Diagram.v18.2.Core.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraVerticalGrid.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraNavBar.v18.2.xml
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Dashboard.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Dashboard.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Dashboard.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Dashboard.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Dashboard.v18.2.Win.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Dashboard.v18.2.Win.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Dashboard.v18.2.Win.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Dashboard.v18.2.Win.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.DataAccess.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.DataAccess.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.DataAccess.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.DataAccess.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.DataAccess.v18.2.UI.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.DataAccess.v18.2.UI.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.DataAccess.v18.2.UI.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.DataAccess.v18.2.UI.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Map.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Map.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Map.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Map.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.PivotGrid.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.PivotGrid.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.PivotGrid.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.PivotGrid.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Utils.v18.2.UI.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Utils.v18.2.UI.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Utils.v18.2.UI.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Utils.v18.2.UI.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Xpo.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Xpo.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Xpo.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Xpo.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraCharts.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraCharts.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraCharts.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraCharts.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraCharts.v18.2.Wizard.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraCharts.v18.2.Wizard.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraCharts.v18.2.Wizard.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraCharts.v18.2.Wizard.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraGauges.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraGauges.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraGauges.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraGauges.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraGauges.v18.2.Presets.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraGauges.v18.2.Presets.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraGauges.v18.2.Presets.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraGauges.v18.2.Presets.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraPivotGrid.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraPivotGrid.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraPivotGrid.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraPivotGrid.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraReports.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraReports.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraReports.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraReports.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraRichEdit.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraRichEdit.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraRichEdit.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraRichEdit.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Diagram.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Diagram.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Diagram.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Diagram.v18.2.Core.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraVerticalGrid.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraVerticalGrid.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraVerticalGrid.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraVerticalGrid.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraNavBar.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraNavBar.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraNavBar.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraNavBar.v18.2.resources.dll
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmSeminarInternational.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmSeminarLocal.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmSeminarNational.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmSeminarRegional.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewSeminarEmployeeList.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewAllEmployees.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewAcademicRegularEmployees.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewNonAcademicRegularEmployees.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewContractualAcademicEmployees.resources
+D:\Keen\Documents\Visual Studio 2019\Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewContractualNonAcademicEmployees.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\HRISCapsu.exe.config
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\HRISCapsu.exe.manifest
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\HRISCapsu.application
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\HRISCapsu.exe
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\HRISCapsu.pdb
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Charts.v18.2.Core.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Dashboard.v18.2.Core.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Dashboard.v18.2.Win.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Data.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.DataAccess.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.DataAccess.v18.2.UI.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Map.v18.2.Core.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Office.v18.2.Core.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.PivotGrid.v18.2.Core.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Printing.v18.2.Core.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.RichEdit.v18.2.Core.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Sparkline.v18.2.Core.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.TreeMap.v18.2.Core.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Utils.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Utils.v18.2.UI.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Xpo.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraBars.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraCharts.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraCharts.v18.2.UI.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraCharts.v18.2.Wizard.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraEditors.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGauges.v18.2.Core.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGauges.v18.2.Presets.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGauges.v18.2.Win.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGrid.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraLayout.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraMap.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraPivotGrid.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraPrinting.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraReports.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraRichEdit.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraTreeList.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraTreeMap.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.CodeParser.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraDiagram.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Diagram.v18.2.Core.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Pdf.v18.2.Core.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Images.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraVerticalGrid.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraNavBar.v18.2.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\EnvDTE.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\stdole.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\Microsoft.MSXML.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Dashboard.v18.2.Core.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Dashboard.v18.2.Win.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Data.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.DataAccess.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.DataAccess.v18.2.UI.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Map.v18.2.Core.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Office.v18.2.Core.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.PivotGrid.v18.2.Core.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Printing.v18.2.Core.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.RichEdit.v18.2.Core.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Sparkline.v18.2.Core.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.TreeMap.v18.2.Core.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Utils.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Utils.v18.2.UI.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Xpo.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraBars.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraCharts.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraCharts.v18.2.UI.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraCharts.v18.2.Wizard.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraEditors.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGauges.v18.2.Core.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGauges.v18.2.Presets.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGauges.v18.2.Win.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraGrid.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraLayout.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraMap.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraPivotGrid.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraPrinting.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraReports.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraRichEdit.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraTreeList.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraTreeMap.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\MySql.Data.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraDiagram.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Diagram.v18.2.Core.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.Pdf.v18.2.Core.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraVerticalGrid.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\DevExpress.XtraNavBar.v18.2.xml
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Dashboard.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Dashboard.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Dashboard.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Dashboard.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Dashboard.v18.2.Win.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Dashboard.v18.2.Win.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Dashboard.v18.2.Win.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Dashboard.v18.2.Win.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Data.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Data.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Data.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Data.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.DataAccess.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.DataAccess.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.DataAccess.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.DataAccess.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.DataAccess.v18.2.UI.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.DataAccess.v18.2.UI.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.DataAccess.v18.2.UI.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.DataAccess.v18.2.UI.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Map.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Map.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Map.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Map.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Office.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Office.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Office.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Office.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.PivotGrid.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.PivotGrid.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.PivotGrid.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.PivotGrid.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Printing.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Printing.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Printing.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Printing.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.RichEdit.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.RichEdit.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.RichEdit.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.RichEdit.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Sparkline.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Sparkline.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Sparkline.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Sparkline.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Utils.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Utils.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Utils.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Utils.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Utils.v18.2.UI.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Utils.v18.2.UI.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Utils.v18.2.UI.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Utils.v18.2.UI.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Xpo.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Xpo.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Xpo.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Xpo.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraBars.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraBars.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraBars.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraBars.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraCharts.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraCharts.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraCharts.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraCharts.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraCharts.v18.2.Wizard.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraCharts.v18.2.Wizard.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraCharts.v18.2.Wizard.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraCharts.v18.2.Wizard.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraEditors.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraEditors.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraEditors.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraEditors.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraGauges.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraGauges.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraGauges.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraGauges.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraGauges.v18.2.Presets.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraGauges.v18.2.Presets.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraGauges.v18.2.Presets.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraGauges.v18.2.Presets.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraGrid.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraGrid.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraGrid.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraGrid.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraLayout.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraLayout.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraLayout.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraLayout.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraPivotGrid.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraPivotGrid.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraPivotGrid.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraPivotGrid.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraPrinting.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraPrinting.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraPrinting.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraPrinting.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraReports.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraReports.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraReports.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraReports.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraRichEdit.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraRichEdit.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraRichEdit.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraRichEdit.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraTreeList.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraTreeList.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraTreeList.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraTreeList.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Diagram.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Diagram.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Diagram.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Diagram.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.Pdf.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.Pdf.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.Pdf.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.Pdf.v18.2.Core.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraVerticalGrid.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraVerticalGrid.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraVerticalGrid.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraVerticalGrid.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\DevExpress.XtraNavBar.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\DevExpress.XtraNavBar.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\DevExpress.XtraNavBar.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\DevExpress.XtraNavBar.v18.2.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.csprojAssemblyReference.cache
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmAbout.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmAddPosition.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmAddSeminar.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmAddSeminarEmployee.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmApplyLeave.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmChangePassword.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmChooseModem.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmDepartments.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmEditSeminar.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmEmployeesRecord.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmListEmployeeLeave.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmListofContractualEmployees.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmListofEmployees.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmLogin.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmPositions.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmSelectPositions.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmSeminarInternational.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmSeminarLocal.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmSeminarNational.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmSeminarRegional.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmSeminarsTraining.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmViewEmployee.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.Graphs.frmDoctoralGraph.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.Graphs.frmMasteralGraph.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.MDIMain.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.Properties.Resources.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewAcademicRegularEmployees.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewAllEmployees.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewContractualAcademicEmployees.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewContractualNonAcademicEmployees.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewNonAcademicRegularEmployees.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewSeminarEmployeeList.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.csproj.GenerateResource.cache
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.exe.licenses
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.exe.manifest
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.application
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.csproj.CopyComplete
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.exe
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.pdb

@@ -1,12 +1,12 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.IO.Ports;
 using System.Threading;
 using System.Windows.Forms;
-using HRISCapsu.ReportViewer;
-using MySql.Data.MySqlClient;
+using HRISCapsu.ReportPreviewer;
 
 namespace HRISCapsu
 {
@@ -30,18 +30,19 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn =
+                using (MySqlConnection conn =
                     new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    var query = "SELECT * from ports";
-                    var cmd = new MySqlCommand(query, conn);
-                    var reader = cmd.ExecuteReader();
+                    string query = "SELECT * from ports";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.HasRows)
+                    {
                         while (reader.Read())
                         {
-                            var modemName = reader["port_name"].ToString();
+                            string modemName = reader["port_name"].ToString();
                             sp.PortName = modemName;
                             sp.Open();
                             sp.WriteLine("AT" + Environment.NewLine);
@@ -51,15 +52,19 @@ namespace HRISCapsu
                             sp.WriteLine("AT+CSCS=\"GSM\"" + Environment.NewLine);
                             Thread.Sleep(100);
 
-                            var response = sp.ReadExisting();
+                            string response = sp.ReadExisting();
 
 
                             if (response.Contains("ERROR"))
+                            {
                                 return false;
+                            }
+
                             return true;
 
                             sp.Close();
                         }
+                    }
                 }
             }
             catch (Exception ex)
@@ -90,14 +95,14 @@ namespace HRISCapsu
                     sp.RtsEnable = true;
                 }
 
-                var d = 1;
+                int d = 1;
 
 
                 try
                 {
-                    var x = "";
+                    string x = "";
 
-                    var m = arrayCount + 1;
+                    double m = arrayCount + 1;
 
                     new ManualResetEvent(false).WaitOne(500);
 
@@ -108,28 +113,35 @@ namespace HRISCapsu
                     sp.Write(x);
 
                     if (inputMessage.Length < 1)
+                    {
                         sp.Write(s_message);
+                    }
                     else
+                    {
                         sp.Write("1" + "/" + m + " " + s_message);
-
+                    }
 
                     new ManualResetEvent(false).WaitOne(500);
                     sp.ReadExisting();
                     sp.Write(x);
 
-                    sp.Write(new byte[] {26}, 0, 1);
+                    sp.Write(new byte[] { 26 }, 0, 1);
                     new ManualResetEvent(false).WaitOne(8000);
                     sp.ReadExisting();
                     sp.Write(x);
 
 
-                    var response = sp.ReadExisting();
+                    string response = sp.ReadExisting();
 
 
                     if (response.Contains("ERROR"))
+                    {
                         resend(phoneNumber, s_message, 1);
+                    }
                     else
+                    {
                         d += 1;
+                    }
                 }
                 catch (Exception)
                 {
@@ -149,7 +161,7 @@ namespace HRISCapsu
         {
             MessageBox.Show("resending..");
 
-            var x = "";
+            string x = "";
 
 
             new ManualResetEvent(false).WaitOne(500);
@@ -166,7 +178,7 @@ namespace HRISCapsu
             sp.ReadExisting();
             sp.Write(x);
 
-            sp.Write(new byte[] {26}, 0, 1);
+            sp.Write(new byte[] { 26 }, 0, 1);
             new ManualResetEvent(false).WaitOne(8000);
             sp.ReadExisting();
             sp.Write(x);
@@ -192,15 +204,16 @@ namespace HRISCapsu
                     sp.RtsEnable = true; // Request-to-send
                 }
 
-                var d = 1;
+                int d = 1;
 
-                for (var i = 0; i < arrayCount; i++)
+                for (int i = 0; i < arrayCount; i++)
+                {
                     try
                     {
-                        var x = "";
-                        var z = i + 2;
+                        string x = "";
+                        int z = i + 2;
 
-                        var m = arrayCount + 1;
+                        double m = arrayCount + 1;
 
                         new ManualResetEvent(false).WaitOne(500);
 
@@ -216,24 +229,29 @@ namespace HRISCapsu
                         sp.ReadExisting();
                         sp.Write(x);
 
-                        sp.Write(new byte[] {26}, 0, 1);
+                        sp.Write(new byte[] { 26 }, 0, 1);
                         new ManualResetEvent(false).WaitOne(8000);
                         sp.ReadExisting();
                         sp.Write(x);
 
 
-                        var response = sp.ReadExisting();
+                        string response = sp.ReadExisting();
 
 
                         if (response.Contains("ERROR"))
+                        {
                             resend(phoneNumber, arrayMessage[i], i);
+                        }
                         else
+                        {
                             d += 1;
+                        }
                     }
                     catch (Exception)
                     {
                         resend(phoneNumber, arrayMessage[i], i);
                     }
+                }
 
                 MessageBox.Show("Message Sent!");
             }
@@ -248,24 +266,25 @@ namespace HRISCapsu
 
         private void message(string phoneNumber)
         {
-            var intro = "Capiz State University Pontevedra Campus: ";
-            var bodyMessage = "Message here";
+            string intro = "Capiz State University Pontevedra Campus: ";
+            string bodyMessage = "Message here";
             if (bodyMessage.Length < 135)
             {
-                var message_start_substring = bodyMessage.Substring(0);
+                string message_start_substring = bodyMessage.Substring(0);
                 message_start = intro + message_start_substring;
                 inputMessage = "";
             }
             else
             {
-                var message_start_substring = bodyMessage.Substring(0, 135);
+                string message_start_substring = bodyMessage.Substring(0, 135);
 
                 message_start = intro + message_start_substring;
 
-                var start_index = 0;
+                int start_index = 0;
 
 
-                for (var w = 1; w < 30; w++)
+                for (int w = 1; w < 30; w++)
+                {
                     if (message_start[message_start.Length - w].ToString() != " ")
                     {
                     }
@@ -277,20 +296,26 @@ namespace HRISCapsu
 
                         break;
                     }
+                }
             }
 
 
             if (inputMessage.Length > 1550)
+            {
                 MessageBox.Show(
                     "Message too long. " + bodyMessage.Length +
                     " total characters. Only 1550 total characters allowed.", "Message", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
+            }
             else if (inputMessage.Length < 1)
+            {
                 sendStartMessage(phoneNumber, message_start);
+            }
             else
+            {
                 try
                 {
-                    var textLimit = 155;
+                    int textLimit = 155;
 
 
                     double x = inputMessage.Length;
@@ -298,42 +323,64 @@ namespace HRISCapsu
                     arrayCount = x / 155.00;
 
                     if (arrayCount <= 1)
+                    {
                         arrayCount = 1;
+                    }
                     else if (arrayCount > 1 && arrayCount <= 2)
+                    {
                         arrayCount = 2;
+                    }
                     else if (arrayCount > 2 && arrayCount <= 3)
+                    {
                         arrayCount = 3;
+                    }
                     else if (arrayCount > 3 && arrayCount <= 4)
+                    {
                         arrayCount = 4;
+                    }
                     else if (arrayCount > 4 && arrayCount <= 5)
+                    {
                         arrayCount = 5;
+                    }
                     else if (arrayCount > 5 && arrayCount <= 6)
+                    {
                         arrayCount = 6;
+                    }
                     else if (arrayCount > 6 && arrayCount <= 7)
+                    {
                         arrayCount = 7;
+                    }
                     else if (arrayCount > 7 && arrayCount <= 8)
+                    {
                         arrayCount = 8;
+                    }
                     else if (arrayCount > 8 && arrayCount <= 9)
+                    {
                         arrayCount = 9;
-                    else if (arrayCount > 9 && arrayCount <= 10) arrayCount = 10;
+                    }
+                    else if (arrayCount > 9 && arrayCount <= 10)
+                    {
+                        arrayCount = 10;
+                    }
 
-                    var start_subs = 0;
-                    var length_subs = 155;
-                    var y = start_subs + textLimit;
+                    int start_subs = 0;
+                    int length_subs = 155;
+                    int y = start_subs + textLimit;
 
                     if (inputMessage.Length > textLimit)
                     {
-                        var backwards = 0;
+                        int backwards = 0;
 
 
-                        var loopcount = 0;
+                        int loopcount = 0;
 
-                        for (var i = 0; i < 100; i++)
+                        for (int i = 0; i < 100; i++)
+                        {
                             if (start_subs + length_subs > inputMessage.Length)
                             {
                                 loopcount++;
                                 arrayMessage[i] = inputMessage.Substring(start_subs);
-                                var changed = arrayMessage[i];
+                                string changed = arrayMessage[i];
 
                                 break;
                             }
@@ -344,9 +391,10 @@ namespace HRISCapsu
 
                                 arrayMessage[i] = inputMessage.Substring(start_subs, length_subs);
 
-                                var current = arrayMessage[i];
+                                string current = arrayMessage[i];
 
-                                for (var w = 1; w < 30; w++)
+                                for (int w = 1; w < 30; w++)
+                                {
                                     if (current[current.Length - w].ToString() != " ")
                                     {
                                     }
@@ -354,7 +402,7 @@ namespace HRISCapsu
                                     {
                                         arrayMessage[i] = inputMessage.Substring(start_subs, length_subs - w);
 
-                                        var changed = arrayMessage[i];
+                                        string changed = arrayMessage[i];
 
 
                                         start_subs = start_subs + textLimit - w;
@@ -364,7 +412,9 @@ namespace HRISCapsu
 
                                         break;
                                     }
+                                }
                             }
+                        }
 
                         MessageBox.Show("total backwards: " + backwards);
                     }
@@ -381,26 +431,28 @@ namespace HRISCapsu
                 {
                     MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
         }
 
         private void displayRecords(DataGridView gridView, string keyword)
         {
             try
             {
-                using (var conn =
+                using (MySqlConnection conn =
                     new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    var query =
-                        @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract' FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE (emp.first_name LIKE @keyword OR emp.middle_name LIKE @keyword OR emp.last_name LIKE @keyword) AND (emp.work_status = @work_status) AND (emp.status = @status) AND (emp.employee_type = @employee_type) ORDER BY emp.last_name ASC;";
-                    var cmd = new MySqlCommand(query, conn);
+                    string query = @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS DateOfBirth, emp.place_of_birth, emp.contact_no, emp.civil_status, emp.highest_degree, emp.bs_course, emp.bs_year_graduated, emp.bs_school, emp.masteral_course, emp.masteral_year_graduated, emp.masteral_school, emp.doctoral_course, emp.doctoral_year_graduated, emp.doctoral_school, emp.eligibility, emp.employee_type, emp.position, emp.department, emp.work_status, employee_photo, emp.documentpath, date_format(emp.hired_date, '%M %d, %Y') AS HiredDate, date_format(emp.end_of_contract, '%M %d, %Y') AS EndOfContract FROM employees emp WHERE emp.last_name LIKE @keyword AND emp.work_status = @work_status AND emp.is_deleted = @is_deleted AND emp.employee_type = @employee_type ORDER BY emp.last_name ASC;";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("keyword", '%' + keyword + '%');
                     cmd.Parameters.AddWithValue("work_status", "Contractual");
-                    cmd.Parameters.AddWithValue("status", "Active");
+                    cmd.Parameters.AddWithValue("is_deleted", 0);
                     cmd.Parameters.AddWithValue("employee_type", employeeType);
-                    var da = new MySqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    var dt = new DataTable();
+                    MySqlDataAdapter da = new MySqlDataAdapter
+                    {
+                        SelectCommand = cmd
+                    };
+                    DataTable dt = new DataTable();
                     da.Fill(dt);
 
                     gridView.DataSource = dt;
@@ -411,31 +463,49 @@ namespace HRISCapsu
                     gridView.Columns[3].HeaderText = "Last Name";
                     gridView.Columns[4].HeaderText = "Address";
                     gridView.Columns[5].HeaderText = "Gender";
-                    gridView.Columns[6].Visible = true;
+                    gridView.Columns[6].Visible = false;
                     gridView.Columns[7].Visible = false;
-                    gridView.Columns[8].HeaderText = "Contact No.";
+                    gridView.Columns[8].Visible = false;
                     gridView.Columns[9].Visible = false;
-                    gridView.Columns[10].HeaderText = "Position";
-                    gridView.Columns[11].HeaderText = "Department";
-                    gridView.Columns[12].HeaderText = "Work Status";
-                    gridView.Columns[13].HeaderText = "Hired Date";
-                    gridView.Columns[14].HeaderText = "End of Contract";
+                    gridView.Columns[10].HeaderText = "Highest Degree";
+                    gridView.Columns[11].Visible = false;
+                    gridView.Columns[12].Visible = false;
+                    gridView.Columns[13].Visible = false;
+                    gridView.Columns[14].Visible = false;
+                    gridView.Columns[15].Visible = false;
+                    gridView.Columns[16].Visible = false;
+                    gridView.Columns[17].Visible = false;
+                    gridView.Columns[18].Visible = false;
+                    gridView.Columns[19].Visible = false;
+                    gridView.Columns[20].Visible = false;
+                    gridView.Columns[21].HeaderText = "Employee Type";
+                    gridView.Columns[22].HeaderText = "Position";
+                    gridView.Columns[23].HeaderText = "Department";
+                    gridView.Columns[24].HeaderText = "Employee Status";
+                    gridView.Columns[25].Visible = false;
+                    gridView.Columns[26].Visible = false;
+                    gridView.Columns[27].HeaderText = "Date Hired";
+                    gridView.Columns[28].HeaderText = "End of Contract";
 
                     if (dt.Rows.Count > 0)
+                    {
                         foreach (DataGridViewRow dataGridViewRow in dtgRecords.Rows)
                         {
-                            var hiredDate = Convert.ToDateTime(dataGridViewRow.Cells[13].Value);
-                            var endOfContract = Convert.ToDateTime(dataGridViewRow.Cells[14].Value);
-                            var expiredContract = (endOfContract - DateTime.Now.Date).TotalDays;
+                            DateTime hiredDate = Convert.ToDateTime(dataGridViewRow.Cells[27].Value);
+                            DateTime endOfContract = Convert.ToDateTime(dataGridViewRow.Cells[28].Value);
+                            double expiredContract = (endOfContract - DateTime.Now.Date).TotalDays;
                             if (expiredContract >= 1 && expiredContract <= 30)
                             {
                                 dataGridViewRow.DefaultCellStyle.BackColor = Color.Red;
                                 dataGridViewRow.DefaultCellStyle.ForeColor = Color.White;
                             }
                         }
+                    }
                     else
+                    {
                         MessageBox.Show("No data found!", "Not found",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)
@@ -462,25 +532,38 @@ namespace HRISCapsu
         private void btnSend_Click(object sender, EventArgs e)
         {
             if (hasModemConnection())
+            {
                 foreach (DataGridViewRow dataGridViewRow in dtgRecords.Rows)
                 {
-                    var hiredDate = Convert.ToDateTime(dataGridViewRow.Cells[13].Value);
-                    var endOfContract = Convert.ToDateTime(dataGridViewRow.Cells[14].Value);
-                    var expiredContract = (endOfContract - DateTime.Now.Date).TotalDays;
+                    DateTime endOfContract = Convert.ToDateTime(dataGridViewRow.Cells[28].Value);
+                    double expiredContract = (endOfContract - DateTime.Now.Date).TotalDays;
                     if (expiredContract >= 1 && expiredContract <= 30)
+                    {
                         message(dataGridViewRow.Cells[8].Value.ToString());
+                    }
                 }
+            }
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            var frm = new frmContractualEmployeesReport();
-            frm.ShowDialog();
+            
+            if (employeeType == "Academic")
+            {
+               var frm = new previewContractualAcademicEmployees();
+               frm.ShowDialog();
+            }
+            else if (employeeType == "Non - Academic")
+            {
+                var frm = new previewContractualNonAcademicEmployees();
+                frm.ShowDialog();
+            }
+            
         }
 
         private void btnModemPort_Click(object sender, EventArgs e)
         {
-            var frm = new frmChooseModem();
+            frmChooseModem frm = new frmChooseModem();
             frm.ShowDialog();
         }
     }

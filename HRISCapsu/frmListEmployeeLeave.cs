@@ -23,12 +23,12 @@ namespace HRISCapsu
                 {
                     conn.Open();
                     string query =
-                        "SELECT employee_no, CONCAT(last_name, ', ', first_name, ' ', UPPER(SUBSTRING(middle_name, 1, 1)), '.') AS fullname FROM employees WHERE (first_name LIKE @fn OR middle_name LIKE @mn OR last_name LIKE @ln) AND (status = @status);";
+                        "SELECT employee_no, CONCAT(last_name, ', ', first_name, ' ', UPPER(SUBSTRING(middle_name, 1, 1)), '.') AS fullname FROM employees WHERE (first_name LIKE @fn OR middle_name LIKE @mn OR last_name LIKE @ln) AND (is_deleted = @is_deleted);";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("fn", '%' + txtEmployeeName.Text + '%');
                     cmd.Parameters.AddWithValue("mn", '%' + txtEmployeeName.Text + '%');
                     cmd.Parameters.AddWithValue("ln", '%' + txtEmployeeName.Text + '%');
-                    cmd.Parameters.AddWithValue("status", "Active");
+                    cmd.Parameters.AddWithValue("is_deleted", 0);
                     MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);

@@ -1,9 +1,9 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Windows.Forms;
-using HRISCapsu.ReportViewer;
-using MySql.Data.MySqlClient;
+using HRISCapsu.ReportPreviewer;
 
 namespace HRISCapsu
 {
@@ -23,20 +23,21 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn =
+                using (MySqlConnection conn =
                     new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    var query =
-                        @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS 'Date of Birth', emp.place_of_birth, emp.contact_no, emp.civil_status, pos.position_name, dept.department_name, emp.work_status, date_format(emp.hired_date, '%M %d, %Y') AS 'Hired Date', date_format(emp.end_of_contract, '%M %d, %Y') AS 'End of Contract' FROM employees emp INNER JOIN positions pos ON emp.position_id = pos.position_id INNER JOIN departments dept ON emp.department_id = dept.department_id WHERE (emp.first_name LIKE @keyword OR emp.middle_name LIKE @keyword OR emp.last_name LIKE @keyword) AND (emp.work_status = @work_status) AND (emp.status = @status) AND (emp.employee_type = @employee_type) ORDER BY emp.last_name ASC;";
-                    var cmd = new MySqlCommand(query, conn);
+                    string query = @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS DateOfBirth, emp.place_of_birth, emp.contact_no, emp.civil_status, emp.highest_degree, emp.bs_course, emp.bs_year_graduated, emp.bs_school, emp.masteral_course, emp.masteral_year_graduated, emp.masteral_school, emp.doctoral_course, emp.doctoral_year_graduated, emp.doctoral_school, emp.eligibility, emp.employee_type, emp.position, emp.department, emp.work_status, employee_photo, emp.documentpath, date_format(emp.hired_date, '%M %d, %Y') AS HiredDate, date_format(emp.end_of_contract, '%M %d, %Y') AS EndOfContract FROM employees emp WHERE emp.last_name LIKE @keyword AND emp.work_status = @work_status AND emp.is_deleted = @is_deleted AND emp.employee_type = @employee_type ORDER BY emp.last_name ASC;";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("keyword", '%' + keyword + '%');
                     cmd.Parameters.AddWithValue("work_status", "Regular");
-                    cmd.Parameters.AddWithValue("status", "Active");
+                    cmd.Parameters.AddWithValue("is_deleted", 0);
                     cmd.Parameters.AddWithValue("employee_type", employeeType);
-                    var da = new MySqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    var dt = new DataTable();
+                    MySqlDataAdapter da = new MySqlDataAdapter
+                    {
+                        SelectCommand = cmd
+                    };
+                    DataTable dt = new DataTable();
                     da.Fill(dt);
 
                     gridView.DataSource = dt;
@@ -47,19 +48,35 @@ namespace HRISCapsu
                     gridView.Columns[3].HeaderText = "Last Name";
                     gridView.Columns[4].HeaderText = "Address";
                     gridView.Columns[5].HeaderText = "Gender";
-                    gridView.Columns[6].Visible = true;
+                    gridView.Columns[6].Visible = false;
                     gridView.Columns[7].Visible = false;
                     gridView.Columns[8].Visible = false;
                     gridView.Columns[9].Visible = false;
-                    gridView.Columns[10].HeaderText = "Position";
-                    gridView.Columns[11].HeaderText = "Department";
-                    gridView.Columns[12].HeaderText = "Work Status";
-                    gridView.Columns[13].HeaderText = "Hired Date";
+                    gridView.Columns[10].HeaderText = "Highest Degree";
+                    gridView.Columns[11].Visible = false;
+                    gridView.Columns[12].Visible = false;
+                    gridView.Columns[13].Visible = false;
                     gridView.Columns[14].Visible = false;
+                    gridView.Columns[15].Visible = false;
+                    gridView.Columns[16].Visible = false;
+                    gridView.Columns[17].Visible = false;
+                    gridView.Columns[18].Visible = false;
+                    gridView.Columns[19].Visible = false;
+                    gridView.Columns[20].Visible = false;
+                    gridView.Columns[21].HeaderText = "Employee Type";
+                    gridView.Columns[22].HeaderText = "Position";
+                    gridView.Columns[23].HeaderText = "Department";
+                    gridView.Columns[24].HeaderText = "Employee Status";
+                    gridView.Columns[25].Visible = false;
+                    gridView.Columns[26].Visible = false;
+                    gridView.Columns[27].Visible = false;
+                    gridView.Columns[28].Visible = false;
 
                     if (dt.Rows.Count == 0)
+                    {
                         MessageBox.Show("No data found!", "Not found",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)
@@ -89,8 +106,16 @@ namespace HRISCapsu
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            var frm = new frmRegularEmployeesReport();
-            frm.ShowDialog();
+            if (employeeType == "Academic")
+            {
+                var frm = new previewAcademicRegularEmployees();
+                frm.ShowDialog();
+            }
+            else if (employeeType == "Non - Academic")
+            {
+                var frm = new previewNonAcademicRegularEmployees();
+                frm.ShowDialog();
+            }
         }
     }
 }

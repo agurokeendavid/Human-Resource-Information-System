@@ -11,79 +11,73 @@ namespace HRISCapsu
         public frmSeminarsTraining()
         {
             InitializeComponent();
-            displaySeminars();
         }
 
-        private void displayEmployees()
+        private void DisplayEmployees()
         {
             try
             {
-                using (var conn =
-                    new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
-                    conn.Open();
-                    var query =
-                        @"SELECT empsem.id, empsem.seminar_id, emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, pos.position_name FROM employee_seminars empsem INNER JOIN employees emp ON empsem.employee_no = emp.employee_no INNER JOIN positions pos ON empsem.employee_position_id = pos.position_id WHERE empsem.seminar_id= @seminar_id";
-                    var cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("seminar_id", dtgSeminars.CurrentRow.Cells[0].Value.ToString());
-                    var da = new MySqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    var dt = new DataTable();
-                    da.Fill(dt);
-
-                    dtgEmployees.DataSource = dt;
-
-                    dtgEmployees.Columns[0].Visible = false;
-                    dtgEmployees.Columns[1].Visible = false;
-                    dtgEmployees.Columns[2].HeaderText = "Employee No.";
-                    dtgEmployees.Columns[3].HeaderText = "First Name";
-                    dtgEmployees.Columns[4].HeaderText = "Middle Name";
-                    dtgEmployees.Columns[5].HeaderText = "Last Name";
-                    dtgEmployees.Columns[6].HeaderText = "Position";
-                    if (dt.Rows.Count == 0)
-                        MessageBox.Show("No data found.", "Not found",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    connection.Open();
+                    string query = "SELECT emp.employee_no, emp.position_item_no, CONCAT(emp.last_name, '. ', emp.first_name, ' ', emp.middle_name) AS FullName, emp.department, emp.work_status, emp.employee_type FROM employees emp INNER JOIN employee_seminars empsem ON emp.employee_no = empsem.employee_no WHERE (empsem.seminar_id = @seminar_id) AND (emp.is_deleted = @is_deleted);";
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("seminar_id", MySqlDbType.Int32).Value = dtgSeminars.CurrentRow.Cells[0].Value;
+                        command.Parameters.AddWithValue("is_deleted", MySqlDbType.Int32).Value = 0;
+                        var da = new MySqlDataAdapter();
+                        da.SelectCommand = command;
+                        var dt = new DataTable();
+                        da.Fill(dt);
+                        dtgEmployees.DataSource = dt;
+                        dtgEmployees.Columns[0].HeaderText = "Employee No.";
+                        dtgEmployees.Columns[1].HeaderText = "Item No.";
+                        dtgEmployees.Columns[2].HeaderText = "Full Name";
+                        dtgEmployees.Columns[3].HeaderText = "Department";
+                        dtgEmployees.Columns[4].HeaderText = "Work Status";
+                        dtgEmployees.Columns[5].HeaderText = "Employee Type";
+                    }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No records found!", "Not found",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void displaySeminars()
+        private void DisplaySeminars()
         {
             try
             {
-                using (var conn =
-                    new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
-                    conn.Open();
-                    var query =
-                        @"SELECT seminar_id, seminar_name, seminar_location, date_format(seminar_date, '%M %d, %Y') AS 'Date', seminar_status FROM seminars WHERE seminar_status = 'Active'";
-                    var cmd = new MySqlCommand(query, conn);
-                    var da = new MySqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    var dt = new DataTable();
-                    da.Fill(dt);
+                    connection.Open();
+                    string query = "SELECT * from seminars WHERE is_deleted = @is_deleted";
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("is_deleted", MySqlDbType.Int32).Value = 0;
+                        var da = new MySqlDataAdapter();
+                        da.SelectCommand = command;
 
-                    dtgSeminars.DataSource = dt;
+                        var dt = new DataTable();
+                        da.Fill(dt);
 
-                    dtgSeminars.Columns[0].Visible = false;
-                    dtgSeminars.Columns[1].HeaderText = "Seminar";
-                    dtgSeminars.Columns[2].HeaderText = "Location";
-                    dtgSeminars.Columns[3].HeaderText = "Date";
-                    dtgSeminars.Columns[4].Visible = false;
+                        dtgSeminars.DataSource = dt;
 
-                    if (dt.Rows.Count == 0)
-                        MessageBox.Show("No data found.", "Not found",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        dtgSeminars.Columns[0].Visible = false;
+                        dtgSeminars.Columns[1].HeaderText = "Seminar";
+                        dtgSeminars.Columns[2].HeaderText = "Location";
+                        dtgSeminars.Columns[3].HeaderText = "Date";
+                        dtgSeminars.Columns[4].HeaderText = "Based";
+                        dtgSeminars.Columns[5].Visible = false;
+                    }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No records found!", "Not found",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -91,7 +85,7 @@ namespace HRISCapsu
         {
             var frm = new frmAddSeminar();
             frm.ShowDialog();
-            displaySeminars();
+            DisplaySeminars();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -99,30 +93,61 @@ namespace HRISCapsu
             Close();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            var frm = new frmEditSeminar(dtgSeminars.CurrentRow.Cells[0].Value.ToString(),
-                dtgSeminars.CurrentRow.Cells[1].Value.ToString(), dtgSeminars.CurrentRow.Cells[2].Value.ToString(),
-                dtgSeminars.CurrentRow.Cells[3].Value.ToString(), dtgSeminars.CurrentRow.Cells[4].Value.ToString());
-            frm.ShowDialog();
-            displaySeminars();
-        }
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            var frm = new frmAddSeminarEmployee(dtgSeminars.CurrentRow.Cells[0].Value.ToString());
-            frm.ShowDialog();
-            displayEmployees();
-        }
-
-
-        private void dtgSeminars_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            displayEmployees();
+            try
+            {
+                var frm = new frmAddSeminarEmployee(dtgSeminars.CurrentRow.Cells[0].Value.ToString());
+                frm.ShowDialog();
+                DisplayEmployees();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please select row first in seminar list.!", "Not found",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void frmSeminarsTraining_Load(object sender, EventArgs e)
         {
+            DisplaySeminars();
+        }
+
+        private void dtgSeminars_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DisplayEmployees();
+        }
+
+        private void dtgSeminars_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            DisplayEmployees();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                {
+                    connection.Open();
+                    string query = "UPDATE seminars SET is_deleted = @is_deleted WHERE id = @id;";
+                    var cmd = new MySqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("is_deleted", MySqlDbType.Int32).Value = 1;
+                    cmd.Parameters.AddWithValue("id", MySqlDbType.Int32).Value = dtgSeminars.CurrentRow.Cells[0].Value;
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Successfully deleted!", "Success", MessageBoxButtons.OK,
+                                MessageBoxIcon.None);
+                    DisplaySeminars();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please select row first.", "Not found",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

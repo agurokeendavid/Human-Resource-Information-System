@@ -1,9 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Windows.Forms;
-using HRISCapsu.ReportViewer;
-using MySql.Data.MySqlClient;
 
 namespace HRISCapsu
 {
@@ -13,7 +12,6 @@ namespace HRISCapsu
         {
             InitializeComponent();
             frmLogin.SendMessage(txtSearch.Handle, 0x1501, 1, "Search position.");
-            frmLogin.SendMessage(txtPosition.Handle, 0x1501, 1, "Position name.");
             displayRecords(dtgRecords);
         }
 
@@ -22,15 +20,17 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn =
+                using (MySqlConnection conn =
                     new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    var query = @"SELECT * FROM positions ORDER BY position_name ASC;";
-                    var cmd = new MySqlCommand(query, conn);
-                    var da = new MySqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    var dt = new DataTable();
+                    string query = @"SELECT position_id, position_item_no, position_name, position_sg, position_step, position_type FROM positions ORDER BY position_name ASC;";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlDataAdapter da = new MySqlDataAdapter
+                    {
+                        SelectCommand = cmd
+                    };
+                    DataTable dt = new DataTable();
                     da.Fill(dt);
 
                     gridView.DataSource = dt;
@@ -38,8 +38,11 @@ namespace HRISCapsu
                     if (dt.Rows.Count > 0)
                     {
                         gridView.Columns[0].Visible = false;
-                        gridView.Columns[1].HeaderText = "Position";
-                        gridView.Columns[2].HeaderText = "Position Type";
+                        gridView.Columns[1].HeaderText = "Position Item No.";
+                        gridView.Columns[2].HeaderText = "Position";
+                        gridView.Columns[3].HeaderText = "SG";
+                        gridView.Columns[4].HeaderText = "Step";
+                        gridView.Columns[5].HeaderText = "Position Type";
                     }
                     else
                     {
@@ -56,13 +59,10 @@ namespace HRISCapsu
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            grpFilter.Enabled = false;
-            grpAddPosition.Enabled = true;
-            btnAdd.Enabled = false;
-            btnEdit.Enabled = false;
-            btnPrint.Enabled = false;
-            txtPosition.Clear();
-            txtSearch.Clear();
+
+            frmAddPosition frm = new frmAddPosition("Add", null, null, null, null, null, null);
+            frm.ShowDialog();
+            displayRecords(dtgRecords);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -70,124 +70,32 @@ namespace HRISCapsu
             Close();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            grpFilter.Enabled = true;
-            grpAddPosition.Enabled = false;
-            btnAdd.Enabled = true;
-            btnEdit.Enabled = true;
-            btnPrint.Enabled = true;
-            txtSearch.Clear();
-            txtPosition.Clear();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (btnSave.Text == "Sav&e")
-            {
-                if (txtPosition.Text != string.Empty)
-                {
-                    try
-                    {
-                        using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"]
-                            .ConnectionString))
-                        {
-                            conn.Open();
-                            var query = @"INSERT INTO positions (position_name, position_type) VALUES (@position_name, @position_type)";
-                            var cmd = new MySqlCommand(query, conn);
-                            cmd.Parameters.AddWithValue("position_name", txtPosition.Text);
-                            cmd.Parameters.AddWithValue("position_type", cmbPositionType.Text);
-                            cmd.ExecuteNonQuery();
-                            cmd.Parameters.Clear();
-                            MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK,
-                                MessageBoxIcon.None);
-                            displayRecords(dtgRecords);
-
-                            grpFilter.Enabled = true;
-                            grpAddPosition.Enabled = false;
-                            btnAdd.Enabled = true;
-                            btnEdit.Enabled = true;
-                            btnPrint.Enabled = true;
-                            txtSearch.Clear();
-                            txtPosition.Clear();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error inserting position: " + ex.Message, "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Required fields.", "Required",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtPosition.Focus();
-                }
-            }
-            else
-            {
-                try
-                {
-                    using (var conn =
-                        new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
-                    {
-                        conn.Open();
-                        var query =
-                            @"UPDATE positions SET position_name = @position_name, position_type = @position_type WHERE position_id = @position_id";
-                        var cmd = new MySqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("position_name", txtPosition.Text);
-                        cmd.Parameters.AddWithValue("position_type", cmbPositionType.Text);
-                        cmd.Parameters.AddWithValue("position_id", dtgRecords.CurrentRow.Cells[0].Value.ToString());
-                        cmd.ExecuteNonQuery();
-                        cmd.Parameters.Clear();
-                        MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
-                        displayRecords(dtgRecords);
-                        grpFilter.Enabled = true;
-                        grpAddPosition.Enabled = false;
-                        btnAdd.Enabled = true;
-                        btnEdit.Enabled = true;
-                        btnPrint.Enabled = true;
-                        txtSearch.Clear();
-                        txtPosition.Clear();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error updating position: " + ex.Message, "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            grpFilter.Enabled = false;
-            grpAddPosition.Enabled = true;
-            btnSave.Text = "&Update";
-            btnAdd.Enabled = false;
-            btnEdit.Enabled = false;
-            btnPrint.Enabled = false;
-            txtPosition.Text = dtgRecords.CurrentRow.Cells[1].Value.ToString();
-            cmbPositionType.SelectedItem = dtgRecords.CurrentRow.Cells[2].Value.ToString();
-            txtSearch.Clear();
-            
+
+            frmAddPosition frm = new frmAddPosition("Edit", dtgRecords.CurrentRow.Cells[0].Value.ToString(), dtgRecords.CurrentRow.Cells[2].Value.ToString(), dtgRecords.CurrentRow.Cells[5].Value.ToString(), dtgRecords.CurrentRow.Cells[3].Value.ToString(), dtgRecords.CurrentRow.Cells[4].Value.ToString(), dtgRecords.CurrentRow.Cells[1].Value.ToString());
+            frm.ShowDialog();
+            displayRecords(dtgRecords);
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
             {
-                using (var conn =
+                using (MySqlConnection conn =
                     new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    var query = @"SELECT * FROM positions WHERE position_name LIKE @position_name ORDER BY position_name ASC;";
-                    var cmd = new MySqlCommand(query, conn);
+                    string query = @"SELECT position_id, position_item_no, position_name, position_sg, position_step, position_type FROM positions WHERE position_name LIKE @position_name ORDER BY position_name ASC;";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("position_name", '%' + txtSearch.Text + '%');
-                    var da = new MySqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    var dt = new DataTable();
+                    MySqlDataAdapter da = new MySqlDataAdapter
+                    {
+                        SelectCommand = cmd
+                    };
+                    DataTable dt = new DataTable();
                     da.Fill(dt);
 
                     dtgRecords.DataSource = dt;
@@ -195,8 +103,11 @@ namespace HRISCapsu
                     if (dt.Rows.Count > 0)
                     {
                         dtgRecords.Columns[0].Visible = false;
-                        dtgRecords.Columns[1].HeaderText = "Position";
-                        dtgRecords.Columns[2].HeaderText = "Position Type";
+                        dtgRecords.Columns[1].HeaderText = "Position Item No.";
+                        dtgRecords.Columns[2].HeaderText = "Position";
+                        dtgRecords.Columns[3].HeaderText = "SG";
+                        dtgRecords.Columns[4].HeaderText = "Step";
+                        dtgRecords.Columns[5].HeaderText = "Position Type";
                     }
                     else
                     {
@@ -214,8 +125,8 @@ namespace HRISCapsu
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            var frm = new frmPositionsReport();
-            frm.ShowDialog();
+            //var frm = new frmPositionsReport();
+            //frm.ShowDialog();
         }
     }
 }

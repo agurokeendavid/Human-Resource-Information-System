@@ -52,7 +52,7 @@ namespace HRISCapsu
                         Close();
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Seminar exist!", "Record exist.",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);

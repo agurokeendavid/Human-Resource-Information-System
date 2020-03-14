@@ -36,15 +36,13 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.Label20 = new System.Windows.Forms.Label();
             this.panelFileInformation = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbLocationBased = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.dtpDateofActivity = new System.Windows.Forms.DateTimePicker();
             this.txtLocation = new System.Windows.Forms.TextBox();
             this.txtSeminarName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbLocationBased = new System.Windows.Forms.ComboBox();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.panelFileInformation.SuspendLayout();
@@ -58,9 +56,8 @@
             this.Panel1.Controls.Add(this.PictureBox1);
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel1.Location = new System.Drawing.Point(0, 0);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(540, 66);
+            this.Panel1.Size = new System.Drawing.Size(405, 54);
             this.Panel1.TabIndex = 6;
             // 
             // Label9
@@ -69,10 +66,9 @@
             this.Label9.BackColor = System.Drawing.Color.Transparent;
             this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label9.ForeColor = System.Drawing.Color.Teal;
-            this.Label9.Location = new System.Drawing.Point(166, 8);
-            this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label9.Location = new System.Drawing.Point(124, 6);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(298, 46);
+            this.Label9.Size = new System.Drawing.Size(238, 37);
             this.Label9.TabIndex = 0;
             this.Label9.Text = "ADD SEMINAR";
             // 
@@ -80,10 +76,9 @@
             // 
             this.PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.PictureBox1.Image = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
-            this.PictureBox1.Location = new System.Drawing.Point(74, 4);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox1.Location = new System.Drawing.Point(56, 3);
             this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(84, 56);
+            this.PictureBox1.Size = new System.Drawing.Size(63, 46);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox1.TabIndex = 47;
             this.PictureBox1.TabStop = false;
@@ -92,10 +87,9 @@
             // 
             this.Label16.AutoSize = true;
             this.Label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label16.Location = new System.Drawing.Point(23, 29);
-            this.Label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label16.Location = new System.Drawing.Point(17, 24);
             this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(91, 25);
+            this.Label16.Size = new System.Drawing.Size(72, 20);
             this.Label16.TabIndex = 0;
             this.Label16.Text = "Seminar:";
             // 
@@ -103,10 +97,9 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(23, 228);
-            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label1.Location = new System.Drawing.Point(17, 185);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(147, 25);
+            this.Label1.Size = new System.Drawing.Size(119, 20);
             this.Label1.TabIndex = 0;
             this.Label1.Text = "Date of Activity:";
             // 
@@ -114,10 +107,9 @@
             // 
             this.Label20.AutoSize = true;
             this.Label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label20.Location = new System.Drawing.Point(23, 92);
-            this.Label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label20.Location = new System.Drawing.Point(17, 75);
             this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(92, 25);
+            this.Label20.Size = new System.Drawing.Size(74, 20);
             this.Label20.TabIndex = 0;
             this.Label20.Text = "Location:";
             // 
@@ -127,8 +119,6 @@
             this.panelFileInformation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelFileInformation.Controls.Add(this.label3);
             this.panelFileInformation.Controls.Add(this.cmbLocationBased);
-            this.panelFileInformation.Controls.Add(this.label2);
-            this.panelFileInformation.Controls.Add(this.cmbStatus);
             this.panelFileInformation.Controls.Add(this.btnCancel);
             this.panelFileInformation.Controls.Add(this.btnSave);
             this.panelFileInformation.Controls.Add(this.dtpDateofActivity);
@@ -137,37 +127,36 @@
             this.panelFileInformation.Controls.Add(this.Label16);
             this.panelFileInformation.Controls.Add(this.Label1);
             this.panelFileInformation.Controls.Add(this.Label20);
-            this.panelFileInformation.Location = new System.Drawing.Point(0, 72);
-            this.panelFileInformation.Margin = new System.Windows.Forms.Padding(4);
+            this.panelFileInformation.Location = new System.Drawing.Point(0, 58);
             this.panelFileInformation.Name = "panelFileInformation";
-            this.panelFileInformation.Size = new System.Drawing.Size(540, 447);
+            this.panelFileInformation.Size = new System.Drawing.Size(406, 306);
             this.panelFileInformation.TabIndex = 0;
             this.panelFileInformation.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFileInformation_Paint);
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 294);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 25);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Status:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(17, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 20);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Location Based:";
             // 
-            // cmbStatus
+            // cmbLocationBased
             // 
-            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Items.AddRange(new object[] {
-            "Active",
-            "Inactive"});
-            this.cmbStatus.Location = new System.Drawing.Point(28, 323);
-            this.cmbStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(488, 33);
-            this.cmbStatus.TabIndex = 5;
+            this.cmbLocationBased.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLocationBased.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbLocationBased.FormattingEnabled = true;
+            this.cmbLocationBased.Items.AddRange(new object[] {
+            "Local",
+            "Regional",
+            "National",
+            "International"});
+            this.cmbLocationBased.Location = new System.Drawing.Point(21, 155);
+            this.cmbLocationBased.Name = "cmbLocationBased";
+            this.cmbLocationBased.Size = new System.Drawing.Size(367, 28);
+            this.cmbLocationBased.TabIndex = 3;
             // 
             // btnCancel
             // 
@@ -179,10 +168,9 @@
             this.btnCancel.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(419, 382);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Location = new System.Drawing.Point(315, 239);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(97, 53);
+            this.btnCancel.Size = new System.Drawing.Size(73, 43);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -199,10 +187,9 @@
             this.btnSave.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(314, 382);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(237, 239);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(97, 53);
+            this.btnSave.Size = new System.Drawing.Size(73, 43);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "&Save ";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -214,9 +201,10 @@
             this.dtpDateofActivity.CustomFormat = "MMMM dd, yyyy";
             this.dtpDateofActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateofActivity.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateofActivity.Location = new System.Drawing.Point(28, 256);
+            this.dtpDateofActivity.Location = new System.Drawing.Point(21, 208);
+            this.dtpDateofActivity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpDateofActivity.Name = "dtpDateofActivity";
-            this.dtpDateofActivity.Size = new System.Drawing.Size(488, 30);
+            this.dtpDateofActivity.Size = new System.Drawing.Size(367, 26);
             this.dtpDateofActivity.TabIndex = 4;
             this.dtpDateofActivity.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
             // 
@@ -224,57 +212,29 @@
             // 
             this.txtLocation.BackColor = System.Drawing.Color.White;
             this.txtLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLocation.Location = new System.Drawing.Point(28, 121);
-            this.txtLocation.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLocation.Location = new System.Drawing.Point(21, 98);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(488, 30);
+            this.txtLocation.Size = new System.Drawing.Size(367, 26);
             this.txtLocation.TabIndex = 2;
             // 
             // txtSeminarName
             // 
             this.txtSeminarName.BackColor = System.Drawing.Color.White;
             this.txtSeminarName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSeminarName.Location = new System.Drawing.Point(28, 58);
-            this.txtSeminarName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeminarName.Location = new System.Drawing.Point(21, 47);
             this.txtSeminarName.Name = "txtSeminarName";
-            this.txtSeminarName.Size = new System.Drawing.Size(488, 30);
+            this.txtSeminarName.Size = new System.Drawing.Size(367, 26);
             this.txtSeminarName.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 162);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 25);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Location Based:";
-            // 
-            // cmbLocationBased
-            // 
-            this.cmbLocationBased.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLocationBased.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbLocationBased.FormattingEnabled = true;
-            this.cmbLocationBased.Items.AddRange(new object[] {
-            "Local",
-            "Regional",
-            "National",
-            "International"});
-            this.cmbLocationBased.Location = new System.Drawing.Point(28, 191);
-            this.cmbLocationBased.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbLocationBased.Name = "cmbLocationBased";
-            this.cmbLocationBased.Size = new System.Drawing.Size(488, 33);
-            this.cmbLocationBased.TabIndex = 3;
             // 
             // frmAddSeminar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 521);
+            this.ClientSize = new System.Drawing.Size(405, 364);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.panelFileInformation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAddSeminar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddSeminar";
@@ -301,8 +261,6 @@
         private System.Windows.Forms.DateTimePicker dtpDateofActivity;
         internal System.Windows.Forms.Button btnSave;
         internal System.Windows.Forms.Button btnCancel;
-        internal System.Windows.Forms.Label label2;
-        internal System.Windows.Forms.ComboBox cmbStatus;
         internal System.Windows.Forms.Label label3;
         internal System.Windows.Forms.ComboBox cmbLocationBased;
     }

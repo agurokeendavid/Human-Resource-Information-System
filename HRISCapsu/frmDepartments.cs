@@ -1,9 +1,9 @@
-﻿using System;
+﻿
+using MySql.Data.MySqlClient;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Windows.Forms;
-using HRISCapsu.ReportViewer;
-using MySql.Data.MySqlClient;
 
 namespace HRISCapsu
 {
@@ -21,15 +21,17 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn =
+                using (MySqlConnection conn =
                     new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    var query = @"SELECT * FROM departments ORDER BY department_name;";
-                    var cmd = new MySqlCommand(query, conn);
-                    var da = new MySqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    var dt = new DataTable();
+                    string query = @"SELECT * FROM departments ORDER BY department_name;";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlDataAdapter da = new MySqlDataAdapter
+                    {
+                        SelectCommand = cmd
+                    };
+                    DataTable dt = new DataTable();
                     da.Fill(dt);
 
                     gridView.DataSource = dt;
@@ -57,16 +59,18 @@ namespace HRISCapsu
         {
             try
             {
-                using (var conn =
+                using (MySqlConnection conn =
                     new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    var query = @"SELECT * FROM departments WHERE department_name LIKE @department_name ORDER BY department_name ASC;";
-                    var cmd = new MySqlCommand(query, conn);
+                    string query = @"SELECT * FROM departments WHERE department_name LIKE @department_name ORDER BY department_name ASC;";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("department_name", '%' + txtSearch.Text + '%');
-                    var da = new MySqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    var dt = new DataTable();
+                    MySqlDataAdapter da = new MySqlDataAdapter
+                    {
+                        SelectCommand = cmd
+                    };
+                    DataTable dt = new DataTable();
                     da.Fill(dt);
 
                     dtgRecords.DataSource = dt;
@@ -109,12 +113,12 @@ namespace HRISCapsu
                 {
                     try
                     {
-                        using (var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"]
+                        using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"]
                             .ConnectionString))
                         {
                             conn.Open();
-                            var query = @"INSERT INTO departments (department_name) VALUES (@department_name)";
-                            var cmd = new MySqlCommand(query, conn);
+                            string query = @"INSERT INTO departments (department_name) VALUES (@department_name)";
+                            MySqlCommand cmd = new MySqlCommand(query, conn);
                             cmd.Parameters.AddWithValue("department_name", txtDepartment.Text);
                             cmd.ExecuteNonQuery();
                             cmd.Parameters.Clear();
@@ -147,13 +151,13 @@ namespace HRISCapsu
             {
                 try
                 {
-                    using (var conn =
+                    using (MySqlConnection conn =
                         new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                     {
                         conn.Open();
-                        var query =
+                        string query =
                             @"UPDATE departments SET department_name = @department_name WHERE department_id = @department_id";
-                        var cmd = new MySqlCommand(query, conn);
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("department_name", txtDepartment.Text);
                         cmd.Parameters.AddWithValue("department_id", dtgRecords.CurrentRow.Cells[0].Value.ToString());
                         cmd.ExecuteNonQuery();
@@ -202,8 +206,8 @@ namespace HRISCapsu
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            var frm = new frmDepartmentsReport();
-            frm.ShowDialog();
+            //var frm = new frmDepartmentsReport();
+            //frm.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
