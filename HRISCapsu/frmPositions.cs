@@ -60,9 +60,9 @@ namespace HRISCapsu
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
-            frmAddPosition frm = new frmAddPosition("Add", null, null, null, null, null, null);
-            frm.ShowDialog();
-            displayRecords(dtgRecords);
+            //frmAddPosition frm = new frmAddPosition("Add", null, null, null, null, null, null);
+            //frm.ShowDialog();
+            //displayRecords(dtgRecords);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -74,9 +74,9 @@ namespace HRISCapsu
         private void btnEdit_Click(object sender, EventArgs e)
         {
 
-            frmAddPosition frm = new frmAddPosition("Edit", dtgRecords.CurrentRow.Cells[0].Value.ToString(), dtgRecords.CurrentRow.Cells[2].Value.ToString(), dtgRecords.CurrentRow.Cells[5].Value.ToString(), dtgRecords.CurrentRow.Cells[3].Value.ToString(), dtgRecords.CurrentRow.Cells[4].Value.ToString(), dtgRecords.CurrentRow.Cells[1].Value.ToString());
-            frm.ShowDialog();
-            displayRecords(dtgRecords);
+            //frmAddPosition frm = new frmAddPosition("Edit", dtgRecords.CurrentRow.Cells[0].Value.ToString(), dtgRecords.CurrentRow.Cells[2].Value.ToString(), dtgRecords.CurrentRow.Cells[5].Value.ToString(), dtgRecords.CurrentRow.Cells[3].Value.ToString(), dtgRecords.CurrentRow.Cells[4].Value.ToString(), dtgRecords.CurrentRow.Cells[1].Value.ToString());
+            //frm.ShowDialog();
+            //displayRecords(dtgRecords);
 
         }
 

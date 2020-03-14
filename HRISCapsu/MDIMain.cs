@@ -42,10 +42,6 @@ namespace HRISCapsu
                             {
                                 count++;
                             }
-                            else
-                            {
-                                count = 0;
-                            }
                         }
                     }
                 }
@@ -160,10 +156,6 @@ namespace HRISCapsu
                             {
                                 count++;
                             }
-                            else
-                            {
-                                count = 0;
-                            }
                         }
                     }
                 }
@@ -240,10 +232,6 @@ namespace HRISCapsu
                             if (expiredContract >= 1 && expiredContract <= 30)
                             {
                                 count++;
-                            }
-                            else
-                            {
-                                count = 0;
                             }
                         }
                     }
@@ -328,6 +316,7 @@ namespace HRISCapsu
             frmLogin frm = new frmLogin();
             frm.ShowDialog(this);
             notifications();
+            
 
         }
 
@@ -524,6 +513,12 @@ namespace HRISCapsu
         private void seminarsAttendedToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new previewSeminarEmployeeList();
+            frm.ShowDialog();
+        }
+
+        private void addPositionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmAddPosition();
             frm.ShowDialog();
         }
     }

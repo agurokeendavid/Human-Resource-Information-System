@@ -907,3 +907,4 @@ D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\D
 D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.csproj.CopyComplete
 D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.exe
 D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.pdb
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmRegister.resources

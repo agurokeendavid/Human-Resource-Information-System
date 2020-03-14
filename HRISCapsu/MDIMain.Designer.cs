@@ -55,6 +55,7 @@
             this.graphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listOfMasteralHolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listOfDoctoralHolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seminarsAttendedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notificationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.endOfContractToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,7 +66,8 @@
             this.tsslCurrentDateAndTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.seminarsAttendedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.positionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addPositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -118,7 +120,8 @@
             this.allEmployeesToolStripMenuItem1,
             this.employeesToolStripMenuItem1,
             this.nonAcademicToolStripMenuItem,
-            this.leaveToolStripMenuItem});
+            this.leaveToolStripMenuItem,
+            this.positionsToolStripMenuItem});
             this.recordsToolStripMenuItem.Name = "recordsToolStripMenuItem";
             this.recordsToolStripMenuItem.Size = new System.Drawing.Size(148, 36);
             this.recordsToolStripMenuItem.Text = "HR Records";
@@ -279,6 +282,13 @@
             this.listOfDoctoralHolderToolStripMenuItem.Text = "List of Doctoral Holder";
             this.listOfDoctoralHolderToolStripMenuItem.Click += new System.EventHandler(this.listOfDoctoralHolderToolStripMenuItem_Click);
             // 
+            // seminarsAttendedToolStripMenuItem
+            // 
+            this.seminarsAttendedToolStripMenuItem.Name = "seminarsAttendedToolStripMenuItem";
+            this.seminarsAttendedToolStripMenuItem.Size = new System.Drawing.Size(334, 36);
+            this.seminarsAttendedToolStripMenuItem.Text = "Seminars Attended";
+            this.seminarsAttendedToolStripMenuItem.Click += new System.EventHandler(this.seminarsAttendedToolStripMenuItem_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
@@ -361,12 +371,20 @@
             this.panel1.Size = new System.Drawing.Size(1924, 703);
             this.panel1.TabIndex = 9;
             // 
-            // seminarsAttendedToolStripMenuItem
+            // positionsToolStripMenuItem
             // 
-            this.seminarsAttendedToolStripMenuItem.Name = "seminarsAttendedToolStripMenuItem";
-            this.seminarsAttendedToolStripMenuItem.Size = new System.Drawing.Size(334, 36);
-            this.seminarsAttendedToolStripMenuItem.Text = "Seminars Attended";
-            this.seminarsAttendedToolStripMenuItem.Click += new System.EventHandler(this.seminarsAttendedToolStripMenuItem_Click);
+            this.positionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addPositionToolStripMenuItem});
+            this.positionsToolStripMenuItem.Name = "positionsToolStripMenuItem";
+            this.positionsToolStripMenuItem.Size = new System.Drawing.Size(263, 36);
+            this.positionsToolStripMenuItem.Text = "Positions";
+            // 
+            // addPositionToolStripMenuItem
+            // 
+            this.addPositionToolStripMenuItem.Name = "addPositionToolStripMenuItem";
+            this.addPositionToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.addPositionToolStripMenuItem.Text = "Add Position";
+            this.addPositionToolStripMenuItem.Click += new System.EventHandler(this.addPositionToolStripMenuItem_Click);
             // 
             // MDIMain
             // 
@@ -435,6 +453,8 @@
         private System.Windows.Forms.ToolStripMenuItem nonAcademicToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem oldEmployeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seminarsAttendedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem positionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addPositionToolStripMenuItem;
     }
 }
 

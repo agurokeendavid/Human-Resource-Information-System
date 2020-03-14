@@ -21,7 +21,7 @@ namespace HRISCapsu.Classes
                     }
                     else if (control is ComboBox)
                     {
-                        ((ComboBox)control).SelectedIndex = 0;
+                        ((ComboBox)control).SelectedItem = null;
                     }
                     else if (control is DateTimePicker)
                     {
@@ -41,8 +41,8 @@ namespace HRISCapsu.Classes
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Failed! " + exception.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Failed! " + exception.Message, "Error",
+                //    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

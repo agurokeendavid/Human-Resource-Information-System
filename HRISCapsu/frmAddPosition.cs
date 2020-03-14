@@ -14,101 +14,42 @@ namespace HRISCapsu
 {
     public partial class frmAddPosition : Form
     {
-        private string command;
-        private string posid;
-        public frmAddPosition(string command, string posid, string posname, string postype, string possg, string postep, string positemno)
+        public frmAddPosition()
         {
             InitializeComponent();
-            this.command = command;
-
-            if (this.command == "Edit" && posid != null && posname != null && postype != null && possg != null && postep != null && positemno != null)
-            {
-                this.posid = posid;
-                txtUniqueItemNo.Text = positemno;
-                txtPositionName.Text = posname;
-                cmbPositionType.SelectedItem = postype;
-                txtSalaryGradeLevel.Text = possg;
-                txtStep.Text = postep;
-
-            }
+            frmLogin.SendMessage(txtPositionName.Handle, 0x1501, 1, "Position.");
+            frmLogin.SendMessage(txtSalaryGradeLevel.Handle, 0x1501, 1, "Salary Grade.");
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (command == "Add")
+            try
             {
-                if (txtUniqueItemNo.Text == String.Empty)
+                using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
-                    MessageBox.Show("Unique Item Field required! ", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    try
+                    connection.Open();
+                    string query = @"INSERT INTO tbl_positions (position_name, position_type, salary_grade_level) VALUES (@position_name, @position_type, @salary_grade_level)";
+                    using (var command = new MySqlCommand(query, connection))
                     {
-                        using (var connection =
-                            new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
-                        {
-                            connection.Open();
-                            string query =
-                                "INSERT INTO positions (position_name, position_type, position_sg, position_step, position_item_no) VALUES (@position_name, @position_type, @position_sg, @position_step, @position_item_no);";
-                            var cmd = new MySqlCommand(query, connection);
-                            cmd.Parameters.AddWithValue("position_name", txtPositionName.Text);
-                            cmd.Parameters.AddWithValue("position_type", cmbPositionType.SelectedItem.ToString());
-                            cmd.Parameters.AddWithValue("position_sg", txtSalaryGradeLevel.Text);
-                            cmd.Parameters.AddWithValue("position_step", txtStep.Text);
-                            cmd.Parameters.AddWithValue("position_item_no", txtPositionName.Text);
-                            cmd.ExecuteNonQuery();
-                            cmd.Parameters.Clear();
-                            MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK,
-                                MessageBoxIcon.None);
-                            Close();
-                        }
-                    }
-                    catch (MySqlException)
-                    {
-                        MessageBox.Show("Item No. already exist!", "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    catch (Exception exception)
-                    {
-                        MessageBox.Show("Error inserting position: " + exception.Message, "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                
-            }
-            else
-            {
-                try
-                {
-                    using (var conn =
-                        new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
-                    {
-                        conn.Open();
-                        var query =
-                            @"UPDATE positions SET position_name = @position_name, position_type = @position_type, position_sg = @position_sg, position_step = @position_step, position_item_no = @position_item_no WHERE position_id = @position_id;";
-                        var cmd = new MySqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("position_name", txtPositionName.Text);
-                        cmd.Parameters.AddWithValue("position_type", cmbPositionType.SelectedItem.ToString());
-                        cmd.Parameters.AddWithValue("position_sg", txtSalaryGradeLevel.Text);
-                        cmd.Parameters.AddWithValue("position_step", txtStep.Text);
-                        cmd.Parameters.AddWithValue("position_item_no", txtUniqueItemNo.Text);
-                        cmd.Parameters.AddWithValue("position_id", posid);
-                        cmd.ExecuteNonQuery();
-                        cmd.Parameters.Clear();
-                        MessageBox.Show("Successfully updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
+                        command.Parameters.Add("position_name", MySqlDbType.VarChar).Value = txtPositionName.Text;
+                        command.Parameters.Add("position_type", MySqlDbType.VarChar).Value = cmbPositionType.SelectedItem.ToString();
+                        command.Parameters.Add("salary_grade_level", MySqlDbType.Int32).Value = txtSalaryGradeLevel.Text;
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
                         Close();
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error updating position: " + ex.Message, "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
             }
-
-
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Position already exist!", "Failed!",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please try again later!", "Failed!",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -118,14 +59,13 @@ namespace HRISCapsu
 
         private void frmAddPosition_Load(object sender, EventArgs e)
         {
-            if (this.command == "Add")
-            {
-                lblTitle.Text = "ADD POSITION";
-            }
-            else
-            {
-                lblTitle.Text = "UPDATE POSITION";
-            }
+
+        }
+
+        private void txtSalaryGradeLevel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            const char Delete = (char)8;
+            e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != Delete;
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 using HRISCapsu.ReportPreviewer;
+using System.Collections.Generic;
 
 namespace HRISCapsu
 {
@@ -49,8 +50,7 @@ namespace HRISCapsu
             frmLogin.SendMessage(txtDoctoralCourse.Handle, 0x1501, 1, "Course");
             frmLogin.SendMessage(txtDoctoralYearGraduated.Handle, 0x1501, 1, "Year Graduated");
             frmLogin.SendMessage(txtDoctoralSchool.Handle, 0x1501, 1, "School");
-            DisplayRecords();
-            cmbEmployeeType.SelectedIndex = 0;
+            DisplayRecords(string.Empty);
             Methods.ClearItems(panelFileInformation);
         }
 
@@ -221,7 +221,7 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
             }
         }
 
-        private void DisplayRecords()
+        private void DisplayRecords(string keyword)
         {
             try
             {
@@ -230,11 +230,12 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
                 {
                     connection.Open();
                     string query =
-                        "SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS DateOfBirth, emp.place_of_birth, emp.contact_no, emp.civil_status, emp.highest_degree, emp.bs_course, emp.bs_year_graduated, emp.bs_school, emp.masteral_course, emp.masteral_year_graduated, emp.masteral_school, emp.doctoral_course, emp.doctoral_year_graduated, emp.doctoral_school, emp.eligibility, employee_type, position, unique_item_no, salary_grade, step, department, work_status, employee_photo, documentpath, hired_date, end_of_contract, sem.local_seminar_name, sem.local_seminar_type, date_format(sem.local_from, '%M %d, %Y'), date_format(sem.local_to, '%M %d, %Y'), sem.regional_seminar_name, sem.regional_seminar_type, date_format(sem.regional_from, '%M %d, %Y'), date_format(sem.regional_to, '%M %d, %Y'), sem.national_seminar_name, sem.national_seminar_type, date_format(sem.national_from, '%M %d, %Y'), date_format(sem.national_to, '%M %d, %Y'), sem.international_seminar_name, sem.international_seminar_type, date_format(sem.international_from, '%M %d, %Y'), date_format(sem.international_to, '%M %d, %Y') FROM employees emp INNER JOIN tbl_list_of_seminars sem ON emp.employee_no = sem.employee_no WHERE emp.is_deleted = @is_deleted AND sem.is_deleted = @sem_is_deleted;";
+                        "SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, emp.address, emp.gender, date_format(emp.date_of_birth, '%M %d, %Y') AS DateOfBirth, emp.place_of_birth, emp.contact_no, emp.civil_status, emp.highest_degree, emp.bs_course, emp.bs_year_graduated, emp.bs_school, emp.masteral_course, emp.masteral_year_graduated, emp.masteral_school, emp.doctoral_course, emp.doctoral_year_graduated, emp.doctoral_school, emp.eligibility, employee_type, position, unique_item_no, salary_grade, step, department, work_status, employee_photo, documentpath, hired_date, end_of_contract, sem.local_seminar_name, sem.local_seminar_type, date_format(sem.local_from, '%M %d, %Y'), date_format(sem.local_to, '%M %d, %Y'), sem.regional_seminar_name, sem.regional_seminar_type, date_format(sem.regional_from, '%M %d, %Y'), date_format(sem.regional_to, '%M %d, %Y'), sem.national_seminar_name, sem.national_seminar_type, date_format(sem.national_from, '%M %d, %Y'), date_format(sem.national_to, '%M %d, %Y'), sem.international_seminar_name, sem.international_seminar_type, date_format(sem.international_from, '%M %d, %Y'), date_format(sem.international_to, '%M %d, %Y') FROM employees emp INNER JOIN tbl_list_of_seminars sem ON emp.employee_no = sem.employee_no WHERE (emp.is_deleted = @is_deleted AND sem.is_deleted = @sem_is_deleted) AND (emp.first_name LIKE @keyword OR emp.last_name LIKE @keyword OR emp.employee_no LIKE @keyword) ORDER BY emp.last_name ASC;";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("is_deleted", MySqlDbType.Int32).Value = 0;
                         command.Parameters.AddWithValue("sem_is_deleted", MySqlDbType.Int32).Value = 0;
+                        command.Parameters.AddWithValue("keyword", '%' + keyword + '%');
                         var da = new MySqlDataAdapter();
                         da.SelectCommand = command;
                         DataTable dt = new DataTable();
@@ -374,6 +375,91 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
 
 
         }
+
+        private List<string> AcademicPositions()
+        {
+            const string ACADEMIC = "Academic";
+            var academicPositions = new List<string>();
+            try
+            {
+                using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                {
+                    connection.Open();
+                    string query = @"SELECT position_name FROM tbl_positions WHERE position_type = @position_type;";
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.Add("position_type", MySqlDbType.VarChar).Value = ACADEMIC;
+                        MySqlDataReader reader = command.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            academicPositions.Add(reader["position_name"].ToString());
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+            return academicPositions;
+        }
+
+        private List<string> NonAcademicPositions()
+        {
+            const string NON_ACADEMIC = "Non - Academic";
+            var nonAcademicPositions = new List<string>();
+            try
+            {
+                using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                {
+                    connection.Open();
+                    string query = @"SELECT position_name FROM tbl_positions WHERE position_type = @position_type;";
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.Add("position_type", MySqlDbType.VarChar).Value = NON_ACADEMIC;
+                        MySqlDataReader reader = command.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            nonAcademicPositions.Add(reader["position_name"].ToString());
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+            return nonAcademicPositions;
+        }
+
+        private string GetSalaryGrade()
+        {
+            string salaryGrade = string.Empty;
+            try
+            {
+                using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                {
+                    connection.Open();
+                    string query = @"SELECT salary_grade_level FROM tbl_positions WHERE position_name = @position_name;";
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.Add("position_name", MySqlDbType.VarChar).Value = cmbPosition.SelectedItem.ToString();
+                        MySqlDataReader reader = command.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            salaryGrade = reader["salary_grade_level"].ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                salaryGrade = string.Empty;
+            }
+            return salaryGrade;
+        }
         #endregion
 
 
@@ -472,7 +558,7 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
                     btnSave.Text = "&Save";
                     pgbAttachment.Value = 0;
                     panelFileInformation.Enabled = false;
-                    DisplayRecords();
+                    DisplayRecords(string.Empty);
                     txtEmployeeNo.ReadOnly = false;
                     label14.Visible = false;
                     dtpEndofContract.Visible = false;
@@ -547,7 +633,7 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
                                 transaction.Commit();
                                 DeleteSeminar();
                                 MessageBox.Show("Successfully deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
-                                DisplayRecords();
+                                DisplayRecords(string.Empty);
                             }
                         }
                     }
@@ -666,7 +752,7 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
             {
                 openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 openFileDialog.Title = "Select a word document to be upload.";
-                openFileDialog.Filter = "Select Valid Word File(*.doc; *.docx;)|*.doc;*.docx;";
+                openFileDialog.Filter = "Select File(*.doc; *.docx;; *.pdf)|*.doc;*.docx;*.pdf;";
                 openFileDialog.FilterIndex = 1;
                 openFileDialog.FileName = "";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -800,38 +886,24 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
             if (cmbEmployeeType.SelectedItem.ToString() == "Academic")
             {
                 cmbPosition.Items.Clear();
-                cmbPosition.Items.Add("Instructor I");
-                cmbPosition.Items.Add("Instructor II");
-                cmbPosition.Items.Add("Instructor III");
-                cmbPosition.Items.Add("Asst. Prof I");
-                cmbPosition.Items.Add("Asst. Prof II");
-                cmbPosition.Items.Add("Asst. Prof III");
-                cmbPosition.Items.Add("Asso. Prof I");
-                cmbPosition.Items.Add("Asso. Prof II");
-                cmbPosition.Items.Add("Asso. Prof III");
-                cmbPosition.Items.Add("Asso. Prof IV");
+                foreach (var position in AcademicPositions())
+                {
+                    cmbPosition.Items.Add(position);
+                }
             }
             else if (cmbEmployeeType.SelectedItem.ToString() == "Non - Academic")
             {
                 cmbPosition.Items.Clear();
-                cmbPosition.Items.Add("Admin. Aide I");
-                cmbPosition.Items.Add("Admin. Aide II");
-                cmbPosition.Items.Add("Admin. Aide III");
-                cmbPosition.Items.Add("Admin. Aide IV");
-                cmbPosition.Items.Add("Admin. Aide V");
-                cmbPosition.Items.Add("Admin. Aide VI");
-                cmbPosition.Items.Add("Admin. Asst I");
-                cmbPosition.Items.Add("Admin. Asst II");
-                cmbPosition.Items.Add("Admin. Asst III");
-                cmbPosition.Items.Add("Admin. Asst IV");
-                cmbPosition.Items.Add("Admin. Asst V");
-                cmbPosition.Items.Add("Admin. Asst VI");
-                cmbPosition.Items.Add("Admin. Officer");
+                foreach (var position in NonAcademicPositions())
+                {
+                    cmbPosition.Items.Add(position);
+                }
             }
             else
             {
                 cmbPosition.Items.Clear();
             }
+            txtSalaryGrade.Clear();
         }
 
         private void txtBSYearGraduated_TextChanged(object sender, EventArgs e)
@@ -861,6 +933,25 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
         {
             var frm = new frmViewEmployee(dtgRecords.CurrentRow.Cells[0].Value.ToString(), dtgRecords.CurrentRow.Cells[1].Value.ToString(), dtgRecords.CurrentRow.Cells[2].Value.ToString(), dtgRecords.CurrentRow.Cells[3].Value.ToString(), dtgRecords.CurrentRow.Cells[4].Value.ToString(), dtgRecords.CurrentRow.Cells[5].Value.ToString(), dtgRecords.CurrentRow.Cells[6].Value.ToString(), dtgRecords.CurrentRow.Cells[7].Value.ToString(), dtgRecords.CurrentRow.Cells[8].Value.ToString(), dtgRecords.CurrentRow.Cells[9].Value.ToString(), dtgRecords.CurrentRow.Cells[10].Value.ToString(), dtgRecords.CurrentRow.Cells[11].Value.ToString(), dtgRecords.CurrentRow.Cells[12].Value.ToString(), dtgRecords.CurrentRow.Cells[13].Value.ToString(), dtgRecords.CurrentRow.Cells[14].Value.ToString(), dtgRecords.CurrentRow.Cells[15].Value.ToString(), dtgRecords.CurrentRow.Cells[16].Value.ToString(), dtgRecords.CurrentRow.Cells[17].Value.ToString(), dtgRecords.CurrentRow.Cells[18].Value.ToString(), dtgRecords.CurrentRow.Cells[19].Value.ToString(), dtgRecords.CurrentRow.Cells[20].Value.ToString(), dtgRecords.CurrentRow.Cells[21].Value.ToString(), dtgRecords.CurrentRow.Cells[22].Value.ToString(), dtgRecords.CurrentRow.Cells[23].Value.ToString(), dtgRecords.CurrentRow.Cells[24].Value.ToString(), dtgRecords.CurrentRow.Cells[25].Value.ToString(), dtgRecords.CurrentRow.Cells[26].Value.ToString(), dtgRecords.CurrentRow.Cells[27].Value.ToString(), (byte[])dtgRecords.CurrentRow.Cells[28].Value, dtgRecords.CurrentRow.Cells[29].Value.ToString(), dtgRecords.CurrentRow.Cells[30].Value.ToString(), dtgRecords.CurrentRow.Cells[31].Value.ToString(), dtgRecords.CurrentRow.Cells[32].Value.ToString(), dtgRecords.CurrentRow.Cells[33].Value.ToString(), dtgRecords.CurrentRow.Cells[34].Value.ToString(), dtgRecords.CurrentRow.Cells[35].Value.ToString(), dtgRecords.CurrentRow.Cells[36].Value.ToString(), dtgRecords.CurrentRow.Cells[37].Value.ToString(), dtgRecords.CurrentRow.Cells[38].Value.ToString(), dtgRecords.CurrentRow.Cells[39].Value.ToString(), dtgRecords.CurrentRow.Cells[40].Value.ToString(), dtgRecords.CurrentRow.Cells[41].Value.ToString(), dtgRecords.CurrentRow.Cells[42].Value.ToString(), dtgRecords.CurrentRow.Cells[43].Value.ToString(), dtgRecords.CurrentRow.Cells[44].Value.ToString(), dtgRecords.CurrentRow.Cells[45].Value.ToString(), dtgRecords.CurrentRow.Cells[46].Value.ToString(), dtgRecords.CurrentRow.Cells[47].Value.ToString());
             frm.ShowDialog();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            DisplayRecords(txtSearch.Text);
+        }
+
+        private void cmbPosition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (cmbPosition.SelectedItem != null)
+            {
+                txtSalaryGrade.Clear();
+                txtSalaryGrade.Text = GetSalaryGrade();
+            }
+            else
+            {
+                txtSalaryGrade.Clear();
+            }
         }
     }
 }

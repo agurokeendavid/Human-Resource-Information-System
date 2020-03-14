@@ -1,6 +1,6 @@
 ﻿namespace HRISCapsu
 {
-    partial class frmLogin
+    partial class frmRegister
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
@@ -37,20 +37,14 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Label3 = new System.Windows.Forms.Label();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.lblCreateAccount = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GroupBox1.SuspendLayout();
             this.Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox1
             // 
             this.GroupBox1.BackColor = System.Drawing.Color.White;
-            this.GroupBox1.Controls.Add(this.lblCreateAccount);
-            this.GroupBox1.Controls.Add(this.pictureBox1);
-            this.GroupBox1.Controls.Add(this.btnLogin);
+            this.GroupBox1.Controls.Add(this.btnRegister);
             this.GroupBox1.Controls.Add(this.btnCancel);
             this.GroupBox1.Controls.Add(this.txtPassword);
             this.GroupBox1.Controls.Add(this.Label2);
@@ -62,52 +56,52 @@
             this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBox1.Size = new System.Drawing.Size(516, 171);
-            this.GroupBox1.TabIndex = 2;
+            this.GroupBox1.Size = new System.Drawing.Size(419, 160);
+            this.GroupBox1.TabIndex = 0;
             this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "LOGIN";
+            this.GroupBox1.Text = "Register";
             // 
-            // btnLogin
+            // btnRegister
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogin.Location = new System.Drawing.Point(305, 131);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(100, 32);
-            this.btnLogin.TabIndex = 2;
-            this.btnLogin.Text = "&Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnRegister.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegister.Location = new System.Drawing.Point(249, 97);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(100, 32);
+            this.btnRegister.TabIndex = 3;
+            this.btnRegister.Text = "&Register";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancel.Location = new System.Drawing.Point(408, 131);
+            this.btnCancel.Location = new System.Drawing.Point(136, 97);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 32);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(295, 57);
+            this.txtPassword.Location = new System.Drawing.Point(136, 67);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(213, 22);
-            this.txtPassword.TabIndex = 1;
+            this.txtPassword.TabIndex = 2;
             // 
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(187, 60);
+            this.Label2.Location = new System.Drawing.Point(28, 70);
             this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(61, 13);
@@ -116,16 +110,16 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(295, 22);
+            this.txtUsername.Location = new System.Drawing.Point(136, 32);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(213, 22);
-            this.txtUsername.TabIndex = 0;
+            this.txtUsername.TabIndex = 1;
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(187, 26);
+            this.Label1.Location = new System.Drawing.Point(28, 36);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(64, 13);
@@ -136,77 +130,39 @@
             // 
             this.Panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Panel1.Controls.Add(this.Label3);
-            this.Panel1.Controls.Add(this.Label4);
             this.Panel1.Location = new System.Drawing.Point(9, 9);
             this.Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(516, 85);
-            this.Panel1.TabIndex = 3;
+            this.Panel1.Size = new System.Drawing.Size(419, 85);
+            this.Panel1.TabIndex = 5;
             // 
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Broadway", 10F);
+            this.Label3.Font = new System.Drawing.Font("Broadway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label3.Location = new System.Drawing.Point(65, 10);
+            this.Label3.Location = new System.Drawing.Point(119, 32);
             this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(322, 16);
+            this.Label3.Size = new System.Drawing.Size(181, 21);
             this.Label3.TabIndex = 0;
-            this.Label3.Text = "HUMAN RESOURCE INFORMATION SYSTEM";
+            this.Label3.Text = "Register Account";
             // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label4.Location = new System.Drawing.Point(182, 46);
-            this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(117, 17);
-            this.Label4.TabIndex = 0;
-            this.Label4.Text = "CapSU Pontevedra";
-            // 
-            // lblCreateAccount
-            // 
-            this.lblCreateAccount.AutoSize = true;
-            this.lblCreateAccount.BackColor = System.Drawing.Color.Transparent;
-            this.lblCreateAccount.Location = new System.Drawing.Point(292, 95);
-            this.lblCreateAccount.Name = "lblCreateAccount";
-            this.lblCreateAccount.Size = new System.Drawing.Size(82, 13);
-            this.lblCreateAccount.TabIndex = 4;
-            this.lblCreateAccount.TabStop = true;
-            this.lblCreateAccount.Text = "Create account";
-            this.lblCreateAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblCreateAccount_LinkClicked);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 127);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // frmLogin
+            // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(535, 283);
+            this.ClientSize = new System.Drawing.Size(441, 268);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmLogin";
+            this.Name = "frmRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "frmRegister";
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -214,8 +170,7 @@
         #endregion
 
         internal System.Windows.Forms.GroupBox GroupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        internal System.Windows.Forms.Button btnLogin;
+        internal System.Windows.Forms.Button btnRegister;
         internal System.Windows.Forms.Button btnCancel;
         internal System.Windows.Forms.TextBox txtPassword;
         internal System.Windows.Forms.Label Label2;
@@ -223,8 +178,5 @@
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.Label Label4;
-        private System.Windows.Forms.LinkLabel lblCreateAccount;
     }
 }
-
