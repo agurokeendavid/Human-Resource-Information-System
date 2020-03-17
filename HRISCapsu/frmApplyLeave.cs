@@ -21,6 +21,36 @@ namespace HRISCapsu
             frmLogin.SendMessage(txtOthers.Handle, 0x1501, 1, "Please specify");
         }
 
+        private void ApplyLeave(string leaveType)
+        {
+            try
+            {
+                using (var conn =
+                    new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
+                {
+                    conn.Open();
+                    string query =
+                        "INSERT INTO tbl_leave (employee_no, type, from_date, to_date, reason) VALUES (@employee_no, @type, @from_date, @to_date, @reason);";
+                    var cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
+                    cmd.Parameters.AddWithValue("type", leaveType);
+                    cmd.Parameters.AddWithValue("from_date", dtpLeaveFrom.Value);
+                    cmd.Parameters.AddWithValue("to_date", dtpLeaveTo.Value);
+                    cmd.Parameters.AddWithValue("reason", txtReason.Text);
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+                    MessageBox.Show("Application successfully added.!", "Success", MessageBoxButtons.OK,
+                        MessageBoxIcon.None);
+                    clearItems(panelEmployeeInformation);
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Error: " + exception.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private bool IsEmployeeExist()
         {
             try
@@ -48,9 +78,10 @@ namespace HRISCapsu
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            var frm = new frmListEmployeeLeave();
+            var frm = new frmListEmployeeLeave("Non - Academic");
             frm.ShowDialog();
             txtEmployeeNo.Text = frmListEmployeeLeave.employeeNo;
+            frmListEmployeeLeave.employeeNo = null;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -130,32 +161,7 @@ namespace HRISCapsu
                     {
                         if (dtpLeaveFrom.Value < dtpLeaveTo.Value)
                         {
-                            try
-                            {
-                                using (var conn =
-                                    new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
-                                {
-                                    conn.Open();
-                                    string query =
-                                        "INSERT INTO tbl_leave (employee_no, type, from_date, to_date, reason) VALUES (@employee_no, @type, @from_date, @to_date, @reason);";
-                                    var cmd = new MySqlCommand(query, conn);
-                                    cmd.Parameters.AddWithValue("employee_no", txtEmployeeNo.Text);
-                                    cmd.Parameters.AddWithValue("type", leaveType);
-                                    cmd.Parameters.AddWithValue("from_date", dtpLeaveFrom.Value);
-                                    cmd.Parameters.AddWithValue("to_date", dtpLeaveTo.Value);
-                                    cmd.Parameters.AddWithValue("reason", txtReason.Text);
-                                    cmd.ExecuteNonQuery();
-                                    cmd.Parameters.Clear();
-                                    MessageBox.Show("Application successfully added.!", "Success", MessageBoxButtons.OK,
-                                        MessageBoxIcon.None);
-                                    clearItems(panelEmployeeInformation);
-                                }
-                            }
-                            catch (Exception exception)
-                            {
-                                MessageBox.Show("Error: " + exception.Message, "Error",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+                            ApplyLeave(leaveType);
                         }
                         else
                         {

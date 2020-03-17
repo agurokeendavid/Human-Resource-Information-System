@@ -56,8 +56,9 @@
             this.Panel1.Controls.Add(this.PictureBox1);
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel1.Location = new System.Drawing.Point(0, 0);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(405, 54);
+            this.Panel1.Size = new System.Drawing.Size(540, 66);
             this.Panel1.TabIndex = 6;
             // 
             // Label9
@@ -66,9 +67,10 @@
             this.Label9.BackColor = System.Drawing.Color.Transparent;
             this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label9.ForeColor = System.Drawing.Color.Teal;
-            this.Label9.Location = new System.Drawing.Point(124, 6);
+            this.Label9.Location = new System.Drawing.Point(165, 7);
+            this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(238, 37);
+            this.Label9.Size = new System.Drawing.Size(298, 46);
             this.Label9.TabIndex = 0;
             this.Label9.Text = "ADD SEMINAR";
             // 
@@ -76,9 +78,10 @@
             // 
             this.PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.PictureBox1.Image = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
-            this.PictureBox1.Location = new System.Drawing.Point(56, 3);
+            this.PictureBox1.Location = new System.Drawing.Point(75, 4);
+            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(63, 46);
+            this.PictureBox1.Size = new System.Drawing.Size(84, 57);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox1.TabIndex = 47;
             this.PictureBox1.TabStop = false;
@@ -87,19 +90,21 @@
             // 
             this.Label16.AutoSize = true;
             this.Label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label16.Location = new System.Drawing.Point(17, 24);
+            this.Label16.Location = new System.Drawing.Point(23, 30);
+            this.Label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(72, 20);
+            this.Label16.Size = new System.Drawing.Size(55, 25);
             this.Label16.TabIndex = 0;
-            this.Label16.Text = "Seminar:";
+            this.Label16.Text = "Title:";
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(17, 185);
+            this.Label1.Location = new System.Drawing.Point(23, 228);
+            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(119, 20);
+            this.Label1.Size = new System.Drawing.Size(147, 25);
             this.Label1.TabIndex = 0;
             this.Label1.Text = "Date of Activity:";
             // 
@@ -107,9 +112,10 @@
             // 
             this.Label20.AutoSize = true;
             this.Label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label20.Location = new System.Drawing.Point(17, 75);
+            this.Label20.Location = new System.Drawing.Point(23, 92);
+            this.Label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(74, 20);
+            this.Label20.Size = new System.Drawing.Size(92, 25);
             this.Label20.TabIndex = 0;
             this.Label20.Text = "Location:";
             // 
@@ -127,9 +133,10 @@
             this.panelFileInformation.Controls.Add(this.Label16);
             this.panelFileInformation.Controls.Add(this.Label1);
             this.panelFileInformation.Controls.Add(this.Label20);
-            this.panelFileInformation.Location = new System.Drawing.Point(0, 58);
+            this.panelFileInformation.Location = new System.Drawing.Point(0, 71);
+            this.panelFileInformation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFileInformation.Name = "panelFileInformation";
-            this.panelFileInformation.Size = new System.Drawing.Size(406, 306);
+            this.panelFileInformation.Size = new System.Drawing.Size(541, 376);
             this.panelFileInformation.TabIndex = 0;
             this.panelFileInformation.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFileInformation_Paint);
             // 
@@ -137,9 +144,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 132);
+            this.label3.Location = new System.Drawing.Point(23, 162);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 20);
+            this.label3.Size = new System.Drawing.Size(153, 25);
             this.label3.TabIndex = 34;
             this.label3.Text = "Location Based:";
             // 
@@ -153,9 +161,10 @@
             "Regional",
             "National",
             "International"});
-            this.cmbLocationBased.Location = new System.Drawing.Point(21, 155);
+            this.cmbLocationBased.Location = new System.Drawing.Point(28, 191);
+            this.cmbLocationBased.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbLocationBased.Name = "cmbLocationBased";
-            this.cmbLocationBased.Size = new System.Drawing.Size(367, 28);
+            this.cmbLocationBased.Size = new System.Drawing.Size(488, 33);
             this.cmbLocationBased.TabIndex = 3;
             // 
             // btnCancel
@@ -168,9 +177,10 @@
             this.btnCancel.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(315, 239);
+            this.btnCancel.Location = new System.Drawing.Point(420, 294);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(73, 43);
+            this.btnCancel.Size = new System.Drawing.Size(97, 53);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -187,9 +197,10 @@
             this.btnSave.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(237, 239);
+            this.btnSave.Location = new System.Drawing.Point(316, 294);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(73, 43);
+            this.btnSave.Size = new System.Drawing.Size(97, 53);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "&Save ";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -201,10 +212,10 @@
             this.dtpDateofActivity.CustomFormat = "MMMM dd, yyyy";
             this.dtpDateofActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateofActivity.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateofActivity.Location = new System.Drawing.Point(21, 208);
-            this.dtpDateofActivity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDateofActivity.Location = new System.Drawing.Point(28, 256);
+            this.dtpDateofActivity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDateofActivity.Name = "dtpDateofActivity";
-            this.dtpDateofActivity.Size = new System.Drawing.Size(367, 26);
+            this.dtpDateofActivity.Size = new System.Drawing.Size(488, 30);
             this.dtpDateofActivity.TabIndex = 4;
             this.dtpDateofActivity.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
             // 
@@ -212,29 +223,31 @@
             // 
             this.txtLocation.BackColor = System.Drawing.Color.White;
             this.txtLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLocation.Location = new System.Drawing.Point(21, 98);
+            this.txtLocation.Location = new System.Drawing.Point(28, 121);
+            this.txtLocation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(367, 26);
+            this.txtLocation.Size = new System.Drawing.Size(488, 30);
             this.txtLocation.TabIndex = 2;
             // 
             // txtSeminarName
             // 
             this.txtSeminarName.BackColor = System.Drawing.Color.White;
             this.txtSeminarName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSeminarName.Location = new System.Drawing.Point(21, 47);
+            this.txtSeminarName.Location = new System.Drawing.Point(28, 58);
+            this.txtSeminarName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeminarName.Name = "txtSeminarName";
-            this.txtSeminarName.Size = new System.Drawing.Size(367, 26);
+            this.txtSeminarName.Size = new System.Drawing.Size(488, 30);
             this.txtSeminarName.TabIndex = 1;
             // 
             // frmAddSeminar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 364);
+            this.ClientSize = new System.Drawing.Size(540, 448);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.panelFileInformation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAddSeminar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddSeminar";

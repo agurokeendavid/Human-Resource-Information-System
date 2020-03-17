@@ -138,6 +138,12 @@
     <Compile Include="frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAcademicApplyLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcademicApplyLeave.Designer.cs">
+      <DependentUpon>frmAcademicApplyLeave.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddPosition.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,12 @@
     </Compile>
     <Compile Include="frmApplyLeave.Designer.cs">
       <DependentUpon>frmApplyLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmApplyLeaveMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmApplyLeaveMenu.Designer.cs">
+      <DependentUpon>frmApplyLeaveMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmChangePassword.cs">
       <SubType>Form</SubType>
@@ -338,6 +350,9 @@
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAcademicApplyLeave.resx">
+      <DependentUpon>frmAcademicApplyLeave.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddPosition.resx">
       <DependentUpon>frmAddPosition.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmApplyLeave.resx">
       <DependentUpon>frmApplyLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmApplyLeaveMenu.resx">
+      <DependentUpon>frmApplyLeaveMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>

@@ -609,7 +609,7 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
         {
             DialogResult dialogResult =
                     MessageBox.Show(
-                        $"Delete {dtgRecords.CurrentRow.Cells["last_name"].Value}, {dtgRecords.CurrentRow.Cells["first_name"].Value} {dtgRecords.CurrentRow.Cells["middle_name"].Value} ?",
+                        $"Do you want to delete {dtgRecords.CurrentRow.Cells["last_name"].Value}, {dtgRecords.CurrentRow.Cells["first_name"].Value} {dtgRecords.CurrentRow.Cells["middle_name"].Value} profile ?",
                         "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
@@ -678,61 +678,69 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            grpSeminar.Enabled = false;
-            panelFileInformation.Enabled = true;
-            grpPicture.Visible = true;
-            btnNew.Enabled = false;
-            btnSave.Text = "&Update";
-            btnSave.Enabled = true;
-            btnCancel.Enabled = true;
-            btnDelete.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnView.Enabled = false;
-            txtEmployeeNo.ReadOnly = true;
-            txtEmployeeNo.Text = dtgRecords.CurrentRow.Cells[0].Value.ToString();
-            txtFirstName.Text = dtgRecords.CurrentRow.Cells[1].Value.ToString();
-            txtMiddleName.Text = dtgRecords.CurrentRow.Cells[2].Value.ToString();
-            txtLastName.Text = dtgRecords.CurrentRow.Cells[3].Value.ToString();
-            txtAddress.Text = dtgRecords.CurrentRow.Cells[4].Value.ToString();
-            cmbGender.SelectedItem = dtgRecords.CurrentRow.Cells[5].Value;
-            dtpDateofBirth.Text = dtgRecords.CurrentRow.Cells[6].Value.ToString();
-            txtPlaceofBirth.Text = dtgRecords.CurrentRow.Cells[7].Value.ToString();
-            txtContactNo.Text = dtgRecords.CurrentRow.Cells[8].Value.ToString();
-            cmbCivilStatus.SelectedItem = dtgRecords.CurrentRow.Cells[9].Value;
-            cmbDegree.SelectedItem = dtgRecords.CurrentRow.Cells[10].Value;
-            txtBSCourse.Text = dtgRecords.CurrentRow.Cells[11].Value.ToString();
-            txtBSYearGraduated.Text = dtgRecords.CurrentRow.Cells[12].Value.ToString();
-            txtBSSchool.Text = dtgRecords.CurrentRow.Cells[13].Value.ToString();
-            txtMasteralCourse.Text = dtgRecords.CurrentRow.Cells[14].Value.ToString();
-            txtMasteralYearGraduated.Text = dtgRecords.CurrentRow.Cells[15].Value.ToString();
-            txtMasteralSchool.Text = dtgRecords.CurrentRow.Cells[16].Value.ToString();
-            txtDoctoralCourse.Text = dtgRecords.CurrentRow.Cells[17].Value.ToString();
-            txtDoctoralYearGraduated.Text = dtgRecords.CurrentRow.Cells[18].Value.ToString();
-            txtDoctoralSchool.Text = dtgRecords.CurrentRow.Cells[19].Value.ToString();
-            txtEligibility.Text = dtgRecords.CurrentRow.Cells[20].Value.ToString();
-            cmbEmployeeType.SelectedItem = dtgRecords.CurrentRow.Cells[21].Value;
-            cmbPosition.SelectedItem = dtgRecords.CurrentRow.Cells[22].Value;
-            txtUniqueItemNo.Text = dtgRecords.CurrentRow.Cells[23].Value.ToString();
-            txtSalaryGrade.Text = dtgRecords.CurrentRow.Cells[24].Value.ToString();
-            txtStep.Text = dtgRecords.CurrentRow.Cells[25].Value.ToString();
-            cmbDepartment.SelectedItem = dtgRecords.CurrentRow.Cells[26].Value;
-            cmbWorkStatus.SelectedItem = dtgRecords.CurrentRow.Cells[27].Value;
-            destination = dtgRecords.CurrentRow.Cells[29].Value.ToString();
-            dtpHiredDate.Text = dtgRecords.CurrentRow.Cells[30].Value.ToString();
-            if (cmbWorkStatus.SelectedItem.ToString() == "Regular")
+            string message = "Do you want to edit this employee profile?";
+            string title = "Edit Profile";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                label14.Visible = false;
-                dtpEndofContract.Visible = false;
+                grpSeminar.Enabled = false;
+                panelFileInformation.Enabled = true;
+                grpPicture.Visible = true;
+                btnNew.Enabled = false;
+                btnSave.Text = "&Update";
+                btnSave.Enabled = true;
+                btnCancel.Enabled = true;
+                btnDelete.Enabled = false;
+                btnUpdate.Enabled = false;
+                btnView.Enabled = false;
+                txtEmployeeNo.ReadOnly = true;
+                txtEmployeeNo.Text = dtgRecords.CurrentRow.Cells[0].Value.ToString();
+                txtFirstName.Text = dtgRecords.CurrentRow.Cells[1].Value.ToString();
+                txtMiddleName.Text = dtgRecords.CurrentRow.Cells[2].Value.ToString();
+                txtLastName.Text = dtgRecords.CurrentRow.Cells[3].Value.ToString();
+                txtAddress.Text = dtgRecords.CurrentRow.Cells[4].Value.ToString();
+                cmbGender.SelectedItem = dtgRecords.CurrentRow.Cells[5].Value;
+                dtpDateofBirth.Text = dtgRecords.CurrentRow.Cells[6].Value.ToString();
+                txtPlaceofBirth.Text = dtgRecords.CurrentRow.Cells[7].Value.ToString();
+                txtContactNo.Text = dtgRecords.CurrentRow.Cells[8].Value.ToString();
+                cmbCivilStatus.SelectedItem = dtgRecords.CurrentRow.Cells[9].Value;
+                cmbDegree.SelectedItem = dtgRecords.CurrentRow.Cells[10].Value;
+                txtBSCourse.Text = dtgRecords.CurrentRow.Cells[11].Value.ToString();
+                txtBSYearGraduated.Text = dtgRecords.CurrentRow.Cells[12].Value.ToString();
+                txtBSSchool.Text = dtgRecords.CurrentRow.Cells[13].Value.ToString();
+                txtMasteralCourse.Text = dtgRecords.CurrentRow.Cells[14].Value.ToString();
+                txtMasteralYearGraduated.Text = dtgRecords.CurrentRow.Cells[15].Value.ToString();
+                txtMasteralSchool.Text = dtgRecords.CurrentRow.Cells[16].Value.ToString();
+                txtDoctoralCourse.Text = dtgRecords.CurrentRow.Cells[17].Value.ToString();
+                txtDoctoralYearGraduated.Text = dtgRecords.CurrentRow.Cells[18].Value.ToString();
+                txtDoctoralSchool.Text = dtgRecords.CurrentRow.Cells[19].Value.ToString();
+                txtEligibility.Text = dtgRecords.CurrentRow.Cells[20].Value.ToString();
+                cmbEmployeeType.SelectedItem = dtgRecords.CurrentRow.Cells[21].Value;
+                cmbPosition.SelectedItem = dtgRecords.CurrentRow.Cells[22].Value;
+                txtUniqueItemNo.Text = dtgRecords.CurrentRow.Cells[23].Value.ToString();
+                txtSalaryGrade.Text = dtgRecords.CurrentRow.Cells[24].Value.ToString();
+                txtStep.Text = dtgRecords.CurrentRow.Cells[25].Value.ToString();
+                cmbDepartment.SelectedItem = dtgRecords.CurrentRow.Cells[26].Value;
+                cmbWorkStatus.SelectedItem = dtgRecords.CurrentRow.Cells[27].Value;
+                destination = dtgRecords.CurrentRow.Cells[29].Value.ToString();
+                dtpHiredDate.Text = dtgRecords.CurrentRow.Cells[30].Value.ToString();
+                if (cmbWorkStatus.SelectedItem.ToString() == "Regular")
+                {
+                    label14.Visible = false;
+                    dtpEndofContract.Visible = false;
+                }
+                else
+                {
+                    label14.Visible = true;
+                    dtpEndofContract.Visible = true;
+                    dtpEndofContract.Text = dtgRecords.CurrentRow.Cells[31].Value.ToString();
+                }
+                dtgRecords.Enabled = false;
+                grpPicture.Enabled = false;
+                grpAttachment.Enabled = false;
             }
-            else
-            {
-                label14.Visible = true;
-                dtpEndofContract.Visible = true;
-                dtpEndofContract.Text = dtgRecords.CurrentRow.Cells[31].Value.ToString();
-            }
-            dtgRecords.Enabled = false;
-            grpPicture.Enabled = false;
-            grpAttachment.Enabled = false;
+            
         }
 
         private void txtContactNo_KeyPress(object sender, KeyPressEventArgs e)

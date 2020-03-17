@@ -75,7 +75,7 @@ namespace HRISCapsu
                             double computeTodayAndHiredDay = (DateTime.Now.Date - hiredDate).TotalDays;
                             if (computeTodayAndHiredDay >= 3652)
                             {
-                                employeesList.Add($"{reader["last_name"]}, {reader["first_name"]} {reader["middle_name"].ToString().Substring(0, 1)}.");
+                                employeesList.Add($"{reader["first_name"]} {reader["middle_name"].ToString().Substring(0, 1)} {reader["last_name"]}");
                             }
                         }
                     }
@@ -89,9 +89,6 @@ namespace HRISCapsu
             return employeesList;
         }
 
-
-
-
         private List<string> allNearEndLeaveEmployeeList()
         {
             List<string> employeesList = new List<string>();
@@ -101,7 +98,7 @@ namespace HRISCapsu
                     new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    string query = "SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, tbl_leave.from_date, tbl_leave.to_date FROM employees emp INNER JOIN tbl_leave ON emp.employee_no = tbl_leave.employee_no WHERE tbl_leave.is_deleted = @is_deleted;";
+                    string query = "SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, tbl_leave.from_date, tbl_leave.to_date FROM employees emp INNER JOIN tbl_leave ON emp.employee_no = tbl_leave.employee_no WHERE tbl_leave.type IS NOT NULL && tbl_leave.is_deleted = @is_deleted;";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("is_deleted", 0);
                     using (MySqlDataReader reader = cmd.ExecuteReader())
@@ -115,7 +112,7 @@ namespace HRISCapsu
                             expiredLeave = (endOfLeave - DateTime.Now.Date).TotalDays;
                             if (expiredLeave >= 0 && expiredLeave <= 7)
                             {
-                                employeesList.Add(reader[0] + " - " + reader[3] + ", " + reader[1] + " " + reader[2].ToString().Substring(0, 1) + ". " + "(" + expiredLeave + " day/days remaining)");
+                                employeesList.Add($"{reader["first_name"]} {reader["middle_name"].ToString().Substring(0, 1)} {reader["last_name"]} leave will end in {expiredLeave} day/days.");
                             }
                         }
                     }
@@ -140,7 +137,7 @@ namespace HRISCapsu
                     new MySqlConnection(ConfigurationManager.ConnectionStrings["HRISConnection"].ConnectionString))
                 {
                     conn.Open();
-                    string query = "SELECT from_date, to_date FROM tbl_leave WHERE is_deleted = @is_deleted;";
+                    string query = "SELECT from_date, to_date FROM tbl_leave WHERE tbl_leave.type IS NOT NULL && is_deleted = @is_deleted;";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("is_deleted", 0);
                     using (MySqlDataReader reader = cmd.ExecuteReader())
@@ -192,7 +189,7 @@ namespace HRISCapsu
                             expiredContract = (endOfContract - DateTime.Now.Date).TotalDays;
                             if (expiredContract >= 1 && expiredContract <= 30)
                             {
-                                employeesList.Add(reader[0] + " - " + reader[3] + ", " + reader[1] + " " + reader[2].ToString().Substring(0, 1) + ". " + "(" + expiredContract + " day/days remaining)");
+                                employeesList.Add($"{reader["first_name"]} {reader["middle_name"].ToString().Substring(0, 1)} {reader["last_name"]} contract will end in {expiredContract} day/days.");
                             }
                         }
                     }
@@ -261,7 +258,7 @@ namespace HRISCapsu
                     double countPresentDate;
                     while (reader.Read())
                     {
-                        countPresentDate = ((Convert.ToDateTime(reader[2])) - DateTime.Now.Date).TotalDays;
+                        countPresentDate = ((Convert.ToDateTime(reader["to_date"])) - DateTime.Now.Date).TotalDays;
                         if (countPresentDate < 0)
                         {
                             using (MySqlConnection conn1 = new MySqlConnection(ConfigurationManager
@@ -271,7 +268,7 @@ namespace HRISCapsu
                                 query = "UPDATE tbl_leave SET is_deleted = @is_deleted WHERE id = @id";
                                 cmd = new MySqlCommand(query, conn1);
                                 cmd.Parameters.AddWithValue("is_deleted", 1);
-                                cmd.Parameters.AddWithValue("id", reader[0]);
+                                cmd.Parameters.AddWithValue("id", reader["id"]);
                                 cmd.ExecuteNonQuery();
                                 cmd.Parameters.Clear();
                             }
@@ -316,8 +313,6 @@ namespace HRISCapsu
             frmLogin frm = new frmLogin();
             frm.ShowDialog(this);
             notifications();
-            
-
         }
 
         private void notifications()
@@ -370,8 +365,6 @@ namespace HRISCapsu
                         oldEmployeesToolStripMenuItem.DropDownItems.Add(employee);
                     }
                 }
-
-
             }
             else
             {
@@ -379,6 +372,7 @@ namespace HRISCapsu
                 notificationsToolStripMenuItem.Enabled = false;
             }
         }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime dateTime = DateTime.Now;
@@ -391,14 +385,11 @@ namespace HRISCapsu
             frm.ShowDialog();
         }
 
-
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmChangePassword frm = new frmChangePassword();
             frm.ShowDialog();
         }
-
-
 
         private void viewRegularEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -436,17 +427,15 @@ namespace HRISCapsu
             frm.ShowDialog();
         }
 
-
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAbout frm = new frmAbout();
             frm.ShowDialog();
         }
 
-
         private void applyLeaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmApplyLeave frm = new frmApplyLeave();
+            var frm = new frmApplyLeaveMenu();
             frm.ShowDialog();
         }
 
@@ -486,30 +475,6 @@ namespace HRISCapsu
             frm.ShowDialog();
         }
 
-        private void academicToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var frm = new previewAcademicRegularEmployees();
-            frm.ShowDialog();
-        }
-
-        private void academicToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            var frm = new previewContractualAcademicEmployees();
-            frm.ShowDialog();
-        }
-
-        private void nonAcademicToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            var frm = new previewNonAcademicRegularEmployees();
-            frm.ShowDialog();
-        }
-
-        private void nonAcademicToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            var frm = new previewContractualNonAcademicEmployees();
-            frm.ShowDialog();
-        }
-
         private void seminarsAttendedToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new previewSeminarEmployeeList();
@@ -519,6 +484,30 @@ namespace HRISCapsu
         private void addPositionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmAddPosition();
+            frm.ShowDialog();
+        }
+
+        private void regularToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new previewAcademicRegularEmployees();
+            frm.ShowDialog();
+        }
+
+        private void contractualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new previewContractualAcademicEmployees();
+            frm.ShowDialog();
+        }
+
+        private void regularToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frm = new previewNonAcademicRegularEmployees();
+            frm.ShowDialog();
+        }
+
+        private void contractualToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frm = new previewContractualNonAcademicEmployees();
             frm.ShowDialog();
         }
     }

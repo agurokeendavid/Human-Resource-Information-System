@@ -9,9 +9,11 @@ namespace HRISCapsu
     public partial class frmListEmployeeLeave : Form
     {
         public static string employeeNo;
-        public frmListEmployeeLeave()
+        private string _employeeType;
+        public frmListEmployeeLeave(string employeeType)
         {
             InitializeComponent();
+            _employeeType = employeeType;
         }
 
         void DisplayEmployees()
@@ -23,14 +25,15 @@ namespace HRISCapsu
                 {
                     conn.Open();
                     string query =
-                        "SELECT employee_no, CONCAT(last_name, ', ', first_name, ' ', UPPER(SUBSTRING(middle_name, 1, 1)), '.') AS fullname FROM employees WHERE (first_name LIKE @fn OR middle_name LIKE @mn OR last_name LIKE @ln) AND (is_deleted = @is_deleted);";
+                        "SELECT employee_no, CONCAT(last_name, ', ', first_name, ' ', UPPER(SUBSTRING(middle_name, 1, 1)), '.') AS fullname FROM employees WHERE (first_name LIKE @fn OR middle_name LIKE @mn OR last_name LIKE @ln) AND (employee_type = @employee_type) AND (is_deleted = @is_deleted);";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("fn", '%' + txtEmployeeName.Text + '%');
                     cmd.Parameters.AddWithValue("mn", '%' + txtEmployeeName.Text + '%');
                     cmd.Parameters.AddWithValue("ln", '%' + txtEmployeeName.Text + '%');
+                    cmd.Parameters.AddWithValue("employee_type", _employeeType);
                     cmd.Parameters.AddWithValue("is_deleted", 0);
-                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
+                    var da = new MySqlDataAdapter(cmd);
+                    var dt = new DataTable();
                     da.Fill(dt);
 
 
@@ -65,7 +68,7 @@ namespace HRISCapsu
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
             
         }
 
