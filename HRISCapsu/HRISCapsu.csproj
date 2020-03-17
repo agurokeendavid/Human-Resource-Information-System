@@ -294,6 +294,12 @@
     <Compile Include="Graphs\frmMasteralGraph.Designer.cs">
       <DependentUpon>frmMasteralGraph.cs</DependentUpon>
     </Compile>
+    <Compile Include="Graphs\frmPositionGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphs\frmPositionGraph.Designer.cs">
+      <DependentUpon>frmPositionGraph.cs</DependentUpon>
+    </Compile>
     <Compile Include="HRISDataSource.cs">
       <DependentUpon>HRISDataSource.xsd</DependentUpon>
     </Compile>
@@ -316,11 +322,23 @@
     <Compile Include="ReportPreviewer\previewAcademicRegularEmployees.Designer.cs">
       <DependentUpon>previewAcademicRegularEmployees.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportPreviewer\previewAllAcademicEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreviewer\previewAllAcademicEmployees.Designer.cs">
+      <DependentUpon>previewAllAcademicEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportPreviewer\previewAllEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReportPreviewer\previewAllEmployees.Designer.cs">
       <DependentUpon>previewAllEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreviewer\previewAllNonAcademicEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreviewer\previewAllNonAcademicEmployees.Designer.cs">
+      <DependentUpon>previewAllNonAcademicEmployees.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportPreviewer\previewContractualAcademicEmployees.cs">
       <SubType>Form</SubType>
@@ -428,6 +446,9 @@
     <EmbeddedResource Include="Graphs\frmMasteralGraph.resx">
       <DependentUpon>frmMasteralGraph.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Graphs\frmPositionGraph.resx">
+      <DependentUpon>frmPositionGraph.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIMain.resx">
       <DependentUpon>MDIMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -445,8 +466,14 @@
     <EmbeddedResource Include="ReportPreviewer\previewAcademicRegularEmployees.resx">
       <DependentUpon>previewAcademicRegularEmployees.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreviewer\previewAllAcademicEmployees.resx">
+      <DependentUpon>previewAllAcademicEmployees.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportPreviewer\previewAllEmployees.resx">
       <DependentUpon>previewAllEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreviewer\previewAllNonAcademicEmployees.resx">
+      <DependentUpon>previewAllNonAcademicEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportPreviewer\previewContractualAcademicEmployees.resx">
       <DependentUpon>previewContractualAcademicEmployees.cs</DependentUpon>
@@ -460,7 +487,9 @@
     <EmbeddedResource Include="ReportPreviewer\previewSeminarEmployeeList.resx">
       <DependentUpon>previewSeminarEmployeeList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptNewAllAcademicEmployees.rdlc" />
     <EmbeddedResource Include="Reports\rptNewAllEmployees.rdlc" />
+    <EmbeddedResource Include="Reports\rptNewAllNonAcademicEmployees.rdlc" />
     <EmbeddedResource Include="Reports\rptNewContractualAcademicEmployees.rdlc" />
     <EmbeddedResource Include="Reports\rptNewContractualNonAcademicEmployees.rdlc" />
     <EmbeddedResource Include="Reports\rptNewRegularAcademicEmployees.rdlc" />

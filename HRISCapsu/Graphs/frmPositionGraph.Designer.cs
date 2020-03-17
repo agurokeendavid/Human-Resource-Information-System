@@ -1,6 +1,6 @@
 ﻿namespace HRISCapsu.Graphs
 {
-    partial class frmDoctoralGraph
+    partial class frmPositionGraph
     {
         /// <summary>
         /// Required designer variable.
@@ -43,7 +43,7 @@
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
             legend1.Name = "Legend1";
-            legend1.Title = "Gender";
+            legend1.Title = "Academic Rank";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -58,28 +58,26 @@
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(800, 710);
             this.chart1.TabIndex = 1;
-            this.chart1.Text = "chart1";
-            title1.BackColor = System.Drawing.Color.Transparent;
+            this.chart1.Text = "A";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold);
             title1.Name = "Title1";
-            title1.Text = "Faculty Profile by Qualification";
+            title1.Text = "Faculty Profile by Academic Rank";
             title1.TextStyle = System.Windows.Forms.DataVisualization.Charting.TextStyle.Frame;
             this.chart1.Titles.Add(title1);
             // 
-            // frmDoctoralGraph
+            // frmPositionGraph
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 710);
             this.Controls.Add(this.chart1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimizeBox = false;
-            this.Name = "frmDoctoralGraph";
+            this.Name = "frmPositionGraph";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Doctoral Degree";
-            this.Load += new System.EventHandler(this.frmDoctoralGraph_Load);
+            this.Text = "Faculty Profile";
+            this.Load += new System.EventHandler(this.frmPositionGraph_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 

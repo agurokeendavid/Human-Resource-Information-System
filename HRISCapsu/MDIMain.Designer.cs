@@ -57,8 +57,6 @@
             this.regularToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.contractualToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.graphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listOfMasteralHolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listOfDoctoralHolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seminarsAttendedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notificationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,6 +67,11 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsslCurrentDateAndTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslConnection = new System.Windows.Forms.ToolStripStatusLabel();
+            this.academicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nonAcademicToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.qualificationGenderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.masteralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doctoralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -245,6 +248,7 @@
             this.allAcademicToolStripMenuItem.Name = "allAcademicToolStripMenuItem";
             this.allAcademicToolStripMenuItem.Size = new System.Drawing.Size(280, 46);
             this.allAcademicToolStripMenuItem.Text = "All Academic";
+            this.allAcademicToolStripMenuItem.Click += new System.EventHandler(this.allAcademicToolStripMenuItem_Click);
             // 
             // regularToolStripMenuItem
             // 
@@ -275,6 +279,7 @@
             this.allNonAcademicToolStripMenuItem.Name = "allNonAcademicToolStripMenuItem";
             this.allNonAcademicToolStripMenuItem.Size = new System.Drawing.Size(365, 46);
             this.allNonAcademicToolStripMenuItem.Text = "All Non - Academic";
+            this.allNonAcademicToolStripMenuItem.Click += new System.EventHandler(this.allNonAcademicToolStripMenuItem_Click);
             // 
             // regularToolStripMenuItem1
             // 
@@ -293,25 +298,11 @@
             // graphToolStripMenuItem
             // 
             this.graphToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listOfMasteralHolderToolStripMenuItem,
-            this.listOfDoctoralHolderToolStripMenuItem});
+            this.academicToolStripMenuItem,
+            this.nonAcademicToolStripMenuItem1});
             this.graphToolStripMenuItem.Name = "graphToolStripMenuItem";
             this.graphToolStripMenuItem.Size = new System.Drawing.Size(557, 46);
             this.graphToolStripMenuItem.Text = "Graph Presentation";
-            // 
-            // listOfMasteralHolderToolStripMenuItem
-            // 
-            this.listOfMasteralHolderToolStripMenuItem.Name = "listOfMasteralHolderToolStripMenuItem";
-            this.listOfMasteralHolderToolStripMenuItem.Size = new System.Drawing.Size(408, 46);
-            this.listOfMasteralHolderToolStripMenuItem.Text = "List of Masteral Holder";
-            this.listOfMasteralHolderToolStripMenuItem.Click += new System.EventHandler(this.listOfMasteralHolderToolStripMenuItem_Click);
-            // 
-            // listOfDoctoralHolderToolStripMenuItem
-            // 
-            this.listOfDoctoralHolderToolStripMenuItem.Name = "listOfDoctoralHolderToolStripMenuItem";
-            this.listOfDoctoralHolderToolStripMenuItem.Size = new System.Drawing.Size(408, 46);
-            this.listOfDoctoralHolderToolStripMenuItem.Text = "List of Doctoral Holder";
-            this.listOfDoctoralHolderToolStripMenuItem.Click += new System.EventHandler(this.listOfDoctoralHolderToolStripMenuItem_Click);
             // 
             // seminarsAttendedToolStripMenuItem
             // 
@@ -391,6 +382,44 @@
             this.tsslConnection.Size = new System.Drawing.Size(171, 41);
             this.tsslConnection.Text = "Connection";
             // 
+            // academicToolStripMenuItem
+            // 
+            this.academicToolStripMenuItem.Name = "academicToolStripMenuItem";
+            this.academicToolStripMenuItem.Size = new System.Drawing.Size(324, 46);
+            this.academicToolStripMenuItem.Text = "Academic";
+            this.academicToolStripMenuItem.Click += new System.EventHandler(this.academicToolStripMenuItem_Click);
+            // 
+            // nonAcademicToolStripMenuItem1
+            // 
+            this.nonAcademicToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.qualificationGenderToolStripMenuItem});
+            this.nonAcademicToolStripMenuItem1.Name = "nonAcademicToolStripMenuItem1";
+            this.nonAcademicToolStripMenuItem1.Size = new System.Drawing.Size(324, 46);
+            this.nonAcademicToolStripMenuItem1.Text = "Non - Academic";
+            // 
+            // qualificationGenderToolStripMenuItem
+            // 
+            this.qualificationGenderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.masteralToolStripMenuItem,
+            this.doctoralToolStripMenuItem});
+            this.qualificationGenderToolStripMenuItem.Name = "qualificationGenderToolStripMenuItem";
+            this.qualificationGenderToolStripMenuItem.Size = new System.Drawing.Size(400, 46);
+            this.qualificationGenderToolStripMenuItem.Text = "Qualification (Gender)";
+            // 
+            // masteralToolStripMenuItem
+            // 
+            this.masteralToolStripMenuItem.Name = "masteralToolStripMenuItem";
+            this.masteralToolStripMenuItem.Size = new System.Drawing.Size(223, 46);
+            this.masteralToolStripMenuItem.Text = "Masteral";
+            this.masteralToolStripMenuItem.Click += new System.EventHandler(this.masteralToolStripMenuItem_Click);
+            // 
+            // doctoralToolStripMenuItem
+            // 
+            this.doctoralToolStripMenuItem.Name = "doctoralToolStripMenuItem";
+            this.doctoralToolStripMenuItem.Size = new System.Drawing.Size(223, 46);
+            this.doctoralToolStripMenuItem.Text = "Doctoral";
+            this.doctoralToolStripMenuItem.Click += new System.EventHandler(this.doctoralToolStripMenuItem_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
@@ -455,8 +484,6 @@
         private System.Windows.Forms.ToolStripMenuItem endOfLeaveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notificationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem graphToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listOfMasteralHolderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listOfDoctoralHolderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem allEmployeesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem nonAcademicToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regularEmployeesToolStripMenuItem1;
@@ -473,6 +500,11 @@
         private System.Windows.Forms.ToolStripMenuItem allNonAcademicToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regularToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem contractualToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem academicToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nonAcademicToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem qualificationGenderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masteralToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem doctoralToolStripMenuItem;
     }
 }
 

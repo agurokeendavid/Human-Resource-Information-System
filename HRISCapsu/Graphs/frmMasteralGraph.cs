@@ -29,11 +29,12 @@ namespace HRISCapsu.Graphs
                 {
                     conn.Open();
                     string query =
-                        "SELECT COUNT(employee_no) AS employee_count FROM employees WHERE gender = @gender AND is_deleted = @is_deleted AND highest_degree = @highest_degree;";
+                        "SELECT COUNT(employee_no) AS employee_count FROM employees WHERE gender = @gender AND is_deleted = @is_deleted AND highest_degree = @highest_degree AND employee_type = @employee_type;";
                     var cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("gender", "Male");
                     cmd.Parameters.AddWithValue("is_deleted", 0);
                     cmd.Parameters.AddWithValue("highest_degree", "Masteral Degree");
+                    cmd.Parameters.AddWithValue("employee_type", "Non - Academic");
                     MySqlDataReader reader = cmd.ExecuteReader();
                     if (reader.HasRows)
                     {
@@ -67,11 +68,12 @@ namespace HRISCapsu.Graphs
                 {
                     conn.Open();
                     string query =
-                        "SELECT COUNT(employee_no) AS employee_count FROM employees WHERE gender = @gender AND is_deleted = @is_deleted AND highest_degree = @highest_degree;";
+                        "SELECT COUNT(employee_no) AS employee_count FROM employees WHERE gender = @gender AND is_deleted = @is_deleted AND highest_degree = @highest_degree AND employee_type = @employee_type;";
                     var cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("gender", "Female");
                     cmd.Parameters.AddWithValue("is_deleted", 0);
                     cmd.Parameters.AddWithValue("highest_degree", "Masteral Degree");
+                    cmd.Parameters.AddWithValue("employee_type", "Non - Academic");
                     MySqlDataReader reader = cmd.ExecuteReader();
                     if (reader.HasRows)
                     {

@@ -439,18 +439,6 @@ namespace HRISCapsu
             frm.ShowDialog();
         }
 
-        private void listOfMasteralHolderToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Graphs.frmMasteralGraph frm = new Graphs.frmMasteralGraph();
-            frm.ShowDialog();
-        }
-
-        private void listOfDoctoralHolderToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Graphs.frmDoctoralGraph frm = new Graphs.frmDoctoralGraph();
-            frm.ShowDialog();
-        }
-
         private void allEmployeesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmEmployeesRecord frm = new frmEmployeesRecord();
@@ -508,6 +496,36 @@ namespace HRISCapsu
         private void contractualToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var frm = new previewContractualNonAcademicEmployees();
+            frm.ShowDialog();
+        }
+
+        private void allAcademicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new previewAllAcademicEmployees();
+            frm.ShowDialog();
+        }
+
+        private void allNonAcademicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new previewAllNonAcademicEmployees();
+            frm.ShowDialog();
+        }
+
+        private void masteralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Graphs.frmMasteralGraph frm = new Graphs.frmMasteralGraph();
+            frm.ShowDialog();
+        }
+
+        private void doctoralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Graphs.frmDoctoralGraph frm = new Graphs.frmDoctoralGraph();
+            frm.ShowDialog();
+        }
+
+        private void academicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new Graphs.frmPositionGraph();
             frm.ShowDialog();
         }
     }

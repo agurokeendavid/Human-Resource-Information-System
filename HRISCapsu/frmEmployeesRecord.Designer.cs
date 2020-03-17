@@ -178,7 +178,7 @@
             this.btnPrint.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnPrint.Image = global::HRISCapsu.Properties.Resources.icons8_print_16;
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(539, 12);
+            this.btnPrint.Location = new System.Drawing.Point(539, 16);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(97, 34);
@@ -198,7 +198,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(117, 12);
+            this.btnDelete.Location = new System.Drawing.Point(119, 16);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(97, 34);
@@ -219,7 +219,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(1167, 14);
+            this.btnCancel.Location = new System.Drawing.Point(1172, 16);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(97, 34);
@@ -239,7 +239,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(433, 10);
+            this.btnClose.Location = new System.Drawing.Point(434, 16);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(97, 34);
@@ -260,7 +260,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(1061, 12);
+            this.btnSave.Location = new System.Drawing.Point(1067, 16);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(97, 34);
@@ -280,7 +280,7 @@
             this.btnView.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnView.Image = ((System.Drawing.Image)(resources.GetObject("btnView.Image")));
             this.btnView.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnView.Location = new System.Drawing.Point(328, 10);
+            this.btnView.Location = new System.Drawing.Point(329, 16);
             this.btnView.Margin = new System.Windows.Forms.Padding(4);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(97, 34);
@@ -300,7 +300,7 @@
             this.btnUpdate.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(223, 12);
+            this.btnUpdate.Location = new System.Drawing.Point(224, 16);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(97, 34);
@@ -320,7 +320,7 @@
             this.btnNew.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
             this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(13, 12);
+            this.btnNew.Location = new System.Drawing.Point(14, 16);
             this.btnNew.Margin = new System.Windows.Forms.Padding(4);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(97, 34);
