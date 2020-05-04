@@ -54,6 +54,7 @@ namespace HRISCapsu
 
                             string response = sp.ReadExisting();
 
+                            sp.Close();
 
                             if (response.Contains("ERROR"))
                             {
@@ -62,7 +63,7 @@ namespace HRISCapsu
 
                             return true;
 
-                            sp.Close();
+
                         }
                     }
                 }
