@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployeesRecord));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -75,6 +75,8 @@
             this.Label9 = new System.Windows.Forms.Label();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelFileInformation = new System.Windows.Forms.Panel();
+            this.label37 = new System.Windows.Forms.Label();
+            this.txtLeaveCredit = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.txtStep = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -127,9 +129,9 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dtgRecords = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
+            this.dtgRecords = new System.Windows.Forms.DataGridView();
             this.GroupBox2.SuspendLayout();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
@@ -358,20 +360,20 @@
             // Label20
             // 
             this.Label20.AutoSize = true;
-            this.Label20.Location = new System.Drawing.Point(39, 50);
+            this.Label20.Location = new System.Drawing.Point(42, 51);
             this.Label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(79, 16);
+            this.Label20.Size = new System.Drawing.Size(73, 15);
             this.Label20.TabIndex = 0;
             this.Label20.Text = "First Name :";
             // 
             // Label16
             // 
             this.Label16.AutoSize = true;
-            this.Label16.Location = new System.Drawing.Point(19, 20);
+            this.Label16.Location = new System.Drawing.Point(25, 21);
             this.Label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(100, 16);
+            this.Label16.Size = new System.Drawing.Size(90, 15);
             this.Label16.TabIndex = 0;
             this.Label16.Text = "Employee No. :";
             // 
@@ -381,17 +383,17 @@
             this.Label1.Location = new System.Drawing.Point(27, 82);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(95, 16);
+            this.Label1.Size = new System.Drawing.Size(88, 15);
             this.Label1.TabIndex = 0;
             this.Label1.Text = "Middle Name :";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(306, 316);
+            this.label14.Location = new System.Drawing.Point(313, 302);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 16);
+            this.label14.Size = new System.Drawing.Size(96, 15);
             this.label14.TabIndex = 26;
             this.label14.Text = "End of Contract :";
             this.label14.Visible = false;
@@ -400,7 +402,7 @@
             // 
             this.dtpEndofContract.CustomFormat = "MMMM dd, yyyy";
             this.dtpEndofContract.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEndofContract.Location = new System.Drawing.Point(437, 311);
+            this.dtpEndofContract.Location = new System.Drawing.Point(441, 302);
             this.dtpEndofContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEndofContract.Name = "dtpEndofContract";
             this.dtpEndofContract.Size = new System.Drawing.Size(137, 21);
@@ -411,10 +413,10 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(331, 286);
+            this.label13.Location = new System.Drawing.Point(337, 278);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(79, 16);
+            this.label13.Size = new System.Drawing.Size(72, 15);
             this.label13.TabIndex = 24;
             this.label13.Text = "Hired Date :";
             // 
@@ -422,7 +424,7 @@
             // 
             this.dtpHiredDate.CustomFormat = "MMMM dd, yyyy";
             this.dtpHiredDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHiredDate.Location = new System.Drawing.Point(437, 281);
+            this.dtpHiredDate.Location = new System.Drawing.Point(441, 277);
             this.dtpHiredDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpHiredDate.Name = "dtpHiredDate";
             this.dtpHiredDate.Size = new System.Drawing.Size(137, 21);
@@ -436,7 +438,7 @@
             this.cmbWorkStatus.Items.AddRange(new object[] {
             "Regular",
             "Contractual"});
-            this.cmbWorkStatus.Location = new System.Drawing.Point(437, 244);
+            this.cmbWorkStatus.Location = new System.Drawing.Point(441, 219);
             this.cmbWorkStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbWorkStatus.Name = "cmbWorkStatus";
             this.cmbWorkStatus.Size = new System.Drawing.Size(137, 23);
@@ -446,10 +448,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(324, 247);
+            this.label12.Location = new System.Drawing.Point(331, 219);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 16);
+            this.label12.Size = new System.Drawing.Size(78, 15);
             this.label12.TabIndex = 21;
             this.label12.Text = "Work Status :";
             // 
@@ -462,7 +464,7 @@
             "College of Agriculture and Fisheries",
             "College of Management",
             "College of Business Management"});
-            this.cmbDepartment.Location = new System.Drawing.Point(437, 212);
+            this.cmbDepartment.Location = new System.Drawing.Point(441, 187);
             this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(137, 23);
@@ -471,20 +473,20 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(326, 215);
+            this.label11.Location = new System.Drawing.Point(331, 187);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 16);
+            this.label11.Size = new System.Drawing.Size(78, 15);
             this.label11.TabIndex = 19;
             this.label11.Text = "Department :";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(348, 83);
+            this.label10.Location = new System.Drawing.Point(352, 58);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 16);
+            this.label10.Size = new System.Drawing.Size(57, 15);
             this.label10.TabIndex = 17;
             this.label10.Text = "Position :";
             // 
@@ -495,7 +497,7 @@
             this.cmbCivilStatus.Items.AddRange(new object[] {
             "Single",
             "Married"});
-            this.cmbCivilStatus.Location = new System.Drawing.Point(151, 358);
+            this.cmbCivilStatus.Location = new System.Drawing.Point(151, 328);
             this.cmbCivilStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCivilStatus.Name = "cmbCivilStatus";
             this.cmbCivilStatus.Size = new System.Drawing.Size(137, 23);
@@ -504,17 +506,17 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(40, 362);
+            this.label8.Location = new System.Drawing.Point(43, 331);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 16);
+            this.label8.Size = new System.Drawing.Size(72, 15);
             this.label8.TabIndex = 15;
             this.label8.Text = "Civil Status :";
             // 
             // txtContactNo
             // 
             this.txtContactNo.BackColor = System.Drawing.Color.White;
-            this.txtContactNo.Location = new System.Drawing.Point(151, 326);
+            this.txtContactNo.Location = new System.Drawing.Point(151, 296);
             this.txtContactNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(137, 21);
@@ -524,40 +526,40 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(35, 330);
+            this.label7.Location = new System.Drawing.Point(39, 300);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 16);
+            this.label7.Size = new System.Drawing.Size(76, 15);
             this.label7.TabIndex = 14;
             this.label7.Text = "Contact No. :";
             // 
             // txtPlaceofBirth
             // 
             this.txtPlaceofBirth.BackColor = System.Drawing.Color.White;
-            this.txtPlaceofBirth.Location = new System.Drawing.Point(151, 271);
+            this.txtPlaceofBirth.Location = new System.Drawing.Point(151, 248);
             this.txtPlaceofBirth.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlaceofBirth.Multiline = true;
             this.txtPlaceofBirth.Name = "txtPlaceofBirth";
-            this.txtPlaceofBirth.Size = new System.Drawing.Size(137, 48);
+            this.txtPlaceofBirth.Size = new System.Drawing.Size(137, 40);
             this.txtPlaceofBirth.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 273);
+            this.label6.Location = new System.Drawing.Point(30, 251);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 16);
+            this.label6.Size = new System.Drawing.Size(85, 15);
             this.label6.TabIndex = 11;
             this.label6.Text = "Place of Birth :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 246);
+            this.label5.Location = new System.Drawing.Point(35, 226);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 16);
+            this.label5.Size = new System.Drawing.Size(80, 15);
             this.label5.TabIndex = 10;
             this.label5.Text = "Date of Birth :";
             // 
@@ -565,7 +567,7 @@
             // 
             this.dtpDateofBirth.CustomFormat = "MMMM dd, yyyy";
             this.dtpDateofBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateofBirth.Location = new System.Drawing.Point(151, 240);
+            this.dtpDateofBirth.Location = new System.Drawing.Point(151, 221);
             this.dtpDateofBirth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDateofBirth.Name = "dtpDateofBirth";
             this.dtpDateofBirth.Size = new System.Drawing.Size(137, 21);
@@ -579,7 +581,7 @@
             this.cmbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(151, 208);
+            this.cmbGender.Location = new System.Drawing.Point(151, 192);
             this.cmbGender.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(137, 23);
@@ -588,10 +590,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(63, 210);
+            this.label4.Location = new System.Drawing.Point(59, 195);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 16);
+            this.label4.Size = new System.Drawing.Size(54, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "Gender :";
             // 
@@ -602,7 +604,7 @@
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(137, 56);
+            this.txtAddress.Size = new System.Drawing.Size(137, 40);
             this.txtAddress.TabIndex = 4;
             // 
             // label3
@@ -611,7 +613,7 @@
             this.label3.Location = new System.Drawing.Point(56, 146);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 16);
+            this.label3.Size = new System.Drawing.Size(57, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Address :";
             // 
@@ -630,7 +632,7 @@
             this.label2.Location = new System.Drawing.Point(40, 114);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 16);
+            this.label2.Size = new System.Drawing.Size(73, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Last Name :";
             // 
@@ -675,6 +677,8 @@
             // 
             this.panelFileInformation.BackColor = System.Drawing.Color.Transparent;
             this.panelFileInformation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelFileInformation.Controls.Add(this.label37);
+            this.panelFileInformation.Controls.Add(this.txtLeaveCredit);
             this.panelFileInformation.Controls.Add(this.label35);
             this.panelFileInformation.Controls.Add(this.txtStep);
             this.panelFileInformation.Controls.Add(this.label34);
@@ -731,20 +735,41 @@
             this.panelFileInformation.Size = new System.Drawing.Size(1173, 427);
             this.panelFileInformation.TabIndex = 0;
             // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(325, 250);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(84, 15);
+            this.label37.TabIndex = 70;
+            this.label37.Text = "Leave Credits:";
+            // 
+            // txtLeaveCredit
+            // 
+            this.txtLeaveCredit.BackColor = System.Drawing.Color.White;
+            this.txtLeaveCredit.Enabled = false;
+            this.txtLeaveCredit.Location = new System.Drawing.Point(441, 250);
+            this.txtLeaveCredit.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLeaveCredit.Name = "txtLeaveCredit";
+            this.txtLeaveCredit.Size = new System.Drawing.Size(137, 21);
+            this.txtLeaveCredit.TabIndex = 69;
+            this.txtLeaveCredit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLeaveCredit_KeyPress);
+            // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(368, 177);
+            this.label35.Location = new System.Drawing.Point(371, 149);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(42, 16);
+            this.label35.Size = new System.Drawing.Size(38, 15);
             this.label35.TabIndex = 68;
             this.label35.Text = "Step :";
             // 
             // txtStep
             // 
             this.txtStep.BackColor = System.Drawing.Color.White;
-            this.txtStep.Location = new System.Drawing.Point(437, 174);
+            this.txtStep.Location = new System.Drawing.Point(441, 149);
             this.txtStep.Margin = new System.Windows.Forms.Padding(4);
             this.txtStep.Name = "txtStep";
             this.txtStep.Size = new System.Drawing.Size(137, 21);
@@ -754,17 +779,17 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(316, 145);
+            this.label34.Location = new System.Drawing.Point(325, 117);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(94, 16);
+            this.label34.Size = new System.Drawing.Size(84, 15);
             this.label34.TabIndex = 66;
             this.label34.Text = "Salary Grade :";
             // 
             // txtSalaryGrade
             // 
             this.txtSalaryGrade.BackColor = System.Drawing.Color.White;
-            this.txtSalaryGrade.Location = new System.Drawing.Point(437, 142);
+            this.txtSalaryGrade.Location = new System.Drawing.Point(441, 117);
             this.txtSalaryGrade.Margin = new System.Windows.Forms.Padding(4);
             this.txtSalaryGrade.Name = "txtSalaryGrade";
             this.txtSalaryGrade.Size = new System.Drawing.Size(137, 21);
@@ -774,17 +799,17 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(304, 113);
+            this.label33.Location = new System.Drawing.Point(310, 86);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(106, 16);
+            this.label33.Size = new System.Drawing.Size(99, 15);
             this.label33.TabIndex = 64;
             this.label33.Text = "Unique Item No :";
             // 
             // txtUniqueItemNo
             // 
             this.txtUniqueItemNo.BackColor = System.Drawing.Color.White;
-            this.txtUniqueItemNo.Location = new System.Drawing.Point(437, 110);
+            this.txtUniqueItemNo.Location = new System.Drawing.Point(441, 85);
             this.txtUniqueItemNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtUniqueItemNo.Name = "txtUniqueItemNo";
             this.txtUniqueItemNo.Size = new System.Drawing.Size(137, 21);
@@ -794,7 +819,7 @@
             // 
             this.cmbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Location = new System.Drawing.Point(437, 77);
+            this.cmbPosition.Location = new System.Drawing.Point(441, 52);
             this.cmbPosition.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(137, 23);
@@ -920,7 +945,7 @@
             // txtEligibility
             // 
             this.txtEligibility.BackColor = System.Drawing.Color.White;
-            this.txtEligibility.Location = new System.Drawing.Point(437, 17);
+            this.txtEligibility.Location = new System.Drawing.Point(151, 390);
             this.txtEligibility.Margin = new System.Windows.Forms.Padding(4);
             this.txtEligibility.Name = "txtEligibility";
             this.txtEligibility.Size = new System.Drawing.Size(137, 21);
@@ -929,10 +954,10 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(343, 19);
+            this.label15.Location = new System.Drawing.Point(52, 393);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 16);
+            this.label15.Size = new System.Drawing.Size(61, 15);
             this.label15.TabIndex = 61;
             this.label15.Text = "Eligibility :";
             // 
@@ -960,7 +985,7 @@
             this.label26.Location = new System.Drawing.Point(5, 81);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(56, 16);
+            this.label26.Size = new System.Drawing.Size(51, 15);
             this.label26.TabIndex = 7;
             this.label26.Text = "School :";
             // 
@@ -970,7 +995,7 @@
             this.label27.Location = new System.Drawing.Point(5, 50);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(110, 16);
+            this.label27.Size = new System.Drawing.Size(99, 15);
             this.label27.TabIndex = 5;
             this.label27.Text = "Year Graduated :";
             // 
@@ -999,7 +1024,7 @@
             this.label28.Location = new System.Drawing.Point(5, 21);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(57, 16);
+            this.label28.Size = new System.Drawing.Size(52, 15);
             this.label28.TabIndex = 3;
             this.label28.Text = "Course :";
             // 
@@ -1036,7 +1061,7 @@
             this.label23.Location = new System.Drawing.Point(5, 81);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(56, 16);
+            this.label23.Size = new System.Drawing.Size(51, 15);
             this.label23.TabIndex = 7;
             this.label23.Text = "School :";
             // 
@@ -1046,7 +1071,7 @@
             this.label24.Location = new System.Drawing.Point(5, 50);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(110, 16);
+            this.label24.Size = new System.Drawing.Size(99, 15);
             this.label24.TabIndex = 5;
             this.label24.Text = "Year Graduated :";
             // 
@@ -1075,7 +1100,7 @@
             this.label25.Location = new System.Drawing.Point(5, 21);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(57, 16);
+            this.label25.Size = new System.Drawing.Size(52, 15);
             this.label25.TabIndex = 3;
             this.label25.Text = "Course :";
             // 
@@ -1112,7 +1137,7 @@
             this.label22.Location = new System.Drawing.Point(5, 81);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(56, 16);
+            this.label22.Size = new System.Drawing.Size(51, 15);
             this.label22.TabIndex = 7;
             this.label22.Text = "School :";
             // 
@@ -1122,7 +1147,7 @@
             this.label21.Location = new System.Drawing.Point(5, 50);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(110, 16);
+            this.label21.Size = new System.Drawing.Size(99, 15);
             this.label21.TabIndex = 5;
             this.label21.Text = "Year Graduated :";
             // 
@@ -1152,7 +1177,7 @@
             this.label19.Location = new System.Drawing.Point(5, 21);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(57, 16);
+            this.label19.Size = new System.Drawing.Size(52, 15);
             this.label19.TabIndex = 3;
             this.label19.Text = "Course :";
             // 
@@ -1168,10 +1193,10 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(299, 49);
+            this.label18.Location = new System.Drawing.Point(312, 24);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(111, 16);
+            this.label18.Size = new System.Drawing.Size(97, 15);
             this.label18.TabIndex = 55;
             this.label18.Text = "Employee Type :";
             // 
@@ -1182,7 +1207,7 @@
             this.cmbEmployeeType.Items.AddRange(new object[] {
             "Academic",
             "Non - Academic"});
-            this.cmbEmployeeType.Location = new System.Drawing.Point(437, 46);
+            this.cmbEmployeeType.Location = new System.Drawing.Point(441, 21);
             this.cmbEmployeeType.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEmployeeType.Name = "cmbEmployeeType";
             this.cmbEmployeeType.Size = new System.Drawing.Size(137, 23);
@@ -1192,10 +1217,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(18, 392);
+            this.label17.Location = new System.Drawing.Point(19, 362);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(106, 16);
+            this.label17.Size = new System.Drawing.Size(96, 15);
             this.label17.TabIndex = 53;
             this.label17.Text = "Highest Degree:";
             // 
@@ -1210,7 +1235,7 @@
             "College",
             "Masteral Degree",
             "Doctoral Degree"});
-            this.cmbDegree.Location = new System.Drawing.Point(151, 389);
+            this.cmbDegree.Location = new System.Drawing.Point(151, 359);
             this.cmbDegree.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDegree.Name = "cmbDegree";
             this.cmbDegree.Size = new System.Drawing.Size(137, 23);
@@ -1258,7 +1283,7 @@
             this.lblPercent.AutoSize = true;
             this.lblPercent.Location = new System.Drawing.Point(7, 46);
             this.lblPercent.Name = "lblPercent";
-            this.lblPercent.Size = new System.Drawing.Size(27, 16);
+            this.lblPercent.Size = new System.Drawing.Size(25, 15);
             this.lblPercent.TabIndex = 48;
             this.lblPercent.Text = "0%";
             // 
@@ -1284,7 +1309,7 @@
             this.lblFileName.Location = new System.Drawing.Point(7, 166);
             this.lblFileName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFileName.Name = "lblFileName";
-            this.lblFileName.Size = new System.Drawing.Size(73, 16);
+            this.lblFileName.Size = new System.Drawing.Size(67, 15);
             this.lblFileName.TabIndex = 51;
             this.lblFileName.Text = "File Name:";
             // 
@@ -1326,58 +1351,6 @@
             this.panel2.Size = new System.Drawing.Size(1173, 181);
             this.panel2.TabIndex = 46;
             // 
-            // dtgRecords
-            // 
-            this.dtgRecords.AllowUserToAddRows = false;
-            this.dtgRecords.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FloralWhite;
-            this.dtgRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
-            this.dtgRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgRecords.BackgroundColor = System.Drawing.Color.White;
-            this.dtgRecords.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dtgRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
-            this.dtgRecords.ColumnHeadersHeight = 30;
-            this.dtgRecords.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtgRecords.EnableHeadersVisualStyles = false;
-            this.dtgRecords.GridColor = System.Drawing.Color.PaleTurquoise;
-            this.dtgRecords.Location = new System.Drawing.Point(0, 36);
-            this.dtgRecords.Margin = new System.Windows.Forms.Padding(4);
-            this.dtgRecords.MultiSelect = false;
-            this.dtgRecords.Name = "dtgRecords";
-            this.dtgRecords.ReadOnly = true;
-            this.dtgRecords.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
-            this.dtgRecords.RowHeadersVisible = false;
-            this.dtgRecords.RowHeadersWidth = 25;
-            this.dtgRecords.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle40.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgRecords.RowsDefaultCellStyle = dataGridViewCellStyle40;
-            this.dtgRecords.RowTemplate.Height = 18;
-            this.dtgRecords.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgRecords.Size = new System.Drawing.Size(1172, 145);
-            this.dtgRecords.TabIndex = 26;
-            this.dtgRecords.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgRecords_CellContentClick);
-            this.dtgRecords.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgRecords_CellDoubleClick);
-            // 
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(54, 8);
@@ -1395,6 +1368,58 @@
             this.label36.Size = new System.Drawing.Size(45, 17);
             this.label36.TabIndex = 0;
             this.label36.Text = "Name";
+            // 
+            // dtgRecords
+            // 
+            this.dtgRecords.AllowUserToAddRows = false;
+            this.dtgRecords.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FloralWhite;
+            this.dtgRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dtgRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgRecords.BackgroundColor = System.Drawing.Color.White;
+            this.dtgRecords.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dtgRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dtgRecords.ColumnHeadersHeight = 30;
+            this.dtgRecords.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtgRecords.EnableHeadersVisualStyles = false;
+            this.dtgRecords.GridColor = System.Drawing.Color.PaleTurquoise;
+            this.dtgRecords.Location = new System.Drawing.Point(0, 36);
+            this.dtgRecords.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgRecords.MultiSelect = false;
+            this.dtgRecords.Name = "dtgRecords";
+            this.dtgRecords.ReadOnly = true;
+            this.dtgRecords.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dtgRecords.RowHeadersVisible = false;
+            this.dtgRecords.RowHeadersWidth = 25;
+            this.dtgRecords.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgRecords.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dtgRecords.RowTemplate.Height = 18;
+            this.dtgRecords.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgRecords.Size = new System.Drawing.Size(1172, 145);
+            this.dtgRecords.TabIndex = 26;
+            this.dtgRecords.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgRecords_CellContentClick);
+            this.dtgRecords.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgRecords_CellDoubleClick);
             // 
             // frmEmployeesRecord
             // 
@@ -1537,5 +1562,7 @@
         internal System.Windows.Forms.TextBox txtStep;
         private System.Windows.Forms.TextBox txtSearch;
         internal System.Windows.Forms.Label label36;
+        internal System.Windows.Forms.Label label37;
+        internal System.Windows.Forms.TextBox txtLeaveCredit;
     }
 }

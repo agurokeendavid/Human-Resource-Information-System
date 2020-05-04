@@ -528,5 +528,11 @@ namespace HRISCapsu
             frmListofContractualEmployees frm = new frmListofContractualEmployees("Non - Academic");
             frm.ShowDialog();
         }
+
+        private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmAddEmployee();
+            frm.ShowDialog();
+        }
     }
 }
