@@ -454,7 +454,7 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 salaryGrade = string.Empty;
             }
