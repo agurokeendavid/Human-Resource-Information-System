@@ -961,5 +961,11 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
                 txtSalaryGrade.Clear();
             }
         }
+
+        private void txtLeaveCredit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            const char Delete = (char)8;
+            e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != Delete;
+        }
     }
 }
