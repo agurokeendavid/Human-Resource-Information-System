@@ -131,7 +131,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ConnectionString.cs" />
+    <Compile Include="Classes\ListOfSeminar.cs" />
     <Compile Include="Classes\Methods.cs" />
+    <Compile Include="Classes\Position.cs" />
     <Compile Include="frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +146,12 @@
     </Compile>
     <Compile Include="frmAcademicApplyLeave.Designer.cs">
       <DependentUpon>frmAcademicApplyLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEmployee.Designer.cs">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddPosition.cs">
       <SubType>Form</SubType>
@@ -192,11 +201,23 @@
     <Compile Include="frmDepartments.Designer.cs">
       <DependentUpon>frmDepartments.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditEmployee.Designer.cs">
+      <DependentUpon>frmEditEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditSeminar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEditSeminar.Designer.cs">
       <DependentUpon>frmEditSeminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeesOnLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeesOnLeave.Designer.cs">
+      <DependentUpon>frmEmployeesOnLeave.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEmployeesRecord.cs">
       <SubType>Form</SubType>
@@ -276,6 +297,12 @@
     <Compile Include="frmSeminarsTraining.Designer.cs">
       <DependentUpon>frmSeminarsTraining.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmViewContractualEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewContractualEmployees.Designer.cs">
+      <DependentUpon>frmViewContractualEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmViewEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +341,9 @@
     <Compile Include="MDIMain.Designer.cs">
       <DependentUpon>MDIMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\LeaveCredits.cs" />
+    <Compile Include="Models\Seminar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportPreviewer\previewAcademicRegularEmployees.cs">
@@ -364,12 +394,18 @@
     <Compile Include="ReportPreviewer\previewSeminarEmployeeList.Designer.cs">
       <DependentUpon>previewSeminarEmployeeList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repository\EmployeeRepository.cs" />
+    <Compile Include="Repository\LeaveCreditRepository.cs" />
+    <Compile Include="Repository\ListOfSeminarRepository.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAcademicApplyLeave.resx">
       <DependentUpon>frmAcademicApplyLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEmployee.resx">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddPosition.resx">
       <DependentUpon>frmAddPosition.cs</DependentUpon>
@@ -395,8 +431,14 @@
     <EmbeddedResource Include="frmDepartments.resx">
       <DependentUpon>frmDepartments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditEmployee.resx">
+      <DependentUpon>frmEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEditSeminar.resx">
       <DependentUpon>frmEditSeminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeesOnLeave.resx">
+      <DependentUpon>frmEmployeesOnLeave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmployeesRecord.resx">
       <DependentUpon>frmEmployeesRecord.cs</DependentUpon>
@@ -436,6 +478,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSeminarsTraining.resx">
       <DependentUpon>frmSeminarsTraining.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewContractualEmployees.resx">
+      <DependentUpon>frmViewContractualEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewEmployee.resx">
       <DependentUpon>frmViewEmployee.cs</DependentUpon>

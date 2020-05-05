@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddEmployee));
-            this.txtLeaveCredit = new System.Windows.Forms.TextBox();
+            this.txtLeaveCredits = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.txtDoctoralYearGraduated = new System.Windows.Forms.TextBox();
@@ -118,6 +119,7 @@
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Label9 = new System.Windows.Forms.Label();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.grpSeminar.SuspendLayout();
             this.grpDoctoral.SuspendLayout();
@@ -129,17 +131,20 @@
             this.panelFileInformation.SuspendLayout();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtLeaveCredit
+            // txtLeaveCredits
             // 
-            this.txtLeaveCredit.BackColor = System.Drawing.Color.White;
-            this.txtLeaveCredit.Enabled = false;
-            this.txtLeaveCredit.Location = new System.Drawing.Point(441, 250);
-            this.txtLeaveCredit.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLeaveCredit.Name = "txtLeaveCredit";
-            this.txtLeaveCredit.Size = new System.Drawing.Size(137, 21);
-            this.txtLeaveCredit.TabIndex = 69;
+            this.txtLeaveCredits.BackColor = System.Drawing.Color.White;
+            this.txtLeaveCredits.Enabled = false;
+            this.txtLeaveCredits.Location = new System.Drawing.Point(441, 52);
+            this.txtLeaveCredits.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLeaveCredits.Name = "txtLeaveCredits";
+            this.txtLeaveCredits.Size = new System.Drawing.Size(137, 21);
+            this.txtLeaveCredits.TabIndex = 69;
+            this.txtLeaveCredits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLeaveCredits_KeyPress);
+            this.txtLeaveCredits.Validating += new System.ComponentModel.CancelEventHandler(this.txtLeaveCredits_Validating);
             // 
             // label26
             // 
@@ -169,6 +174,7 @@
             this.txtDoctoralYearGraduated.Name = "txtDoctoralYearGraduated";
             this.txtDoctoralYearGraduated.Size = new System.Drawing.Size(137, 21);
             this.txtDoctoralYearGraduated.TabIndex = 32;
+            this.txtDoctoralYearGraduated.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDoctoralYearGraduated_KeyPress);
             // 
             // txtDoctoralSchool
             // 
@@ -211,6 +217,7 @@
             this.btnAddInternationSeminar.Text = "+ Seminar";
             this.btnAddInternationSeminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddInternationSeminar.UseVisualStyleBackColor = true;
+            this.btnAddInternationSeminar.Click += new System.EventHandler(this.btnAddInternationSeminar_Click);
             // 
             // btnAddNationalSeminar
             // 
@@ -224,6 +231,7 @@
             this.btnAddNationalSeminar.Text = "+ Seminar";
             this.btnAddNationalSeminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddNationalSeminar.UseVisualStyleBackColor = true;
+            this.btnAddNationalSeminar.Click += new System.EventHandler(this.btnAddNationalSeminar_Click);
             // 
             // btnAddRegionalSeminar
             // 
@@ -237,11 +245,12 @@
             this.btnAddRegionalSeminar.Text = "+ Seminar";
             this.btnAddRegionalSeminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddRegionalSeminar.UseVisualStyleBackColor = true;
+            this.btnAddRegionalSeminar.Click += new System.EventHandler(this.btnAddRegionalSeminar_Click);
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(310, 86);
+            this.label33.Location = new System.Drawing.Point(310, 115);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(99, 15);
@@ -260,6 +269,7 @@
             this.btnAddLocalSeminar.Text = "+ Seminar";
             this.btnAddLocalSeminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddLocalSeminar.UseVisualStyleBackColor = true;
+            this.btnAddLocalSeminar.Click += new System.EventHandler(this.btnAddLocalSeminar_Click);
             // 
             // label29
             // 
@@ -294,7 +304,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(371, 149);
+            this.label35.Location = new System.Drawing.Point(371, 178);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(38, 15);
@@ -304,16 +314,18 @@
             // txtStep
             // 
             this.txtStep.BackColor = System.Drawing.Color.White;
-            this.txtStep.Location = new System.Drawing.Point(441, 149);
+            this.txtStep.Location = new System.Drawing.Point(441, 178);
             this.txtStep.Margin = new System.Windows.Forms.Padding(4);
             this.txtStep.Name = "txtStep";
             this.txtStep.Size = new System.Drawing.Size(137, 21);
             this.txtStep.TabIndex = 16;
+            this.txtStep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStep_KeyPress);
+            this.txtStep.Validating += new System.ComponentModel.CancelEventHandler(this.txtStep_Validating);
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(325, 117);
+            this.label34.Location = new System.Drawing.Point(325, 146);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(84, 15);
@@ -323,16 +335,19 @@
             // txtSalaryGrade
             // 
             this.txtSalaryGrade.BackColor = System.Drawing.Color.White;
-            this.txtSalaryGrade.Location = new System.Drawing.Point(441, 117);
+            this.txtSalaryGrade.Location = new System.Drawing.Point(441, 146);
             this.txtSalaryGrade.Margin = new System.Windows.Forms.Padding(4);
             this.txtSalaryGrade.Name = "txtSalaryGrade";
+            this.txtSalaryGrade.ReadOnly = true;
             this.txtSalaryGrade.Size = new System.Drawing.Size(137, 21);
             this.txtSalaryGrade.TabIndex = 15;
+            this.txtSalaryGrade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalaryGrade_KeyPress);
+            this.txtSalaryGrade.Validating += new System.ComponentModel.CancelEventHandler(this.txtSalaryGrade_Validating);
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(325, 250);
+            this.label37.Location = new System.Drawing.Point(325, 52);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(84, 15);
@@ -360,6 +375,7 @@
             this.btnUpload.Text = "Select Photo";
             this.btnUpload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // pictureBox2
             // 
@@ -401,6 +417,7 @@
             this.txtBSYearGraduated.Name = "txtBSYearGraduated";
             this.txtBSYearGraduated.Size = new System.Drawing.Size(137, 21);
             this.txtBSYearGraduated.TabIndex = 26;
+            this.txtBSYearGraduated.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBSYearGraduated_KeyPress);
             // 
             // txtBSSchool
             // 
@@ -475,6 +492,7 @@
             this.txtMasteralYearGraduated.Name = "txtMasteralYearGraduated";
             this.txtMasteralYearGraduated.Size = new System.Drawing.Size(137, 21);
             this.txtMasteralYearGraduated.TabIndex = 29;
+            this.txtMasteralYearGraduated.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMasteralYearGraduated_KeyPress);
             // 
             // txtMasteralSchool
             // 
@@ -516,6 +534,7 @@
             this.btnAttach.Text = "Attach File";
             this.btnAttach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAttach.UseVisualStyleBackColor = true;
+            this.btnAttach.Click += new System.EventHandler(this.btnAttach_Click);
             // 
             // label24
             // 
@@ -530,21 +549,24 @@
             // txtUniqueItemNo
             // 
             this.txtUniqueItemNo.BackColor = System.Drawing.Color.White;
-            this.txtUniqueItemNo.Location = new System.Drawing.Point(441, 85);
+            this.txtUniqueItemNo.Location = new System.Drawing.Point(441, 114);
             this.txtUniqueItemNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtUniqueItemNo.Name = "txtUniqueItemNo";
             this.txtUniqueItemNo.Size = new System.Drawing.Size(137, 21);
             this.txtUniqueItemNo.TabIndex = 14;
+            this.txtUniqueItemNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtUniqueItemNo_Validating);
             // 
             // cmbPosition
             // 
             this.cmbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Location = new System.Drawing.Point(441, 52);
+            this.cmbPosition.Location = new System.Drawing.Point(441, 81);
             this.cmbPosition.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(137, 23);
             this.cmbPosition.TabIndex = 13;
+            this.cmbPosition.SelectionChangeCommitted += new System.EventHandler(this.cmbPosition_SelectionChangeCommitted);
+            this.cmbPosition.Validating += new System.ComponentModel.CancelEventHandler(this.cmbPosition_Validating);
             // 
             // grpSeminar
             // 
@@ -593,6 +615,7 @@
             this.grpDoctoral.Controls.Add(this.txtDoctoralSchool);
             this.grpDoctoral.Controls.Add(this.label28);
             this.grpDoctoral.Controls.Add(this.txtDoctoralCourse);
+            this.grpDoctoral.Enabled = false;
             this.grpDoctoral.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpDoctoral.Location = new System.Drawing.Point(601, 232);
             this.grpDoctoral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -611,6 +634,7 @@
             this.grpMasteral.Controls.Add(this.txtMasteralSchool);
             this.grpMasteral.Controls.Add(this.label25);
             this.grpMasteral.Controls.Add(this.txtMasteralCourse);
+            this.grpMasteral.Enabled = false;
             this.grpMasteral.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpMasteral.Location = new System.Drawing.Point(601, 117);
             this.grpMasteral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -629,6 +653,7 @@
             this.grpBS.Controls.Add(this.txtBSSchool);
             this.grpBS.Controls.Add(this.label19);
             this.grpBS.Controls.Add(this.txtBSCourse);
+            this.grpBS.Enabled = false;
             this.grpBS.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBS.Location = new System.Drawing.Point(601, 2);
             this.grpBS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -661,6 +686,8 @@
             this.cmbEmployeeType.Name = "cmbEmployeeType";
             this.cmbEmployeeType.Size = new System.Drawing.Size(137, 23);
             this.cmbEmployeeType.TabIndex = 12;
+            this.cmbEmployeeType.SelectionChangeCommitted += new System.EventHandler(this.cmbEmployeeType_SelectionChangeCommitted);
+            this.cmbEmployeeType.Validating += new System.ComponentModel.CancelEventHandler(this.cmbEmployeeType_Validating);
             // 
             // label17
             // 
@@ -688,6 +715,8 @@
             this.cmbDegree.Name = "cmbDegree";
             this.cmbDegree.Size = new System.Drawing.Size(137, 23);
             this.cmbDegree.TabIndex = 10;
+            this.cmbDegree.SelectedIndexChanged += new System.EventHandler(this.cmbDegree_SelectedIndexChanged);
+            this.cmbDegree.Validating += new System.ComponentModel.CancelEventHandler(this.cmbDegree_Validating);
             // 
             // grpAttachment
             // 
@@ -717,18 +746,16 @@
             this.grpPicture.TabIndex = 30;
             this.grpPicture.TabStop = false;
             this.grpPicture.Text = "Please select a picture";
-            this.grpPicture.Visible = false;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(313, 302);
+            this.label14.Location = new System.Drawing.Point(313, 293);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(96, 15);
             this.label14.TabIndex = 26;
             this.label14.Text = "End of Contract :";
-            this.label14.Visible = false;
             // 
             // cmbWorkStatus
             // 
@@ -737,11 +764,13 @@
             this.cmbWorkStatus.Items.AddRange(new object[] {
             "Regular",
             "Contractual"});
-            this.cmbWorkStatus.Location = new System.Drawing.Point(441, 219);
+            this.cmbWorkStatus.Location = new System.Drawing.Point(441, 239);
             this.cmbWorkStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbWorkStatus.Name = "cmbWorkStatus";
             this.cmbWorkStatus.Size = new System.Drawing.Size(137, 23);
             this.cmbWorkStatus.TabIndex = 18;
+            this.cmbWorkStatus.SelectionChangeCommitted += new System.EventHandler(this.cmbWorkStatus_SelectionChangeCommitted);
+            this.cmbWorkStatus.Validating += new System.ComponentModel.CancelEventHandler(this.cmbWorkStatus_Validating);
             // 
             // Label16
             // 
@@ -766,14 +795,14 @@
             // dtpEndofContract
             // 
             this.dtpEndofContract.CustomFormat = "MMMM dd, yyyy";
+            this.dtpEndofContract.Enabled = false;
             this.dtpEndofContract.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEndofContract.Location = new System.Drawing.Point(441, 302);
+            this.dtpEndofContract.Location = new System.Drawing.Point(441, 293);
             this.dtpEndofContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEndofContract.Name = "dtpEndofContract";
             this.dtpEndofContract.Size = new System.Drawing.Size(137, 21);
             this.dtpEndofContract.TabIndex = 20;
             this.dtpEndofContract.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
-            this.dtpEndofContract.Visible = false;
             // 
             // txtPlaceofBirth
             // 
@@ -784,6 +813,7 @@
             this.txtPlaceofBirth.Name = "txtPlaceofBirth";
             this.txtPlaceofBirth.Size = new System.Drawing.Size(137, 40);
             this.txtPlaceofBirth.TabIndex = 7;
+            this.txtPlaceofBirth.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlaceofBirth_Validating);
             // 
             // Label1
             // 
@@ -808,7 +838,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(337, 278);
+            this.label13.Location = new System.Drawing.Point(337, 269);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(72, 15);
@@ -884,6 +914,7 @@
             this.btnSave.Text = "&Save ";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // GroupBox2
             // 
@@ -905,9 +936,9 @@
             this.panelFileInformation.BackColor = System.Drawing.Color.Transparent;
             this.panelFileInformation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelFileInformation.Controls.Add(this.label37);
-            this.panelFileInformation.Controls.Add(this.txtLeaveCredit);
             this.panelFileInformation.Controls.Add(this.label35);
             this.panelFileInformation.Controls.Add(this.txtStep);
+            this.panelFileInformation.Controls.Add(this.txtLeaveCredits);
             this.panelFileInformation.Controls.Add(this.label34);
             this.panelFileInformation.Controls.Add(this.txtSalaryGrade);
             this.panelFileInformation.Controls.Add(this.label33);
@@ -965,7 +996,7 @@
             // 
             this.dtpHiredDate.CustomFormat = "MMMM dd, yyyy";
             this.dtpHiredDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHiredDate.Location = new System.Drawing.Point(441, 277);
+            this.dtpHiredDate.Location = new System.Drawing.Point(441, 268);
             this.dtpHiredDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpHiredDate.Name = "dtpHiredDate";
             this.dtpHiredDate.Size = new System.Drawing.Size(137, 21);
@@ -980,6 +1011,8 @@
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(137, 21);
             this.txtContactNo.TabIndex = 8;
+            this.txtContactNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactNo_KeyPress);
+            this.txtContactNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtContactNo_Validating);
             // 
             // txtMiddleName
             // 
@@ -1002,6 +1035,7 @@
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(137, 23);
             this.cmbGender.TabIndex = 5;
+            this.cmbGender.Validating += new System.ComponentModel.CancelEventHandler(this.cmbGender_Validating);
             // 
             // label8
             // 
@@ -1021,6 +1055,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(137, 21);
             this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.txtFirstName_Validating);
             // 
             // label4
             // 
@@ -1035,7 +1070,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(331, 219);
+            this.label12.Location = new System.Drawing.Point(331, 239);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(78, 15);
@@ -1054,6 +1089,7 @@
             this.cmbCivilStatus.Name = "cmbCivilStatus";
             this.cmbCivilStatus.Size = new System.Drawing.Size(137, 23);
             this.cmbCivilStatus.TabIndex = 9;
+            this.cmbCivilStatus.Validating += new System.ComponentModel.CancelEventHandler(this.cmbCivilStatus_Validating);
             // 
             // txtEmployeeNo
             // 
@@ -1063,6 +1099,7 @@
             this.txtEmployeeNo.Name = "txtEmployeeNo";
             this.txtEmployeeNo.Size = new System.Drawing.Size(137, 21);
             this.txtEmployeeNo.TabIndex = 0;
+            this.txtEmployeeNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmployeeNo_Validating);
             // 
             // txtAddress
             // 
@@ -1073,6 +1110,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(137, 40);
             this.txtAddress.TabIndex = 4;
+            this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddress_Validating);
             // 
             // cmbDepartment
             // 
@@ -1083,16 +1121,17 @@
             "College of Agriculture and Fisheries",
             "College of Management",
             "College of Business Management"});
-            this.cmbDepartment.Location = new System.Drawing.Point(441, 187);
+            this.cmbDepartment.Location = new System.Drawing.Point(441, 207);
             this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(137, 23);
             this.cmbDepartment.TabIndex = 17;
+            this.cmbDepartment.Validating += new System.ComponentModel.CancelEventHandler(this.cmbDepartment_Validating);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(352, 58);
+            this.label10.Location = new System.Drawing.Point(352, 87);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(57, 15);
@@ -1122,7 +1161,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(331, 187);
+            this.label11.Location = new System.Drawing.Point(331, 207);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(78, 15);
@@ -1137,6 +1176,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(137, 21);
             this.txtLastName.TabIndex = 3;
+            this.txtLastName.Validating += new System.ComponentModel.CancelEventHandler(this.txtLastName_Validating);
             // 
             // Panel1
             // 
@@ -1175,6 +1215,10 @@
             this.PictureBox1.TabIndex = 47;
             this.PictureBox1.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmAddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1187,6 +1231,7 @@
             this.Name = "frmAddEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddEmployee";
+            this.Load += new System.EventHandler(this.frmAddEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.grpSeminar.ResumeLayout(false);
             this.grpSeminar.PerformLayout();
@@ -1206,13 +1251,14 @@
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        internal System.Windows.Forms.TextBox txtLeaveCredit;
+        internal System.Windows.Forms.TextBox txtLeaveCredits;
         internal System.Windows.Forms.Label label26;
         internal System.Windows.Forms.Label label27;
         internal System.Windows.Forms.TextBox txtDoctoralYearGraduated;
@@ -1301,5 +1347,6 @@
         internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.Label Label9;
         internal System.Windows.Forms.PictureBox PictureBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

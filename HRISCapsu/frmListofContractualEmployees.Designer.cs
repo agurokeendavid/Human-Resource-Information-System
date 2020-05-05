@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListofContractualEmployees));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListofContractualEmployees));
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.grpFilter = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.Label4 = new System.Windows.Forms.Label();
             this.Panel2 = new System.Windows.Forms.Panel();
+            this.btnModemPort = new System.Windows.Forms.Button();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.Label9 = new System.Windows.Forms.Label();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgRecords = new System.Windows.Forms.DataGridView();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnModemPort = new System.Windows.Forms.Button();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.btnView = new System.Windows.Forms.Button();
             this.grpFilter.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.Panel1.SuspendLayout();
@@ -79,6 +80,19 @@
             this.grpFilter.TabStop = false;
             this.grpFilter.Text = "Filter";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Image = global::HRISCapsu.Properties.Resources.search;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(110, 85);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(104, 41);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "&Search";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // Label4
             // 
             this.Label4.AutoSize = true;
@@ -94,6 +108,7 @@
             this.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Panel2.Controls.Add(this.btnView);
             this.Panel2.Controls.Add(this.btnModemPort);
             this.Panel2.Controls.Add(this.btnSend);
             this.Panel2.Controls.Add(this.btnClose);
@@ -104,6 +119,86 @@
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(1039, 73);
             this.Panel2.TabIndex = 30;
+            // 
+            // btnModemPort
+            // 
+            this.btnModemPort.BackColor = System.Drawing.Color.Transparent;
+            this.btnModemPort.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnModemPort.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModemPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModemPort.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModemPort.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnModemPort.Image = global::HRISCapsu.Properties.Resources.router;
+            this.btnModemPort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModemPort.Location = new System.Drawing.Point(467, 10);
+            this.btnModemPort.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModemPort.Name = "btnModemPort";
+            this.btnModemPort.Size = new System.Drawing.Size(166, 48);
+            this.btnModemPort.TabIndex = 9;
+            this.btnModemPort.Text = "MODEM PORT";
+            this.btnModemPort.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModemPort.UseVisualStyleBackColor = false;
+            this.btnModemPort.Click += new System.EventHandler(this.btnModemPort_Click);
+            // 
+            // btnSend
+            // 
+            this.btnSend.BackColor = System.Drawing.Color.Transparent;
+            this.btnSend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSend.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSend.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnSend.Image = global::HRISCapsu.Properties.Resources.send;
+            this.btnSend.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSend.Location = new System.Drawing.Point(641, 10);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(172, 48);
+            this.btnSend.TabIndex = 8;
+            this.btnSend.Text = "Send Reminder";
+            this.btnSend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSend.UseVisualStyleBackColor = false;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(929, 10);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(100, 48);
+            this.btnClose.TabIndex = 7;
+            this.btnClose.Text = "&Close ";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrint.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(821, 10);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(100, 48);
+            this.btnPrint.TabIndex = 6;
+            this.btnPrint.Text = "&Print  ";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // Label9
             // 
@@ -203,99 +298,6 @@
             this.PictureBox1.TabIndex = 32;
             this.PictureBox1.TabStop = false;
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Image = global::HRISCapsu.Properties.Resources.search;
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(110, 85);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(104, 41);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "&Search";
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btnModemPort
-            // 
-            this.btnModemPort.BackColor = System.Drawing.Color.Transparent;
-            this.btnModemPort.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnModemPort.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModemPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModemPort.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModemPort.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnModemPort.Image = global::HRISCapsu.Properties.Resources.router;
-            this.btnModemPort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModemPort.Location = new System.Drawing.Point(467, 10);
-            this.btnModemPort.Margin = new System.Windows.Forms.Padding(4);
-            this.btnModemPort.Name = "btnModemPort";
-            this.btnModemPort.Size = new System.Drawing.Size(166, 48);
-            this.btnModemPort.TabIndex = 9;
-            this.btnModemPort.Text = "MODEM PORT";
-            this.btnModemPort.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnModemPort.UseVisualStyleBackColor = false;
-            this.btnModemPort.Click += new System.EventHandler(this.btnModemPort_Click);
-            // 
-            // btnSend
-            // 
-            this.btnSend.BackColor = System.Drawing.Color.Transparent;
-            this.btnSend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSend.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSend.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnSend.Image = global::HRISCapsu.Properties.Resources.send;
-            this.btnSend.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSend.Location = new System.Drawing.Point(641, 10);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(172, 48);
-            this.btnSend.TabIndex = 8;
-            this.btnSend.Text = "Send Reminder";
-            this.btnSend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSend.UseVisualStyleBackColor = false;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(929, 10);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(100, 48);
-            this.btnClose.TabIndex = 7;
-            this.btnClose.Text = "&Close ";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
-            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPrint.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(821, 10);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(100, 48);
-            this.btnPrint.TabIndex = 6;
-            this.btnPrint.Text = "&Print  ";
-            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrint.UseVisualStyleBackColor = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
@@ -305,6 +307,26 @@
             this.lblStatus.Size = new System.Drawing.Size(52, 17);
             this.lblStatus.TabIndex = 33;
             this.lblStatus.Text = "Status:";
+            // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.Transparent;
+            this.btnView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnView.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnView.Image = global::HRISCapsu.Properties.Resources.search;
+            this.btnView.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnView.Location = new System.Drawing.Point(359, 10);
+            this.btnView.Margin = new System.Windows.Forms.Padding(4);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(100, 48);
+            this.btnView.TabIndex = 10;
+            this.btnView.Text = "&View";
+            this.btnView.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // frmListofContractualEmployees
             // 
@@ -352,5 +374,6 @@
         internal System.Windows.Forms.Button btnSend;
         internal System.Windows.Forms.Button btnModemPort;
         internal System.Windows.Forms.Label lblStatus;
+        internal System.Windows.Forms.Button btnView;
     }
 }

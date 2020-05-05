@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListofEmployees));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.grpFilter = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -45,6 +45,55 @@
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgRecords = new System.Windows.Forms.DataGridView();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.employee_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middle_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_of_birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.place_of_birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contact_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.civil_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.highest_degree = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bs_course = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bs_year_graduated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bs_school = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.masteral_course = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.masteral_year_graduated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.masteral_school = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctoral_course = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctoral_year_graduated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctoral_school = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eligibility = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employee_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unique_item_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salary_grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.step = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.work_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employee_photo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentpath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hired_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.end_of_contract = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.local_seminar_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.local_seminar_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.local_from = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.local_to = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regional_seminar_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regional_seminar_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regional_from = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regional_to = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.national_seminar_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.national_seminar_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.national_from = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.national_to = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.international_seminar_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.international_seminar_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.international_from = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.international_to = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnView = new System.Windows.Forms.Button();
             this.grpFilter.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.Panel1.SuspendLayout();
@@ -104,6 +153,7 @@
             this.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Panel2.Controls.Add(this.btnView);
             this.Panel2.Controls.Add(this.btnClose);
             this.Panel2.Controls.Add(this.btnPrint);
             this.Panel2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,21 +244,70 @@
             // 
             this.dtgRecords.AllowUserToAddRows = false;
             this.dtgRecords.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FloralWhite;
-            this.dtgRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FloralWhite;
+            this.dtgRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dtgRecords.BackgroundColor = System.Drawing.Color.White;
             this.dtgRecords.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgRecords.ColumnHeadersHeight = 30;
+            this.dtgRecords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.employee_no,
+            this.first_name,
+            this.middle_name,
+            this.last_name,
+            this.address,
+            this.gender,
+            this.date_of_birth,
+            this.place_of_birth,
+            this.contact_no,
+            this.civil_status,
+            this.highest_degree,
+            this.bs_course,
+            this.bs_year_graduated,
+            this.bs_school,
+            this.masteral_course,
+            this.masteral_year_graduated,
+            this.masteral_school,
+            this.doctoral_course,
+            this.doctoral_year_graduated,
+            this.doctoral_school,
+            this.eligibility,
+            this.employee_type,
+            this.position,
+            this.unique_item_no,
+            this.salary_grade,
+            this.step,
+            this.department,
+            this.work_status,
+            this.employee_photo,
+            this.documentpath,
+            this.hired_date,
+            this.end_of_contract,
+            this.local_seminar_name,
+            this.local_seminar_type,
+            this.local_from,
+            this.local_to,
+            this.regional_seminar_name,
+            this.regional_seminar_type,
+            this.regional_from,
+            this.regional_to,
+            this.national_seminar_name,
+            this.national_seminar_type,
+            this.national_from,
+            this.national_to,
+            this.international_seminar_name,
+            this.international_seminar_type,
+            this.international_from,
+            this.international_to});
             this.dtgRecords.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtgRecords.EnableHeadersVisualStyles = false;
             this.dtgRecords.GridColor = System.Drawing.Color.PaleTurquoise;
@@ -218,22 +317,22 @@
             this.dtgRecords.Name = "dtgRecords";
             this.dtgRecords.ReadOnly = true;
             this.dtgRecords.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dtgRecords.RowHeadersVisible = false;
             this.dtgRecords.RowHeadersWidth = 25;
             this.dtgRecords.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgRecords.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgRecords.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgRecords.RowTemplate.Height = 18;
             this.dtgRecords.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -251,6 +350,495 @@
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox1.TabIndex = 27;
             this.PictureBox1.TabStop = false;
+            // 
+            // employee_no
+            // 
+            this.employee_no.DataPropertyName = "employee_no";
+            this.employee_no.HeaderText = "Employee No";
+            this.employee_no.MinimumWidth = 6;
+            this.employee_no.Name = "employee_no";
+            this.employee_no.ReadOnly = true;
+            this.employee_no.Width = 127;
+            // 
+            // first_name
+            // 
+            this.first_name.DataPropertyName = "first_name";
+            this.first_name.HeaderText = "First Name";
+            this.first_name.MinimumWidth = 6;
+            this.first_name.Name = "first_name";
+            this.first_name.ReadOnly = true;
+            this.first_name.Width = 111;
+            // 
+            // middle_name
+            // 
+            this.middle_name.DataPropertyName = "middle_name";
+            this.middle_name.HeaderText = "Middle Name";
+            this.middle_name.MinimumWidth = 6;
+            this.middle_name.Name = "middle_name";
+            this.middle_name.ReadOnly = true;
+            this.middle_name.Width = 123;
+            // 
+            // last_name
+            // 
+            this.last_name.DataPropertyName = "last_name";
+            this.last_name.HeaderText = "Last Name";
+            this.last_name.MinimumWidth = 6;
+            this.last_name.Name = "last_name";
+            this.last_name.ReadOnly = true;
+            this.last_name.Width = 110;
+            // 
+            // address
+            // 
+            this.address.DataPropertyName = "address";
+            this.address.HeaderText = "Address";
+            this.address.MinimumWidth = 6;
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            this.address.Width = 94;
+            // 
+            // gender
+            // 
+            this.gender.DataPropertyName = "gender";
+            this.gender.HeaderText = "Gender";
+            this.gender.MinimumWidth = 6;
+            this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
+            this.gender.Width = 87;
+            // 
+            // date_of_birth
+            // 
+            this.date_of_birth.DataPropertyName = "date_of_birth";
+            this.date_of_birth.HeaderText = "Date of Birth";
+            this.date_of_birth.MinimumWidth = 6;
+            this.date_of_birth.Name = "date_of_birth";
+            this.date_of_birth.ReadOnly = true;
+            this.date_of_birth.Visible = false;
+            this.date_of_birth.Width = 127;
+            // 
+            // place_of_birth
+            // 
+            this.place_of_birth.DataPropertyName = "place_of_birth";
+            this.place_of_birth.HeaderText = "Place of Birth";
+            this.place_of_birth.MinimumWidth = 6;
+            this.place_of_birth.Name = "place_of_birth";
+            this.place_of_birth.ReadOnly = true;
+            this.place_of_birth.Visible = false;
+            this.place_of_birth.Width = 128;
+            // 
+            // contact_no
+            // 
+            this.contact_no.DataPropertyName = "contact_no";
+            this.contact_no.HeaderText = "Contact No.";
+            this.contact_no.MinimumWidth = 6;
+            this.contact_no.Name = "contact_no";
+            this.contact_no.ReadOnly = true;
+            this.contact_no.Visible = false;
+            this.contact_no.Width = 120;
+            // 
+            // civil_status
+            // 
+            this.civil_status.DataPropertyName = "civil_status";
+            this.civil_status.HeaderText = "Civil Status";
+            this.civil_status.MinimumWidth = 6;
+            this.civil_status.Name = "civil_status";
+            this.civil_status.ReadOnly = true;
+            this.civil_status.Visible = false;
+            this.civil_status.Width = 115;
+            // 
+            // highest_degree
+            // 
+            this.highest_degree.DataPropertyName = "highest_degree";
+            this.highest_degree.HeaderText = "Highest Degree";
+            this.highest_degree.MinimumWidth = 6;
+            this.highest_degree.Name = "highest_degree";
+            this.highest_degree.ReadOnly = true;
+            this.highest_degree.Width = 144;
+            // 
+            // bs_course
+            // 
+            this.bs_course.DataPropertyName = "bs_course";
+            this.bs_course.HeaderText = "BS Course";
+            this.bs_course.MinimumWidth = 6;
+            this.bs_course.Name = "bs_course";
+            this.bs_course.ReadOnly = true;
+            this.bs_course.Visible = false;
+            this.bs_course.Width = 111;
+            // 
+            // bs_year_graduated
+            // 
+            this.bs_year_graduated.DataPropertyName = "bs_year_graduated";
+            this.bs_year_graduated.HeaderText = "BS Year Graduated";
+            this.bs_year_graduated.MinimumWidth = 6;
+            this.bs_year_graduated.Name = "bs_year_graduated";
+            this.bs_year_graduated.ReadOnly = true;
+            this.bs_year_graduated.Visible = false;
+            this.bs_year_graduated.Width = 170;
+            // 
+            // bs_school
+            // 
+            this.bs_school.DataPropertyName = "bs_school";
+            this.bs_school.HeaderText = "BS School";
+            this.bs_school.MinimumWidth = 6;
+            this.bs_school.Name = "bs_school";
+            this.bs_school.ReadOnly = true;
+            this.bs_school.Visible = false;
+            this.bs_school.Width = 108;
+            // 
+            // masteral_course
+            // 
+            this.masteral_course.DataPropertyName = "masteral_course";
+            this.masteral_course.HeaderText = "Masteral Course";
+            this.masteral_course.MinimumWidth = 6;
+            this.masteral_course.Name = "masteral_course";
+            this.masteral_course.ReadOnly = true;
+            this.masteral_course.Visible = false;
+            this.masteral_course.Width = 149;
+            // 
+            // masteral_year_graduated
+            // 
+            this.masteral_year_graduated.DataPropertyName = "masteral_year_graduated";
+            this.masteral_year_graduated.HeaderText = "Masteral Year Graduated";
+            this.masteral_year_graduated.MinimumWidth = 6;
+            this.masteral_year_graduated.Name = "masteral_year_graduated";
+            this.masteral_year_graduated.ReadOnly = true;
+            this.masteral_year_graduated.Visible = false;
+            this.masteral_year_graduated.Width = 208;
+            // 
+            // masteral_school
+            // 
+            this.masteral_school.DataPropertyName = "masteral_school";
+            this.masteral_school.HeaderText = "Masteral School";
+            this.masteral_school.MinimumWidth = 6;
+            this.masteral_school.Name = "masteral_school";
+            this.masteral_school.ReadOnly = true;
+            this.masteral_school.Visible = false;
+            this.masteral_school.Width = 146;
+            // 
+            // doctoral_course
+            // 
+            this.doctoral_course.DataPropertyName = "doctoral_course";
+            this.doctoral_course.HeaderText = "Doctoral Course";
+            this.doctoral_course.MinimumWidth = 6;
+            this.doctoral_course.Name = "doctoral_course";
+            this.doctoral_course.ReadOnly = true;
+            this.doctoral_course.Visible = false;
+            this.doctoral_course.Width = 150;
+            // 
+            // doctoral_year_graduated
+            // 
+            this.doctoral_year_graduated.DataPropertyName = "doctoral_year_graduated";
+            this.doctoral_year_graduated.HeaderText = "Doctoral Year Graduated";
+            this.doctoral_year_graduated.MinimumWidth = 6;
+            this.doctoral_year_graduated.Name = "doctoral_year_graduated";
+            this.doctoral_year_graduated.ReadOnly = true;
+            this.doctoral_year_graduated.Visible = false;
+            this.doctoral_year_graduated.Width = 209;
+            // 
+            // doctoral_school
+            // 
+            this.doctoral_school.DataPropertyName = "doctoral_school";
+            this.doctoral_school.HeaderText = "Doctoral School";
+            this.doctoral_school.MinimumWidth = 6;
+            this.doctoral_school.Name = "doctoral_school";
+            this.doctoral_school.ReadOnly = true;
+            this.doctoral_school.Visible = false;
+            this.doctoral_school.Width = 147;
+            // 
+            // eligibility
+            // 
+            this.eligibility.DataPropertyName = "eligibility";
+            this.eligibility.HeaderText = "Eligibility";
+            this.eligibility.MinimumWidth = 6;
+            this.eligibility.Name = "eligibility";
+            this.eligibility.ReadOnly = true;
+            this.eligibility.Visible = false;
+            this.eligibility.Width = 95;
+            // 
+            // employee_type
+            // 
+            this.employee_type.DataPropertyName = "employee_type";
+            this.employee_type.HeaderText = "Employee Type";
+            this.employee_type.MinimumWidth = 6;
+            this.employee_type.Name = "employee_type";
+            this.employee_type.ReadOnly = true;
+            this.employee_type.Width = 141;
+            // 
+            // position
+            // 
+            this.position.DataPropertyName = "position";
+            this.position.HeaderText = "Position";
+            this.position.MinimumWidth = 6;
+            this.position.Name = "position";
+            this.position.ReadOnly = true;
+            this.position.Width = 91;
+            // 
+            // unique_item_no
+            // 
+            this.unique_item_no.DataPropertyName = "unique_item_no";
+            this.unique_item_no.HeaderText = "Unique Item No.";
+            this.unique_item_no.MinimumWidth = 6;
+            this.unique_item_no.Name = "unique_item_no";
+            this.unique_item_no.ReadOnly = true;
+            this.unique_item_no.Visible = false;
+            this.unique_item_no.Width = 150;
+            // 
+            // salary_grade
+            // 
+            this.salary_grade.DataPropertyName = "salary_grade";
+            this.salary_grade.HeaderText = "Salary Grade";
+            this.salary_grade.MinimumWidth = 6;
+            this.salary_grade.Name = "salary_grade";
+            this.salary_grade.ReadOnly = true;
+            this.salary_grade.Visible = false;
+            this.salary_grade.Width = 126;
+            // 
+            // step
+            // 
+            this.step.DataPropertyName = "step";
+            this.step.HeaderText = "Step";
+            this.step.MinimumWidth = 6;
+            this.step.Name = "step";
+            this.step.ReadOnly = true;
+            this.step.Visible = false;
+            this.step.Width = 69;
+            // 
+            // department
+            // 
+            this.department.DataPropertyName = "department";
+            this.department.HeaderText = "Department";
+            this.department.MinimumWidth = 6;
+            this.department.Name = "department";
+            this.department.ReadOnly = true;
+            this.department.Width = 120;
+            // 
+            // work_status
+            // 
+            this.work_status.DataPropertyName = "work_status";
+            this.work_status.HeaderText = "Employee Status";
+            this.work_status.MinimumWidth = 6;
+            this.work_status.Name = "work_status";
+            this.work_status.ReadOnly = true;
+            this.work_status.Width = 155;
+            // 
+            // employee_photo
+            // 
+            this.employee_photo.DataPropertyName = "employee_photo";
+            this.employee_photo.HeaderText = "Photo";
+            this.employee_photo.MinimumWidth = 6;
+            this.employee_photo.Name = "employee_photo";
+            this.employee_photo.ReadOnly = true;
+            this.employee_photo.Visible = false;
+            this.employee_photo.Width = 77;
+            // 
+            // documentpath
+            // 
+            this.documentpath.DataPropertyName = "documentpath";
+            this.documentpath.HeaderText = "Path";
+            this.documentpath.MinimumWidth = 6;
+            this.documentpath.Name = "documentpath";
+            this.documentpath.ReadOnly = true;
+            this.documentpath.Visible = false;
+            this.documentpath.Width = 67;
+            // 
+            // hired_date
+            // 
+            this.hired_date.DataPropertyName = "hired_date";
+            this.hired_date.HeaderText = "Hired Date";
+            this.hired_date.MinimumWidth = 6;
+            this.hired_date.Name = "hired_date";
+            this.hired_date.ReadOnly = true;
+            this.hired_date.Visible = false;
+            this.hired_date.Width = 110;
+            // 
+            // end_of_contract
+            // 
+            this.end_of_contract.DataPropertyName = "end_of_contract";
+            this.end_of_contract.HeaderText = "End of Contract";
+            this.end_of_contract.MinimumWidth = 6;
+            this.end_of_contract.Name = "end_of_contract";
+            this.end_of_contract.ReadOnly = true;
+            this.end_of_contract.Visible = false;
+            this.end_of_contract.Width = 148;
+            // 
+            // local_seminar_name
+            // 
+            this.local_seminar_name.DataPropertyName = "local_seminar_name";
+            this.local_seminar_name.HeaderText = "Local Seminar Name";
+            this.local_seminar_name.MinimumWidth = 6;
+            this.local_seminar_name.Name = "local_seminar_name";
+            this.local_seminar_name.ReadOnly = true;
+            this.local_seminar_name.Visible = false;
+            this.local_seminar_name.Width = 177;
+            // 
+            // local_seminar_type
+            // 
+            this.local_seminar_type.DataPropertyName = "local_seminar_type";
+            this.local_seminar_type.HeaderText = "Local Seminar Type";
+            this.local_seminar_type.MinimumWidth = 6;
+            this.local_seminar_type.Name = "local_seminar_type";
+            this.local_seminar_type.ReadOnly = true;
+            this.local_seminar_type.Visible = false;
+            this.local_seminar_type.Width = 171;
+            // 
+            // local_from
+            // 
+            this.local_from.DataPropertyName = "local_from";
+            this.local_from.HeaderText = "Local From";
+            this.local_from.MinimumWidth = 6;
+            this.local_from.Name = "local_from";
+            this.local_from.ReadOnly = true;
+            this.local_from.Visible = false;
+            this.local_from.Width = 112;
+            // 
+            // local_to
+            // 
+            this.local_to.DataPropertyName = "local_to";
+            this.local_to.HeaderText = "Local To";
+            this.local_to.MinimumWidth = 6;
+            this.local_to.Name = "local_to";
+            this.local_to.ReadOnly = true;
+            this.local_to.Visible = false;
+            this.local_to.Width = 92;
+            // 
+            // regional_seminar_name
+            // 
+            this.regional_seminar_name.DataPropertyName = "regional_seminar_name";
+            this.regional_seminar_name.HeaderText = "Regional Seminar Name";
+            this.regional_seminar_name.MinimumWidth = 6;
+            this.regional_seminar_name.Name = "regional_seminar_name";
+            this.regional_seminar_name.ReadOnly = true;
+            this.regional_seminar_name.Visible = false;
+            this.regional_seminar_name.Width = 201;
+            // 
+            // regional_seminar_type
+            // 
+            this.regional_seminar_type.DataPropertyName = "regional_seminar_type";
+            this.regional_seminar_type.HeaderText = "Regional Seminar Type";
+            this.regional_seminar_type.MinimumWidth = 6;
+            this.regional_seminar_type.Name = "regional_seminar_type";
+            this.regional_seminar_type.ReadOnly = true;
+            this.regional_seminar_type.Visible = false;
+            this.regional_seminar_type.Width = 195;
+            // 
+            // regional_from
+            // 
+            this.regional_from.DataPropertyName = "regional_from";
+            this.regional_from.HeaderText = "Regional From";
+            this.regional_from.MinimumWidth = 6;
+            this.regional_from.Name = "regional_from";
+            this.regional_from.ReadOnly = true;
+            this.regional_from.Visible = false;
+            this.regional_from.Width = 136;
+            // 
+            // regional_to
+            // 
+            this.regional_to.DataPropertyName = "regional_to";
+            this.regional_to.HeaderText = "Regional To";
+            this.regional_to.MinimumWidth = 6;
+            this.regional_to.Name = "regional_to";
+            this.regional_to.ReadOnly = true;
+            this.regional_to.Visible = false;
+            this.regional_to.Width = 116;
+            // 
+            // national_seminar_name
+            // 
+            this.national_seminar_name.DataPropertyName = "national_seminar_name";
+            this.national_seminar_name.HeaderText = "National Seminar Name";
+            this.national_seminar_name.MinimumWidth = 6;
+            this.national_seminar_name.Name = "national_seminar_name";
+            this.national_seminar_name.ReadOnly = true;
+            this.national_seminar_name.Visible = false;
+            this.national_seminar_name.Width = 198;
+            // 
+            // national_seminar_type
+            // 
+            this.national_seminar_type.DataPropertyName = "national_seminar_type";
+            this.national_seminar_type.HeaderText = "National Seminar Type";
+            this.national_seminar_type.MinimumWidth = 6;
+            this.national_seminar_type.Name = "national_seminar_type";
+            this.national_seminar_type.ReadOnly = true;
+            this.national_seminar_type.Visible = false;
+            this.national_seminar_type.Width = 192;
+            // 
+            // national_from
+            // 
+            this.national_from.DataPropertyName = "national_from";
+            this.national_from.HeaderText = "National From";
+            this.national_from.MinimumWidth = 6;
+            this.national_from.Name = "national_from";
+            this.national_from.ReadOnly = true;
+            this.national_from.Visible = false;
+            this.national_from.Width = 133;
+            // 
+            // national_to
+            // 
+            this.national_to.DataPropertyName = "national_to";
+            this.national_to.HeaderText = "National To";
+            this.national_to.MinimumWidth = 6;
+            this.national_to.Name = "national_to";
+            this.national_to.ReadOnly = true;
+            this.national_to.Visible = false;
+            this.national_to.Width = 113;
+            // 
+            // international_seminar_name
+            // 
+            this.international_seminar_name.DataPropertyName = "international_seminar_name";
+            this.international_seminar_name.HeaderText = "International Seminar Name";
+            this.international_seminar_name.MinimumWidth = 6;
+            this.international_seminar_name.Name = "international_seminar_name";
+            this.international_seminar_name.ReadOnly = true;
+            this.international_seminar_name.Visible = false;
+            this.international_seminar_name.Width = 231;
+            // 
+            // international_seminar_type
+            // 
+            this.international_seminar_type.DataPropertyName = "international_seminar_type";
+            this.international_seminar_type.HeaderText = "International Seminar Type";
+            this.international_seminar_type.MinimumWidth = 6;
+            this.international_seminar_type.Name = "international_seminar_type";
+            this.international_seminar_type.ReadOnly = true;
+            this.international_seminar_type.Visible = false;
+            this.international_seminar_type.Width = 225;
+            // 
+            // international_from
+            // 
+            this.international_from.DataPropertyName = "international_to";
+            this.international_from.HeaderText = "International From";
+            this.international_from.MinimumWidth = 6;
+            this.international_from.Name = "international_from";
+            this.international_from.ReadOnly = true;
+            this.international_from.Visible = false;
+            this.international_from.Width = 166;
+            // 
+            // international_to
+            // 
+            this.international_to.DataPropertyName = "international_to";
+            this.international_to.HeaderText = "International To";
+            this.international_to.MinimumWidth = 6;
+            this.international_to.Name = "international_to";
+            this.international_to.ReadOnly = true;
+            this.international_to.Visible = false;
+            this.international_to.Width = 146;
+            // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.Transparent;
+            this.btnView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnView.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnView.Image = global::HRISCapsu.Properties.Resources.search;
+            this.btnView.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnView.Location = new System.Drawing.Point(713, 10);
+            this.btnView.Margin = new System.Windows.Forms.Padding(4);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(100, 48);
+            this.btnView.TabIndex = 8;
+            this.btnView.Text = "&View";
+            this.btnView.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // frmListofEmployees
             // 
@@ -292,5 +880,54 @@
         internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.DataGridView dtgRecords;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employee_no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn first_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn middle_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn last_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date_of_birth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn place_of_birth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contact_no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn civil_status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn highest_degree;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bs_course;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bs_year_graduated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bs_school;
+        private System.Windows.Forms.DataGridViewTextBoxColumn masteral_course;
+        private System.Windows.Forms.DataGridViewTextBoxColumn masteral_year_graduated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn masteral_school;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doctoral_course;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doctoral_year_graduated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doctoral_school;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eligibility;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employee_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn position;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unique_item_no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salary_grade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn step;
+        private System.Windows.Forms.DataGridViewTextBoxColumn department;
+        private System.Windows.Forms.DataGridViewTextBoxColumn work_status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employee_photo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn documentpath;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hired_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn end_of_contract;
+        private System.Windows.Forms.DataGridViewTextBoxColumn local_seminar_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn local_seminar_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn local_from;
+        private System.Windows.Forms.DataGridViewTextBoxColumn local_to;
+        private System.Windows.Forms.DataGridViewTextBoxColumn regional_seminar_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn regional_seminar_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn regional_from;
+        private System.Windows.Forms.DataGridViewTextBoxColumn regional_to;
+        private System.Windows.Forms.DataGridViewTextBoxColumn national_seminar_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn national_seminar_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn national_from;
+        private System.Windows.Forms.DataGridViewTextBoxColumn national_to;
+        private System.Windows.Forms.DataGridViewTextBoxColumn international_seminar_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn international_seminar_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn international_from;
+        private System.Windows.Forms.DataGridViewTextBoxColumn international_to;
+        internal System.Windows.Forms.Button btnView;
     }
 }

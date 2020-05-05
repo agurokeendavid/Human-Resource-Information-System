@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 17, 2020 at 03:16 PM
+-- Generation Time: May 05, 2020 at 03:50 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -104,6 +104,20 @@ CREATE TABLE `tbl_leave` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_leave_credits`
+--
+
+CREATE TABLE `tbl_leave_credits` (
+  `id` int(1) NOT NULL,
+  `employee_no` varchar(50) NOT NULL,
+  `leave_credit` int(4) NOT NULL,
+  `remaining_leave_credit` int(4) NOT NULL,
+  `is_deleted` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_list_of_seminars`
 --
 
@@ -196,6 +210,12 @@ ALTER TABLE `tbl_leave`
   ADD KEY `employee_no_fk` (`employee_no`);
 
 --
+-- Indexes for table `tbl_leave_credits`
+--
+ALTER TABLE `tbl_leave_credits`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_list_of_seminars`
 --
 ALTER TABLE `tbl_list_of_seminars`
@@ -223,7 +243,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `ports`
@@ -235,13 +255,19 @@ ALTER TABLE `ports`
 -- AUTO_INCREMENT for table `tbl_leave`
 --
 ALTER TABLE `tbl_leave`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `tbl_leave_credits`
+--
+ALTER TABLE `tbl_leave_credits`
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_list_of_seminars`
 --
 ALTER TABLE `tbl_list_of_seminars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tbl_positions`

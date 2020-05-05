@@ -43,7 +43,7 @@
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Label20 = new System.Windows.Forms.Label();
             this.panelEmployeeInformation = new System.Windows.Forms.Panel();
-            this.txtLeaveCredits = new System.Windows.Forms.TextBox();
+            this.lblLeaveCredits = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
@@ -86,7 +86,7 @@
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(168, 39);
+            this.btnSelect.Location = new System.Drawing.Point(168, 59);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(93, 30);
             this.btnSelect.TabIndex = 1;
@@ -120,7 +120,7 @@
             // 
             this.txtEmployeeNo.BackColor = System.Drawing.Color.White;
             this.txtEmployeeNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeNo.Location = new System.Drawing.Point(27, 39);
+            this.txtEmployeeNo.Location = new System.Drawing.Point(27, 59);
             this.txtEmployeeNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmployeeNo.Name = "txtEmployeeNo";
             this.txtEmployeeNo.Size = new System.Drawing.Size(134, 30);
@@ -130,7 +130,7 @@
             // 
             this.Label16.AutoSize = true;
             this.Label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label16.Location = new System.Drawing.Point(22, 10);
+            this.Label16.Location = new System.Drawing.Point(22, 30);
             this.Label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(134, 25);
@@ -190,7 +190,7 @@
             // 
             this.Label20.AutoSize = true;
             this.Label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label20.Location = new System.Drawing.Point(22, 73);
+            this.Label20.Location = new System.Drawing.Point(22, 102);
             this.Label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label20.Name = "Label20";
             this.Label20.Size = new System.Drawing.Size(139, 25);
@@ -201,7 +201,7 @@
             // 
             this.panelEmployeeInformation.BackColor = System.Drawing.Color.Transparent;
             this.panelEmployeeInformation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelEmployeeInformation.Controls.Add(this.txtLeaveCredits);
+            this.panelEmployeeInformation.Controls.Add(this.lblLeaveCredits);
             this.panelEmployeeInformation.Controls.Add(this.txtReason);
             this.panelEmployeeInformation.Controls.Add(this.dtpLeaveTo);
             this.panelEmployeeInformation.Controls.Add(this.label3);
@@ -220,16 +220,16 @@
             this.panelEmployeeInformation.Size = new System.Drawing.Size(374, 477);
             this.panelEmployeeInformation.TabIndex = 9;
             // 
-            // txtLeaveCredits
+            // lblLeaveCredits
             // 
-            this.txtLeaveCredits.BackColor = System.Drawing.Color.White;
-            this.txtLeaveCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLeaveCredits.Location = new System.Drawing.Point(27, 102);
-            this.txtLeaveCredits.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLeaveCredits.Name = "txtLeaveCredits";
-            this.txtLeaveCredits.Size = new System.Drawing.Size(80, 30);
-            this.txtLeaveCredits.TabIndex = 2;
-            this.txtLeaveCredits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLeaveCredits_KeyPress);
+            this.lblLeaveCredits.AutoSize = true;
+            this.lblLeaveCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLeaveCredits.Location = new System.Drawing.Point(169, 102);
+            this.lblLeaveCredits.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLeaveCredits.Name = "lblLeaveCredits";
+            this.lblLeaveCredits.Size = new System.Drawing.Size(23, 25);
+            this.lblLeaveCredits.TabIndex = 36;
+            this.lblLeaveCredits.Text = "0";
             // 
             // btnCancel
             // 
@@ -307,6 +307,6 @@
         internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.Label Label20;
         internal System.Windows.Forms.Panel panelEmployeeInformation;
-        internal System.Windows.Forms.TextBox txtLeaveCredits;
+        internal System.Windows.Forms.Label lblLeaveCredits;
     }
 }

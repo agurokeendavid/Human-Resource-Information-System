@@ -502,11 +502,6 @@ namespace HRISCapsu
                             }
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("No data found!", "Not found",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
                 }
             }
             catch (Exception ex)
@@ -565,6 +560,12 @@ namespace HRISCapsu
         private void btnModemPort_Click(object sender, EventArgs e)
         {
             frmChooseModem frm = new frmChooseModem();
+            frm.ShowDialog();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            var frm = new frmViewContractualEmployees(dtgRecords.CurrentRow.Cells[0].Value.ToString());
             frm.ShowDialog();
         }
     }

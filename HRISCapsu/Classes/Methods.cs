@@ -41,8 +41,27 @@ namespace HRISCapsu.Classes
             }
             catch (Exception exception)
             {
-                //MessageBox.Show("Failed! " + exception.Message, "Error",
-                //    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed! " + exception.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void ClearGroupControls(Control group)
+        {
+            try
+            {
+                foreach (Control control in group.Controls)
+                {
+                    if (control is TextBox)
+                    {
+                        control.ResetText();
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Failed! " + exception.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

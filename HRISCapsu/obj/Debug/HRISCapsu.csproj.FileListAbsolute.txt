@@ -915,3 +915,7 @@ D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\D
 D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\RdlCompile.compiled
 D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewAllNonAcademicEmployees.resources
 D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.Graphs.frmPositionGraph.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmAddEmployee.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmEditEmployee.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmEmployeesOnLeave.resources
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmViewContractualEmployees.resources

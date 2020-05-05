@@ -35,7 +35,8 @@
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allEmployeesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.academicToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.regularToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,18 +46,22 @@
             this.contractualToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.leaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.applyLeaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeesOnLeaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.academicToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.nonAcademicToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.positionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addPositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.academicToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.allAcademicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.regularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contractualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nonAcademicToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.allNonAcademicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.regularToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contractualToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.allEmployeesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.academicToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.allToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.regularToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contractualToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.nonAcademicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.regularToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contractualToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.graphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.academicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nonAcademicToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,7 +79,6 @@
             this.tsslCurrentDateAndTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -124,8 +128,8 @@
             // recordsToolStripMenuItem
             // 
             this.recordsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.allEmployeesToolStripMenuItem1,
             this.addEmployeeToolStripMenuItem,
+            this.editEmployeeToolStripMenuItem,
             this.employeesToolStripMenuItem,
             this.leaveToolStripMenuItem,
             this.positionsToolStripMenuItem});
@@ -133,12 +137,19 @@
             this.recordsToolStripMenuItem.Size = new System.Drawing.Size(185, 45);
             this.recordsToolStripMenuItem.Text = "HR Records";
             // 
-            // allEmployeesToolStripMenuItem1
+            // addEmployeeToolStripMenuItem
             // 
-            this.allEmployeesToolStripMenuItem1.Name = "allEmployeesToolStripMenuItem1";
-            this.allEmployeesToolStripMenuItem1.Size = new System.Drawing.Size(304, 46);
-            this.allEmployeesToolStripMenuItem1.Text = "All Employees";
-            this.allEmployeesToolStripMenuItem1.Click += new System.EventHandler(this.allEmployeesToolStripMenuItem1_Click);
+            this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(304, 46);
+            this.addEmployeeToolStripMenuItem.Text = "Add Employee";
+            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
+            // 
+            // editEmployeeToolStripMenuItem
+            // 
+            this.editEmployeeToolStripMenuItem.Name = "editEmployeeToolStripMenuItem";
+            this.editEmployeeToolStripMenuItem.Size = new System.Drawing.Size(304, 46);
+            this.editEmployeeToolStripMenuItem.Text = "Edit Employee";
+            this.editEmployeeToolStripMenuItem.Click += new System.EventHandler(this.editEmployeeToolStripMenuItem_Click);
             // 
             // employeesToolStripMenuItem
             // 
@@ -198,7 +209,8 @@
             // leaveToolStripMenuItem
             // 
             this.leaveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.applyLeaveToolStripMenuItem});
+            this.applyLeaveToolStripMenuItem,
+            this.employeesOnLeaveToolStripMenuItem});
             this.leaveToolStripMenuItem.Name = "leaveToolStripMenuItem";
             this.leaveToolStripMenuItem.Size = new System.Drawing.Size(304, 46);
             this.leaveToolStripMenuItem.Text = "Leave";
@@ -206,9 +218,32 @@
             // applyLeaveToolStripMenuItem
             // 
             this.applyLeaveToolStripMenuItem.Name = "applyLeaveToolStripMenuItem";
-            this.applyLeaveToolStripMenuItem.Size = new System.Drawing.Size(270, 46);
+            this.applyLeaveToolStripMenuItem.Size = new System.Drawing.Size(380, 46);
             this.applyLeaveToolStripMenuItem.Text = "Apply Leave";
             this.applyLeaveToolStripMenuItem.Click += new System.EventHandler(this.applyLeaveToolStripMenuItem_Click);
+            // 
+            // employeesOnLeaveToolStripMenuItem
+            // 
+            this.employeesOnLeaveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.academicToolStripMenuItem2,
+            this.nonAcademicToolStripMenuItem3});
+            this.employeesOnLeaveToolStripMenuItem.Name = "employeesOnLeaveToolStripMenuItem";
+            this.employeesOnLeaveToolStripMenuItem.Size = new System.Drawing.Size(380, 46);
+            this.employeesOnLeaveToolStripMenuItem.Text = "Employees on Leave";
+            // 
+            // academicToolStripMenuItem2
+            // 
+            this.academicToolStripMenuItem2.Name = "academicToolStripMenuItem2";
+            this.academicToolStripMenuItem2.Size = new System.Drawing.Size(324, 46);
+            this.academicToolStripMenuItem2.Text = "Academic";
+            this.academicToolStripMenuItem2.Click += new System.EventHandler(this.academicToolStripMenuItem2_Click);
+            // 
+            // nonAcademicToolStripMenuItem3
+            // 
+            this.nonAcademicToolStripMenuItem3.Name = "nonAcademicToolStripMenuItem3";
+            this.nonAcademicToolStripMenuItem3.Size = new System.Drawing.Size(324, 46);
+            this.nonAcademicToolStripMenuItem3.Text = "Non - Academic";
+            this.nonAcademicToolStripMenuItem3.Click += new System.EventHandler(this.nonAcademicToolStripMenuItem3_Click);
             // 
             // positionsToolStripMenuItem
             // 
@@ -228,83 +263,91 @@
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.allEmployeesToolStripMenuItem,
-            this.academicToolStripMenuItem2,
-            this.nonAcademicToolStripMenuItem3,
+            this.employeesToolStripMenuItem1,
             this.graphToolStripMenuItem,
             this.seminarsAttendedToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(134, 45);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
-            // allEmployeesToolStripMenuItem
+            // employeesToolStripMenuItem1
             // 
-            this.allEmployeesToolStripMenuItem.Name = "allEmployeesToolStripMenuItem";
-            this.allEmployeesToolStripMenuItem.Size = new System.Drawing.Size(557, 46);
-            this.allEmployeesToolStripMenuItem.Text = "All Employees";
-            this.allEmployeesToolStripMenuItem.Click += new System.EventHandler(this.allEmployeesToolStripMenuItem_Click);
+            this.employeesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.allEmployeesToolStripMenuItem1,
+            this.academicToolStripMenuItem3,
+            this.nonAcademicToolStripMenuItem});
+            this.employeesToolStripMenuItem1.Name = "employeesToolStripMenuItem1";
+            this.employeesToolStripMenuItem1.Size = new System.Drawing.Size(557, 46);
+            this.employeesToolStripMenuItem1.Text = "Employees";
             // 
-            // academicToolStripMenuItem2
+            // allEmployeesToolStripMenuItem1
             // 
-            this.academicToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.allAcademicToolStripMenuItem,
-            this.regularToolStripMenuItem,
-            this.contractualToolStripMenuItem});
-            this.academicToolStripMenuItem2.Name = "academicToolStripMenuItem2";
-            this.academicToolStripMenuItem2.Size = new System.Drawing.Size(557, 46);
-            this.academicToolStripMenuItem2.Text = "Academic";
+            this.allEmployeesToolStripMenuItem1.Name = "allEmployeesToolStripMenuItem1";
+            this.allEmployeesToolStripMenuItem1.Size = new System.Drawing.Size(324, 46);
+            this.allEmployeesToolStripMenuItem1.Text = "All Employee";
+            this.allEmployeesToolStripMenuItem1.Click += new System.EventHandler(this.allEmployeesToolStripMenuItem1_Click_1);
             // 
-            // allAcademicToolStripMenuItem
+            // academicToolStripMenuItem3
             // 
-            this.allAcademicToolStripMenuItem.Name = "allAcademicToolStripMenuItem";
-            this.allAcademicToolStripMenuItem.Size = new System.Drawing.Size(280, 46);
-            this.allAcademicToolStripMenuItem.Text = "All Academic";
-            this.allAcademicToolStripMenuItem.Click += new System.EventHandler(this.allAcademicToolStripMenuItem_Click);
+            this.academicToolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.allToolStripMenuItem,
+            this.regularToolStripMenuItem4,
+            this.contractualToolStripMenuItem4});
+            this.academicToolStripMenuItem3.Name = "academicToolStripMenuItem3";
+            this.academicToolStripMenuItem3.Size = new System.Drawing.Size(324, 46);
+            this.academicToolStripMenuItem3.Text = "Academic";
             // 
-            // regularToolStripMenuItem
+            // allToolStripMenuItem
             // 
-            this.regularToolStripMenuItem.Name = "regularToolStripMenuItem";
-            this.regularToolStripMenuItem.Size = new System.Drawing.Size(280, 46);
-            this.regularToolStripMenuItem.Text = "Regular";
-            this.regularToolStripMenuItem.Click += new System.EventHandler(this.regularToolStripMenuItem_Click);
+            this.allToolStripMenuItem.Name = "allToolStripMenuItem";
+            this.allToolStripMenuItem.Size = new System.Drawing.Size(262, 46);
+            this.allToolStripMenuItem.Text = "All";
+            this.allToolStripMenuItem.Click += new System.EventHandler(this.allToolStripMenuItem_Click);
             // 
-            // contractualToolStripMenuItem
+            // regularToolStripMenuItem4
             // 
-            this.contractualToolStripMenuItem.Name = "contractualToolStripMenuItem";
-            this.contractualToolStripMenuItem.Size = new System.Drawing.Size(280, 46);
-            this.contractualToolStripMenuItem.Text = "Contractual";
-            this.contractualToolStripMenuItem.Click += new System.EventHandler(this.contractualToolStripMenuItem_Click);
+            this.regularToolStripMenuItem4.Name = "regularToolStripMenuItem4";
+            this.regularToolStripMenuItem4.Size = new System.Drawing.Size(262, 46);
+            this.regularToolStripMenuItem4.Text = "Regular";
+            this.regularToolStripMenuItem4.Click += new System.EventHandler(this.regularToolStripMenuItem4_Click);
             // 
-            // nonAcademicToolStripMenuItem3
+            // contractualToolStripMenuItem4
             // 
-            this.nonAcademicToolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.allNonAcademicToolStripMenuItem,
-            this.regularToolStripMenuItem1,
-            this.contractualToolStripMenuItem1});
-            this.nonAcademicToolStripMenuItem3.Name = "nonAcademicToolStripMenuItem3";
-            this.nonAcademicToolStripMenuItem3.Size = new System.Drawing.Size(557, 46);
-            this.nonAcademicToolStripMenuItem3.Text = "Non - Academic";
+            this.contractualToolStripMenuItem4.Name = "contractualToolStripMenuItem4";
+            this.contractualToolStripMenuItem4.Size = new System.Drawing.Size(262, 46);
+            this.contractualToolStripMenuItem4.Text = "Contractual";
+            this.contractualToolStripMenuItem4.Click += new System.EventHandler(this.contractualToolStripMenuItem4_Click);
             // 
-            // allNonAcademicToolStripMenuItem
+            // nonAcademicToolStripMenuItem
             // 
-            this.allNonAcademicToolStripMenuItem.Name = "allNonAcademicToolStripMenuItem";
-            this.allNonAcademicToolStripMenuItem.Size = new System.Drawing.Size(365, 46);
-            this.allNonAcademicToolStripMenuItem.Text = "All Non - Academic";
-            this.allNonAcademicToolStripMenuItem.Click += new System.EventHandler(this.allNonAcademicToolStripMenuItem_Click);
+            this.nonAcademicToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.allToolStripMenuItem1,
+            this.regularToolStripMenuItem5,
+            this.contractualToolStripMenuItem5});
+            this.nonAcademicToolStripMenuItem.Name = "nonAcademicToolStripMenuItem";
+            this.nonAcademicToolStripMenuItem.Size = new System.Drawing.Size(324, 46);
+            this.nonAcademicToolStripMenuItem.Text = "Non - Academic";
             // 
-            // regularToolStripMenuItem1
+            // allToolStripMenuItem1
             // 
-            this.regularToolStripMenuItem1.Name = "regularToolStripMenuItem1";
-            this.regularToolStripMenuItem1.Size = new System.Drawing.Size(365, 46);
-            this.regularToolStripMenuItem1.Text = "Regular";
-            this.regularToolStripMenuItem1.Click += new System.EventHandler(this.regularToolStripMenuItem1_Click);
+            this.allToolStripMenuItem1.Name = "allToolStripMenuItem1";
+            this.allToolStripMenuItem1.Size = new System.Drawing.Size(262, 46);
+            this.allToolStripMenuItem1.Text = "All";
+            this.allToolStripMenuItem1.Click += new System.EventHandler(this.allToolStripMenuItem1_Click);
             // 
-            // contractualToolStripMenuItem1
+            // regularToolStripMenuItem5
             // 
-            this.contractualToolStripMenuItem1.Name = "contractualToolStripMenuItem1";
-            this.contractualToolStripMenuItem1.Size = new System.Drawing.Size(365, 46);
-            this.contractualToolStripMenuItem1.Text = "Contractual";
-            this.contractualToolStripMenuItem1.Click += new System.EventHandler(this.contractualToolStripMenuItem1_Click);
+            this.regularToolStripMenuItem5.Name = "regularToolStripMenuItem5";
+            this.regularToolStripMenuItem5.Size = new System.Drawing.Size(262, 46);
+            this.regularToolStripMenuItem5.Text = "Regular";
+            this.regularToolStripMenuItem5.Click += new System.EventHandler(this.regularToolStripMenuItem5_Click);
+            // 
+            // contractualToolStripMenuItem5
+            // 
+            this.contractualToolStripMenuItem5.Name = "contractualToolStripMenuItem5";
+            this.contractualToolStripMenuItem5.Size = new System.Drawing.Size(262, 46);
+            this.contractualToolStripMenuItem5.Text = "Contractual";
+            this.contractualToolStripMenuItem5.Click += new System.EventHandler(this.contractualToolStripMenuItem5_Click);
             // 
             // graphToolStripMenuItem
             // 
@@ -442,13 +485,6 @@
             this.panel1.Size = new System.Drawing.Size(1924, 684);
             this.panel1.TabIndex = 9;
             // 
-            // addEmployeeToolStripMenuItem
-            // 
-            this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(304, 46);
-            this.addEmployeeToolStripMenuItem.Text = "Add Employee";
-            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
-            // 
             // MDIMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(27F, 54F);
@@ -487,7 +523,6 @@
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recordsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem allEmployeesToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tsslCurrentDateAndTime;
         private System.Windows.Forms.ToolStripStatusLabel tsslConnection;
@@ -499,19 +534,10 @@
         private System.Windows.Forms.ToolStripMenuItem endOfLeaveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notificationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem graphToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem allEmployeesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem oldEmployeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seminarsAttendedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem positionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addPositionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem academicToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem allAcademicToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem regularToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contractualToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nonAcademicToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem allNonAcademicToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem regularToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem contractualToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem academicToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nonAcademicToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem qualificationGenderToolStripMenuItem;
@@ -525,6 +551,20 @@
         private System.Windows.Forms.ToolStripMenuItem regularToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem contractualToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem employeesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem allEmployeesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem academicToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem allToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem regularToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem contractualToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem nonAcademicToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem allToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem regularToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem contractualToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem employeesOnLeaveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem academicToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem nonAcademicToolStripMenuItem3;
     }
 }
 

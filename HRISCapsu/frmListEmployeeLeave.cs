@@ -9,6 +9,7 @@ namespace HRISCapsu
     public partial class frmListEmployeeLeave : Form
     {
         public static string employeeNo;
+        public static string leaveCredits;
         private string _employeeType;
         public frmListEmployeeLeave(string employeeType)
         {
@@ -25,7 +26,7 @@ namespace HRISCapsu
                 {
                     conn.Open();
                     string query =
-                        "SELECT employee_no, CONCAT(last_name, ', ', first_name, ' ', UPPER(SUBSTRING(middle_name, 1, 1)), '.') AS fullname FROM employees WHERE (first_name LIKE @fn OR middle_name LIKE @mn OR last_name LIKE @ln) AND (employee_type = @employee_type) AND (is_deleted = @is_deleted);";
+                        "SELECT employees.employee_no, CONCAT(last_name, ', ', first_name, ' ', UPPER(SUBSTRING(middle_name, 1, 1)), '.') AS fullname, tbl_leave_credits.remaining_leave_credit FROM employees INNER JOIN tbl_leave_credits ON employees.employee_no = tbl_leave_credits.employee_no WHERE (first_name LIKE @fn OR middle_name LIKE @mn OR last_name LIKE @ln) AND (employee_type = @employee_type) AND (employees.is_deleted = @is_deleted);";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("fn", '%' + txtEmployeeName.Text + '%');
                     cmd.Parameters.AddWithValue("mn", '%' + txtEmployeeName.Text + '%');
@@ -39,8 +40,9 @@ namespace HRISCapsu
 
                     dtgRecords.DataSource = dt;
 
-                    dtgRecords.Columns[0].HeaderText = "Employee ID";
+                    dtgRecords.Columns[0].HeaderText = "Employee No.";
                     dtgRecords.Columns[1].HeaderText = "Employee Name";
+                    dtgRecords.Columns[2].Visible = false;
 
                     if (dt.Rows.Count == 0)
                     {
@@ -75,6 +77,7 @@ namespace HRISCapsu
         private void dtgRecords_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             employeeNo = dtgRecords.CurrentRow.Cells[0].Value.ToString();
+            leaveCredits = dtgRecords.CurrentRow.Cells[2].Value.ToString();
             this.Close();
         }
     }

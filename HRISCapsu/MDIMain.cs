@@ -409,12 +409,6 @@ namespace HRISCapsu
             frm.ShowDialog();
         }
 
-        private void allEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var frm = new previewAllEmployees();
-            frm.ShowDialog();
-        }
-
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAbout frm = new frmAbout();
@@ -448,42 +442,6 @@ namespace HRISCapsu
         private void addPositionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmAddPosition();
-            frm.ShowDialog();
-        }
-
-        private void regularToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var frm = new previewAcademicRegularEmployees();
-            frm.ShowDialog();
-        }
-
-        private void contractualToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var frm = new previewContractualAcademicEmployees();
-            frm.ShowDialog();
-        }
-
-        private void regularToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            var frm = new previewNonAcademicRegularEmployees();
-            frm.ShowDialog();
-        }
-
-        private void contractualToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            var frm = new previewContractualNonAcademicEmployees();
-            frm.ShowDialog();
-        }
-
-        private void allAcademicToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var frm = new previewAllAcademicEmployees();
-            frm.ShowDialog();
-        }
-
-        private void allNonAcademicToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var frm = new previewAllNonAcademicEmployees();
             frm.ShowDialog();
         }
 
@@ -532,6 +490,66 @@ namespace HRISCapsu
         private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmAddEmployee();
+            frm.ShowDialog();
+        }
+
+        private void editEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmEditEmployee();
+            frm.ShowDialog();
+        }
+
+        private void allEmployeesToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            var frm = new previewAllEmployees();
+            frm.ShowDialog();
+        }
+
+        private void allToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new previewAllAcademicEmployees();
+            frm.ShowDialog();
+        }
+
+        private void regularToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            var frm = new previewAcademicRegularEmployees();
+            frm.ShowDialog();
+        }
+
+        private void contractualToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            var frm = new previewContractualAcademicEmployees();
+            frm.ShowDialog();
+        }
+
+        private void allToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frm = new previewAllNonAcademicEmployees();
+            frm.ShowDialog();
+        }
+
+        private void regularToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            var frm = new previewNonAcademicRegularEmployees();
+            frm.ShowDialog();
+        }
+
+        private void contractualToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            var frm = new previewContractualNonAcademicEmployees();
+            frm.ShowDialog();
+        }
+
+        private void academicToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            var frm = new frmEmployeesOnLeave("Academic");
+            frm.ShowDialog();
+        }
+
+        private void nonAcademicToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            var frm = new frmEmployeesOnLeave("Non - Academic");
             frm.ShowDialog();
         }
     }

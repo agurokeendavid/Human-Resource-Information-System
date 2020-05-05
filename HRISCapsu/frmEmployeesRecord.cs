@@ -339,15 +339,15 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
             }
             return false;
         }
-        private Image ConvertBinaryToImage(byte[] data)
+        private System.Drawing.Image ConvertBinaryToImage(byte[] data)
         {
             using (MemoryStream ms = new MemoryStream(data))
             {
-                return Image.FromStream(ms);
+                return System.Drawing.Image.FromStream(ms);
             }
         }
 
-        private byte[] ConvertImageToBinary(Image image)
+        private byte[] ConvertImageToBinary(System.Drawing.Image image)
         {
             using (MemoryStream ms = new MemoryStream())
             {
@@ -372,8 +372,6 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
 
             fsin.Close();
             fsout.Close();
-
-
         }
 
         private List<string> AcademicPositions()
@@ -966,6 +964,21 @@ date_of_birth = @date_of_birth, place_of_birth = @place_of_birth, contact_no = @
         {
             const char Delete = (char)8;
             e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != Delete;
+        }
+
+        private void txtEmployeeNo_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEmployeeNo.Text))
+            {
+                e.Cancel = true;
+                txtEmployeeNo.Focus();
+                errorProvider1.SetError(txtEmployeeNo, "Name should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtEmployeeNo, "");
+            }
         }
     }
 }
