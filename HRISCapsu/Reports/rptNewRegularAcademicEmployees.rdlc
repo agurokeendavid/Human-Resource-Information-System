@@ -946,6 +946,7 @@
                                   <Value>=Fields!date_of_birth.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
+                                    <Format>MMMM dd, yyyy</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1076,7 +1077,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!bs_year_graduated.Value</Value>
+                                  <Value>=IIF(LEN(Fields!bs_year_graduated.Value)  = 0, "N/A", Fields!bs_year_graduated.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -1109,7 +1110,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!bs_school.Value</Value>
+                                  <Value>=IIF(LEN(Fields!bs_school.Value)  = 0, "N/A", Fields!bs_school.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -1142,7 +1143,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!eligibility.Value</Value>
+                                  <Value>=IIF(LEN(Fields!eligibility.Value)  = 0, "N/A", Fields!eligibility.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>

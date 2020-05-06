@@ -102,7 +102,6 @@
             this.btnAttach = new System.Windows.Forms.Button();
             this.lblEligibility = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.lblEndofContract = new System.Windows.Forms.Label();
             this.lblHiredDate = new System.Windows.Forms.Label();
             this.lblWorkStatus = new System.Windows.Forms.Label();
             this.lblDepartment = new System.Windows.Forms.Label();
@@ -117,7 +116,6 @@
             this.lblMiddleName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblEmployeeNo = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.Label16 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
@@ -176,7 +174,6 @@
             this.panelFileInformation.Controls.Add(this.btnAttach);
             this.panelFileInformation.Controls.Add(this.lblEligibility);
             this.panelFileInformation.Controls.Add(this.label17);
-            this.panelFileInformation.Controls.Add(this.lblEndofContract);
             this.panelFileInformation.Controls.Add(this.lblHiredDate);
             this.panelFileInformation.Controls.Add(this.lblWorkStatus);
             this.panelFileInformation.Controls.Add(this.lblDepartment);
@@ -191,7 +188,6 @@
             this.panelFileInformation.Controls.Add(this.lblMiddleName);
             this.panelFileInformation.Controls.Add(this.lblFirstName);
             this.panelFileInformation.Controls.Add(this.lblEmployeeNo);
-            this.panelFileInformation.Controls.Add(this.label14);
             this.panelFileInformation.Controls.Add(this.Label16);
             this.panelFileInformation.Controls.Add(this.label6);
             this.panelFileInformation.Controls.Add(this.Label1);
@@ -207,7 +203,7 @@
             this.panelFileInformation.Controls.Add(this.label3);
             this.panelFileInformation.Controls.Add(this.label11);
             this.panelFileInformation.Location = new System.Drawing.Point(0, 70);
-            this.panelFileInformation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelFileInformation.Margin = new System.Windows.Forms.Padding(4);
             this.panelFileInformation.Name = "panelFileInformation";
             this.panelFileInformation.Size = new System.Drawing.Size(1383, 715);
             this.panelFileInformation.TabIndex = 49;
@@ -1004,7 +1000,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(296, 319);
+            this.label15.Location = new System.Drawing.Point(295, 294);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(167, 17);
@@ -1014,7 +1010,7 @@
             // btnAttach
             // 
             this.btnAttach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttach.Location = new System.Drawing.Point(476, 319);
+            this.btnAttach.Location = new System.Drawing.Point(475, 294);
             this.btnAttach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAttach.Name = "btnAttach";
             this.btnAttach.Size = new System.Drawing.Size(140, 48);
@@ -1043,18 +1039,6 @@
             this.label17.Size = new System.Drawing.Size(70, 17);
             this.label17.TabIndex = 42;
             this.label17.Text = "Eligibility :";
-            // 
-            // lblEndofContract
-            // 
-            this.lblEndofContract.AutoSize = true;
-            this.lblEndofContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndofContract.Location = new System.Drawing.Point(472, 291);
-            this.lblEndofContract.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEndofContract.Name = "lblEndofContract";
-            this.lblEndofContract.Size = new System.Drawing.Size(105, 15);
-            this.lblEndofContract.TabIndex = 41;
-            this.lblEndofContract.Text = "End of Contract";
-            this.lblEndofContract.Visible = false;
             // 
             // lblHiredDate
             // 
@@ -1210,17 +1194,6 @@
             this.lblEmployeeNo.TabIndex = 27;
             this.lblEmployeeNo.Text = "Employee No.";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(348, 291);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(114, 17);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "End of Contract :";
-            this.label14.Visible = false;
-            // 
             // Label16
             // 
             this.Label16.AutoSize = true;
@@ -1370,7 +1343,7 @@
             this.Panel1.Controls.Add(this.PictureBox1);
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel1.Location = new System.Drawing.Point(0, 0);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(1306, 66);
             this.Panel1.TabIndex = 48;
@@ -1404,7 +1377,7 @@
             this.PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.PictureBox1.Image = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
             this.PictureBox1.Location = new System.Drawing.Point(361, 4);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(84, 57);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1452,7 +1425,6 @@
         #endregion
 
         internal System.Windows.Forms.Panel panelFileInformation;
-        internal System.Windows.Forms.Label label14;
         internal System.Windows.Forms.Label Label16;
         internal System.Windows.Forms.Label label6;
         internal System.Windows.Forms.Label Label1;
@@ -1479,7 +1451,6 @@
         internal System.Windows.Forms.Label lblAddress;
         internal System.Windows.Forms.Label lblLastName;
         internal System.Windows.Forms.Label lblContactNo;
-        internal System.Windows.Forms.Label lblEndofContract;
         internal System.Windows.Forms.Label lblHiredDate;
         internal System.Windows.Forms.Label lblWorkStatus;
         internal System.Windows.Forms.Label lblDepartment;

@@ -42,12 +42,12 @@ namespace HRISCapsu
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Position already exist!", "Failed!",
+                MessageBox.Show($"Position already exist! {ex.Message}", "Failed!",
                                         MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Please try again later!", "Failed!",
+                MessageBox.Show($"Please try again later! {ex.Message}", "Failed!",
                                         MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

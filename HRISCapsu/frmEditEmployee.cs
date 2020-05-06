@@ -129,13 +129,13 @@ namespace HRISCapsu
                     CivilStatus = cmbCivilStatus.Text,
                     HighestDegree = cmbDegree.Text,
                     BsCourse = txtBSCourse.Text,
-                    BsYearGraduated = Convert.ToInt32(txtBSYearGraduated.Text),
+                    BsYearGraduated = txtBSYearGraduated.Text,
                     BsSchool = txtBSSchool.Text,
                     MasteralCourse = txtMasteralCourse.Text,
-                    MasteralYearGraduated = Convert.ToInt32(txtMasteralYearGraduated.Text),
+                    MasteralYearGraduated = txtMasteralYearGraduated.Text,
                     MasteralSchool = txtMasteralSchool.Text,
                     DoctoralCourse = txtDoctoralCourse.Text,
-                    DoctoralYearGraduated = Convert.ToInt32(txtDoctoralYearGraduated.Text),
+                    DoctoralYearGraduated = txtDoctoralYearGraduated.Text,
                     DoctoralSchool = txtDoctoralSchool.Text,
                     Eligibility = txtEligibility.Text,
                     EmployeeType = cmbEmployeeType.Text,
@@ -149,13 +149,21 @@ namespace HRISCapsu
                     EndOfContract = dtpEndofContract.Value
                 };
                 UpdateEmployee(model);
+                int? leaveCredit = null, remainingLeaveCredit = null;
+
+                if (cmbEmployeeType.Text == "Academic")
+                {
+                    leaveCredit = Convert.ToInt32(txtLeaveCredits.Text);
+                    remainingLeaveCredit = GetRemainingLeaveCredit();
+                }
                 var modelLeaveCredit = new LeaveCredits
                 {
                     EmployeeNo = txtEmployeeNo.Text,
-                    LeaveCredit = Convert.ToInt32(txtLeaveCredits.Text),
-                    RemainingLeaveCredit = GetRemainingLeaveCredit()
+                    LeaveCredit = leaveCredit,
+                    RemainingLeaveCredit = remainingLeaveCredit
                 };
                 UpdateLeaveCredit(modelLeaveCredit);
+                MessageBox.Show("Successfully updated!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearItems(panelFileInformation);
                 ClearGroupControls(grpBS);
                 ClearGroupControls(grpMasteral);

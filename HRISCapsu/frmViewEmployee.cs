@@ -21,21 +21,21 @@ namespace HRISCapsu
             lblLastName.Text = lastName;
             lblAddress.Text = address;
             lblGender.Text = gender;
-            lblDateofBirth.Text = dob;
+            lblDateofBirth.Text = DateTime.Parse(dob).ToString("MMMM dd, yyyy");
             lblPlaceofBirth.Text = placeofbirth;
             lblContactNo.Text = contactNo;
             lblCivilStatus.Text = civilStatus;
             lblDegree.Text = degree;
-            lblBSCourse.Text = bscourse;
-            lblBSYearGraduated.Text = bsyeargraduated;
-            lblBSSchool.Text = bsschool;
-            lblMasteralCourse.Text = masteralcourse;
-            lblMasteralYearGraduated.Text = masteralyeargraduated;
-            lblMasteralSchool.Text = masteralschool;
-            lblDoctoralCourse.Text = doctoralcourse;
-            lblDoctoralYearGraduated.Text = doctoralyeargraduated;
-            lblDoctoralSchool.Text = doctoralschool;
-            lblEligibility.Text = eligibility;
+            lblBSCourse.Text = bscourse != string.Empty ? bscourse : "N/A";
+            lblBSYearGraduated.Text = bsyeargraduated != string.Empty ? bsyeargraduated : "N/A";
+            lblBSSchool.Text = bsschool != string.Empty ? bsschool : "N/A";
+            lblMasteralCourse.Text = masteralcourse != string.Empty ? masteralcourse : "N/A";
+            lblMasteralYearGraduated.Text = masteralyeargraduated != string.Empty ? masteralyeargraduated : "N/A";
+            lblMasteralSchool.Text = masteralschool != string.Empty ? masteralschool : "N/A";
+            lblDoctoralCourse.Text = doctoralcourse != string.Empty ? doctoralschool : "N/A";
+            lblDoctoralYearGraduated.Text = doctoralyeargraduated != string.Empty ? doctoralyeargraduated : "N/A";
+            lblDoctoralSchool.Text = doctoralschool != string.Empty ? doctoralschool : "N/A";
+            lblEligibility.Text = eligibility != string.Empty ? eligibility : "N/A";
             lblEmployeeType.Text = employeetype;
             lblPosition.Text = position;
             lblUniqueItemNo.Text = unique_item_no;
@@ -45,30 +45,23 @@ namespace HRISCapsu
             lblWorkStatus.Text = workstatus;
             pictureBox2.Image = ConvertBinaryToImage(employeephoto);
             path = documentpath;
-            lblHiredDate.Text = hireddate;
-            if (endofcontract != "")
-            {
-                lblEndofContract.Text = endofcontract;
-                lblEndofContract.Visible = true;
-                label14.Visible = true;
-            }
-
-            lblLocalSeminarName.Text = localSeminarName;
-            lblLocalSeminarType.Text = localSeminarType;
-            lblLocalSeminarFrom.Text = localFrom;
-            lblLocalSeminarTo.Text = localTo;
-            lblRegionalSeminarName.Text = regionalSeminarName;
-            lblRegionalSeminarType.Text = regionalSeminarType;
-            lblRegionalSeminarFrom.Text = regionalFrom;
-            lblRegionalSeminarTo.Text = regionalTo;
-            lblNationalSeminarName.Text = nationalSeminarName;
-            lblNationalSeminarType.Text = nationalSeminarType;
-            lblNationalSeminarFrom.Text = nationalFrom;
-            lblNationalSeminarTo.Text = nationalTo;
-            lblInternationalSeminarName.Text = internationalSeminarName;
-            lblInternationalSeminarType.Text = internationalSeminarType;
-            lblInternationalFrom.Text = internationalFrom;
-            lblInternationalSeminarTo.Text = internationalTo;
+            lblHiredDate.Text = DateTime.Parse(hireddate).ToString("MMMM dd, yyyy");
+            lblLocalSeminarName.Text = localSeminarName != string.Empty ? localSeminarName : "N/A";
+            lblLocalSeminarType.Text = localSeminarType != string.Empty ? localSeminarType : "N/A";
+            lblLocalSeminarFrom.Text = localFrom != string.Empty ? localFrom : "N/A";
+            lblLocalSeminarTo.Text = localTo != string.Empty ? localTo : "N/A";
+            lblRegionalSeminarName.Text = regionalSeminarName != string.Empty ? regionalSeminarName : "N/A";
+            lblRegionalSeminarType.Text = regionalSeminarType != string.Empty ? regionalSeminarType : "N/A";
+            lblRegionalSeminarFrom.Text = regionalFrom != string.Empty ? regionalFrom : "N/A";
+            lblRegionalSeminarTo.Text = regionalTo != string.Empty ? regionalTo : "N/A";
+            lblNationalSeminarName.Text = nationalSeminarName != string.Empty ? nationalSeminarName : "N/A";
+            lblNationalSeminarType.Text = nationalSeminarType != string.Empty ? nationalSeminarType : "N/A";
+            lblNationalSeminarFrom.Text = nationalFrom != string.Empty ? nationalFrom : "N/A";
+            lblNationalSeminarTo.Text = nationalTo != string.Empty ? nationalTo : "N/A";
+            lblInternationalSeminarName.Text = internationalSeminarName != string.Empty ? internationalSeminarName : "N/A";
+            lblInternationalSeminarType.Text = internationalSeminarType != string.Empty ? internationalSeminarType : "N/A";
+            lblInternationalFrom.Text = internationalFrom != string.Empty ? internationalFrom : "N/A";
+            lblInternationalSeminarTo.Text = internationalTo != string.Empty ? internationalTo : "N/A";
 
         }
 

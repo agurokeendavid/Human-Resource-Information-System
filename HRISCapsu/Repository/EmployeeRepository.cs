@@ -33,13 +33,13 @@ namespace HRISCapsu.Repository
                         command.Parameters.Add("civil_status", MySqlDbType.VarChar).Value = model.CivilStatus;
                         command.Parameters.Add("highest_degree", MySqlDbType.VarChar).Value = model.HighestDegree;
                         command.Parameters.Add("bs_course", MySqlDbType.VarChar).Value = model.BsCourse;
-                        command.Parameters.Add("bs_year_graduated", MySqlDbType.Int16).Value = model.BsYearGraduated;
+                        command.Parameters.Add("bs_year_graduated", MySqlDbType.VarChar).Value = model.BsYearGraduated;
                         command.Parameters.Add("bs_school", MySqlDbType.VarChar).Value = model.BsSchool;
                         command.Parameters.Add("masteral_course", MySqlDbType.VarChar).Value = model.MasteralCourse;
-                        command.Parameters.Add("masteral_year_graduated", MySqlDbType.Int16).Value = model.MasteralYearGraduated;
+                        command.Parameters.Add("masteral_year_graduated", MySqlDbType.VarChar).Value = model.MasteralYearGraduated;
                         command.Parameters.Add("masteral_school", MySqlDbType.VarChar).Value = model.MasteralSchool;
                         command.Parameters.Add("doctoral_course", MySqlDbType.VarChar).Value = model.DoctoralCourse;
-                        command.Parameters.Add("doctoral_year_graduated", MySqlDbType.Int16).Value = model.DoctoralYearGraduated;
+                        command.Parameters.Add("doctoral_year_graduated", MySqlDbType.VarChar).Value = model.DoctoralYearGraduated;
                         command.Parameters.Add("doctoral_school", MySqlDbType.VarChar).Value = model.DoctoralSchool;
                         command.Parameters.Add("eligibility", MySqlDbType.VarChar).Value = model.Eligibility;
                         command.Parameters.Add("employee_type", MySqlDbType.VarChar).Value = model.EmployeeType;
@@ -58,11 +58,15 @@ namespace HRISCapsu.Repository
                     }
                 }
             }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             catch (Exception ex)
             {
-                var testerror = ex.Message;
-                return 0;
+                MessageBox.Show(ex.Message);
             }
+            return 0;
         }
 
         public static void GetAllEmployees(string keyword, int isDeleted, DataTable dataTable)
@@ -109,13 +113,13 @@ namespace HRISCapsu.Repository
                         cmd.Parameters.Add("civil_status", MySqlDbType.VarChar).Value = employee.CivilStatus;
                         cmd.Parameters.Add("highest_degree", MySqlDbType.VarChar).Value = employee.HighestDegree;
                         cmd.Parameters.Add("bs_course", MySqlDbType.VarChar).Value = employee.BsCourse;
-                        cmd.Parameters.Add("bs_year_graduated", MySqlDbType.Int16).Value = employee.BsYearGraduated;
+                        cmd.Parameters.Add("bs_year_graduated", MySqlDbType.VarChar).Value = employee.BsYearGraduated;
                         cmd.Parameters.Add("bs_school", MySqlDbType.VarChar).Value = employee.BsSchool;
                         cmd.Parameters.Add("masteral_course", MySqlDbType.VarChar).Value = employee.MasteralCourse;
-                        cmd.Parameters.Add("masteral_year_graduated", MySqlDbType.Int16).Value = employee.MasteralYearGraduated;
+                        cmd.Parameters.Add("masteral_year_graduated", MySqlDbType.VarChar).Value = employee.MasteralYearGraduated;
                         cmd.Parameters.Add("masteral_school", MySqlDbType.VarChar).Value = employee.MasteralSchool;
                         cmd.Parameters.Add("doctoral_course", MySqlDbType.VarChar).Value = employee.DoctoralCourse;
-                        cmd.Parameters.Add("doctoral_year_graduated", MySqlDbType.Int16).Value = employee.DoctoralYearGraduated;
+                        cmd.Parameters.Add("doctoral_year_graduated", MySqlDbType.VarChar).Value = employee.DoctoralYearGraduated;
                         cmd.Parameters.Add("doctoral_school", MySqlDbType.VarChar).Value = employee.DoctoralSchool;
                         cmd.Parameters.Add("eligibility", MySqlDbType.VarChar).Value = employee.Eligibility;
                         cmd.Parameters.Add("employee_type", MySqlDbType.VarChar).Value = employee.EmployeeType;
@@ -194,7 +198,7 @@ namespace HRISCapsu.Repository
                 using (var connection = new MySqlConnection(GetConnectionString()))
                 {
                     connection.Open();
-                    string query = "SELECT CONCAT(last_name, ', ', first_name, ' ', middle_name) FullName, leave_credit, remaining_leave_credit FROM employees INNER JOIN tbl_leave_credits ON employees.employee_no = tbl_leave_credits.employee_no WHERE (first_name LIKE @keyword OR middle_name LIKE @keyword OR last_name LIKE @keyword) AND employees.is_deleted = @is_deleted";
+                    string query = "SELECT CONCAT(last_name, ', ', first_name, ' ', middle_name) FullName, leave_credit, remaining_leave_credit FROM employees INNER JOIN tbl_leave_credits ON employees.employee_no = tbl_leave_credits.employee_no WHERE leave_credit IS NOT NULL AND remaining_leave_credit IS NOT NULL AND (first_name LIKE @keyword OR middle_name LIKE @keyword OR last_name LIKE @keyword) AND employees.is_deleted = @is_deleted";
                     using (var command = new MySqlCommand(query, connection))
                     {
                         command.Parameters.Add("keyword", MySqlDbType.VarChar).Value = '%' + keyword + '%';
@@ -265,13 +269,13 @@ namespace HRISCapsu.Repository
                                 employee.CivilStatus = reader.GetString("civil_status");
                                 employee.HighestDegree = reader.GetString("highest_degree");
                                 employee.BsCourse = reader.GetString("bs_course");
-                                employee.BsYearGraduated = reader.GetInt16("bs_year_graduated");
+                                employee.BsYearGraduated = reader.GetString("bs_year_graduated");
                                 employee.BsSchool = reader.GetString("bs_school");
                                 employee.MasteralCourse = reader.GetString("masteral_course");
-                                employee.MasteralYearGraduated = reader.GetInt16("masteral_year_graduated");
+                                employee.MasteralYearGraduated = reader.GetString("masteral_year_graduated");
                                 employee.MasteralSchool = reader.GetString("masteral_school");
                                 employee.DoctoralCourse = reader.GetString("doctoral_course");
-                                employee.DoctoralYearGraduated = reader.GetInt16("doctoral_year_graduated");
+                                employee.DoctoralYearGraduated = reader.GetString("doctoral_year_graduated");
                                 employee.DoctoralSchool = reader.GetString("doctoral_school");
                                 employee.Eligibility = reader.GetString("eligibility");
                                 employee.EmployeeType = reader.GetString("employee_type");

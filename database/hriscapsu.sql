@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2020 at 03:50 PM
+-- Generation Time: May 06, 2020 at 10:50 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -42,13 +42,13 @@ CREATE TABLE `employees` (
   `civil_status` varchar(20) NOT NULL,
   `highest_degree` varchar(30) NOT NULL,
   `bs_course` varchar(30) NOT NULL,
-  `bs_year_graduated` int(11) NOT NULL,
+  `bs_year_graduated` varchar(5) DEFAULT NULL,
   `bs_school` varchar(30) NOT NULL,
   `masteral_course` varchar(30) NOT NULL,
-  `masteral_year_graduated` int(11) NOT NULL,
+  `masteral_year_graduated` varchar(5) NOT NULL,
   `masteral_school` varchar(30) NOT NULL,
   `doctoral_course` varchar(30) NOT NULL,
-  `doctoral_year_graduated` int(11) NOT NULL,
+  `doctoral_year_graduated` varchar(5) NOT NULL,
   `doctoral_school` varchar(30) NOT NULL,
   `eligibility` varchar(30) NOT NULL,
   `employee_type` varchar(15) NOT NULL,
@@ -110,8 +110,8 @@ CREATE TABLE `tbl_leave` (
 CREATE TABLE `tbl_leave_credits` (
   `id` int(1) NOT NULL,
   `employee_no` varchar(50) NOT NULL,
-  `leave_credit` int(4) NOT NULL,
-  `remaining_leave_credit` int(4) NOT NULL,
+  `leave_credit` int(4) DEFAULT NULL,
+  `remaining_leave_credit` int(4) DEFAULT NULL,
   `is_deleted` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -243,7 +243,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `ports`
@@ -255,19 +255,19 @@ ALTER TABLE `ports`
 -- AUTO_INCREMENT for table `tbl_leave`
 --
 ALTER TABLE `tbl_leave`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `tbl_leave_credits`
 --
 ALTER TABLE `tbl_leave_credits`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tbl_list_of_seminars`
 --
 ALTER TABLE `tbl_list_of_seminars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `tbl_positions`

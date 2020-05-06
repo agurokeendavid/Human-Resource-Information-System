@@ -132,7 +132,7 @@ namespace HRISCapsu
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Employee exist!", "Record exist.",
+                MessageBox.Show($"Employee exist! {ex.Message}", "Record exist.",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

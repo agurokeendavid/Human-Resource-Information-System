@@ -31,7 +31,9 @@ namespace HRISCapsu
                 BindNonAcademicEmployeesOnLeaveInGridView();
                 dtgRecords.Columns[0].HeaderText = "Name";
                 dtgRecords.Columns[1].HeaderText = "Leave Started";
+                dtgRecords.Columns[1].DefaultCellStyle.Format = "MMMMM dd, yyyy";
                 dtgRecords.Columns[2].HeaderText = "Leave End";
+                dtgRecords.Columns[2].DefaultCellStyle.Format = "MMMMM dd, yyyy";
             }
         }
         private void BindAcademicEmployeesOnLeaveInGridView()

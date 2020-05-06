@@ -384,7 +384,6 @@
             this.lblEndofContract.Size = new System.Drawing.Size(105, 15);
             this.lblEndofContract.TabIndex = 41;
             this.lblEndofContract.Text = "End of Contract";
-            this.lblEndofContract.Visible = false;
             // 
             // lblHiredDate
             // 
@@ -588,7 +587,6 @@
             this.label14.Size = new System.Drawing.Size(114, 17);
             this.label14.TabIndex = 26;
             this.label14.Text = "End of Contract :";
-            this.label14.Visible = false;
             // 
             // Label16
             // 

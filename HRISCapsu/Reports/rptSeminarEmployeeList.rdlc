@@ -438,7 +438,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!local_seminar_name.Value</Value>
+                                  <Value>=IIF(LEN(Fields!local_seminar_name.Value)  = 0, "N/A", Fields!local_seminar_name.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -471,7 +471,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!regional_seminar_name.Value</Value>
+                                  <Value>=IIF(LEN(Fields!regional_seminar_name.Value)  = 0, "N/A", Fields!regional_seminar_name.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -504,7 +504,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!national_seminar_name.Value</Value>
+                                  <Value>=IIF(LEN(Fields!national_seminar_name.Value)  = 0, "N/A", Fields!national_seminar_name.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>MMMM dd, yyyy</Format>
@@ -538,7 +538,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!international_seminar_name.Value</Value>
+                                  <Value>=IIF(LEN(Fields!international_seminar_name.Value)  = 0, "N/A", Fields!international_seminar_name.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>

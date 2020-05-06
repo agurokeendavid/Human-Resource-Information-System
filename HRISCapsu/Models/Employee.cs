@@ -21,13 +21,13 @@ namespace HRISCapsu.Models
         public string CivilStatus { get; set; }
         public string HighestDegree { get; set; }
         public string BsCourse { get; set; }
-        public int BsYearGraduated { get; set; }
+        public string BsYearGraduated { get; set; }
         public string BsSchool { get; set; }
         public string MasteralCourse { get; set; }
-        public int MasteralYearGraduated { get; set; }
+        public string MasteralYearGraduated { get; set; }
         public string MasteralSchool { get; set; }
         public string DoctoralCourse { get; set; }
-        public int DoctoralYearGraduated { get; set; }
+        public string DoctoralYearGraduated { get; set; }
         public string DoctoralSchool { get; set; }
         public string Eligibility { get; set; }
         public string EmployeeType { get; set; }

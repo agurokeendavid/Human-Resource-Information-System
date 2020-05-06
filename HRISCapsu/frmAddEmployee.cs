@@ -178,6 +178,7 @@ namespace HRISCapsu
         {
             if (ValidateChildren(ValidationConstraints.Enabled) && source != null)
             {
+
                 var model = new Employee
                 {
                     EmployeeNo = txtEmployeeNo.Text,
@@ -192,13 +193,13 @@ namespace HRISCapsu
                     CivilStatus = cmbCivilStatus.Text,
                     HighestDegree = cmbDegree.Text,
                     BsCourse = txtBSCourse.Text,
-                    BsYearGraduated = Convert.ToInt32(txtBSYearGraduated.Text),
+                    BsYearGraduated = txtBSYearGraduated.Text,
                     BsSchool = txtBSSchool.Text,
                     MasteralCourse = txtMasteralCourse.Text,
-                    MasteralYearGraduated = Convert.ToInt32(txtMasteralYearGraduated.Text),
+                    MasteralYearGraduated = txtMasteralYearGraduated.Text,
                     MasteralSchool = txtMasteralSchool.Text,
                     DoctoralCourse = txtDoctoralCourse.Text,
-                    DoctoralYearGraduated = Convert.ToInt32(txtDoctoralYearGraduated.Text),
+                    DoctoralYearGraduated = txtDoctoralYearGraduated.Text,
                     DoctoralSchool = txtDoctoralSchool.Text,
                     Eligibility = txtEligibility.Text,
                     EmployeeType = cmbEmployeeType.Text,
@@ -218,11 +219,17 @@ namespace HRISCapsu
                 if (InsertEmployee(model) == 1)
                 {
                     worker.RunWorkerAsync();
+                    int? leaveCredit = null, remainingLeaveCredit = null;
+                    if (cmbEmployeeType.Text == "Academic")
+                    {
+                        leaveCredit = Convert.ToInt32(txtLeaveCredits.Text);
+                        remainingLeaveCredit = Convert.ToInt32(txtLeaveCredits.Text);
+                    }
                     var modelLeaveCredit = new LeaveCredits
                     {
                         EmployeeNo = txtEmployeeNo.Text,
-                        LeaveCredit = Convert.ToInt32(txtLeaveCredits.Text),
-                        RemainingLeaveCredit = Convert.ToInt32(txtLeaveCredits.Text),
+                        LeaveCredit = leaveCredit,
+                        RemainingLeaveCredit = remainingLeaveCredit,
                         IsDeleted = 0
                     };
                     InsertLeaveCredits(modelLeaveCredit);

@@ -1378,13 +1378,13 @@ namespace HRISCapsu {
                         string civil_status, 
                         string highest_degree, 
                         string bs_course, 
-                        int bs_year_graduated, 
+                        string bs_year_graduated, 
                         string bs_school, 
                         string masteral_course, 
-                        int masteral_year_graduated, 
+                        string masteral_year_graduated, 
                         string masteral_school, 
                         string doctoral_course, 
-                        int doctoral_year_graduated, 
+                        string doctoral_year_graduated, 
                         string doctoral_school, 
                         string eligibility, 
                         string employee_type, 
@@ -1529,19 +1529,19 @@ namespace HRISCapsu {
                 base.Columns.Add(this.columnhighest_degree);
                 this.columnbs_course = new global::System.Data.DataColumn("bs_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_course);
-                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_year_graduated);
                 this.columnbs_school = new global::System.Data.DataColumn("bs_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_school);
                 this.columnmasteral_course = new global::System.Data.DataColumn("masteral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_course);
-                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_year_graduated);
                 this.columnmasteral_school = new global::System.Data.DataColumn("masteral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_school);
                 this.columndoctoral_course = new global::System.Data.DataColumn("doctoral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_course);
-                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_year_graduated);
                 this.columndoctoral_school = new global::System.Data.DataColumn("doctoral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_school);
@@ -2189,13 +2189,13 @@ namespace HRISCapsu {
                         string civil_status, 
                         string highest_degree, 
                         string bs_course, 
-                        int bs_year_graduated, 
+                        string bs_year_graduated, 
                         string bs_school, 
                         string masteral_course, 
-                        int masteral_year_graduated, 
+                        string masteral_year_graduated, 
                         string masteral_school, 
                         string doctoral_course, 
-                        int doctoral_year_graduated, 
+                        string doctoral_year_graduated, 
                         string doctoral_school, 
                         string eligibility, 
                         string employee_type, 
@@ -2340,19 +2340,19 @@ namespace HRISCapsu {
                 base.Columns.Add(this.columnhighest_degree);
                 this.columnbs_course = new global::System.Data.DataColumn("bs_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_course);
-                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_year_graduated);
                 this.columnbs_school = new global::System.Data.DataColumn("bs_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_school);
                 this.columnmasteral_course = new global::System.Data.DataColumn("masteral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_course);
-                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_year_graduated);
                 this.columnmasteral_school = new global::System.Data.DataColumn("masteral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_school);
                 this.columndoctoral_course = new global::System.Data.DataColumn("doctoral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_course);
-                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_year_graduated);
                 this.columndoctoral_school = new global::System.Data.DataColumn("doctoral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_school);
@@ -3000,13 +3000,13 @@ namespace HRISCapsu {
                         string civil_status, 
                         string highest_degree, 
                         string bs_course, 
-                        int bs_year_graduated, 
+                        string bs_year_graduated, 
                         string bs_school, 
                         string masteral_course, 
-                        int masteral_year_graduated, 
+                        string masteral_year_graduated, 
                         string masteral_school, 
                         string doctoral_course, 
-                        int doctoral_year_graduated, 
+                        string doctoral_year_graduated, 
                         string doctoral_school, 
                         string eligibility, 
                         string employee_type, 
@@ -3151,19 +3151,19 @@ namespace HRISCapsu {
                 base.Columns.Add(this.columnhighest_degree);
                 this.columnbs_course = new global::System.Data.DataColumn("bs_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_course);
-                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_year_graduated);
                 this.columnbs_school = new global::System.Data.DataColumn("bs_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_school);
                 this.columnmasteral_course = new global::System.Data.DataColumn("masteral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_course);
-                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_year_graduated);
                 this.columnmasteral_school = new global::System.Data.DataColumn("masteral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_school);
                 this.columndoctoral_course = new global::System.Data.DataColumn("doctoral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_course);
-                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_year_graduated);
                 this.columndoctoral_school = new global::System.Data.DataColumn("doctoral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_school);
@@ -3811,13 +3811,13 @@ namespace HRISCapsu {
                         string civil_status, 
                         string highest_degree, 
                         string bs_course, 
-                        int bs_year_graduated, 
+                        string bs_year_graduated, 
                         string bs_school, 
                         string masteral_course, 
-                        int masteral_year_graduated, 
+                        string masteral_year_graduated, 
                         string masteral_school, 
                         string doctoral_course, 
-                        int doctoral_year_graduated, 
+                        string doctoral_year_graduated, 
                         string doctoral_school, 
                         string eligibility, 
                         string employee_type, 
@@ -3962,19 +3962,19 @@ namespace HRISCapsu {
                 base.Columns.Add(this.columnhighest_degree);
                 this.columnbs_course = new global::System.Data.DataColumn("bs_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_course);
-                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_year_graduated);
                 this.columnbs_school = new global::System.Data.DataColumn("bs_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_school);
                 this.columnmasteral_course = new global::System.Data.DataColumn("masteral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_course);
-                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_year_graduated);
                 this.columnmasteral_school = new global::System.Data.DataColumn("masteral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_school);
                 this.columndoctoral_course = new global::System.Data.DataColumn("doctoral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_course);
-                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_year_graduated);
                 this.columndoctoral_school = new global::System.Data.DataColumn("doctoral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_school);
@@ -4622,13 +4622,13 @@ namespace HRISCapsu {
                         string civil_status, 
                         string highest_degree, 
                         string bs_course, 
-                        int bs_year_graduated, 
+                        string bs_year_graduated, 
                         string bs_school, 
                         string masteral_course, 
-                        int masteral_year_graduated, 
+                        string masteral_year_graduated, 
                         string masteral_school, 
                         string doctoral_course, 
-                        int doctoral_year_graduated, 
+                        string doctoral_year_graduated, 
                         string doctoral_school, 
                         string eligibility, 
                         string employee_type, 
@@ -4773,19 +4773,19 @@ namespace HRISCapsu {
                 base.Columns.Add(this.columnhighest_degree);
                 this.columnbs_course = new global::System.Data.DataColumn("bs_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_course);
-                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_year_graduated);
                 this.columnbs_school = new global::System.Data.DataColumn("bs_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_school);
                 this.columnmasteral_course = new global::System.Data.DataColumn("masteral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_course);
-                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_year_graduated);
                 this.columnmasteral_school = new global::System.Data.DataColumn("masteral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_school);
                 this.columndoctoral_course = new global::System.Data.DataColumn("doctoral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_course);
-                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_year_graduated);
                 this.columndoctoral_school = new global::System.Data.DataColumn("doctoral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_school);
@@ -5433,13 +5433,13 @@ namespace HRISCapsu {
                         string civil_status, 
                         string highest_degree, 
                         string bs_course, 
-                        int bs_year_graduated, 
+                        string bs_year_graduated, 
                         string bs_school, 
                         string masteral_course, 
-                        int masteral_year_graduated, 
+                        string masteral_year_graduated, 
                         string masteral_school, 
                         string doctoral_course, 
-                        int doctoral_year_graduated, 
+                        string doctoral_year_graduated, 
                         string doctoral_school, 
                         string eligibility, 
                         string employee_type, 
@@ -5584,19 +5584,19 @@ namespace HRISCapsu {
                 base.Columns.Add(this.columnhighest_degree);
                 this.columnbs_course = new global::System.Data.DataColumn("bs_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_course);
-                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_year_graduated);
                 this.columnbs_school = new global::System.Data.DataColumn("bs_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_school);
                 this.columnmasteral_course = new global::System.Data.DataColumn("masteral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_course);
-                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_year_graduated);
                 this.columnmasteral_school = new global::System.Data.DataColumn("masteral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_school);
                 this.columndoctoral_course = new global::System.Data.DataColumn("doctoral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_course);
-                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_year_graduated);
                 this.columndoctoral_school = new global::System.Data.DataColumn("doctoral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_school);
@@ -6244,13 +6244,13 @@ namespace HRISCapsu {
                         string civil_status, 
                         string highest_degree, 
                         string bs_course, 
-                        int bs_year_graduated, 
+                        string bs_year_graduated, 
                         string bs_school, 
                         string masteral_course, 
-                        int masteral_year_graduated, 
+                        string masteral_year_graduated, 
                         string masteral_school, 
                         string doctoral_course, 
-                        int doctoral_year_graduated, 
+                        string doctoral_year_graduated, 
                         string doctoral_school, 
                         string eligibility, 
                         string employee_type, 
@@ -6395,19 +6395,19 @@ namespace HRISCapsu {
                 base.Columns.Add(this.columnhighest_degree);
                 this.columnbs_course = new global::System.Data.DataColumn("bs_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_course);
-                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnbs_year_graduated = new global::System.Data.DataColumn("bs_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_year_graduated);
                 this.columnbs_school = new global::System.Data.DataColumn("bs_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbs_school);
                 this.columnmasteral_course = new global::System.Data.DataColumn("masteral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_course);
-                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnmasteral_year_graduated = new global::System.Data.DataColumn("masteral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_year_graduated);
                 this.columnmasteral_school = new global::System.Data.DataColumn("masteral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmasteral_school);
                 this.columndoctoral_course = new global::System.Data.DataColumn("doctoral_course", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_course);
-                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columndoctoral_year_graduated = new global::System.Data.DataColumn("doctoral_year_graduated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_year_graduated);
                 this.columndoctoral_school = new global::System.Data.DataColumn("doctoral_school", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndoctoral_school);
@@ -7104,9 +7104,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int bs_year_graduated {
+            public string bs_year_graduated {
                 get {
-                    return ((int)(this[this.tableAllEmployees.bs_year_graduatedColumn]));
+                    return ((string)(this[this.tableAllEmployees.bs_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableAllEmployees.bs_year_graduatedColumn] = value;
@@ -7137,9 +7137,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int masteral_year_graduated {
+            public string masteral_year_graduated {
                 get {
-                    return ((int)(this[this.tableAllEmployees.masteral_year_graduatedColumn]));
+                    return ((string)(this[this.tableAllEmployees.masteral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableAllEmployees.masteral_year_graduatedColumn] = value;
@@ -7170,9 +7170,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int doctoral_year_graduated {
+            public string doctoral_year_graduated {
                 get {
-                    return ((int)(this[this.tableAllEmployees.doctoral_year_graduatedColumn]));
+                    return ((string)(this[this.tableAllEmployees.doctoral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableAllEmployees.doctoral_year_graduatedColumn] = value;
@@ -7510,9 +7510,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int bs_year_graduated {
+            public string bs_year_graduated {
                 get {
-                    return ((int)(this[this.tableAcademicRegularEmployees.bs_year_graduatedColumn]));
+                    return ((string)(this[this.tableAcademicRegularEmployees.bs_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableAcademicRegularEmployees.bs_year_graduatedColumn] = value;
@@ -7543,9 +7543,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int masteral_year_graduated {
+            public string masteral_year_graduated {
                 get {
-                    return ((int)(this[this.tableAcademicRegularEmployees.masteral_year_graduatedColumn]));
+                    return ((string)(this[this.tableAcademicRegularEmployees.masteral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableAcademicRegularEmployees.masteral_year_graduatedColumn] = value;
@@ -7576,9 +7576,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int doctoral_year_graduated {
+            public string doctoral_year_graduated {
                 get {
-                    return ((int)(this[this.tableAcademicRegularEmployees.doctoral_year_graduatedColumn]));
+                    return ((string)(this[this.tableAcademicRegularEmployees.doctoral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableAcademicRegularEmployees.doctoral_year_graduatedColumn] = value;
@@ -7917,9 +7917,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int bs_year_graduated {
+            public string bs_year_graduated {
                 get {
-                    return ((int)(this[this.tableNonAcademicRegularEmployees.bs_year_graduatedColumn]));
+                    return ((string)(this[this.tableNonAcademicRegularEmployees.bs_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableNonAcademicRegularEmployees.bs_year_graduatedColumn] = value;
@@ -7950,9 +7950,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int masteral_year_graduated {
+            public string masteral_year_graduated {
                 get {
-                    return ((int)(this[this.tableNonAcademicRegularEmployees.masteral_year_graduatedColumn]));
+                    return ((string)(this[this.tableNonAcademicRegularEmployees.masteral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableNonAcademicRegularEmployees.masteral_year_graduatedColumn] = value;
@@ -7983,9 +7983,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int doctoral_year_graduated {
+            public string doctoral_year_graduated {
                 get {
-                    return ((int)(this[this.tableNonAcademicRegularEmployees.doctoral_year_graduatedColumn]));
+                    return ((string)(this[this.tableNonAcademicRegularEmployees.doctoral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableNonAcademicRegularEmployees.doctoral_year_graduatedColumn] = value;
@@ -8324,9 +8324,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int bs_year_graduated {
+            public string bs_year_graduated {
                 get {
-                    return ((int)(this[this.tableContractualAcademicEmployees.bs_year_graduatedColumn]));
+                    return ((string)(this[this.tableContractualAcademicEmployees.bs_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableContractualAcademicEmployees.bs_year_graduatedColumn] = value;
@@ -8357,9 +8357,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int masteral_year_graduated {
+            public string masteral_year_graduated {
                 get {
-                    return ((int)(this[this.tableContractualAcademicEmployees.masteral_year_graduatedColumn]));
+                    return ((string)(this[this.tableContractualAcademicEmployees.masteral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableContractualAcademicEmployees.masteral_year_graduatedColumn] = value;
@@ -8390,9 +8390,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int doctoral_year_graduated {
+            public string doctoral_year_graduated {
                 get {
-                    return ((int)(this[this.tableContractualAcademicEmployees.doctoral_year_graduatedColumn]));
+                    return ((string)(this[this.tableContractualAcademicEmployees.doctoral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableContractualAcademicEmployees.doctoral_year_graduatedColumn] = value;
@@ -8731,9 +8731,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int bs_year_graduated {
+            public string bs_year_graduated {
                 get {
-                    return ((int)(this[this.tableContractualNonAcademicEmployees.bs_year_graduatedColumn]));
+                    return ((string)(this[this.tableContractualNonAcademicEmployees.bs_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableContractualNonAcademicEmployees.bs_year_graduatedColumn] = value;
@@ -8764,9 +8764,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int masteral_year_graduated {
+            public string masteral_year_graduated {
                 get {
-                    return ((int)(this[this.tableContractualNonAcademicEmployees.masteral_year_graduatedColumn]));
+                    return ((string)(this[this.tableContractualNonAcademicEmployees.masteral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableContractualNonAcademicEmployees.masteral_year_graduatedColumn] = value;
@@ -8797,9 +8797,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int doctoral_year_graduated {
+            public string doctoral_year_graduated {
                 get {
-                    return ((int)(this[this.tableContractualNonAcademicEmployees.doctoral_year_graduatedColumn]));
+                    return ((string)(this[this.tableContractualNonAcademicEmployees.doctoral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableContractualNonAcademicEmployees.doctoral_year_graduatedColumn] = value;
@@ -9138,9 +9138,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int bs_year_graduated {
+            public string bs_year_graduated {
                 get {
-                    return ((int)(this[this.tableAllAcademicEmployees.bs_year_graduatedColumn]));
+                    return ((string)(this[this.tableAllAcademicEmployees.bs_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableAllAcademicEmployees.bs_year_graduatedColumn] = value;
@@ -9171,9 +9171,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int masteral_year_graduated {
+            public string masteral_year_graduated {
                 get {
-                    return ((int)(this[this.tableAllAcademicEmployees.masteral_year_graduatedColumn]));
+                    return ((string)(this[this.tableAllAcademicEmployees.masteral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableAllAcademicEmployees.masteral_year_graduatedColumn] = value;
@@ -9204,9 +9204,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int doctoral_year_graduated {
+            public string doctoral_year_graduated {
                 get {
-                    return ((int)(this[this.tableAllAcademicEmployees.doctoral_year_graduatedColumn]));
+                    return ((string)(this[this.tableAllAcademicEmployees.doctoral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableAllAcademicEmployees.doctoral_year_graduatedColumn] = value;
@@ -9545,9 +9545,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int bs_year_graduated {
+            public string bs_year_graduated {
                 get {
-                    return ((int)(this[this.tableAllNonAcademicEmployees.bs_year_graduatedColumn]));
+                    return ((string)(this[this.tableAllNonAcademicEmployees.bs_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableAllNonAcademicEmployees.bs_year_graduatedColumn] = value;
@@ -9578,9 +9578,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int masteral_year_graduated {
+            public string masteral_year_graduated {
                 get {
-                    return ((int)(this[this.tableAllNonAcademicEmployees.masteral_year_graduatedColumn]));
+                    return ((string)(this[this.tableAllNonAcademicEmployees.masteral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableAllNonAcademicEmployees.masteral_year_graduatedColumn] = value;
@@ -9611,9 +9611,9 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int doctoral_year_graduated {
+            public string doctoral_year_graduated {
                 get {
-                    return ((int)(this[this.tableAllNonAcademicEmployees.doctoral_year_graduatedColumn]));
+                    return ((string)(this[this.tableAllNonAcademicEmployees.doctoral_year_graduatedColumn]));
                 }
                 set {
                     this[this.tableAllNonAcademicEmployees.doctoral_year_graduatedColumn] = value;
@@ -10219,7 +10219,15 @@ namespace HRISCapsu.HRISDataSourceTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, sem.local_seminar_name, sem.local_seminar_type, sem.regional_seminar_name, sem.regional_seminar_type, sem.national_seminar_name, sem.national_seminar_type, sem.international_seminar_name, sem.international_seminar_type, sem.number_of_seminars FROM employees emp INNER JOIN tbl_list_of_seminars sem ON emp.employee_no = sem.employee_no WHERE emp.is_deleted = 0 AND sem.is_deleted = 0 ORDER BY emp.last_name ASC";
+            this._commandCollection[0].CommandText = @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, sem.local_seminar_name, sem.local_seminar_type, sem.regional_seminar_name, sem.regional_seminar_type, sem.national_seminar_name, 
+                  sem.national_seminar_type, sem.international_seminar_name, sem.international_seminar_type, sem.number_of_seminars
+FROM     employees emp INNER JOIN
+                  tbl_list_of_seminars sem ON emp.employee_no = sem.employee_no
+WHERE  (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.local_seminar_name <> '') OR
+                  (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.regional_seminar_name <> '') OR
+                  (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.national_seminar_name <> '') OR
+                  (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.international_seminar_name <> '')
+ORDER BY emp.last_name";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

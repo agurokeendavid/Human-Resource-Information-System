@@ -142,7 +142,7 @@
             this.txtLeaveCredits.Margin = new System.Windows.Forms.Padding(4);
             this.txtLeaveCredits.Name = "txtLeaveCredits";
             this.txtLeaveCredits.Size = new System.Drawing.Size(137, 21);
-            this.txtLeaveCredits.TabIndex = 69;
+            this.txtLeaveCredits.TabIndex = 15;
             this.txtLeaveCredits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLeaveCredits_KeyPress);
             this.txtLeaveCredits.Validating += new System.ComponentModel.CancelEventHandler(this.txtLeaveCredits_Validating);
             // 
@@ -173,7 +173,7 @@
             this.txtDoctoralYearGraduated.Margin = new System.Windows.Forms.Padding(4);
             this.txtDoctoralYearGraduated.Name = "txtDoctoralYearGraduated";
             this.txtDoctoralYearGraduated.Size = new System.Drawing.Size(137, 21);
-            this.txtDoctoralYearGraduated.TabIndex = 32;
+            this.txtDoctoralYearGraduated.TabIndex = 37;
             this.txtDoctoralYearGraduated.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDoctoralYearGraduated_KeyPress);
             // 
             // txtDoctoralSchool
@@ -183,7 +183,7 @@
             this.txtDoctoralSchool.Margin = new System.Windows.Forms.Padding(4);
             this.txtDoctoralSchool.Name = "txtDoctoralSchool";
             this.txtDoctoralSchool.Size = new System.Drawing.Size(183, 21);
-            this.txtDoctoralSchool.TabIndex = 33;
+            this.txtDoctoralSchool.TabIndex = 38;
             // 
             // label28
             // 
@@ -213,7 +213,7 @@
             this.btnAddInternationSeminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddInternationSeminar.Name = "btnAddInternationSeminar";
             this.btnAddInternationSeminar.Size = new System.Drawing.Size(104, 34);
-            this.btnAddInternationSeminar.TabIndex = 24;
+            this.btnAddInternationSeminar.TabIndex = 28;
             this.btnAddInternationSeminar.Text = "+ Seminar";
             this.btnAddInternationSeminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddInternationSeminar.UseVisualStyleBackColor = true;
@@ -227,7 +227,7 @@
             this.btnAddNationalSeminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddNationalSeminar.Name = "btnAddNationalSeminar";
             this.btnAddNationalSeminar.Size = new System.Drawing.Size(104, 34);
-            this.btnAddNationalSeminar.TabIndex = 23;
+            this.btnAddNationalSeminar.TabIndex = 26;
             this.btnAddNationalSeminar.Text = "+ Seminar";
             this.btnAddNationalSeminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddNationalSeminar.UseVisualStyleBackColor = true;
@@ -241,7 +241,7 @@
             this.btnAddRegionalSeminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddRegionalSeminar.Name = "btnAddRegionalSeminar";
             this.btnAddRegionalSeminar.Size = new System.Drawing.Size(104, 34);
-            this.btnAddRegionalSeminar.TabIndex = 22;
+            this.btnAddRegionalSeminar.TabIndex = 27;
             this.btnAddRegionalSeminar.Text = "+ Seminar";
             this.btnAddRegionalSeminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddRegionalSeminar.UseVisualStyleBackColor = true;
@@ -265,7 +265,7 @@
             this.btnAddLocalSeminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddLocalSeminar.Name = "btnAddLocalSeminar";
             this.btnAddLocalSeminar.Size = new System.Drawing.Size(104, 34);
-            this.btnAddLocalSeminar.TabIndex = 21;
+            this.btnAddLocalSeminar.TabIndex = 25;
             this.btnAddLocalSeminar.Text = "+ Seminar";
             this.btnAddLocalSeminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddLocalSeminar.UseVisualStyleBackColor = true;
@@ -318,7 +318,7 @@
             this.txtStep.Margin = new System.Windows.Forms.Padding(4);
             this.txtStep.Name = "txtStep";
             this.txtStep.Size = new System.Drawing.Size(137, 21);
-            this.txtStep.TabIndex = 16;
+            this.txtStep.TabIndex = 19;
             this.txtStep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStep_KeyPress);
             this.txtStep.Validating += new System.ComponentModel.CancelEventHandler(this.txtStep_Validating);
             // 
@@ -340,7 +340,7 @@
             this.txtSalaryGrade.Name = "txtSalaryGrade";
             this.txtSalaryGrade.ReadOnly = true;
             this.txtSalaryGrade.Size = new System.Drawing.Size(137, 21);
-            this.txtSalaryGrade.TabIndex = 15;
+            this.txtSalaryGrade.TabIndex = 18;
             this.txtSalaryGrade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalaryGrade_KeyPress);
             this.txtSalaryGrade.Validating += new System.ComponentModel.CancelEventHandler(this.txtSalaryGrade_Validating);
             // 
@@ -361,7 +361,7 @@
             this.txtDoctoralCourse.Margin = new System.Windows.Forms.Padding(4);
             this.txtDoctoralCourse.Name = "txtDoctoralCourse";
             this.txtDoctoralCourse.Size = new System.Drawing.Size(183, 21);
-            this.txtDoctoralCourse.TabIndex = 31;
+            this.txtDoctoralCourse.TabIndex = 36;
             // 
             // btnUpload
             // 
@@ -371,7 +371,7 @@
             this.btnUpload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(188, 39);
-            this.btnUpload.TabIndex = 34;
+            this.btnUpload.TabIndex = 40;
             this.btnUpload.Text = "Select Photo";
             this.btnUpload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpload.UseVisualStyleBackColor = true;
@@ -416,7 +416,7 @@
             this.txtBSYearGraduated.Margin = new System.Windows.Forms.Padding(4);
             this.txtBSYearGraduated.Name = "txtBSYearGraduated";
             this.txtBSYearGraduated.Size = new System.Drawing.Size(137, 21);
-            this.txtBSYearGraduated.TabIndex = 26;
+            this.txtBSYearGraduated.TabIndex = 31;
             this.txtBSYearGraduated.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBSYearGraduated_KeyPress);
             // 
             // txtBSSchool
@@ -426,7 +426,7 @@
             this.txtBSSchool.Margin = new System.Windows.Forms.Padding(4);
             this.txtBSSchool.Name = "txtBSSchool";
             this.txtBSSchool.Size = new System.Drawing.Size(183, 21);
-            this.txtBSSchool.TabIndex = 27;
+            this.txtBSSchool.TabIndex = 32;
             // 
             // label19
             // 
@@ -464,7 +464,7 @@
             this.txtBSCourse.Margin = new System.Windows.Forms.Padding(4);
             this.txtBSCourse.Name = "txtBSCourse";
             this.txtBSCourse.Size = new System.Drawing.Size(188, 21);
-            this.txtBSCourse.TabIndex = 25;
+            this.txtBSCourse.TabIndex = 30;
             // 
             // pgbAttachment
             // 
@@ -491,7 +491,7 @@
             this.txtMasteralYearGraduated.Margin = new System.Windows.Forms.Padding(4);
             this.txtMasteralYearGraduated.Name = "txtMasteralYearGraduated";
             this.txtMasteralYearGraduated.Size = new System.Drawing.Size(137, 21);
-            this.txtMasteralYearGraduated.TabIndex = 29;
+            this.txtMasteralYearGraduated.TabIndex = 34;
             this.txtMasteralYearGraduated.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMasteralYearGraduated_KeyPress);
             // 
             // txtMasteralSchool
@@ -501,7 +501,7 @@
             this.txtMasteralSchool.Margin = new System.Windows.Forms.Padding(4);
             this.txtMasteralSchool.Name = "txtMasteralSchool";
             this.txtMasteralSchool.Size = new System.Drawing.Size(183, 21);
-            this.txtMasteralSchool.TabIndex = 30;
+            this.txtMasteralSchool.TabIndex = 35;
             // 
             // label25
             // 
@@ -520,7 +520,7 @@
             this.txtMasteralCourse.Margin = new System.Windows.Forms.Padding(4);
             this.txtMasteralCourse.Name = "txtMasteralCourse";
             this.txtMasteralCourse.Size = new System.Drawing.Size(188, 21);
-            this.txtMasteralCourse.TabIndex = 28;
+            this.txtMasteralCourse.TabIndex = 33;
             // 
             // btnAttach
             // 
@@ -530,7 +530,7 @@
             this.btnAttach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAttach.Name = "btnAttach";
             this.btnAttach.Size = new System.Drawing.Size(107, 34);
-            this.btnAttach.TabIndex = 35;
+            this.btnAttach.TabIndex = 42;
             this.btnAttach.Text = "Attach File";
             this.btnAttach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAttach.UseVisualStyleBackColor = true;
@@ -553,7 +553,7 @@
             this.txtUniqueItemNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtUniqueItemNo.Name = "txtUniqueItemNo";
             this.txtUniqueItemNo.Size = new System.Drawing.Size(137, 21);
-            this.txtUniqueItemNo.TabIndex = 14;
+            this.txtUniqueItemNo.TabIndex = 17;
             this.txtUniqueItemNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtUniqueItemNo_Validating);
             // 
             // cmbPosition
@@ -564,7 +564,7 @@
             this.cmbPosition.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(137, 23);
-            this.cmbPosition.TabIndex = 13;
+            this.cmbPosition.TabIndex = 16;
             this.cmbPosition.SelectionChangeCommitted += new System.EventHandler(this.cmbPosition_SelectionChangeCommitted);
             this.cmbPosition.Validating += new System.ComponentModel.CancelEventHandler(this.cmbPosition_Validating);
             // 
@@ -584,7 +584,7 @@
             this.grpSeminar.Name = "grpSeminar";
             this.grpSeminar.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpSeminar.Size = new System.Drawing.Size(856, 65);
-            this.grpSeminar.TabIndex = 62;
+            this.grpSeminar.TabIndex = 24;
             this.grpSeminar.TabStop = false;
             this.grpSeminar.Text = "Learning and Development";
             // 
@@ -595,7 +595,7 @@
             this.txtEligibility.Margin = new System.Windows.Forms.Padding(4);
             this.txtEligibility.Name = "txtEligibility";
             this.txtEligibility.Size = new System.Drawing.Size(137, 21);
-            this.txtEligibility.TabIndex = 11;
+            this.txtEligibility.TabIndex = 13;
             // 
             // label15
             // 
@@ -660,7 +660,7 @@
             this.grpBS.Name = "grpBS";
             this.grpBS.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpBS.Size = new System.Drawing.Size(325, 111);
-            this.grpBS.TabIndex = 18;
+            this.grpBS.TabIndex = 29;
             this.grpBS.TabStop = false;
             this.grpBS.Text = "BS Degree";
             // 
@@ -685,7 +685,7 @@
             this.cmbEmployeeType.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEmployeeType.Name = "cmbEmployeeType";
             this.cmbEmployeeType.Size = new System.Drawing.Size(137, 23);
-            this.cmbEmployeeType.TabIndex = 12;
+            this.cmbEmployeeType.TabIndex = 14;
             this.cmbEmployeeType.SelectionChangeCommitted += new System.EventHandler(this.cmbEmployeeType_SelectionChangeCommitted);
             this.cmbEmployeeType.Validating += new System.ComponentModel.CancelEventHandler(this.cmbEmployeeType_Validating);
             // 
@@ -714,7 +714,7 @@
             this.cmbDegree.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDegree.Name = "cmbDegree";
             this.cmbDegree.Size = new System.Drawing.Size(137, 23);
-            this.cmbDegree.TabIndex = 10;
+            this.cmbDegree.TabIndex = 12;
             this.cmbDegree.SelectedIndexChanged += new System.EventHandler(this.cmbDegree_SelectedIndexChanged);
             this.cmbDegree.Validating += new System.ComponentModel.CancelEventHandler(this.cmbDegree_Validating);
             // 
@@ -728,7 +728,7 @@
             this.grpAttachment.Name = "grpAttachment";
             this.grpAttachment.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpAttachment.Size = new System.Drawing.Size(200, 101);
-            this.grpAttachment.TabIndex = 32;
+            this.grpAttachment.TabIndex = 41;
             this.grpAttachment.TabStop = false;
             this.grpAttachment.Text = "Attachment";
             // 
@@ -743,7 +743,7 @@
             this.grpPicture.Name = "grpPicture";
             this.grpPicture.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpPicture.Size = new System.Drawing.Size(200, 235);
-            this.grpPicture.TabIndex = 30;
+            this.grpPicture.TabIndex = 39;
             this.grpPicture.TabStop = false;
             this.grpPicture.Text = "Please select a picture";
             // 
@@ -768,7 +768,7 @@
             this.cmbWorkStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbWorkStatus.Name = "cmbWorkStatus";
             this.cmbWorkStatus.Size = new System.Drawing.Size(137, 23);
-            this.cmbWorkStatus.TabIndex = 18;
+            this.cmbWorkStatus.TabIndex = 21;
             this.cmbWorkStatus.SelectionChangeCommitted += new System.EventHandler(this.cmbWorkStatus_SelectionChangeCommitted);
             this.cmbWorkStatus.Validating += new System.ComponentModel.CancelEventHandler(this.cmbWorkStatus_Validating);
             // 
@@ -801,7 +801,7 @@
             this.dtpEndofContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEndofContract.Name = "dtpEndofContract";
             this.dtpEndofContract.Size = new System.Drawing.Size(137, 21);
-            this.dtpEndofContract.TabIndex = 20;
+            this.dtpEndofContract.TabIndex = 23;
             this.dtpEndofContract.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
             // 
             // txtPlaceofBirth
@@ -812,7 +812,7 @@
             this.txtPlaceofBirth.Multiline = true;
             this.txtPlaceofBirth.Name = "txtPlaceofBirth";
             this.txtPlaceofBirth.Size = new System.Drawing.Size(137, 40);
-            this.txtPlaceofBirth.TabIndex = 7;
+            this.txtPlaceofBirth.TabIndex = 8;
             this.txtPlaceofBirth.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlaceofBirth_Validating);
             // 
             // Label1
@@ -873,7 +873,7 @@
             this.dtpDateofBirth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDateofBirth.Name = "dtpDateofBirth";
             this.dtpDateofBirth.Size = new System.Drawing.Size(137, 21);
-            this.dtpDateofBirth.TabIndex = 6;
+            this.dtpDateofBirth.TabIndex = 7;
             this.dtpDateofBirth.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
             // 
             // btnClose
@@ -890,7 +890,7 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(97, 30);
-            this.btnClose.TabIndex = 41;
+            this.btnClose.TabIndex = 45;
             this.btnClose.Text = "Clos&e ";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = false;
@@ -910,7 +910,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(97, 30);
-            this.btnSave.TabIndex = 43;
+            this.btnSave.TabIndex = 44;
             this.btnSave.Text = "&Save ";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = false;
@@ -928,7 +928,7 @@
             this.GroupBox2.Name = "GroupBox2";
             this.GroupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.GroupBox2.Size = new System.Drawing.Size(1190, 58);
-            this.GroupBox2.TabIndex = 48;
+            this.GroupBox2.TabIndex = 43;
             this.GroupBox2.TabStop = false;
             // 
             // panelFileInformation
@@ -990,7 +990,7 @@
             this.panelFileInformation.Margin = new System.Windows.Forms.Padding(4);
             this.panelFileInformation.Name = "panelFileInformation";
             this.panelFileInformation.Size = new System.Drawing.Size(1173, 427);
-            this.panelFileInformation.TabIndex = 47;
+            this.panelFileInformation.TabIndex = 0;
             // 
             // dtpHiredDate
             // 
@@ -1000,7 +1000,7 @@
             this.dtpHiredDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpHiredDate.Name = "dtpHiredDate";
             this.dtpHiredDate.Size = new System.Drawing.Size(137, 21);
-            this.dtpHiredDate.TabIndex = 19;
+            this.dtpHiredDate.TabIndex = 22;
             this.dtpHiredDate.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
             // 
             // txtContactNo
@@ -1010,7 +1010,7 @@
             this.txtContactNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(137, 21);
-            this.txtContactNo.TabIndex = 8;
+            this.txtContactNo.TabIndex = 9;
             this.txtContactNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactNo_KeyPress);
             this.txtContactNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtContactNo_Validating);
             // 
@@ -1021,7 +1021,7 @@
             this.txtMiddleName.Margin = new System.Windows.Forms.Padding(4);
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Size = new System.Drawing.Size(137, 21);
-            this.txtMiddleName.TabIndex = 2;
+            this.txtMiddleName.TabIndex = 3;
             // 
             // cmbGender
             // 
@@ -1034,7 +1034,7 @@
             this.cmbGender.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(137, 23);
-            this.cmbGender.TabIndex = 5;
+            this.cmbGender.TabIndex = 6;
             this.cmbGender.Validating += new System.ComponentModel.CancelEventHandler(this.cmbGender_Validating);
             // 
             // label8
@@ -1054,7 +1054,7 @@
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(137, 21);
-            this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.TabIndex = 2;
             this.txtFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.txtFirstName_Validating);
             // 
             // label4
@@ -1088,7 +1088,7 @@
             this.cmbCivilStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCivilStatus.Name = "cmbCivilStatus";
             this.cmbCivilStatus.Size = new System.Drawing.Size(137, 23);
-            this.cmbCivilStatus.TabIndex = 9;
+            this.cmbCivilStatus.TabIndex = 10;
             this.cmbCivilStatus.Validating += new System.ComponentModel.CancelEventHandler(this.cmbCivilStatus_Validating);
             // 
             // txtEmployeeNo
@@ -1098,7 +1098,7 @@
             this.txtEmployeeNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmployeeNo.Name = "txtEmployeeNo";
             this.txtEmployeeNo.Size = new System.Drawing.Size(137, 21);
-            this.txtEmployeeNo.TabIndex = 0;
+            this.txtEmployeeNo.TabIndex = 1;
             this.txtEmployeeNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmployeeNo_Validating);
             // 
             // txtAddress
@@ -1109,7 +1109,7 @@
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(137, 40);
-            this.txtAddress.TabIndex = 4;
+            this.txtAddress.TabIndex = 5;
             this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddress_Validating);
             // 
             // cmbDepartment
@@ -1125,7 +1125,7 @@
             this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(137, 23);
-            this.cmbDepartment.TabIndex = 17;
+            this.cmbDepartment.TabIndex = 20;
             this.cmbDepartment.Validating += new System.ComponentModel.CancelEventHandler(this.cmbDepartment_Validating);
             // 
             // label10
@@ -1175,7 +1175,7 @@
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(137, 21);
-            this.txtLastName.TabIndex = 3;
+            this.txtLastName.TabIndex = 4;
             this.txtLastName.Validating += new System.ComponentModel.CancelEventHandler(this.txtLastName_Validating);
             // 
             // Panel1

@@ -10,8 +10,8 @@ namespace HRISCapsu.Models
     {
         public int Id { get; set; }
         public string EmployeeNo { get; set; }
-        public int LeaveCredit { get; set; }
-        public int RemainingLeaveCredit { get; set; }
+        public int? LeaveCredit { get; set; }
+        public int? RemainingLeaveCredit { get; set; }
         public byte IsDeleted { get; set; }
     }
 }

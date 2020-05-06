@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditEmployee));
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -191,7 +191,7 @@
             this.txtDoctoralYearGraduated.Margin = new System.Windows.Forms.Padding(4);
             this.txtDoctoralYearGraduated.Name = "txtDoctoralYearGraduated";
             this.txtDoctoralYearGraduated.Size = new System.Drawing.Size(137, 21);
-            this.txtDoctoralYearGraduated.TabIndex = 32;
+            this.txtDoctoralYearGraduated.TabIndex = 33;
             // 
             // txtDoctoralSchool
             // 
@@ -200,7 +200,7 @@
             this.txtDoctoralSchool.Margin = new System.Windows.Forms.Padding(4);
             this.txtDoctoralSchool.Name = "txtDoctoralSchool";
             this.txtDoctoralSchool.Size = new System.Drawing.Size(183, 21);
-            this.txtDoctoralSchool.TabIndex = 33;
+            this.txtDoctoralSchool.TabIndex = 34;
             // 
             // label28
             // 
@@ -219,7 +219,7 @@
             this.txtDoctoralCourse.Margin = new System.Windows.Forms.Padding(4);
             this.txtDoctoralCourse.Name = "txtDoctoralCourse";
             this.txtDoctoralCourse.Size = new System.Drawing.Size(183, 21);
-            this.txtDoctoralCourse.TabIndex = 31;
+            this.txtDoctoralCourse.TabIndex = 32;
             // 
             // label33
             // 
@@ -248,7 +248,7 @@
             this.txtStep.Margin = new System.Windows.Forms.Padding(4);
             this.txtStep.Name = "txtStep";
             this.txtStep.Size = new System.Drawing.Size(137, 21);
-            this.txtStep.TabIndex = 16;
+            this.txtStep.TabIndex = 18;
             this.txtStep.Validating += new System.ComponentModel.CancelEventHandler(this.txtStep_Validating);
             // 
             // label34
@@ -268,28 +268,28 @@
             this.txtSalaryGrade.Margin = new System.Windows.Forms.Padding(4);
             this.txtSalaryGrade.Name = "txtSalaryGrade";
             this.txtSalaryGrade.Size = new System.Drawing.Size(137, 21);
-            this.txtSalaryGrade.TabIndex = 15;
+            this.txtSalaryGrade.TabIndex = 17;
             this.txtSalaryGrade.Validating += new System.ComponentModel.CancelEventHandler(this.txtSalaryGrade_Validating);
             // 
             // dtgRecords
             // 
             this.dtgRecords.AllowUserToAddRows = false;
             this.dtgRecords.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FloralWhite;
-            this.dtgRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FloralWhite;
+            this.dtgRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgRecords.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dtgRecords.BackgroundColor = System.Drawing.Color.White;
             this.dtgRecords.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgRecords.ColumnHeadersHeight = 30;
             this.dtgRecords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EmployeeId,
@@ -335,21 +335,21 @@
             this.dtgRecords.Name = "dtgRecords";
             this.dtgRecords.ReadOnly = true;
             this.dtgRecords.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgRecords.RowHeadersVisible = false;
             this.dtgRecords.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgRecords.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgRecords.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dtgRecords.RowTemplate.Height = 18;
             this.dtgRecords.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -416,9 +416,9 @@
             // DateOfBirth
             // 
             this.DateOfBirth.DataPropertyName = "DateOfBirth";
-            dataGridViewCellStyle10.Format = "MMMM dd, yyyy";
-            dataGridViewCellStyle10.NullValue = null;
-            this.DateOfBirth.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Format = "MMMM dd, yyyy";
+            dataGridViewCellStyle3.NullValue = null;
+            this.DateOfBirth.DefaultCellStyle = dataGridViewCellStyle3;
             this.DateOfBirth.HeaderText = "Date of Birth";
             this.DateOfBirth.MinimumWidth = 6;
             this.DateOfBirth.Name = "DateOfBirth";
@@ -612,8 +612,8 @@
             // HiredDate
             // 
             this.HiredDate.DataPropertyName = "HiredDate";
-            dataGridViewCellStyle11.Format = "MMMM dd, yyyy";
-            this.HiredDate.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.Format = "MMMM dd, yyyy";
+            this.HiredDate.DefaultCellStyle = dataGridViewCellStyle4;
             this.HiredDate.HeaderText = "Hired Date";
             this.HiredDate.MinimumWidth = 6;
             this.HiredDate.Name = "HiredDate";
@@ -622,8 +622,8 @@
             // EndOfContract
             // 
             this.EndOfContract.DataPropertyName = "EndOfContract";
-            dataGridViewCellStyle12.Format = "MMMM dd, yyyy";
-            this.EndOfContract.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.Format = "MMMM dd, yyyy";
+            this.EndOfContract.DefaultCellStyle = dataGridViewCellStyle5;
             this.EndOfContract.HeaderText = "End of Contract";
             this.EndOfContract.MinimumWidth = 6;
             this.EndOfContract.Name = "EndOfContract";
@@ -699,7 +699,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(960, 181);
-            this.panel2.TabIndex = 50;
+            this.panel2.TabIndex = 35;
             // 
             // label22
             // 
@@ -728,7 +728,7 @@
             this.txtBSYearGraduated.Margin = new System.Windows.Forms.Padding(4);
             this.txtBSYearGraduated.Name = "txtBSYearGraduated";
             this.txtBSYearGraduated.Size = new System.Drawing.Size(137, 21);
-            this.txtBSYearGraduated.TabIndex = 26;
+            this.txtBSYearGraduated.TabIndex = 25;
             // 
             // txtBSSchool
             // 
@@ -737,7 +737,7 @@
             this.txtBSSchool.Margin = new System.Windows.Forms.Padding(4);
             this.txtBSSchool.Name = "txtBSSchool";
             this.txtBSSchool.Size = new System.Drawing.Size(183, 21);
-            this.txtBSSchool.TabIndex = 27;
+            this.txtBSSchool.TabIndex = 26;
             // 
             // label19
             // 
@@ -756,7 +756,7 @@
             this.txtBSCourse.Margin = new System.Windows.Forms.Padding(4);
             this.txtBSCourse.Name = "txtBSCourse";
             this.txtBSCourse.Size = new System.Drawing.Size(188, 21);
-            this.txtBSCourse.TabIndex = 25;
+            this.txtBSCourse.TabIndex = 24;
             // 
             // txtMasteralYearGraduated
             // 
@@ -812,7 +812,7 @@
             this.txtUniqueItemNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtUniqueItemNo.Name = "txtUniqueItemNo";
             this.txtUniqueItemNo.Size = new System.Drawing.Size(137, 21);
-            this.txtUniqueItemNo.TabIndex = 14;
+            this.txtUniqueItemNo.TabIndex = 16;
             this.txtUniqueItemNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtUniqueItemNo_Validating);
             // 
             // grpMasteral
@@ -830,7 +830,7 @@
             this.grpMasteral.Name = "grpMasteral";
             this.grpMasteral.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpMasteral.Size = new System.Drawing.Size(325, 111);
-            this.grpMasteral.TabIndex = 22;
+            this.grpMasteral.TabIndex = 27;
             this.grpMasteral.TabStop = false;
             this.grpMasteral.Text = "Masteral Degree";
             // 
@@ -848,7 +848,7 @@
             this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(97, 30);
-            this.btnPrint.TabIndex = 42;
+            this.btnPrint.TabIndex = 41;
             this.btnPrint.Text = "&Print";
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrint.UseVisualStyleBackColor = false;
@@ -868,7 +868,7 @@
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(97, 30);
-            this.btnDelete.TabIndex = 38;
+            this.btnDelete.TabIndex = 40;
             this.btnDelete.Text = "&Delete";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -888,7 +888,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(97, 30);
-            this.btnCancel.TabIndex = 44;
+            this.btnCancel.TabIndex = 38;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -909,7 +909,7 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(97, 30);
-            this.btnClose.TabIndex = 41;
+            this.btnClose.TabIndex = 42;
             this.btnClose.Text = "Clos&e ";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = false;
@@ -930,7 +930,7 @@
             this.grpBS.Name = "grpBS";
             this.grpBS.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpBS.Size = new System.Drawing.Size(325, 111);
-            this.grpBS.TabIndex = 18;
+            this.grpBS.TabIndex = 23;
             this.grpBS.TabStop = false;
             this.grpBS.Text = "BS Degree";
             // 
@@ -958,7 +958,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(97, 30);
-            this.btnSave.TabIndex = 43;
+            this.btnSave.TabIndex = 37;
             this.btnSave.Text = "&Save ";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = false;
@@ -1002,7 +1002,7 @@
             this.txtEligibility.Margin = new System.Windows.Forms.Padding(4);
             this.txtEligibility.Name = "txtEligibility";
             this.txtEligibility.Size = new System.Drawing.Size(137, 21);
-            this.txtEligibility.TabIndex = 11;
+            this.txtEligibility.TabIndex = 12;
             // 
             // label15
             // 
@@ -1029,7 +1029,7 @@
             this.grpDoctoral.Name = "grpDoctoral";
             this.grpDoctoral.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpDoctoral.Size = new System.Drawing.Size(325, 111);
-            this.grpDoctoral.TabIndex = 26;
+            this.grpDoctoral.TabIndex = 31;
             this.grpDoctoral.TabStop = false;
             this.grpDoctoral.Text = "Doctoral Degree";
             // 
@@ -1044,7 +1044,7 @@
             this.cmbEmployeeType.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEmployeeType.Name = "cmbEmployeeType";
             this.cmbEmployeeType.Size = new System.Drawing.Size(137, 23);
-            this.cmbEmployeeType.TabIndex = 12;
+            this.cmbEmployeeType.TabIndex = 13;
             this.cmbEmployeeType.SelectedIndexChanged += new System.EventHandler(this.cmbEmployeeType_SelectedIndexChanged);
             this.cmbEmployeeType.Validating += new System.ComponentModel.CancelEventHandler(this.cmbEmployeeType_Validating);
             // 
@@ -1063,7 +1063,7 @@
             this.cmbDegree.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDegree.Name = "cmbDegree";
             this.cmbDegree.Size = new System.Drawing.Size(137, 23);
-            this.cmbDegree.TabIndex = 10;
+            this.cmbDegree.TabIndex = 11;
             this.cmbDegree.SelectedIndexChanged += new System.EventHandler(this.cmbDegree_SelectedIndexChanged);
             this.cmbDegree.Validating += new System.ComponentModel.CancelEventHandler(this.cmbDegree_Validating);
             // 
@@ -1124,7 +1124,7 @@
             this.panelFileInformation.Margin = new System.Windows.Forms.Padding(4);
             this.panelFileInformation.Name = "panelFileInformation";
             this.panelFileInformation.Size = new System.Drawing.Size(960, 401);
-            this.panelFileInformation.TabIndex = 47;
+            this.panelFileInformation.TabIndex = 0;
             // 
             // label29
             // 
@@ -1144,7 +1144,7 @@
             this.txtLeaveCredits.Margin = new System.Windows.Forms.Padding(4);
             this.txtLeaveCredits.Name = "txtLeaveCredits";
             this.txtLeaveCredits.Size = new System.Drawing.Size(137, 21);
-            this.txtLeaveCredits.TabIndex = 71;
+            this.txtLeaveCredits.TabIndex = 14;
             this.txtLeaveCredits.Validating += new System.ComponentModel.CancelEventHandler(this.txtLeaveCredits_Validating);
             // 
             // cmbPosition
@@ -1155,7 +1155,7 @@
             this.cmbPosition.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(137, 23);
-            this.cmbPosition.TabIndex = 13;
+            this.cmbPosition.TabIndex = 15;
             this.cmbPosition.Validating += new System.ComponentModel.CancelEventHandler(this.cmbPosition_Validating);
             // 
             // label17
@@ -1179,7 +1179,7 @@
             this.cmbWorkStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbWorkStatus.Name = "cmbWorkStatus";
             this.cmbWorkStatus.Size = new System.Drawing.Size(137, 23);
-            this.cmbWorkStatus.TabIndex = 18;
+            this.cmbWorkStatus.TabIndex = 20;
             this.cmbWorkStatus.SelectedIndexChanged += new System.EventHandler(this.cmbWorkStatus_SelectedIndexChanged);
             this.cmbWorkStatus.Validating += new System.ComponentModel.CancelEventHandler(this.cmbWorkStatus_Validating);
             // 
@@ -1212,7 +1212,7 @@
             this.dtpEndofContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEndofContract.Name = "dtpEndofContract";
             this.dtpEndofContract.Size = new System.Drawing.Size(137, 21);
-            this.dtpEndofContract.TabIndex = 20;
+            this.dtpEndofContract.TabIndex = 22;
             this.dtpEndofContract.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
             // 
             // txtPlaceofBirth
@@ -1223,7 +1223,7 @@
             this.txtPlaceofBirth.Multiline = true;
             this.txtPlaceofBirth.Name = "txtPlaceofBirth";
             this.txtPlaceofBirth.Size = new System.Drawing.Size(137, 40);
-            this.txtPlaceofBirth.TabIndex = 7;
+            this.txtPlaceofBirth.TabIndex = 8;
             this.txtPlaceofBirth.Validating += new System.ComponentModel.CancelEventHandler(this.txtPlaceofBirth_Validating);
             // 
             // Label1
@@ -1284,7 +1284,7 @@
             this.dtpDateofBirth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDateofBirth.Name = "dtpDateofBirth";
             this.dtpDateofBirth.Size = new System.Drawing.Size(137, 21);
-            this.dtpDateofBirth.TabIndex = 6;
+            this.dtpDateofBirth.TabIndex = 7;
             this.dtpDateofBirth.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
             this.dtpDateofBirth.Validating += new System.ComponentModel.CancelEventHandler(this.dtpDateofBirth_Validating);
             // 
@@ -1296,7 +1296,7 @@
             this.dtpHiredDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpHiredDate.Name = "dtpHiredDate";
             this.dtpHiredDate.Size = new System.Drawing.Size(137, 21);
-            this.dtpHiredDate.TabIndex = 19;
+            this.dtpHiredDate.TabIndex = 21;
             this.dtpHiredDate.Value = new System.DateTime(2020, 1, 3, 0, 0, 0, 0);
             // 
             // txtContactNo
@@ -1306,7 +1306,7 @@
             this.txtContactNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(137, 21);
-            this.txtContactNo.TabIndex = 8;
+            this.txtContactNo.TabIndex = 9;
             this.txtContactNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtContactNo_Validating);
             // 
             // txtMiddleName
@@ -1316,7 +1316,7 @@
             this.txtMiddleName.Margin = new System.Windows.Forms.Padding(4);
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Size = new System.Drawing.Size(137, 21);
-            this.txtMiddleName.TabIndex = 2;
+            this.txtMiddleName.TabIndex = 3;
             // 
             // cmbGender
             // 
@@ -1329,7 +1329,7 @@
             this.cmbGender.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(137, 23);
-            this.cmbGender.TabIndex = 5;
+            this.cmbGender.TabIndex = 6;
             this.cmbGender.Validating += new System.ComponentModel.CancelEventHandler(this.cmbGender_Validating);
             // 
             // label8
@@ -1349,7 +1349,7 @@
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(137, 21);
-            this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.TabIndex = 2;
             this.txtFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.txtFirstName_Validating);
             // 
             // label4
@@ -1383,7 +1383,7 @@
             this.cmbCivilStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCivilStatus.Name = "cmbCivilStatus";
             this.cmbCivilStatus.Size = new System.Drawing.Size(137, 23);
-            this.cmbCivilStatus.TabIndex = 9;
+            this.cmbCivilStatus.TabIndex = 10;
             this.cmbCivilStatus.Validating += new System.ComponentModel.CancelEventHandler(this.cmbCivilStatus_Validating);
             // 
             // txtEmployeeNo
@@ -1394,7 +1394,7 @@
             this.txtEmployeeNo.Name = "txtEmployeeNo";
             this.txtEmployeeNo.ReadOnly = true;
             this.txtEmployeeNo.Size = new System.Drawing.Size(137, 21);
-            this.txtEmployeeNo.TabIndex = 0;
+            this.txtEmployeeNo.TabIndex = 1;
             this.txtEmployeeNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmployeeNo_Validating);
             // 
             // txtAddress
@@ -1405,7 +1405,7 @@
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(137, 40);
-            this.txtAddress.TabIndex = 4;
+            this.txtAddress.TabIndex = 5;
             this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddress_Validating);
             // 
             // cmbDepartment
@@ -1421,7 +1421,7 @@
             this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(137, 23);
-            this.cmbDepartment.TabIndex = 17;
+            this.cmbDepartment.TabIndex = 19;
             this.cmbDepartment.Validating += new System.ComponentModel.CancelEventHandler(this.cmbDepartment_Validating);
             // 
             // label10
@@ -1471,7 +1471,7 @@
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(137, 21);
-            this.txtLastName.TabIndex = 3;
+            this.txtLastName.TabIndex = 4;
             this.txtLastName.Validating += new System.ComponentModel.CancelEventHandler(this.txtLastName_Validating);
             // 
             // GroupBox2
