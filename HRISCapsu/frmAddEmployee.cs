@@ -26,6 +26,7 @@ namespace HRISCapsu
             worker.ProgressChanged += worker_ProgressChanged;
             worker.DoWork += Worker_DoWork;
             ClearStaticVariables();
+            
         }
 
         void ClearStaticVariables()

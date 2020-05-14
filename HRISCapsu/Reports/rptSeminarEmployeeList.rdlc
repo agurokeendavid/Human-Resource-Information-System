@@ -372,7 +372,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!employee_no.Value</Value>
+                                  <Value>=RunningValue(Fields!employee_no.Value, CountDistinct, "EmployeeSeminarDataSet")</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
