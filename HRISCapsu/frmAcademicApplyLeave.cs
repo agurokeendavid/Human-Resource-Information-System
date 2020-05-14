@@ -108,37 +108,29 @@ namespace HRISCapsu
             {
                 if (IsEmployeeExist())
                 {
-                    if (dtpLeaveFrom.Value.Date >= DateTime.Now.Date)
+                    if (dtpLeaveFrom.Value < dtpLeaveTo.Value)
                     {
-                        if (dtpLeaveFrom.Value < dtpLeaveTo.Value)
+                        int totalLeaveDays = Convert.ToInt32((dtpLeaveTo.Value - dtpLeaveFrom.Value).TotalDays);
+                        if (totalLeaveDays <= Convert.ToInt32(lblLeaveCredits.Text))
                         {
-                            int totalLeaveDays = Convert.ToInt32((dtpLeaveTo.Value - dtpLeaveFrom.Value).TotalDays);
-                            if (totalLeaveDays <= Convert.ToInt32(lblLeaveCredits.Text))
-                            {
-                                ApplyLeave();
-                                UpdateRemainingLeaveCredit(Convert.ToInt32((dtpLeaveTo.Value - dtpLeaveFrom.Value).TotalDays), txtEmployeeNo.Text);
-                                lblLeaveCredits.Text = "0";
-                                Classes.Methods.ClearItems(panelEmployeeInformation);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Leave days must not exceed in leave credits", "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+                            ApplyLeave();
+                            UpdateRemainingLeaveCredit(Convert.ToInt32((dtpLeaveTo.Value - dtpLeaveFrom.Value).TotalDays), txtEmployeeNo.Text);
+                            lblLeaveCredits.Text = "0";
+                            Classes.Methods.ClearItems(panelEmployeeInformation);
                         }
                         else
                         {
-                            MessageBox.Show("Please select a valid leave date.", "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Leave days must not exceed in leave credits", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
                         MessageBox.Show("Please select a valid leave date.", "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    
-                    
+
+
                 }
                 else
                 {
