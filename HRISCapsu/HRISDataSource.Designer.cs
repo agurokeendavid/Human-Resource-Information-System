@@ -550,6 +550,22 @@ namespace HRISCapsu {
             
             private global::System.Data.DataColumn columnnumber_of_seminars;
             
+            private global::System.Data.DataColumn columnlocal_from;
+            
+            private global::System.Data.DataColumn columnlocal_to;
+            
+            private global::System.Data.DataColumn columnregional_from;
+            
+            private global::System.Data.DataColumn columnregional_to;
+            
+            private global::System.Data.DataColumn columnnational_from;
+            
+            private global::System.Data.DataColumn columnnational_to;
+            
+            private global::System.Data.DataColumn columninternational_from;
+            
+            private global::System.Data.DataColumn columninternational_to;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public EmployeeSeminarListDataTable() {
@@ -689,6 +705,70 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn local_fromColumn {
+                get {
+                    return this.columnlocal_from;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn local_toColumn {
+                get {
+                    return this.columnlocal_to;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn regional_fromColumn {
+                get {
+                    return this.columnregional_from;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn regional_toColumn {
+                get {
+                    return this.columnregional_to;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn national_fromColumn {
+                get {
+                    return this.columnnational_from;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn national_toColumn {
+                get {
+                    return this.columnnational_to;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn international_fromColumn {
+                get {
+                    return this.columninternational_from;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn international_toColumn {
+                get {
+                    return this.columninternational_to;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -724,7 +804,28 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EmployeeSeminarListRow AddEmployeeSeminarListRow(string employee_no, string first_name, string middle_name, string last_name, string local_seminar_name, string local_seminar_type, string regional_seminar_name, string regional_seminar_type, string national_seminar_name, string national_seminar_type, string international_seminar_name, string international_seminar_type, int number_of_seminars) {
+            public EmployeeSeminarListRow AddEmployeeSeminarListRow(
+                        string employee_no, 
+                        string first_name, 
+                        string middle_name, 
+                        string last_name, 
+                        string local_seminar_name, 
+                        string local_seminar_type, 
+                        string regional_seminar_name, 
+                        string regional_seminar_type, 
+                        string national_seminar_name, 
+                        string national_seminar_type, 
+                        string international_seminar_name, 
+                        string international_seminar_type, 
+                        int number_of_seminars, 
+                        System.DateTime local_from, 
+                        System.DateTime local_to, 
+                        System.DateTime regional_from, 
+                        System.DateTime regional_to, 
+                        System.DateTime national_from, 
+                        System.DateTime national_to, 
+                        System.DateTime international_from, 
+                        System.DateTime international_to) {
                 EmployeeSeminarListRow rowEmployeeSeminarListRow = ((EmployeeSeminarListRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         employee_no,
@@ -739,7 +840,15 @@ namespace HRISCapsu {
                         national_seminar_type,
                         international_seminar_name,
                         international_seminar_type,
-                        number_of_seminars};
+                        number_of_seminars,
+                        local_from,
+                        local_to,
+                        regional_from,
+                        regional_to,
+                        national_from,
+                        national_to,
+                        international_from,
+                        international_to};
                 rowEmployeeSeminarListRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEmployeeSeminarListRow);
                 return rowEmployeeSeminarListRow;
@@ -775,6 +884,14 @@ namespace HRISCapsu {
                 this.columninternational_seminar_name = base.Columns["international_seminar_name"];
                 this.columninternational_seminar_type = base.Columns["international_seminar_type"];
                 this.columnnumber_of_seminars = base.Columns["number_of_seminars"];
+                this.columnlocal_from = base.Columns["local_from"];
+                this.columnlocal_to = base.Columns["local_to"];
+                this.columnregional_from = base.Columns["regional_from"];
+                this.columnregional_to = base.Columns["regional_to"];
+                this.columnnational_from = base.Columns["national_from"];
+                this.columnnational_to = base.Columns["national_to"];
+                this.columninternational_from = base.Columns["international_from"];
+                this.columninternational_to = base.Columns["international_to"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -806,6 +923,22 @@ namespace HRISCapsu {
                 base.Columns.Add(this.columninternational_seminar_type);
                 this.columnnumber_of_seminars = new global::System.Data.DataColumn("number_of_seminars", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnumber_of_seminars);
+                this.columnlocal_from = new global::System.Data.DataColumn("local_from", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlocal_from);
+                this.columnlocal_to = new global::System.Data.DataColumn("local_to", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlocal_to);
+                this.columnregional_from = new global::System.Data.DataColumn("regional_from", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnregional_from);
+                this.columnregional_to = new global::System.Data.DataColumn("regional_to", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnregional_to);
+                this.columnnational_from = new global::System.Data.DataColumn("national_from", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnational_from);
+                this.columnnational_to = new global::System.Data.DataColumn("national_to", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnational_to);
+                this.columninternational_from = new global::System.Data.DataColumn("international_from", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninternational_from);
+                this.columninternational_to = new global::System.Data.DataColumn("international_to", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninternational_to);
                 this.columnemployee_no.AllowDBNull = false;
                 this.columnemployee_no.MaxLength = 50;
                 this.columnfirst_name.AllowDBNull = false;
@@ -6838,6 +6971,136 @@ namespace HRISCapsu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime local_from {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableEmployeeSeminarList.local_fromColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'local_from\' in table \'EmployeeSeminarList\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployeeSeminarList.local_fromColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime local_to {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableEmployeeSeminarList.local_toColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'local_to\' in table \'EmployeeSeminarList\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployeeSeminarList.local_toColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime regional_from {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableEmployeeSeminarList.regional_fromColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'regional_from\' in table \'EmployeeSeminarList\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployeeSeminarList.regional_fromColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime regional_to {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableEmployeeSeminarList.regional_toColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'regional_to\' in table \'EmployeeSeminarList\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployeeSeminarList.regional_toColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime national_from {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableEmployeeSeminarList.national_fromColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'national_from\' in table \'EmployeeSeminarList\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployeeSeminarList.national_fromColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime national_to {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableEmployeeSeminarList.national_toColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'national_to\' in table \'EmployeeSeminarList\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployeeSeminarList.national_toColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime international_from {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableEmployeeSeminarList.international_fromColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'international_from\' in table \'EmployeeSeminarList\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployeeSeminarList.international_fromColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime international_to {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableEmployeeSeminarList.international_toColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'international_to\' in table \'EmployeeSeminarList\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployeeSeminarList.international_toColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Islocal_seminar_nameNull() {
                 return this.IsNull(this.tableEmployeeSeminarList.local_seminar_nameColumn);
             }
@@ -6942,6 +7205,102 @@ namespace HRISCapsu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setnumber_of_seminarsNull() {
                 this[this.tableEmployeeSeminarList.number_of_seminarsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Islocal_fromNull() {
+                return this.IsNull(this.tableEmployeeSeminarList.local_fromColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setlocal_fromNull() {
+                this[this.tableEmployeeSeminarList.local_fromColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Islocal_toNull() {
+                return this.IsNull(this.tableEmployeeSeminarList.local_toColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setlocal_toNull() {
+                this[this.tableEmployeeSeminarList.local_toColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isregional_fromNull() {
+                return this.IsNull(this.tableEmployeeSeminarList.regional_fromColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setregional_fromNull() {
+                this[this.tableEmployeeSeminarList.regional_fromColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isregional_toNull() {
+                return this.IsNull(this.tableEmployeeSeminarList.regional_toColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setregional_toNull() {
+                this[this.tableEmployeeSeminarList.regional_toColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isnational_fromNull() {
+                return this.IsNull(this.tableEmployeeSeminarList.national_fromColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setnational_fromNull() {
+                this[this.tableEmployeeSeminarList.national_fromColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isnational_toNull() {
+                return this.IsNull(this.tableEmployeeSeminarList.national_toColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setnational_toNull() {
+                this[this.tableEmployeeSeminarList.national_toColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isinternational_fromNull() {
+                return this.IsNull(this.tableEmployeeSeminarList.international_fromColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setinternational_fromNull() {
+                this[this.tableEmployeeSeminarList.international_fromColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isinternational_toNull() {
+                return this.IsNull(this.tableEmployeeSeminarList.international_toColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setinternational_toNull() {
+                this[this.tableEmployeeSeminarList.international_toColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -10203,6 +10562,14 @@ namespace HRISCapsu.HRISDataSourceTableAdapters {
             tableMapping.ColumnMappings.Add("international_seminar_name", "international_seminar_name");
             tableMapping.ColumnMappings.Add("international_seminar_type", "international_seminar_type");
             tableMapping.ColumnMappings.Add("number_of_seminars", "number_of_seminars");
+            tableMapping.ColumnMappings.Add("local_from", "local_from");
+            tableMapping.ColumnMappings.Add("local_to", "local_to");
+            tableMapping.ColumnMappings.Add("regional_from", "regional_from");
+            tableMapping.ColumnMappings.Add("regional_to", "regional_to");
+            tableMapping.ColumnMappings.Add("national_from", "national_from");
+            tableMapping.ColumnMappings.Add("national_to", "national_to");
+            tableMapping.ColumnMappings.Add("international_from", "international_from");
+            tableMapping.ColumnMappings.Add("international_to", "international_to");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -10219,14 +10586,15 @@ namespace HRISCapsu.HRISDataSourceTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, sem.local_seminar_name, sem.local_seminar_type, sem.regional_seminar_name, sem.regional_seminar_type, sem.national_seminar_name, 
-                  sem.national_seminar_type, sem.international_seminar_name, sem.international_seminar_type, sem.number_of_seminars
-FROM     employees emp INNER JOIN
-                  tbl_list_of_seminars sem ON emp.employee_no = sem.employee_no
-WHERE  (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.local_seminar_name <> '') OR
-                  (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.regional_seminar_name <> '') OR
-                  (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.national_seminar_name <> '') OR
-                  (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.international_seminar_name <> '')
+            this._commandCollection[0].CommandText = @"SELECT        emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, sem.local_seminar_name, sem.local_seminar_type, sem.local_from, sem.local_to, sem.regional_seminar_name, sem.regional_seminar_type, 
+                         sem.regional_from, sem.regional_to, sem.national_seminar_name, sem.national_seminar_type, sem.national_from, sem.national_to, sem.international_seminar_name, sem.international_seminar_type, sem.international_from, 
+                         sem.international_to, sem.number_of_seminars
+FROM            employees emp INNER JOIN
+                         tbl_list_of_seminars sem ON emp.employee_no = sem.employee_no
+WHERE        (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.local_seminar_name <> '') OR
+                         (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.regional_seminar_name <> '') OR
+                         (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.national_seminar_name <> '') OR
+                         (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.international_seminar_name <> '')
 ORDER BY emp.last_name";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }

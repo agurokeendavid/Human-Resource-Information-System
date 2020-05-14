@@ -394,6 +394,12 @@
     <Compile Include="ReportPreviewer\previewSeminarEmployeeList.Designer.cs">
       <DependentUpon>previewSeminarEmployeeList.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportPreviewer\previewSeminarList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreviewer\previewSeminarList.Designer.cs">
+      <DependentUpon>previewSeminarList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repository\EmployeeRepository.cs" />
     <Compile Include="Repository\LeaveCreditRepository.cs" />
     <Compile Include="Repository\ListOfSeminarRepository.cs" />
@@ -532,6 +538,9 @@
     <EmbeddedResource Include="ReportPreviewer\previewSeminarEmployeeList.resx">
       <DependentUpon>previewSeminarEmployeeList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreviewer\previewSeminarList.resx">
+      <DependentUpon>previewSeminarList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptNewAllAcademicEmployees.rdlc" />
     <EmbeddedResource Include="Reports\rptNewAllEmployees.rdlc" />
     <EmbeddedResource Include="Reports\rptNewAllNonAcademicEmployees.rdlc" />
@@ -540,6 +549,7 @@
     <EmbeddedResource Include="Reports\rptNewRegularAcademicEmployees.rdlc" />
     <EmbeddedResource Include="Reports\rptNewRegularNonAcademicEmployees.rdlc" />
     <EmbeddedResource Include="Reports\rptSeminarEmployeeList.rdlc" />
+    <EmbeddedResource Include="Reports\rptSeminarList.rdlc" />
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>

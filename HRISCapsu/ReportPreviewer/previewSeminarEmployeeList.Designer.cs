@@ -29,44 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.employeeSeminarListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hRISDataSourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hRISDataSource = new HRISCapsu.HRISDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.hRISDataSource = new HRISCapsu.HRISDataSource();
+            this.employeeSeminarListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeSeminarListTableAdapter = new HRISCapsu.HRISDataSourceTableAdapters.EmployeeSeminarListTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeSeminarListBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hRISDataSourceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hRISDataSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeSeminarListBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // employeeSeminarListBindingSource
+            // reportViewer1
             // 
-            this.employeeSeminarListBindingSource.DataMember = "EmployeeSeminarList";
-            this.employeeSeminarListBindingSource.DataSource = this.hRISDataSourceBindingSource;
-            // 
-            // hRISDataSourceBindingSource
-            // 
-            this.hRISDataSourceBindingSource.DataSource = this.hRISDataSource;
-            this.hRISDataSourceBindingSource.Position = 0;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.employeeSeminarListBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "HRISCapsu.Reports.rptSeminarList.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.TabIndex = 0;
             // 
             // hRISDataSource
             // 
             this.hRISDataSource.DataSetName = "HRISDataSource";
             this.hRISDataSource.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
+            // employeeSeminarListBindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "EmployeeSeminarDataSet";
-            reportDataSource3.Value = this.employeeSeminarListBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "HRISCapsu.Reports.rptSeminarEmployeeList.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer1.TabIndex = 0;
+            this.employeeSeminarListBindingSource.DataMember = "EmployeeSeminarList";
+            this.employeeSeminarListBindingSource.DataSource = this.hRISDataSource;
             // 
             // employeeSeminarListTableAdapter
             // 
@@ -84,9 +77,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Seminar List";
             this.Load += new System.EventHandler(this.previewSeminarEmployeeList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.employeeSeminarListBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hRISDataSourceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hRISDataSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeSeminarListBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -95,7 +87,6 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private HRISDataSource hRISDataSource;
-        private System.Windows.Forms.BindingSource hRISDataSourceBindingSource;
         private System.Windows.Forms.BindingSource employeeSeminarListBindingSource;
         private HRISDataSourceTableAdapters.EmployeeSeminarListTableAdapter employeeSeminarListTableAdapter;
     }

@@ -12,14 +12,15 @@
               <DbSource ConnectionRef="HRISConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, sem.local_seminar_name, sem.local_seminar_type, sem.regional_seminar_name, sem.regional_seminar_type, sem.national_seminar_name, 
-                  sem.national_seminar_type, sem.international_seminar_name, sem.international_seminar_type, sem.number_of_seminars
-FROM     employees emp INNER JOIN
-                  tbl_list_of_seminars sem ON emp.employee_no = sem.employee_no
-WHERE  (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.local_seminar_name &lt;&gt; '') OR
-                  (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.regional_seminar_name &lt;&gt; '') OR
-                  (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.national_seminar_name &lt;&gt; '') OR
-                  (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.international_seminar_name &lt;&gt; '')
+                    <CommandText>SELECT        emp.employee_no, emp.first_name, emp.middle_name, emp.last_name, sem.local_seminar_name, sem.local_seminar_type, sem.local_from, sem.local_to, sem.regional_seminar_name, sem.regional_seminar_type, 
+                         sem.regional_from, sem.regional_to, sem.national_seminar_name, sem.national_seminar_type, sem.national_from, sem.national_to, sem.international_seminar_name, sem.international_seminar_type, sem.international_from, 
+                         sem.international_to, sem.number_of_seminars
+FROM            employees emp INNER JOIN
+                         tbl_list_of_seminars sem ON emp.employee_no = sem.employee_no
+WHERE        (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.local_seminar_name &lt;&gt; '') OR
+                         (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.regional_seminar_name &lt;&gt; '') OR
+                         (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.national_seminar_name &lt;&gt; '') OR
+                         (emp.is_deleted = 0) AND (sem.is_deleted = 0) AND (sem.international_seminar_name &lt;&gt; '')
 ORDER BY emp.last_name</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -40,6 +41,14 @@ ORDER BY emp.last_name</CommandText>
               <Mapping SourceColumn="international_seminar_name" DataSetColumn="international_seminar_name" />
               <Mapping SourceColumn="international_seminar_type" DataSetColumn="international_seminar_type" />
               <Mapping SourceColumn="number_of_seminars" DataSetColumn="number_of_seminars" />
+              <Mapping SourceColumn="local_from" DataSetColumn="local_from" />
+              <Mapping SourceColumn="local_to" DataSetColumn="local_to" />
+              <Mapping SourceColumn="regional_from" DataSetColumn="regional_from" />
+              <Mapping SourceColumn="regional_to" DataSetColumn="regional_to" />
+              <Mapping SourceColumn="national_from" DataSetColumn="national_from" />
+              <Mapping SourceColumn="national_to" DataSetColumn="national_to" />
+              <Mapping SourceColumn="international_from" DataSetColumn="international_from" />
+              <Mapping SourceColumn="international_to" DataSetColumn="international_to" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1479,7 +1488,7 @@ ORDER BY emp.last_name</CommandText>
   <xs:element name="HRISDataSource" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="HRISDataSource" msprop:Generator_UserDSName="HRISDataSource">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="EmployeeSeminarList" msprop:Generator_TableClassName="EmployeeSeminarListDataTable" msprop:Generator_TableVarName="tableEmployeeSeminarList" msprop:Generator_RowChangedName="EmployeeSeminarListRowChanged" msprop:Generator_TablePropName="EmployeeSeminarList" msprop:Generator_RowDeletingName="EmployeeSeminarListRowDeleting" msprop:Generator_RowChangingName="EmployeeSeminarListRowChanging" msprop:Generator_RowEvHandlerName="EmployeeSeminarListRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeeSeminarListRowDeleted" msprop:Generator_RowClassName="EmployeeSeminarListRow" msprop:Generator_UserTableName="EmployeeSeminarList" msprop:Generator_RowEvArgName="EmployeeSeminarListRowChangeEvent">
+        <xs:element name="EmployeeSeminarList" msprop:Generator_TableClassName="EmployeeSeminarListDataTable" msprop:Generator_TableVarName="tableEmployeeSeminarList" msprop:Generator_TablePropName="EmployeeSeminarList" msprop:Generator_RowDeletingName="EmployeeSeminarListRowDeleting" msprop:Generator_RowChangingName="EmployeeSeminarListRowChanging" msprop:Generator_RowEvHandlerName="EmployeeSeminarListRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeeSeminarListRowDeleted" msprop:Generator_UserTableName="EmployeeSeminarList" msprop:Generator_RowChangedName="EmployeeSeminarListRowChanged" msprop:Generator_RowEvArgName="EmployeeSeminarListRowChangeEvent" msprop:Generator_RowClassName="EmployeeSeminarListRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="employee_no" msprop:Generator_ColumnVarNameInTable="columnemployee_no" msprop:Generator_ColumnPropNameInRow="employee_no" msprop:Generator_ColumnPropNameInTable="employee_noColumn" msprop:Generator_UserColumnName="employee_no">
@@ -1567,10 +1576,18 @@ ORDER BY emp.last_name</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="number_of_seminars" msprop:Generator_ColumnVarNameInTable="columnnumber_of_seminars" msprop:Generator_ColumnPropNameInRow="number_of_seminars" msprop:Generator_ColumnPropNameInTable="number_of_seminarsColumn" msprop:Generator_UserColumnName="number_of_seminars" type="xs:int" minOccurs="0" />
+              <xs:element name="local_from" msprop:Generator_ColumnVarNameInTable="columnlocal_from" msprop:Generator_ColumnPropNameInRow="local_from" msprop:Generator_ColumnPropNameInTable="local_fromColumn" msprop:Generator_UserColumnName="local_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="local_to" msprop:Generator_ColumnVarNameInTable="columnlocal_to" msprop:Generator_ColumnPropNameInRow="local_to" msprop:Generator_ColumnPropNameInTable="local_toColumn" msprop:Generator_UserColumnName="local_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="regional_from" msprop:Generator_ColumnVarNameInTable="columnregional_from" msprop:Generator_ColumnPropNameInRow="regional_from" msprop:Generator_ColumnPropNameInTable="regional_fromColumn" msprop:Generator_UserColumnName="regional_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="regional_to" msprop:Generator_ColumnVarNameInTable="columnregional_to" msprop:Generator_ColumnPropNameInRow="regional_to" msprop:Generator_ColumnPropNameInTable="regional_toColumn" msprop:Generator_UserColumnName="regional_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="national_from" msprop:Generator_ColumnVarNameInTable="columnnational_from" msprop:Generator_ColumnPropNameInRow="national_from" msprop:Generator_ColumnPropNameInTable="national_fromColumn" msprop:Generator_UserColumnName="national_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="national_to" msprop:Generator_ColumnVarNameInTable="columnnational_to" msprop:Generator_ColumnPropNameInRow="national_to" msprop:Generator_ColumnPropNameInTable="national_toColumn" msprop:Generator_UserColumnName="national_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="international_from" msprop:Generator_ColumnVarNameInTable="columninternational_from" msprop:Generator_ColumnPropNameInRow="international_from" msprop:Generator_ColumnPropNameInTable="international_fromColumn" msprop:Generator_UserColumnName="international_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="international_to" msprop:Generator_ColumnVarNameInTable="columninternational_to" msprop:Generator_ColumnPropNameInRow="international_to" msprop:Generator_ColumnPropNameInTable="international_toColumn" msprop:Generator_UserColumnName="international_to" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AllEmployees" msprop:Generator_TableClassName="AllEmployeesDataTable" msprop:Generator_TableVarName="tableAllEmployees" msprop:Generator_TablePropName="AllEmployees" msprop:Generator_RowDeletingName="AllEmployeesRowDeleting" msprop:Generator_RowChangingName="AllEmployeesRowChanging" msprop:Generator_RowEvHandlerName="AllEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="AllEmployeesRowDeleted" msprop:Generator_UserTableName="AllEmployees" msprop:Generator_RowChangedName="AllEmployeesRowChanged" msprop:Generator_RowEvArgName="AllEmployeesRowChangeEvent" msprop:Generator_RowClassName="AllEmployeesRow">
+        <xs:element name="AllEmployees" msprop:Generator_TableClassName="AllEmployeesDataTable" msprop:Generator_TableVarName="tableAllEmployees" msprop:Generator_RowChangedName="AllEmployeesRowChanged" msprop:Generator_TablePropName="AllEmployees" msprop:Generator_RowDeletingName="AllEmployeesRowDeleting" msprop:Generator_RowChangingName="AllEmployeesRowChanging" msprop:Generator_RowEvHandlerName="AllEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="AllEmployeesRowDeleted" msprop:Generator_RowClassName="AllEmployeesRow" msprop:Generator_UserTableName="AllEmployees" msprop:Generator_RowEvArgName="AllEmployeesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="employee_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnemployee_id" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_UserColumnName="employee_id" type="xs:int" />
@@ -1748,7 +1765,7 @@ ORDER BY emp.last_name</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AcademicRegularEmployees" msprop:Generator_TableClassName="AcademicRegularEmployeesDataTable" msprop:Generator_TableVarName="tableAcademicRegularEmployees" msprop:Generator_RowChangedName="AcademicRegularEmployeesRowChanged" msprop:Generator_TablePropName="AcademicRegularEmployees" msprop:Generator_RowDeletingName="AcademicRegularEmployeesRowDeleting" msprop:Generator_RowChangingName="AcademicRegularEmployeesRowChanging" msprop:Generator_RowEvHandlerName="AcademicRegularEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="AcademicRegularEmployeesRowDeleted" msprop:Generator_RowClassName="AcademicRegularEmployeesRow" msprop:Generator_UserTableName="AcademicRegularEmployees" msprop:Generator_RowEvArgName="AcademicRegularEmployeesRowChangeEvent">
+        <xs:element name="AcademicRegularEmployees" msprop:Generator_TableClassName="AcademicRegularEmployeesDataTable" msprop:Generator_TableVarName="tableAcademicRegularEmployees" msprop:Generator_TablePropName="AcademicRegularEmployees" msprop:Generator_RowDeletingName="AcademicRegularEmployeesRowDeleting" msprop:Generator_RowChangingName="AcademicRegularEmployeesRowChanging" msprop:Generator_RowEvHandlerName="AcademicRegularEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="AcademicRegularEmployeesRowDeleted" msprop:Generator_UserTableName="AcademicRegularEmployees" msprop:Generator_RowChangedName="AcademicRegularEmployeesRowChanged" msprop:Generator_RowEvArgName="AcademicRegularEmployeesRowChangeEvent" msprop:Generator_RowClassName="AcademicRegularEmployeesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="employee_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnemployee_id" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_UserColumnName="employee_id" type="xs:int" />
@@ -1926,7 +1943,7 @@ ORDER BY emp.last_name</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="NonAcademicRegularEmployees" msprop:Generator_TableClassName="NonAcademicRegularEmployeesDataTable" msprop:Generator_TableVarName="tableNonAcademicRegularEmployees" msprop:Generator_TablePropName="NonAcademicRegularEmployees" msprop:Generator_RowDeletingName="NonAcademicRegularEmployeesRowDeleting" msprop:Generator_RowChangingName="NonAcademicRegularEmployeesRowChanging" msprop:Generator_RowEvHandlerName="NonAcademicRegularEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="NonAcademicRegularEmployeesRowDeleted" msprop:Generator_UserTableName="NonAcademicRegularEmployees" msprop:Generator_RowChangedName="NonAcademicRegularEmployeesRowChanged" msprop:Generator_RowEvArgName="NonAcademicRegularEmployeesRowChangeEvent" msprop:Generator_RowClassName="NonAcademicRegularEmployeesRow">
+        <xs:element name="NonAcademicRegularEmployees" msprop:Generator_TableClassName="NonAcademicRegularEmployeesDataTable" msprop:Generator_TableVarName="tableNonAcademicRegularEmployees" msprop:Generator_RowChangedName="NonAcademicRegularEmployeesRowChanged" msprop:Generator_TablePropName="NonAcademicRegularEmployees" msprop:Generator_RowDeletingName="NonAcademicRegularEmployeesRowDeleting" msprop:Generator_RowChangingName="NonAcademicRegularEmployeesRowChanging" msprop:Generator_RowEvHandlerName="NonAcademicRegularEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="NonAcademicRegularEmployeesRowDeleted" msprop:Generator_RowClassName="NonAcademicRegularEmployeesRow" msprop:Generator_UserTableName="NonAcademicRegularEmployees" msprop:Generator_RowEvArgName="NonAcademicRegularEmployeesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="employee_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnemployee_id" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_UserColumnName="employee_id" type="xs:int" />
@@ -2104,7 +2121,7 @@ ORDER BY emp.last_name</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ContractualAcademicEmployees" msprop:Generator_TableClassName="ContractualAcademicEmployeesDataTable" msprop:Generator_TableVarName="tableContractualAcademicEmployees" msprop:Generator_RowChangedName="ContractualAcademicEmployeesRowChanged" msprop:Generator_TablePropName="ContractualAcademicEmployees" msprop:Generator_RowDeletingName="ContractualAcademicEmployeesRowDeleting" msprop:Generator_RowChangingName="ContractualAcademicEmployeesRowChanging" msprop:Generator_RowEvHandlerName="ContractualAcademicEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="ContractualAcademicEmployeesRowDeleted" msprop:Generator_RowClassName="ContractualAcademicEmployeesRow" msprop:Generator_UserTableName="ContractualAcademicEmployees" msprop:Generator_RowEvArgName="ContractualAcademicEmployeesRowChangeEvent">
+        <xs:element name="ContractualAcademicEmployees" msprop:Generator_TableClassName="ContractualAcademicEmployeesDataTable" msprop:Generator_TableVarName="tableContractualAcademicEmployees" msprop:Generator_TablePropName="ContractualAcademicEmployees" msprop:Generator_RowDeletingName="ContractualAcademicEmployeesRowDeleting" msprop:Generator_RowChangingName="ContractualAcademicEmployeesRowChanging" msprop:Generator_RowEvHandlerName="ContractualAcademicEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="ContractualAcademicEmployeesRowDeleted" msprop:Generator_UserTableName="ContractualAcademicEmployees" msprop:Generator_RowChangedName="ContractualAcademicEmployeesRowChanged" msprop:Generator_RowEvArgName="ContractualAcademicEmployeesRowChangeEvent" msprop:Generator_RowClassName="ContractualAcademicEmployeesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="employee_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnemployee_id" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_UserColumnName="employee_id" type="xs:int" />
@@ -2282,7 +2299,7 @@ ORDER BY emp.last_name</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ContractualNonAcademicEmployees" msprop:Generator_TableClassName="ContractualNonAcademicEmployeesDataTable" msprop:Generator_TableVarName="tableContractualNonAcademicEmployees" msprop:Generator_RowChangedName="ContractualNonAcademicEmployeesRowChanged" msprop:Generator_TablePropName="ContractualNonAcademicEmployees" msprop:Generator_RowDeletingName="ContractualNonAcademicEmployeesRowDeleting" msprop:Generator_RowChangingName="ContractualNonAcademicEmployeesRowChanging" msprop:Generator_RowEvHandlerName="ContractualNonAcademicEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="ContractualNonAcademicEmployeesRowDeleted" msprop:Generator_RowClassName="ContractualNonAcademicEmployeesRow" msprop:Generator_UserTableName="ContractualNonAcademicEmployees" msprop:Generator_RowEvArgName="ContractualNonAcademicEmployeesRowChangeEvent">
+        <xs:element name="ContractualNonAcademicEmployees" msprop:Generator_TableClassName="ContractualNonAcademicEmployeesDataTable" msprop:Generator_TableVarName="tableContractualNonAcademicEmployees" msprop:Generator_TablePropName="ContractualNonAcademicEmployees" msprop:Generator_RowDeletingName="ContractualNonAcademicEmployeesRowDeleting" msprop:Generator_RowChangingName="ContractualNonAcademicEmployeesRowChanging" msprop:Generator_RowEvHandlerName="ContractualNonAcademicEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="ContractualNonAcademicEmployeesRowDeleted" msprop:Generator_UserTableName="ContractualNonAcademicEmployees" msprop:Generator_RowChangedName="ContractualNonAcademicEmployeesRowChanged" msprop:Generator_RowEvArgName="ContractualNonAcademicEmployeesRowChangeEvent" msprop:Generator_RowClassName="ContractualNonAcademicEmployeesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="employee_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnemployee_id" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_UserColumnName="employee_id" type="xs:int" />
@@ -2460,7 +2477,7 @@ ORDER BY emp.last_name</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AllAcademicEmployees" msprop:Generator_TableClassName="AllAcademicEmployeesDataTable" msprop:Generator_TableVarName="tableAllAcademicEmployees" msprop:Generator_RowChangedName="AllAcademicEmployeesRowChanged" msprop:Generator_TablePropName="AllAcademicEmployees" msprop:Generator_RowDeletingName="AllAcademicEmployeesRowDeleting" msprop:Generator_RowChangingName="AllAcademicEmployeesRowChanging" msprop:Generator_RowEvHandlerName="AllAcademicEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="AllAcademicEmployeesRowDeleted" msprop:Generator_RowClassName="AllAcademicEmployeesRow" msprop:Generator_UserTableName="AllAcademicEmployees" msprop:Generator_RowEvArgName="AllAcademicEmployeesRowChangeEvent">
+        <xs:element name="AllAcademicEmployees" msprop:Generator_TableClassName="AllAcademicEmployeesDataTable" msprop:Generator_TableVarName="tableAllAcademicEmployees" msprop:Generator_TablePropName="AllAcademicEmployees" msprop:Generator_RowDeletingName="AllAcademicEmployeesRowDeleting" msprop:Generator_RowChangingName="AllAcademicEmployeesRowChanging" msprop:Generator_RowEvHandlerName="AllAcademicEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="AllAcademicEmployeesRowDeleted" msprop:Generator_UserTableName="AllAcademicEmployees" msprop:Generator_RowChangedName="AllAcademicEmployeesRowChanged" msprop:Generator_RowEvArgName="AllAcademicEmployeesRowChangeEvent" msprop:Generator_RowClassName="AllAcademicEmployeesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="employee_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnemployee_id" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_UserColumnName="employee_id" type="xs:int" />
@@ -2638,7 +2655,7 @@ ORDER BY emp.last_name</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AllNonAcademicEmployees" msprop:Generator_TableClassName="AllNonAcademicEmployeesDataTable" msprop:Generator_TableVarName="tableAllNonAcademicEmployees" msprop:Generator_RowChangedName="AllNonAcademicEmployeesRowChanged" msprop:Generator_TablePropName="AllNonAcademicEmployees" msprop:Generator_RowDeletingName="AllNonAcademicEmployeesRowDeleting" msprop:Generator_RowChangingName="AllNonAcademicEmployeesRowChanging" msprop:Generator_RowEvHandlerName="AllNonAcademicEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="AllNonAcademicEmployeesRowDeleted" msprop:Generator_RowClassName="AllNonAcademicEmployeesRow" msprop:Generator_UserTableName="AllNonAcademicEmployees" msprop:Generator_RowEvArgName="AllNonAcademicEmployeesRowChangeEvent">
+        <xs:element name="AllNonAcademicEmployees" msprop:Generator_TableClassName="AllNonAcademicEmployeesDataTable" msprop:Generator_TableVarName="tableAllNonAcademicEmployees" msprop:Generator_TablePropName="AllNonAcademicEmployees" msprop:Generator_RowDeletingName="AllNonAcademicEmployeesRowDeleting" msprop:Generator_RowChangingName="AllNonAcademicEmployeesRowChanging" msprop:Generator_RowEvHandlerName="AllNonAcademicEmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="AllNonAcademicEmployeesRowDeleted" msprop:Generator_UserTableName="AllNonAcademicEmployees" msprop:Generator_RowChangedName="AllNonAcademicEmployeesRowChanged" msprop:Generator_RowEvArgName="AllNonAcademicEmployeesRowChangeEvent" msprop:Generator_RowClassName="AllNonAcademicEmployeesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="employee_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnemployee_id" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_UserColumnName="employee_id" type="xs:int" />

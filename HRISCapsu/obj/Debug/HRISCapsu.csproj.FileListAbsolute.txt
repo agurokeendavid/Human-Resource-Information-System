@@ -920,3 +920,4 @@ D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\D
 D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmEmployeesOnLeave.resources
 D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.frmViewContractualEmployees.resources
 D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.csproj.CoreCompileInputs.cache
+D:\aguro\Documents\C# Projects\Human-Resource-Information-System\HRISCapsu\obj\Debug\HRISCapsu.ReportPreviewer.previewSeminarList.resources
