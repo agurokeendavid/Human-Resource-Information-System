@@ -325,7 +325,7 @@ namespace HRISCapsu
 
                 if (CountNearEndContractualEmployees() > 0)
                 {
-                    endOfContractToolStripMenuItem.ForeColor = Color.Red;
+                    endOfContractToolStripMenuItem.ForeColor = Color.Green;
                     endOfContractToolStripMenuItem.Text = $"{CountNearEndContractualEmployees()} End of Contract";
                 }
 
