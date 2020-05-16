@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static HRISCapsu.Repository.ListOfSeminarRepository;
 
 namespace HRISCapsu
 {
     public partial class frmSeminarRegional : Form
     {
-        public frmSeminarRegional()
+        private string _employeeNo;
+        public frmSeminarRegional(string employeeNo = null)
         {
             InitializeComponent();
+            _employeeNo = employeeNo;
         }
 
         public static string RegionalSeminar;
@@ -43,6 +46,19 @@ namespace HRISCapsu
             {
                 MessageBox.Show("Please fill all required fields.", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void frmSeminarRegional_Load(object sender, EventArgs e)
+        {
+            var seminar = GetSingleSeminar(_employeeNo);
+
+            if (_employeeNo != null && seminar.RegionalFrom.HasValue && seminar.RegionalTo.HasValue)
+            {
+                txtSeminarName.Text = seminar.RegionalSeminarName;
+                cmbSeminarType.Text = seminar.RegionalSeminarType;
+                dtpFrom.Value = seminar.RegionalFrom.Value;
+                dtpTo.Value = seminar.RegionalTo.Value;
             }
         }
     }

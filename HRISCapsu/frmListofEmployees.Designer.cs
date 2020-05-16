@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListofEmployees));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.grpFilter = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.Label4 = new System.Windows.Forms.Label();
             this.Panel2 = new System.Windows.Forms.Panel();
+            this.btnView = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.Label9 = new System.Windows.Forms.Label();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgRecords = new System.Windows.Forms.DataGridView();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.employee_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.middle_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,7 +93,9 @@
             this.international_seminar_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.international_from = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.international_to = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnView = new System.Windows.Forms.Button();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnModemPort = new System.Windows.Forms.Button();
+            this.btnSend = new System.Windows.Forms.Button();
             this.grpFilter.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.Panel1.SuspendLayout();
@@ -104,9 +106,10 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(17, 55);
+            this.txtSearch.Location = new System.Drawing.Point(13, 45);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(197, 24);
+            this.txtSearch.Size = new System.Drawing.Size(149, 21);
             this.txtSearch.TabIndex = 3;
             // 
             // grpFilter
@@ -116,11 +119,9 @@
             this.grpFilter.Controls.Add(this.txtSearch);
             this.grpFilter.Controls.Add(this.Label4);
             this.grpFilter.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpFilter.Location = new System.Drawing.Point(12, 276);
-            this.grpFilter.Margin = new System.Windows.Forms.Padding(4);
+            this.grpFilter.Location = new System.Drawing.Point(9, 224);
             this.grpFilter.Name = "grpFilter";
-            this.grpFilter.Padding = new System.Windows.Forms.Padding(4);
-            this.grpFilter.Size = new System.Drawing.Size(228, 158);
+            this.grpFilter.Size = new System.Drawing.Size(171, 128);
             this.grpFilter.TabIndex = 2;
             this.grpFilter.TabStop = false;
             this.grpFilter.Text = "Filter";
@@ -129,9 +130,10 @@
             // 
             this.btnSearch.Image = global::HRISCapsu.Properties.Resources.search;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(110, 85);
+            this.btnSearch.Location = new System.Drawing.Point(82, 69);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(104, 41);
+            this.btnSearch.Size = new System.Drawing.Size(78, 33);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "&Search";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -141,10 +143,9 @@
             // Label4
             // 
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(14, 35);
-            this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label4.Location = new System.Drawing.Point(10, 28);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(47, 17);
+            this.Label4.Size = new System.Drawing.Size(40, 13);
             this.Label4.TabIndex = 0;
             this.Label4.Text = "Name";
             // 
@@ -153,15 +154,35 @@
             this.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Panel2.Controls.Add(this.btnModemPort);
+            this.Panel2.Controls.Add(this.btnSend);
             this.Panel2.Controls.Add(this.btnView);
             this.Panel2.Controls.Add(this.btnClose);
             this.Panel2.Controls.Add(this.btnPrint);
             this.Panel2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Panel2.Location = new System.Drawing.Point(248, 578);
-            this.Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel2.Location = new System.Drawing.Point(186, 470);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(1039, 73);
+            this.Panel2.Size = new System.Drawing.Size(780, 60);
             this.Panel2.TabIndex = 5;
+            // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.Transparent;
+            this.btnView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnView.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnView.Image = global::HRISCapsu.Properties.Resources.search;
+            this.btnView.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnView.Location = new System.Drawing.Point(269, 8);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(75, 39);
+            this.btnView.TabIndex = 8;
+            this.btnView.Text = "&View";
+            this.btnView.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnClose
             // 
@@ -173,10 +194,9 @@
             this.btnClose.ForeColor = System.Drawing.Color.DarkCyan;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(929, 10);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Location = new System.Drawing.Point(697, 8);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(100, 48);
+            this.btnClose.Size = new System.Drawing.Size(75, 39);
             this.btnClose.TabIndex = 7;
             this.btnClose.Text = "&Close ";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -193,10 +213,9 @@
             this.btnPrint.ForeColor = System.Drawing.Color.DarkCyan;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(821, 10);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrint.Location = new System.Drawing.Point(616, 8);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(100, 48);
+            this.btnPrint.Size = new System.Drawing.Size(75, 39);
             this.btnPrint.TabIndex = 6;
             this.btnPrint.Text = "&Print  ";
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -209,10 +228,9 @@
             this.Label9.BackColor = System.Drawing.Color.Transparent;
             this.Label9.Font = new System.Drawing.Font("Britannic Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label9.ForeColor = System.Drawing.Color.Teal;
-            this.Label9.Location = new System.Drawing.Point(396, 9);
-            this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label9.Location = new System.Drawing.Point(297, 7);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(478, 44);
+            this.Label9.Size = new System.Drawing.Size(380, 36);
             this.Label9.TabIndex = 1;
             this.Label9.Text = "List of Regular Employees";
             // 
@@ -221,10 +239,9 @@
             this.Panel1.BackColor = System.Drawing.Color.Transparent;
             this.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Panel1.Controls.Add(this.Label9);
-            this.Panel1.Location = new System.Drawing.Point(12, 8);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel1.Location = new System.Drawing.Point(9, 6);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(1275, 66);
+            this.Panel1.Size = new System.Drawing.Size(957, 54);
             this.Panel1.TabIndex = 24;
             // 
             // GroupBox1
@@ -232,11 +249,9 @@
             this.GroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.GroupBox1.Controls.Add(this.dtgRecords);
             this.GroupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.Location = new System.Drawing.Point(248, 78);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.GroupBox1.Location = new System.Drawing.Point(186, 63);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBox1.Size = new System.Drawing.Size(1039, 490);
+            this.GroupBox1.Size = new System.Drawing.Size(779, 398);
             this.GroupBox1.TabIndex = 0;
             this.GroupBox1.TabStop = false;
             // 
@@ -244,20 +259,20 @@
             // 
             this.dtgRecords.AllowUserToAddRows = false;
             this.dtgRecords.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FloralWhite;
-            this.dtgRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FloralWhite;
+            this.dtgRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dtgRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dtgRecords.BackgroundColor = System.Drawing.Color.White;
             this.dtgRecords.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtgRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dtgRecords.ColumnHeadersHeight = 30;
             this.dtgRecords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.employee_no,
@@ -311,45 +326,33 @@
             this.dtgRecords.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtgRecords.EnableHeadersVisualStyles = false;
             this.dtgRecords.GridColor = System.Drawing.Color.PaleTurquoise;
-            this.dtgRecords.Location = new System.Drawing.Point(8, 14);
-            this.dtgRecords.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgRecords.Location = new System.Drawing.Point(6, 11);
             this.dtgRecords.MultiSelect = false;
             this.dtgRecords.Name = "dtgRecords";
             this.dtgRecords.ReadOnly = true;
             this.dtgRecords.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dtgRecords.RowHeadersVisible = false;
             this.dtgRecords.RowHeadersWidth = 25;
             this.dtgRecords.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgRecords.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgRecords.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.dtgRecords.RowTemplate.Height = 18;
             this.dtgRecords.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgRecords.Size = new System.Drawing.Size(1023, 462);
+            this.dtgRecords.Size = new System.Drawing.Size(767, 375);
             this.dtgRecords.TabIndex = 1;
             this.dtgRecords.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgRecords_CellContentClick);
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Image = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
-            this.PictureBox1.Location = new System.Drawing.Point(12, 82);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(228, 186);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox1.TabIndex = 27;
-            this.PictureBox1.TabStop = false;
             // 
             // employee_no
             // 
@@ -358,7 +361,7 @@
             this.employee_no.MinimumWidth = 6;
             this.employee_no.Name = "employee_no";
             this.employee_no.ReadOnly = true;
-            this.employee_no.Width = 127;
+            this.employee_no.Width = 97;
             // 
             // first_name
             // 
@@ -367,7 +370,7 @@
             this.first_name.MinimumWidth = 6;
             this.first_name.Name = "first_name";
             this.first_name.ReadOnly = true;
-            this.first_name.Width = 111;
+            this.first_name.Width = 85;
             // 
             // middle_name
             // 
@@ -376,7 +379,7 @@
             this.middle_name.MinimumWidth = 6;
             this.middle_name.Name = "middle_name";
             this.middle_name.ReadOnly = true;
-            this.middle_name.Width = 123;
+            this.middle_name.Width = 95;
             // 
             // last_name
             // 
@@ -385,7 +388,7 @@
             this.last_name.MinimumWidth = 6;
             this.last_name.Name = "last_name";
             this.last_name.ReadOnly = true;
-            this.last_name.Width = 110;
+            this.last_name.Width = 84;
             // 
             // address
             // 
@@ -394,7 +397,7 @@
             this.address.MinimumWidth = 6;
             this.address.Name = "address";
             this.address.ReadOnly = true;
-            this.address.Width = 94;
+            this.address.Width = 77;
             // 
             // gender
             // 
@@ -403,7 +406,7 @@
             this.gender.MinimumWidth = 6;
             this.gender.Name = "gender";
             this.gender.ReadOnly = true;
-            this.gender.Width = 87;
+            this.gender.Width = 73;
             // 
             // date_of_birth
             // 
@@ -413,7 +416,7 @@
             this.date_of_birth.Name = "date_of_birth";
             this.date_of_birth.ReadOnly = true;
             this.date_of_birth.Visible = false;
-            this.date_of_birth.Width = 127;
+            this.date_of_birth.Width = 96;
             // 
             // place_of_birth
             // 
@@ -423,7 +426,7 @@
             this.place_of_birth.Name = "place_of_birth";
             this.place_of_birth.ReadOnly = true;
             this.place_of_birth.Visible = false;
-            this.place_of_birth.Width = 128;
+            this.place_of_birth.Width = 75;
             // 
             // contact_no
             // 
@@ -433,7 +436,7 @@
             this.contact_no.Name = "contact_no";
             this.contact_no.ReadOnly = true;
             this.contact_no.Visible = false;
-            this.contact_no.Width = 120;
+            this.contact_no.Width = 91;
             // 
             // civil_status
             // 
@@ -443,7 +446,7 @@
             this.civil_status.Name = "civil_status";
             this.civil_status.ReadOnly = true;
             this.civil_status.Visible = false;
-            this.civil_status.Width = 115;
+            this.civil_status.Width = 89;
             // 
             // highest_degree
             // 
@@ -452,7 +455,7 @@
             this.highest_degree.MinimumWidth = 6;
             this.highest_degree.Name = "highest_degree";
             this.highest_degree.ReadOnly = true;
-            this.highest_degree.Width = 144;
+            this.highest_degree.Width = 109;
             // 
             // bs_course
             // 
@@ -462,7 +465,7 @@
             this.bs_course.Name = "bs_course";
             this.bs_course.ReadOnly = true;
             this.bs_course.Visible = false;
-            this.bs_course.Width = 111;
+            this.bs_course.Width = 86;
             // 
             // bs_year_graduated
             // 
@@ -472,7 +475,7 @@
             this.bs_year_graduated.Name = "bs_year_graduated";
             this.bs_year_graduated.ReadOnly = true;
             this.bs_year_graduated.Visible = false;
-            this.bs_year_graduated.Width = 170;
+            this.bs_year_graduated.Width = 129;
             // 
             // bs_school
             // 
@@ -482,7 +485,7 @@
             this.bs_school.Name = "bs_school";
             this.bs_school.ReadOnly = true;
             this.bs_school.Visible = false;
-            this.bs_school.Width = 108;
+            this.bs_school.Width = 83;
             // 
             // masteral_course
             // 
@@ -492,7 +495,7 @@
             this.masteral_course.Name = "masteral_course";
             this.masteral_course.ReadOnly = true;
             this.masteral_course.Visible = false;
-            this.masteral_course.Width = 149;
+            this.masteral_course.Width = 114;
             // 
             // masteral_year_graduated
             // 
@@ -502,7 +505,7 @@
             this.masteral_year_graduated.Name = "masteral_year_graduated";
             this.masteral_year_graduated.ReadOnly = true;
             this.masteral_year_graduated.Visible = false;
-            this.masteral_year_graduated.Width = 208;
+            this.masteral_year_graduated.Width = 158;
             // 
             // masteral_school
             // 
@@ -512,7 +515,7 @@
             this.masteral_school.Name = "masteral_school";
             this.masteral_school.ReadOnly = true;
             this.masteral_school.Visible = false;
-            this.masteral_school.Width = 146;
+            this.masteral_school.Width = 112;
             // 
             // doctoral_course
             // 
@@ -522,7 +525,7 @@
             this.doctoral_course.Name = "doctoral_course";
             this.doctoral_course.ReadOnly = true;
             this.doctoral_course.Visible = false;
-            this.doctoral_course.Width = 150;
+            this.doctoral_course.Width = 114;
             // 
             // doctoral_year_graduated
             // 
@@ -532,7 +535,7 @@
             this.doctoral_year_graduated.Name = "doctoral_year_graduated";
             this.doctoral_year_graduated.ReadOnly = true;
             this.doctoral_year_graduated.Visible = false;
-            this.doctoral_year_graduated.Width = 209;
+            this.doctoral_year_graduated.Width = 158;
             // 
             // doctoral_school
             // 
@@ -542,7 +545,7 @@
             this.doctoral_school.Name = "doctoral_school";
             this.doctoral_school.ReadOnly = true;
             this.doctoral_school.Visible = false;
-            this.doctoral_school.Width = 147;
+            this.doctoral_school.Width = 112;
             // 
             // eligibility
             // 
@@ -552,7 +555,7 @@
             this.eligibility.Name = "eligibility";
             this.eligibility.ReadOnly = true;
             this.eligibility.Visible = false;
-            this.eligibility.Width = 95;
+            this.eligibility.Width = 82;
             // 
             // employee_type
             // 
@@ -561,7 +564,7 @@
             this.employee_type.MinimumWidth = 6;
             this.employee_type.Name = "employee_type";
             this.employee_type.ReadOnly = true;
-            this.employee_type.Width = 141;
+            this.employee_type.Width = 108;
             // 
             // position
             // 
@@ -570,7 +573,7 @@
             this.position.MinimumWidth = 6;
             this.position.Name = "position";
             this.position.ReadOnly = true;
-            this.position.Width = 91;
+            this.position.Width = 75;
             // 
             // unique_item_no
             // 
@@ -580,7 +583,7 @@
             this.unique_item_no.Name = "unique_item_no";
             this.unique_item_no.ReadOnly = true;
             this.unique_item_no.Visible = false;
-            this.unique_item_no.Width = 150;
+            this.unique_item_no.Width = 97;
             // 
             // salary_grade
             // 
@@ -590,7 +593,7 @@
             this.salary_grade.Name = "salary_grade";
             this.salary_grade.ReadOnly = true;
             this.salary_grade.Visible = false;
-            this.salary_grade.Width = 126;
+            this.salary_grade.Width = 99;
             // 
             // step
             // 
@@ -600,7 +603,7 @@
             this.step.Name = "step";
             this.step.ReadOnly = true;
             this.step.Visible = false;
-            this.step.Width = 69;
+            this.step.Width = 58;
             // 
             // department
             // 
@@ -609,7 +612,7 @@
             this.department.MinimumWidth = 6;
             this.department.Name = "department";
             this.department.ReadOnly = true;
-            this.department.Width = 120;
+            this.department.Width = 99;
             // 
             // work_status
             // 
@@ -618,7 +621,7 @@
             this.work_status.MinimumWidth = 6;
             this.work_status.Name = "work_status";
             this.work_status.ReadOnly = true;
-            this.work_status.Width = 155;
+            this.work_status.Width = 116;
             // 
             // employee_photo
             // 
@@ -628,7 +631,7 @@
             this.employee_photo.Name = "employee_photo";
             this.employee_photo.ReadOnly = true;
             this.employee_photo.Visible = false;
-            this.employee_photo.Width = 77;
+            this.employee_photo.Width = 64;
             // 
             // documentpath
             // 
@@ -638,7 +641,7 @@
             this.documentpath.Name = "documentpath";
             this.documentpath.ReadOnly = true;
             this.documentpath.Visible = false;
-            this.documentpath.Width = 67;
+            this.documentpath.Width = 57;
             // 
             // hired_date
             // 
@@ -648,7 +651,7 @@
             this.hired_date.Name = "hired_date";
             this.hired_date.ReadOnly = true;
             this.hired_date.Visible = false;
-            this.hired_date.Width = 110;
+            this.hired_date.Width = 86;
             // 
             // end_of_contract
             // 
@@ -658,7 +661,7 @@
             this.end_of_contract.Name = "end_of_contract";
             this.end_of_contract.ReadOnly = true;
             this.end_of_contract.Visible = false;
-            this.end_of_contract.Width = 148;
+            this.end_of_contract.Width = 111;
             // 
             // local_seminar_name
             // 
@@ -668,7 +671,7 @@
             this.local_seminar_name.Name = "local_seminar_name";
             this.local_seminar_name.ReadOnly = true;
             this.local_seminar_name.Visible = false;
-            this.local_seminar_name.Width = 177;
+            this.local_seminar_name.Width = 137;
             // 
             // local_seminar_type
             // 
@@ -678,7 +681,7 @@
             this.local_seminar_type.Name = "local_seminar_type";
             this.local_seminar_type.ReadOnly = true;
             this.local_seminar_type.Visible = false;
-            this.local_seminar_type.Width = 171;
+            this.local_seminar_type.Width = 132;
             // 
             // local_from
             // 
@@ -688,7 +691,7 @@
             this.local_from.Name = "local_from";
             this.local_from.ReadOnly = true;
             this.local_from.Visible = false;
-            this.local_from.Width = 112;
+            this.local_from.Width = 87;
             // 
             // local_to
             // 
@@ -698,7 +701,7 @@
             this.local_to.Name = "local_to";
             this.local_to.ReadOnly = true;
             this.local_to.Visible = false;
-            this.local_to.Width = 92;
+            this.local_to.Width = 72;
             // 
             // regional_seminar_name
             // 
@@ -708,7 +711,7 @@
             this.regional_seminar_name.Name = "regional_seminar_name";
             this.regional_seminar_name.ReadOnly = true;
             this.regional_seminar_name.Visible = false;
-            this.regional_seminar_name.Width = 201;
+            this.regional_seminar_name.Width = 125;
             // 
             // regional_seminar_type
             // 
@@ -718,7 +721,7 @@
             this.regional_seminar_type.Name = "regional_seminar_type";
             this.regional_seminar_type.ReadOnly = true;
             this.regional_seminar_type.Visible = false;
-            this.regional_seminar_type.Width = 195;
+            this.regional_seminar_type.Width = 125;
             // 
             // regional_from
             // 
@@ -728,7 +731,7 @@
             this.regional_from.Name = "regional_from";
             this.regional_from.ReadOnly = true;
             this.regional_from.Visible = false;
-            this.regional_from.Width = 136;
+            this.regional_from.Width = 105;
             // 
             // regional_to
             // 
@@ -738,7 +741,7 @@
             this.regional_to.Name = "regional_to";
             this.regional_to.ReadOnly = true;
             this.regional_to.Visible = false;
-            this.regional_to.Width = 116;
+            this.regional_to.Width = 90;
             // 
             // national_seminar_name
             // 
@@ -748,7 +751,7 @@
             this.national_seminar_name.Name = "national_seminar_name";
             this.national_seminar_name.ReadOnly = true;
             this.national_seminar_name.Visible = false;
-            this.national_seminar_name.Width = 198;
+            this.national_seminar_name.Width = 123;
             // 
             // national_seminar_type
             // 
@@ -758,7 +761,7 @@
             this.national_seminar_type.Name = "national_seminar_type";
             this.national_seminar_type.ReadOnly = true;
             this.national_seminar_type.Visible = false;
-            this.national_seminar_type.Width = 192;
+            this.national_seminar_type.Width = 123;
             // 
             // national_from
             // 
@@ -768,7 +771,7 @@
             this.national_from.Name = "national_from";
             this.national_from.ReadOnly = true;
             this.national_from.Visible = false;
-            this.national_from.Width = 133;
+            this.national_from.Width = 102;
             // 
             // national_to
             // 
@@ -778,7 +781,7 @@
             this.national_to.Name = "national_to";
             this.national_to.ReadOnly = true;
             this.national_to.Visible = false;
-            this.national_to.Width = 113;
+            this.national_to.Width = 87;
             // 
             // international_seminar_name
             // 
@@ -788,7 +791,7 @@
             this.international_seminar_name.Name = "international_seminar_name";
             this.international_seminar_name.ReadOnly = true;
             this.international_seminar_name.Visible = false;
-            this.international_seminar_name.Width = 231;
+            this.international_seminar_name.Width = 147;
             // 
             // international_seminar_type
             // 
@@ -798,7 +801,7 @@
             this.international_seminar_type.Name = "international_seminar_type";
             this.international_seminar_type.ReadOnly = true;
             this.international_seminar_type.Visible = false;
-            this.international_seminar_type.Width = 225;
+            this.international_seminar_type.Width = 147;
             // 
             // international_from
             // 
@@ -808,7 +811,7 @@
             this.international_from.Name = "international_from";
             this.international_from.ReadOnly = true;
             this.international_from.Visible = false;
-            this.international_from.Width = 166;
+            this.international_from.Width = 126;
             // 
             // international_to
             // 
@@ -818,39 +821,68 @@
             this.international_to.Name = "international_to";
             this.international_to.ReadOnly = true;
             this.international_to.Visible = false;
-            this.international_to.Width = 146;
+            this.international_to.Width = 112;
             // 
-            // btnView
+            // PictureBox1
             // 
-            this.btnView.BackColor = System.Drawing.Color.Transparent;
-            this.btnView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnView.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnView.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnView.Image = global::HRISCapsu.Properties.Resources.search;
-            this.btnView.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnView.Location = new System.Drawing.Point(713, 10);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(100, 48);
-            this.btnView.TabIndex = 8;
-            this.btnView.Text = "&View";
-            this.btnView.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnView.UseVisualStyleBackColor = false;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            this.PictureBox1.Image = global::HRISCapsu.Properties.Resources._200px_Capiz_State_University;
+            this.PictureBox1.Location = new System.Drawing.Point(9, 67);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(171, 151);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 27;
+            this.PictureBox1.TabStop = false;
+            // 
+            // btnModemPort
+            // 
+            this.btnModemPort.BackColor = System.Drawing.Color.Transparent;
+            this.btnModemPort.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnModemPort.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModemPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModemPort.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModemPort.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnModemPort.Image = global::HRISCapsu.Properties.Resources.router;
+            this.btnModemPort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModemPort.Location = new System.Drawing.Point(350, 8);
+            this.btnModemPort.Name = "btnModemPort";
+            this.btnModemPort.Size = new System.Drawing.Size(124, 39);
+            this.btnModemPort.TabIndex = 11;
+            this.btnModemPort.Text = "MODEM PORT";
+            this.btnModemPort.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModemPort.UseVisualStyleBackColor = false;
+            this.btnModemPort.Click += new System.EventHandler(this.btnModemPort_Click);
+            // 
+            // btnSend
+            // 
+            this.btnSend.BackColor = System.Drawing.Color.Transparent;
+            this.btnSend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSend.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSend.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnSend.Image = global::HRISCapsu.Properties.Resources.send;
+            this.btnSend.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSend.Location = new System.Drawing.Point(481, 8);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(129, 39);
+            this.btnSend.TabIndex = 10;
+            this.btnSend.Text = "Send Reminder";
+            this.btnSend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSend.UseVisualStyleBackColor = false;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // frmListofEmployees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 664);
+            this.ClientSize = new System.Drawing.Size(975, 540);
             this.Controls.Add(this.PictureBox1);
             this.Controls.Add(this.grpFilter);
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmListofEmployees";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListofEmployees";
@@ -929,5 +961,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn international_from;
         private System.Windows.Forms.DataGridViewTextBoxColumn international_to;
         internal System.Windows.Forms.Button btnView;
+        internal System.Windows.Forms.Button btnModemPort;
+        internal System.Windows.Forms.Button btnSend;
     }
 }

@@ -223,7 +223,7 @@ namespace HRISCapsu.Repository
                 using (var connection = new MySqlConnection(GetConnectionString()))
                 {
                     connection.Open();
-                    string query = "SELECT CONCAT(last_name, ', ', first_name, ' ', middle_name) FullName, from_date, to_date FROM employees INNER JOIN tbl_leave ON employees.employee_no = tbl_leave.employee_no WHERE (first_name LIKE @keyword OR middle_name LIKE @keyword OR last_name LIKE @keyword) AND employees.is_deleted = @is_deleted AND tbl_leave.is_deleted = @is_deleted";
+                    string query = "SELECT CONCAT(last_name, ', ', first_name, ' ', middle_name) FullName, contact_no,from_date, to_date FROM employees INNER JOIN tbl_leave ON employees.employee_no = tbl_leave.employee_no WHERE (first_name LIKE @keyword OR middle_name LIKE @keyword OR last_name LIKE @keyword) AND employees.is_deleted = @is_deleted AND tbl_leave.is_deleted = @is_deleted";
                     using (var command = new MySqlCommand(query, connection))
                     {
                         command.Parameters.Add("keyword", MySqlDbType.VarChar).Value = '%' + keyword + '%';

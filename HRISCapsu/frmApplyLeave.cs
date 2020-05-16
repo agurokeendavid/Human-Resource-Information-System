@@ -159,7 +159,7 @@ namespace HRISCapsu
 
                     if (leaveType != "")
                     {
-                        if (dtpLeaveFrom.Value < dtpLeaveTo.Value)
+                        if (dtpLeaveFrom.Value.Date <= dtpLeaveTo.Value.Date)
                         {
                             ApplyLeave(leaveType);
                         }

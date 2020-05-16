@@ -163,7 +163,42 @@ namespace HRISCapsu
                     RemainingLeaveCredit = remainingLeaveCredit
                 };
                 UpdateLeaveCredit(modelLeaveCredit);
+
+                var seminar = new Seminar
+                {
+                    EmployeeNo = txtEmployeeNo.Text,
+                    LocalSeminarName = frmSeminarLocal.LocalSeminar,
+                    LocalSeminarType = frmSeminarLocal.LocalSeminarType,
+                    LocalFrom = frmSeminarLocal.LocalSeminarFrom,
+                    LocalTo = frmSeminarLocal.LocalSeminarTo,
+                    RegionalSeminarName = frmSeminarRegional.RegionalSeminar,
+                    RegionalSeminarType = frmSeminarRegional.RegionalSeminarType,
+                    RegionalFrom = frmSeminarRegional.RegionalSeminarFrom,
+                    RegionalTo = frmSeminarRegional.RegionalSeminarTo,
+                    NationalSeminarName = frmSeminarNational.NationalSeminar,
+                    NationalSeminarType = frmSeminarNational.NationalSeminarType,
+                    NationalFrom = frmSeminarNational.NationalSeminarFrom,
+                    NationalTo = frmSeminarNational.NationalSeminarTo,
+                    InternationalSeminarName = frmSeminarInternational.InternationalSeminar,
+                    InternationalSeminarType = frmSeminarInternational.InternationalSeminarType,
+                    InternationalFrom = frmSeminarInternational.InternationalSeminarFrom,
+                    InternationalTo = frmSeminarInternational.InternationalSeminarTo
+                };
+
+                if (frmSeminarLocal.LocalSeminar != null)
+                    UpdateLocalSeminar(seminar);
+
+                if (frmSeminarRegional.RegionalSeminar != null)
+                    UpdateRegionalSeminar(seminar);
+
+                if (frmSeminarNational.NationalSeminar != null)
+                    UpdateNationalSeminar(seminar);
+
+                if (frmSeminarInternational.InternationalSeminar != null)
+                    UpdateInternationalSeminar(seminar);
+
                 MessageBox.Show("Successfully updated!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearSeminars();
                 ClearItems(panelFileInformation);
                 ClearGroupControls(grpBS);
                 ClearGroupControls(grpMasteral);
@@ -172,6 +207,26 @@ namespace HRISCapsu
                 LoadDataInGridView();
             }
             
+        }
+
+        private void ClearSeminars()
+        {
+            frmSeminarLocal.LocalSeminar = null;
+            frmSeminarLocal.LocalSeminarType = null;
+            frmSeminarLocal.LocalSeminarFrom = null;
+            frmSeminarLocal.LocalSeminarTo = null;
+            frmSeminarRegional.RegionalSeminar = null;
+            frmSeminarRegional.RegionalSeminarType = null;
+            frmSeminarRegional.RegionalSeminarFrom = null;
+            frmSeminarRegional.RegionalSeminarTo = null;
+            frmSeminarNational.NationalSeminar = null;
+            frmSeminarNational.NationalSeminarType = null;
+            frmSeminarNational.NationalSeminarFrom = null;
+            frmSeminarNational.NationalSeminarTo = null;
+            frmSeminarInternational.InternationalSeminar = null;
+            frmSeminarInternational.InternationalSeminarType = null;
+            frmSeminarInternational.InternationalSeminarFrom = null;
+            frmSeminarInternational.InternationalSeminarTo = null;
         }
 
         private int GetRemainingLeaveCredit()
@@ -546,6 +601,30 @@ namespace HRISCapsu
                 grpMasteral.Enabled = false;
                 grpDoctoral.Enabled = false;
             }
+        }
+
+        private void btnAddLocalSeminar_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSeminarLocal(dtgRecords.CurrentRow.Cells[1].Value.ToString());
+            frm.ShowDialog();
+        }
+
+        private void btnAddNationalSeminar_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSeminarNational(dtgRecords.CurrentRow.Cells[1].Value.ToString());
+            frm.ShowDialog();
+        }
+
+        private void btnAddRegionalSeminar_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSeminarRegional(dtgRecords.CurrentRow.Cells[1].Value.ToString());
+            frm.ShowDialog();
+        }
+
+        private void btnAddInternationSeminar_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSeminarInternational(dtgRecords.CurrentRow.Cells[1].Value.ToString());
+            frm.ShowDialog();
         }
     }
 }

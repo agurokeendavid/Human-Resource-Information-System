@@ -21,6 +21,7 @@ namespace HRISCapsu
             lblLastName.Text = lastName;
             lblAddress.Text = address;
             lblGender.Text = gender;
+            lblAge.Text = (DateTime.Now.Date.Year - DateTime.Parse(dob).Year) + " yrs old.";
             lblDateofBirth.Text = DateTime.Parse(dob).ToString("MMMM dd, yyyy");
             lblPlaceofBirth.Text = placeofbirth;
             lblContactNo.Text = contactNo;

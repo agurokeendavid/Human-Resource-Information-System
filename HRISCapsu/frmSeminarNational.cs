@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static HRISCapsu.Repository.ListOfSeminarRepository;
 
 namespace HRISCapsu
 {
     public partial class frmSeminarNational : Form
     {
-        public frmSeminarNational()
+
+        private string _employeeNo;
+        public frmSeminarNational(string employeeNo = null)
         {
             InitializeComponent();
+            _employeeNo = employeeNo;
         }
 
         public static string NationalSeminar;
@@ -44,6 +48,19 @@ namespace HRISCapsu
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void frmSeminarNational_Load(object sender, EventArgs e)
+        {
+            var seminar = GetSingleSeminar(_employeeNo);
+
+            if (_employeeNo != null && seminar.NationalFrom.HasValue && seminar.NationalTo.HasValue)
+            {
+                txtSeminarName.Text = seminar.NationalSeminarName;
+                cmbSeminarType.Text = seminar.NationalSeminarType;
+                dtpFrom.Value = seminar.NationalFrom.Value;
+                dtpTo.Value = seminar.NationalTo.Value;
+            }
         }
     }
 }

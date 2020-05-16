@@ -46,6 +46,7 @@ namespace HRISCapsu
             lblLastName.Text = employee.LastName;
             lblAddress.Text = employee.Address;
             lblGender.Text = employee.Gender;
+            lblAge.Text = (DateTime.Now.Year - employee.DateOfBirth.Year) + " years old.";
             lblDateofBirth.Text = employee.DateOfBirth.ToString("MMMM dd, yyyy");
             lblPlaceofBirth.Text = employee.PlaceOfBirth;
             lblContactNo.Text = employee.ContactNo;

@@ -235,6 +235,18 @@ namespace HRISCapsu
                     };
                     InsertLeaveCredits(modelLeaveCredit);
 
+                    if (frmSeminarLocal.LocalSeminarTo.HasValue && frmSeminarLocal.LocalSeminarFrom == frmSeminarLocal.LocalSeminarTo)
+                        frmSeminarLocal.LocalSeminarTo = frmSeminarLocal.LocalSeminarTo.Value.AddDays(1);
+
+                    if (frmSeminarRegional.RegionalSeminarTo.HasValue && frmSeminarRegional.RegionalSeminarFrom == frmSeminarRegional.RegionalSeminarTo)
+                        frmSeminarRegional.RegionalSeminarTo = frmSeminarRegional.RegionalSeminarTo.Value.AddDays(1);
+
+                    if (frmSeminarNational.NationalSeminarFrom == frmSeminarNational.NationalSeminarTo && frmSeminarNational.NationalSeminarTo.HasValue)
+                        frmSeminarNational.NationalSeminarTo = frmSeminarNational.NationalSeminarTo.Value.AddDays(1);
+
+                    if (frmSeminarInternational.InternationalSeminarFrom == frmSeminarInternational.InternationalSeminarTo && frmSeminarInternational.InternationalSeminarTo.HasValue)
+                        frmSeminarInternational.InternationalSeminarTo = frmSeminarInternational.InternationalSeminarTo.Value.AddDays(1);
+
                     var modelSeminar = new Seminar
                     {
                         EmployeeNo = txtEmployeeNo.Text,
