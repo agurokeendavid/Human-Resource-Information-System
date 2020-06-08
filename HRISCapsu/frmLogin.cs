@@ -72,10 +72,5 @@ namespace HRISCapsu
             }
         }
 
-        private void lblCreateAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            var frm = new frmRegister();
-            frm.ShowDialog();
-        }
     }
 }

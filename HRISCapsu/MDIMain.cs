@@ -387,8 +387,7 @@ namespace HRISCapsu
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmChangePassword frm = new frmChangePassword();
-            frm.ShowDialog();
+            
         }
 
         private void viewPositionsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -550,6 +549,18 @@ namespace HRISCapsu
         private void nonAcademicToolStripMenuItem3_Click(object sender, EventArgs e)
         {
             var frm = new frmEmployeesOnLeave("Non - Academic");
+            frm.ShowDialog();
+        }
+
+        private void changePasswordToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmChangePassword frm = new frmChangePassword();
+            frm.ShowDialog();
+        }
+
+        private void createAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmRegister();
             frm.ShowDialog();
         }
     }

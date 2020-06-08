@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -37,8 +38,10 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Label3 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.GroupBox1.SuspendLayout();
             this.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox1
@@ -52,11 +55,9 @@
             this.GroupBox1.Controls.Add(this.Label1);
             this.GroupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.GroupBox1.Location = new System.Drawing.Point(9, 99);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.GroupBox1.Location = new System.Drawing.Point(7, 80);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBox1.Size = new System.Drawing.Size(419, 160);
+            this.GroupBox1.Size = new System.Drawing.Size(314, 130);
             this.GroupBox1.TabIndex = 0;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Register";
@@ -66,10 +67,9 @@
             this.btnRegister.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegister.Location = new System.Drawing.Point(249, 97);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegister.Location = new System.Drawing.Point(187, 79);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(100, 32);
+            this.btnRegister.Size = new System.Drawing.Size(75, 26);
             this.btnRegister.TabIndex = 3;
             this.btnRegister.Text = "&Register";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -80,10 +80,9 @@
             this.btnCancel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancel.Location = new System.Drawing.Point(136, 97);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Location = new System.Drawing.Point(102, 79);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 32);
+            this.btnCancel.Size = new System.Drawing.Size(75, 26);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -91,18 +90,17 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(136, 67);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Location = new System.Drawing.Point(102, 54);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
-            this.txtPassword.Size = new System.Drawing.Size(213, 22);
+            this.txtPassword.Size = new System.Drawing.Size(161, 22);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
             // 
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(28, 70);
-            this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label2.Location = new System.Drawing.Point(21, 57);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(61, 13);
             this.Label2.TabIndex = 0;
@@ -110,17 +108,16 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(136, 32);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Location = new System.Drawing.Point(102, 26);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(213, 22);
+            this.txtUsername.Size = new System.Drawing.Size(161, 22);
             this.txtUsername.TabIndex = 1;
+            this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsername_Validating);
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(28, 36);
-            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label1.Location = new System.Drawing.Point(21, 29);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(64, 13);
             this.Label1.TabIndex = 0;
@@ -130,10 +127,9 @@
             // 
             this.Panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Panel1.Controls.Add(this.Label3);
-            this.Panel1.Location = new System.Drawing.Point(9, 9);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel1.Location = new System.Drawing.Point(7, 7);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(419, 85);
+            this.Panel1.Size = new System.Drawing.Size(314, 69);
             this.Panel1.TabIndex = 5;
             // 
             // Label3
@@ -141,21 +137,25 @@
             this.Label3.AutoSize = true;
             this.Label3.Font = new System.Drawing.Font("Broadway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label3.Location = new System.Drawing.Point(119, 32);
-            this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label3.Location = new System.Drawing.Point(89, 26);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(181, 21);
             this.Label3.TabIndex = 0;
             this.Label3.Text = "Register Account";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 268);
+            this.ClientSize = new System.Drawing.Size(331, 218);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegister";
@@ -163,6 +163,7 @@
             this.GroupBox1.PerformLayout();
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -178,5 +179,6 @@
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.Label Label3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

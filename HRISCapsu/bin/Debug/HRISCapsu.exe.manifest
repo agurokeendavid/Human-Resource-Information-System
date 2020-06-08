@@ -2023,14 +2023,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HRISCapsu.exe" size="3333592">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HRISCapsu.exe" size="3334616">
       <assemblyIdentity name="HRISCapsu" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>F87T5K9l2+Pz2AQPuCQf/dhGvp8Lx10x+KhjWrRggN4=</dsig:DigestValue>
+        <dsig:DigestValue>VdzKPxfEmo4HLucM3/xiLuyWl0OI5hXHhviszikUW7k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
