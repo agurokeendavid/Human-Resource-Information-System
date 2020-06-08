@@ -102,18 +102,17 @@ namespace HRISCapsu
 
         private void txtPassword_Validating(object sender, CancelEventArgs e)
         {
-            var regex = new Regex("^[a-zA-Z]+$");
-            var regexNumber = new Regex(@"\d+");
-            Match letterMatch = regex.Match(txtPassword.Text);
-            Match numberMatch = regexNumber.Match(txtPassword.Text);
-
-            string letters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
-            string numbers = "1234567890";
             if (string.IsNullOrWhiteSpace(txtPassword.Text) || CountLetters(txtPassword.Text) == 0 || CountDigits(txtPassword.Text) == 0)
             {
                 e.Cancel = true;
                 txtPassword.Focus();
                 errorProvider1.SetError(txtPassword, "Password should contains numbers and letters!");
+            }
+            else if (CountPasswordCharacters(txtPassword.Text) < 5)
+            {
+                e.Cancel = true;
+                txtPassword.Focus();
+                errorProvider1.SetError(txtPassword, "Password should be minimum 6 characters!");
             }
             else
             {
@@ -122,6 +121,15 @@ namespace HRISCapsu
             }
         }
 
+        public static int CountPasswordCharacters(string s)
+        {
+            int count = 0;
+            foreach (char c in s)
+            {
+                count++;
+            }
+            return count;
+        }
         public static int CountLetters(string s)
         {
             int count = 0;
